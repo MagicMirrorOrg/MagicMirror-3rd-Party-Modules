@@ -35,6 +35,7 @@ jobs:
           python-version: 3.9
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      - run: npm clean-install
       - run: npm run all
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
