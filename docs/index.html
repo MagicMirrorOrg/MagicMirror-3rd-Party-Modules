@@ -6,6 +6,10 @@
     <title>MagicMirror² 3rd Party Modules</title>
     <link rel="icon" type="image/x-icon" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -58,23 +62,42 @@
       </div>
       <div id="tag-buttons"></div>
     </header>
+
+    <div class="accent"></div>
+
     <main id="module-container"></main>
 
     <template id="card-template">
       <div class="card">
         <div class="card-header">
-          <a class="name" href="" target="_blank"></a>
-          <div class="maintainer"></div>
-          <div class="last-commit"></div>
+          <div class="name-container">
+            <a class="name" href="" target="_blank"></a>
+          </div>
+          <div class="subtitle">
+            <div class="maintainer"></div>
+            <div class="stars"></div>
+          </div>
         </div>
-        <div class="issues"><a target="_blank" href="">🗈</a></div>
-        <div class="stars"></div>
-        <div class="card-image-container">
-          <img src=" " alt="Image" />
-          <div class="card-image-license-info"></div>
-        </div>
-        <div class="description"></div>
         <div class="tags"></div>
+        <div class="description"></div>
+        <div class="img-container">
+          <img src=""/>
+        </div>
+        <div class="info">
+          <div class="container issues">
+            <div class="label">Issues</div>
+            <a class="text" href="">VIEW</a>
+          </div>
+          <div class="container commit">
+            <div class="label">Last Commit</div>
+            <a class="text" href=""></a>
+          </div>
+          <div class="container license">
+            <div class="label">License</div>
+            <a class="text" href=""></a>
+          </div>
+        </div>
+
         <div class="outdated-note"></div>
       </div>
     </template>

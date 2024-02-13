@@ -8,51 +8,93 @@ const tagButtonContainer = document.getElementById("tag-buttons");
 const sortDropdown = document.getElementById("sort-dropdown");
 const showOutdated = document.getElementById("show-outdated");
 
+/* [<name>, <icon>, <background>, <foreground>] */
+/* Add aliases to modules so similar can be found */
+const tagsList = [
+  ["calendar", "📅", "#5bc7d9", "#022126"],
+  ["news", "📰", "#e0fffe", "#141e1e"],
+  ["public transport", "🚍", "#f9c376", "#231602"],
+  ["smarthome", "💡", "#ef9531", "#2c1802"],
+  ["soccer", "⚽", "#737ef7", "#01041f"],
+  ["text-to-speech", "🔉", "#ecff7b", "#1f2302"],
+  ["stock", "🗠", "#a9acb6", "#000"],
+  ["traffic", "⛕", "#86f58b", "#021603"],
+  ["voice control", "🎤", "#5fb2ff", "#021527"],
+  ["weather", "☁️", "#f74545", "#270202"],
+  ["social media", "📱", "#ff419e", "#220212"]
+];
+
+
 function createCard (moduleData) {
   const card = document.importNode(cardTemplate.content, true);
+
+  /* Set the header data */
   card.querySelector(".name").href = moduleData.url;
   card.querySelector(".name").textContent = moduleData.name;
-  card.querySelector(".maintainer").textContent = `maintained by ${moduleData.maintainer}`;
-  card.querySelector(".last-commit").textContent = `last commit: ${moduleData.lastCommit.split("T")[0]}`;
-
-  if (moduleData.issues > 0 && !(moduleData.maintainer === "KristjanESPERANTO" && moduleData.issues === 1)) {
-    // To reduce imbalance in the default sort order, modules from KristjanESPERANTO get a fake-issue (look at the check_modules.py). This condition is here to avoid displaying the div incorrectly.
-    const url = `https://github.com/KristjanESPERANTO/MagicMirror-3rd-Party-Modules/blob/main/result.md#${moduleData.name}-by-${moduleData.maintainer}`;
-    card.querySelector(".issues a").href = url;
-  } else {
-    card.querySelector(".issues").remove();
-  }
+  card.querySelector(".maintainer").textContent = `${moduleData.maintainer}`;
 
   if (typeof moduleData.stars === "undefined") {
     card.querySelector(".stars").remove();
   } else {
-    card.querySelector(".stars").textContent = moduleData.stars;
+    card.querySelector(".stars").textContent = `${moduleData.stars} stars`;
   }
+
+  /* Generate the tags, add color asignation */
+  if (moduleData.tags) {
+    moduleData.tags.forEach(tag => {
+      const tagElement = document.createElement("div");
+      tagElement.textContent = tag;
+      card.querySelector(".tags").appendChild(tagElement);
+    });
+  } else {
+    card.querySelector(".tags").remove();
+  }
+
+  /* Set the card body */
+  card.querySelector(".description").innerHTML = moduleData.description;
 
   if (moduleData.image) {
     const imagePath = `./images/${moduleData.name}---${moduleData.maintainer}---${moduleData.image}`;
-    card.querySelector(".card-image-container img").src = imagePath;
-    card.querySelector(".card-image-license-info").textContent = `Image from the repository. ©${moduleData.license}`;
+    const image = card.querySelector("img")
+    image.src = imagePath;
+    image.alt = `${moduleData.name} image`;
   } else {
-    card.querySelector(".card-image-container").remove();
+    card.querySelector("img").remove();
   }
 
+  if (moduleData.license) {
+    const license = card.querySelector(".info .container.license .text")
+    license.href = `${moduleData.url}`;
+    license.textContent = `©${moduleData.license}`;
+  } else {
+    card.querySelector(".info .container.license").remove();
+  }
+
+  /* Set the card footer */
+  if (moduleData.lastCommit) {
+    const commit = card.querySelector(".info .container.commit .text")
+    /* If is not github? */
+    commit.href = `${moduleData.url}/commits/`;
+    commit.textContent = `${moduleData.lastCommit.split("T")[0].replaceAll("-", "/")}`;
+  } else {
+    card.querySelector(".info .container.commit").remove();
+  }
+  
+
+  if (moduleData.issues > 0 && !(moduleData.maintainer === "KristjanESPERANTO" && moduleData.issues === 1)) {
+    // To reduce imbalance in the default sort order, modules from KristjanESPERANTO get a fake-issue (look at the check_modules.py). This condition is here to avoid displaying the div incorrectly.
+    const url = `https://github.com/KristjanESPERANTO/MagicMirror-3rd-Party-Modules/blob/main/result.md#${moduleData.name}-by-${moduleData.maintainer}`;
+    card.querySelector(".info .container.issues .text").href = url;
+  } else {
+    card.querySelector(".info .container.issues").remove();
+  }
+
+  /* Add a notice/change styling if the module is outdated */
   if (moduleData.outdated) {
     card.querySelector(".card").classList.add("outdated");
     card.querySelector(".outdated-note").innerHTML = moduleData.outdated;
   } else {
     card.querySelector(".outdated-note").remove();
-  }
-
-  card.querySelector(".description").innerHTML = moduleData.description;
-
-  if (moduleData.tags) {
-    const tagsString = `${moduleData.tags
-      .map((tag) => `#${tag}`)
-      .join(" ")}`;
-    card.querySelector(".tags").textContent = tagsString;
-  } else {
-    card.querySelector(".tags").remove();
   }
 
   moduleCardContainer.appendChild(card);
@@ -65,7 +107,11 @@ function updateModuleCardContainer () {
 
   filteredModuleList.forEach((moduleData) => {
     if (!moduleData.outdated || showOutdated.checked) {
-      createCard(moduleData);
+      try {
+        createCard(moduleData);
+      } catch (error) {
+        console.error("Error creating module", moduleData)
+      }
     } else {
       moduleCounter -= 1;
     }
@@ -113,27 +159,30 @@ function sortData (sortOption) {
 }
 
 function displayTagButtonContainer () {
-  const tags = [
-    "calendar",
-    "news",
-    "public transport",
-    "smarthome",
-    "soccer",
-    "text-to-speech",
-    "stock",
-    "traffic",
-    "voice control",
-    "weather"
-  ];
+  const root = document.querySelector(":root");
   tagButtonContainer.innerHTML = "";
 
-  const sortedTags = tags.sort();
+  const sortedTags = tagsList.sort((a, b) => {
+    if (a[0] < b[0]) return -1;
+    if (a[0] > b[0]) return 1;
+    return 0;
+  });
 
   sortedTags.forEach((tag) => {
     const button = document.createElement("a");
     button.className = "tag-button";
-    button.setAttribute("data-tag", tag);
-    button.textContent = `#${tag}`;
+    button.textContent = `${tag[1]} ${tag[0]}`;
+    button.setAttribute("data-tag", tag[0]);
+    if (tag[2] && tag[3]) {
+      const tagNameNormal = tag[0].replaceAll(" ", "")
+      /* Once the .json file get chunked (instead of just loading everything) and loaded by parts,
+      maybe we can put the tags in the cards with colors */
+      root.style.setProperty(`--tags-bg-${tagNameNormal}`, tag[2]);
+      root.style.setProperty(`--tags-fg-${tagNameNormal}`, tag[3]);
+      button.style.backgroundColor = `var(--tags-bg-${tagNameNormal})`;
+      button.style.color = `var(--tags-fg-${tagNameNormal})`;
+      button.setAttribute("data-color", true);
+    }
     tagButtonContainer.appendChild(button);
   });
 }
@@ -220,18 +269,31 @@ moduleCardContainer.addEventListener("click", (event) => {
 });
 
 resetButton.addEventListener("click", () => {
+  const root = document.querySelector(":root");
   filteredModuleList = allModules;
   searchInput.value = "";
   showOutdated.checked = true;
   removeSelectedMarkingFromTagsAndCards();
   sortDropdown.value = "default";
   sortData(sortDropdown.value);
+  root.style.setProperty("--color-accent-header", "var(--color-background)");
+  /* --color-accent-light: #ebf8ff; --color-accent-dark: #033454; */
+  root.style.setProperty("--color-accent-light", "#ebf8ff");
+  root.style.setProperty("--color-accent-dark", "#033454");
   updateModuleCardContainer();
 });
 
 tagButtonContainer.addEventListener("click", (event) => {
   if (event.target.tagName === "A") {
+    const root = document.querySelector(":root");
     const tag = event.target.getAttribute("data-tag");
+    if (event.target.getAttribute("data-color")) {
+      const tagNameNormal = tag.replaceAll(" ", "")
+      root.style.setProperty("--color-accent-light", `var(--tags-bg-${tagNameNormal})`);
+      root.style.setProperty("--color-accent-dark", `var(--tags-fg-${tagNameNormal})`);
+      root.style.setProperty("--color-accent-header", `var(--tags-bg-${tagNameNormal})`);
+    }
+
     filterByTag(tag);
     searchInput.value = "";
   }
