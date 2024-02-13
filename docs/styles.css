@@ -232,13 +232,16 @@ main {
 .tags {
   display: flex;
   flex-flow: row nowrap;
+  overflow: -moz-scrollbars-none;
   overflow-x: scroll;
   gap: 0.2em;
   padding: 0.5em 0 0;
+  scrollbar-width: none;
 }
 
 .tags::-webkit-scrollbar {
-  display: none;
+  width: 0;
+  background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
 .tags div {
@@ -267,7 +270,7 @@ main {
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  max-height: 200px;
+  max-height: 300px;
   border-radius: 0.4em;
   margin-top: 0.5em;
 }
