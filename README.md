@@ -80,6 +80,8 @@ This script reads the GitHub info of the modules from the respective GitHub repo
 
 ### updateGitHubApiData.js
 
+This script reads data, such as the number of stars, via the GitHub API for a few modules.
+
 ### get_modules.py
 
 This script reads the module list (created by the script before) and clones all modules.

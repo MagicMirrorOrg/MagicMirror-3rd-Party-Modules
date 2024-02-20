@@ -883,7 +883,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BirdNET",
@@ -911,6 +912,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 7,
+    "hasGithubIssues": true,
     "license": "Apache-2.0",
     "image": "example.jpg"
   },
@@ -924,7 +926,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 13
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-bitcoin-portfolio",
@@ -936,7 +939,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Bixi",
@@ -950,6 +954,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshot.jpg"
   },
@@ -962,6 +967,7 @@
     "description": "Module that shows french jokes from the BlaguesAPI <a target=\"_blank\" href=\"https://www.blagues-api.fr\">https://www.blagues-api.fr</a>.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "jokes"
     ],
@@ -978,7 +984,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Bluebikes",
@@ -989,6 +996,7 @@
     "description": "Displays the number of available bikes at selected stations of the Boston public bike system (Bluebikes).",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "bluebikes",
       "transit"
@@ -1008,6 +1016,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "preview.jpg"
   },
@@ -1020,6 +1029,7 @@
     "description": "Connecting Bluetooth devices, currently only Oral-B toothbrushes.",
     "issues": [],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "bluetooth",
       "oralb"
@@ -1040,6 +1050,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": ".github-example.jpg"
   },
@@ -1055,6 +1066,7 @@
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-1.jpg"
   },
@@ -1069,7 +1081,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. The API endpoint changed. This module needs updated, but the author is inactive.",
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BMW-DS",
@@ -1082,7 +1095,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 14
+    "stars": 14,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BMW-OW",
@@ -1095,7 +1109,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BMWConnected",
@@ -1108,6 +1123,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -1121,7 +1137,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BoredDaily",
@@ -1133,7 +1150,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BornBeforeDate",
@@ -1145,7 +1163,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BoschSmartHome",
@@ -1156,6 +1175,7 @@
     "description": "A client interface for the Bosch Smart Home System. Supports rooms, Window/Door contacts, Room Climate Controls, Thermostats, Twinguards, Visualization of Temperature, Humidity and Purity, Bosch Home Connect Dishwashers, Philips Hue Bridge.",
     "issues": [],
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "bosch smart home"
     ],
@@ -1172,7 +1192,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-BrawlStars",
@@ -1185,6 +1206,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "brawl stars"
     ],
@@ -1200,7 +1222,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Brewdog",
@@ -1212,7 +1235,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Bring",
@@ -1223,6 +1247,7 @@
     "description": "Display a Bring! shopping list in a flexible view and touch support.",
     "issues": [],
     "stars": 28,
+    "hasGithubIssues": true,
     "tags": [
       "bring"
     ],
@@ -1241,6 +1266,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Screenshot.jpg"
   },
@@ -1253,6 +1279,7 @@
     "description": "Displays the number of available bikes on the selected stations of the Budapest public bike system (aka MOL Bubi).",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "bike",
       "transport"
@@ -1272,6 +1299,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "Screenshot.jpg"
   },
@@ -1285,7 +1313,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': Error: Invalid version: \"1.0\""
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-bunq",
@@ -1298,6 +1327,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "img-img.jpg"
   },
@@ -1310,6 +1340,7 @@
     "description": "A module that flickers the whole screen to prevent a burn-in effect on your display.",
     "issues": [],
     "stars": 23,
+    "hasGithubIssues": true,
     "tags": [
       "lcd",
       "amoled",
@@ -1329,6 +1360,7 @@
     "description": "Display Dutch bus and some other public transports for a targeted set of bus stops.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "bus",
       "times"
@@ -1347,6 +1379,7 @@
       "No image found."
     ],
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "button"
     ],
@@ -1364,6 +1397,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "buttons"
     ],
@@ -1379,7 +1413,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CalDAV",
@@ -1392,6 +1427,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "caldav"
     ],
@@ -1406,6 +1442,7 @@
     "description": "Extended calendar and event view.",
     "issues": [],
     "stars": 88,
+    "hasGithubIssues": true,
     "tags": [
       "calendar"
     ],
@@ -1423,6 +1460,7 @@
       "No image found."
     ],
     "stars": 30,
+    "hasGithubIssues": true,
     "tags": [
       "calendar",
       "calext3"
@@ -1440,6 +1478,7 @@
       "No image found."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "calendar",
       "agenda"
@@ -1457,6 +1496,7 @@
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "cx3j",
       "calendarext3",
@@ -1475,6 +1515,7 @@
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "timeline",
       "cx3"
@@ -1491,7 +1532,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CalendarExtPlan",
@@ -1503,7 +1545,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CalendarExtTimeline",
@@ -1515,7 +1558,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 16
+    "stars": 16,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CalendarTodayTomorrow",
@@ -1527,7 +1571,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CalendarWeek",
@@ -1539,7 +1584,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 50
+    "stars": 50,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Callmonitor-Current-Call",
@@ -1549,10 +1595,11 @@
     "maintainerURL": "",
     "description": "Extension for <a target=\"_blank\" href=\"https://github.com/paviro/MMM-FRITZ-Box-Callmonitor\">MMM-FRITZ-Box-Callmonitor</a>. Displays the currently active call.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Caltrain",
@@ -1564,7 +1611,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Caltrain",
@@ -1576,7 +1624,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "camera",
@@ -1590,6 +1639,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "email",
       "camera",
@@ -1606,6 +1656,7 @@
     "description": "Gets weather watches, warnings, and advisories for user specified regions. Using alert data published by Environment Canada.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "canada",
       "alerts",
@@ -1628,6 +1679,7 @@
     "description": "Show meals from canteens (Germany and Switzerland).",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "canteen",
       "openmensa"
@@ -1645,7 +1697,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CardDavBirthdaysProvider",
@@ -1657,7 +1710,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': SyntaxError: Expected double-quoted property name in JSON at position 777 (line 25 column 3)"
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CARDS",
@@ -1670,7 +1724,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Carousel",
@@ -1681,6 +1736,7 @@
     "description": "Rotate modules, to save space on screen.",
     "issues": [],
     "stars": 36,
+    "hasGithubIssues": true,
     "tags": [
       "carousel",
       "navigation",
@@ -1704,6 +1760,7 @@
       "No image found."
     ],
     "stars": 13,
+    "hasGithubIssues": true,
     "tags": [
       "cec",
       "control",
@@ -1722,7 +1779,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. The API endpoint changed. There is a PR to fix that, but the author is inactive.",
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CHAMPIONSQUEUE-LEADERBOARD",
@@ -1733,6 +1791,7 @@
     "description": "Displays LOL Champions Queue standings.",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "esports",
       "league",
@@ -1756,6 +1815,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": ".github-example.jpg"
   },
@@ -1771,6 +1831,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "impression_0.jpg"
   },
@@ -1784,7 +1845,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 42
+    "stars": 42,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Chuck-Norris",
@@ -1798,6 +1860,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "assets-img-screenshot.jpg"
   },
@@ -1814,6 +1877,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "image-1.jpg"
   },
@@ -1827,7 +1891,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ClashofClans-Player",
@@ -1839,7 +1904,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ClashRoyaleChests",
@@ -1851,7 +1917,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Climacell-Hourly",
@@ -1864,7 +1931,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Clockinese",
@@ -1876,7 +1944,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CloneWarsQuotes",
@@ -1888,7 +1957,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ClosestFlight",
@@ -1900,7 +1970,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Cocktails",
@@ -1913,7 +1984,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Coinbase",
@@ -1925,6 +1997,7 @@
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2023-07-26.",
     "stars": 12,
+    "hasGithubIssues": true,
     "tags": [
       "coinbase",
       "mmm-magic-mirror"
@@ -1941,6 +2014,7 @@
     "description": "Display cryptocurrency information from the Coin Market Cap website. Ticker Price, Logos, Sparkline Graphs, etc.",
     "issues": [],
     "stars": 35,
+    "hasGithubIssues": true,
     "tags": [
       "crypto currency",
       "coinmarketcap",
@@ -1959,7 +2033,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CollegeFootballTop25",
@@ -1971,7 +2046,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ComEdPrice",
@@ -1986,7 +2062,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CommandToNotification",
@@ -1997,6 +2074,7 @@
     "description": "Calls configurable scripts periodically and send the output as notification(s).",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "scripts",
       "commands",
@@ -2019,6 +2097,7 @@
     "description": "Display internet connection status.",
     "issues": [],
     "stars": 27,
+    "hasGithubIssues": true,
     "tags": [
       "magicmirror internet connection"
     ],
@@ -2035,7 +2114,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CountDown",
@@ -2049,6 +2129,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 35,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshots-screenshot.jpg"
   },
@@ -2063,7 +2144,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Repo has been archived at 2020-06-10.",
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CountUP",
@@ -2075,7 +2157,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CoupEscooters",
@@ -2086,6 +2169,7 @@
     "description": "Display COUP e-scooters around you and sort them by distance. It works for Berlin and other cities.",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "coup",
       "sooter",
@@ -2105,7 +2189,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 8
+    "stars": 8,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-covid19",
@@ -2118,6 +2203,7 @@
       "`package.json` issue: No license field."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "covid19",
       "covid",
@@ -2134,7 +2220,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 34
+    "stars": 34,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-COVID19-AMPEL",
@@ -2147,6 +2234,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 12,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshot.jpg"
   },
@@ -2161,7 +2249,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Obsolete, no new data since 2022-04-27.",
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-covid19uk-stats",
@@ -2176,7 +2265,8 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "outdated": "Obsolete, no new data since 2022-05-20.",
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CracowMPK",
@@ -2188,7 +2278,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CricketScores",
@@ -2199,6 +2290,7 @@
     "description": "Display cicket scores for ongoing live cricket matches.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "cricket"
     ],
@@ -2214,6 +2306,7 @@
     "description": "News feed from the <strong>Swedish</strong> Government Crisis Information (Krisinformation.se).",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "crisis"
     ],
@@ -2230,7 +2323,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-cryptocurrency",
@@ -2242,7 +2336,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 93
+    "stars": 93,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CTA",
@@ -2254,7 +2349,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CuandoLlega",
@@ -2266,7 +2362,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CurrencyArg",
@@ -2278,7 +2375,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Currentweather-MQTT",
@@ -2291,6 +2389,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "weather_screenshot.jpg"
   },
@@ -2305,6 +2404,7 @@
       "No image found."
     ],
     "stars": 22,
+    "hasGithubIssues": true,
     "tags": [
       "cursor",
       "mmm-cursor"
@@ -2321,7 +2421,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CustomMessage",
@@ -2331,10 +2432,11 @@
     "maintainerURL": "",
     "description": "Post a message to your mirror either by MagicMirror API post or manual update (entering text onscreen).",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-CyanideHappiness",
@@ -2347,6 +2449,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "cyanide",
       "happiness",
@@ -2365,7 +2468,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 8
+    "stars": 8,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-CzechPost",
@@ -2377,7 +2481,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-D2L",
@@ -2391,6 +2496,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "ui-d2l.jpg"
   },
@@ -2422,6 +2528,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-screenshot.jpg"
   },
@@ -2434,6 +2541,7 @@
     "description": "Displays information retreived from a Daikin Air Conditioner Unit.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "daikin"
     ],
@@ -2448,10 +2556,11 @@
     "maintainerURL": "",
     "description": "Forked from MMM-Daikin to work with Daikin Airbase controllers (wifi air conditioner controllers used in Australia/New Zealand regions).",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-DailyACVillager",
@@ -2463,7 +2572,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DailyAlarm",
@@ -2476,7 +2586,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Repo has been archived at 2020-06-10.",
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DailyBibleVerse",
@@ -2490,6 +2601,7 @@
       "No image found."
     ],
     "stars": 25,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -2502,7 +2614,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DailyDilbert",
@@ -2514,7 +2627,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DailyPokemon",
@@ -2528,6 +2642,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 21,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-demo.jpg"
   },
@@ -2541,7 +2656,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DailyUnreachedPeopleGroup",
@@ -2555,6 +2671,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -2568,7 +2685,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 48
+    "stars": 48,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-darksky-hourly",
@@ -2581,7 +2699,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DarkSky24Hours",
@@ -2594,7 +2713,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DarkSkyForecast",
@@ -2608,6 +2728,7 @@
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
     "stars": 82,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "icons-iconsets.jpg"
   },
@@ -2625,7 +2746,8 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DateCounter",
@@ -2637,7 +2759,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DateOnly",
@@ -2649,7 +2772,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DBF",
@@ -2662,6 +2786,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "dbfApp_dark.jpg"
   },
@@ -2673,10 +2798,11 @@
     "maintainerURL": "https://github.com/kyle-kelly",
     "description": "A fork of <a target=\"_blank\" href=\"https://github.com/AdamMoses-GitHub/MMM-DCMetroTrainTimes\">MMM-DCMetroTrainTimes</a> (above) that also displays arrival times for buses.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-DCMetroTrainTimes",
@@ -2688,7 +2814,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 14
+    "stars": 14,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DefaultWeatherAnimated",
@@ -2700,7 +2827,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 13
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DeLijn",
@@ -2712,7 +2840,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DHT",
@@ -2724,7 +2853,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DHT-Sensor",
@@ -2737,6 +2867,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "temperature",
       "humidity",
@@ -2759,7 +2890,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': Error: Invalid version: \"0.1\""
     ],
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DHT22",
@@ -2771,7 +2903,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DigClock",
@@ -2783,7 +2916,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DigitalAlarmClock",
@@ -2794,6 +2928,7 @@
     "description": "A vintage-style Digital Alarm Clock integrating MMM-DigClock and MMM-AlarmClock.",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "digital alarm clock"
     ],
@@ -2810,6 +2945,7 @@
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2022-08-26.",
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "discogs"
     ],
@@ -2829,6 +2965,7 @@
       "No compatible or wrong license field in 'package.json'. Without that, we can't use an image."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "tags": [
       "discord"
     ],
@@ -2843,6 +2980,7 @@
     "description": "Show user notifications of a site that runs on <a target=\"_blank\" href=\"https://www.discourse.org\">Discourse</a>.",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "discourse",
       "notifications"
@@ -2862,6 +3000,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "wait-times-demo.jpg"
   },
@@ -2875,7 +3014,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Domoticz-ext",
@@ -2887,6 +3027,7 @@
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2023-07-05.",
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "domoticz"
     ],
@@ -2905,6 +3046,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "MMM-Dorba-Trails.jpg"
   },
@@ -2919,6 +3061,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "MMM-Dreambox_screenshot1.jpg"
   },
@@ -2935,6 +3078,7 @@
     ],
     "outdated": "Abandoned. Repo has been archived at 2023-10-24.",
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "media-01-developer.dribbble.com.jpg"
   },
@@ -2950,6 +3094,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -2964,6 +3109,7 @@
     ],
     "outdated": "Successor is MMM-DropboxPictures.",
     "stars": 17,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "sc.jpg"
   },
@@ -2976,6 +3122,7 @@
     "description": "Customisable real-time stop data for Dublin Bus, Luas and IrishRail stops.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "public transport",
       "dublin bus",
@@ -2994,6 +3141,7 @@
     "description": "Station monitor for the Dresden/Germany local transport (DVB) bus, tram and train system.",
     "issues": [],
     "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "dvb",
       "vvo",
@@ -3015,6 +3163,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -3030,6 +3179,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "irishrail"
     ],
@@ -3046,6 +3196,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 61,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshot.jpg"
   },
@@ -3059,7 +3210,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-DynamicWeather",
@@ -3070,6 +3222,7 @@
     "description": "A heavily configurable module to display different animations based on current weather and show customized event effects.",
     "issues": [],
     "stars": 26,
+    "hasGithubIssues": true,
     "tags": [
       "weather"
     ],
@@ -3086,6 +3239,7 @@
     "issues": [],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
     "stars": 59,
+    "hasGithubIssues": true,
     "tags": [
       "earth",
       "nasa"
@@ -3104,7 +3258,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. The URL to fetch the video doesn't work anymore. The author is inactive.",
-    "stars": 26
+    "stars": 26,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Earthquake",
@@ -3118,6 +3273,7 @@
     ],
     "outdated": "Deprecated. API is disabled.",
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "pix-1.jpg"
   },
@@ -3131,7 +3287,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-EasyPix",
@@ -3142,6 +3299,7 @@
     "description": "The easiest way to show pictures on your mirror.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "picture"
     ],
@@ -3157,6 +3315,7 @@
     "description": "Display data from ecobee thermostats and remote sensors.",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "ecobee",
       "thermostat"
@@ -3174,7 +3333,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Ecowatt",
@@ -3185,6 +3345,7 @@
     "description": "Graphical and textual informations from <a target=\"_blank\" href=\"https://www.monecowatt.fr\">Ecowatt</a>.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "ecowatt",
       "electricity weather",
@@ -3203,6 +3364,7 @@
     "description": "Show the interface throughput of an Ubiquity EdgeRouter.",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "edgerouter",
       "throughput",
@@ -3222,6 +3384,7 @@
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "efa",
       "departures",
@@ -3243,7 +3406,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Elvira",
@@ -3254,6 +3418,7 @@
     "description": "Displays Hungarian public train departure times using real-time data from the \"Elvira\" service provided by the Hungarian national railway company (MÁV).",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "elvira",
       "máv",
@@ -3275,6 +3440,7 @@
     "description": "Embed one or multiple websites with there URL.",
     "issues": [],
     "stars": 15,
+    "hasGithubIssues": true,
     "tags": [
       "embed",
       "iframe",
@@ -3295,7 +3461,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 31
+    "stars": 31,
+    "hasGithubIssues": true
   },
   {
     "name": "emt",
@@ -3307,7 +3474,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-EMTValencia",
@@ -3318,6 +3486,7 @@
     "description": "Get estimations for bus stops in the city of Valencia (Spain).",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "bus stop",
       "emt valencia",
@@ -3335,6 +3504,7 @@
     "description": "Visualizes production and consumption of electrical energy in your home. Is meant to be used with solar energy converters and (optional) energy storage systems.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "energy",
       "monitor",
@@ -3355,7 +3525,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Entur-tavle",
@@ -3366,6 +3537,7 @@
     "description": "Display public transport information/departure boards for any public transport in Norway.",
     "issues": [],
     "stars": 15,
+    "hasGithubIssues": true,
     "tags": [
       "entur",
       "public transport"
@@ -3382,6 +3554,7 @@
     "description": "Module to display weather forecast information from Environment Canada.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "canada",
       "weather",
@@ -3401,7 +3574,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-EskomSePush",
@@ -3412,6 +3586,7 @@
     "description": "Display loadshedding schedule data for the South African users.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "eskomsepush"
     ],
@@ -3432,6 +3607,7 @@
       "No image found."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -3442,10 +3618,11 @@
     "maintainerURL": "",
     "description": "Display ethereum ticker.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-ethermine",
@@ -3457,7 +3634,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Ethos",
@@ -3470,6 +3648,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "showAllTemps.jpg"
   },
@@ -3483,7 +3662,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 13
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Events",
@@ -3496,7 +3676,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. Eventful API discontinued. This module needs updated.",
-    "stars": 23
+    "stars": 23,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-EveryNews",
@@ -3506,10 +3687,11 @@
     "maintainerURL": "",
     "description": "Over 30,000 News sources! Up to 10 at once. Simplified addition to your config entry.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "EXT-Alert",
@@ -3518,10 +3700,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display any warning, information or error on your screen about Assistant.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "notification",
       "warning",
@@ -3538,10 +3719,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Change the default Google Assistant background to your own or with animated gifs for each status of the assistant.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "cortana-confirmation.jpg"
   },
@@ -3553,10 +3734,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Show your current shopping list of Bring!",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "Screenshot.jpg"
   },
@@ -3568,10 +3749,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display any internet web page like a real browser in fullscreen.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "browser"
     ],
@@ -3584,10 +3765,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Multi-keyword listener for MMM-GoogleAssistant.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 6,
+    "hasGithubIssues": false,
     "tags": [
       "hotword",
       "porcupine",
@@ -3607,10 +3787,11 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display Channel from French Internet Provider: Free.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
+      "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "resources-FreeboxTV.jpg"
   },
@@ -3621,10 +3802,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display your album directory with Google photos API in background or in MagicMirror² position.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "google",
       "photo"
@@ -3640,10 +3820,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "CPU governor enables the operating system to scale the CPU frequency up or down in order to save power or improve performance.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "governor",
       "ext",
@@ -3658,10 +3838,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Check your internet connexion, display ping.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "internet",
       "warning"
@@ -3677,11 +3856,11 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Control your mirror with a keyboard.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "license": "MIT"
   },
   {
@@ -3691,10 +3870,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Allow to play Spotify music on your mirror with Librespot.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "spotify",
       "librespot"
@@ -3710,10 +3888,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Control your screen with a webcam (as motion detector).",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "plugin",
       "screen",
@@ -3729,10 +3907,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Play any music found on a USB Key or in defined local directory.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "volume",
       "warning"
@@ -3747,10 +3924,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin allows you to have animated pages.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "pages"
     ],
@@ -3764,10 +3940,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Displaying any photos discover by assistant in fullscreen.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "photos"
     ],
@@ -3781,10 +3956,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Control your screen with a PIR Sensor.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "sensor",
       "motion detection",
@@ -3802,10 +3976,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Play radio station on MagicMirror².",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "radio"
     ],
@@ -3819,10 +3992,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "After a configurated time without any user interaction the display will turn off and hide all modules for economy mode.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "screen",
       "ext",
@@ -3839,10 +4011,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Take selfies from webcam.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "resources-screenshot.jpg"
   },
@@ -3854,11 +4026,11 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Need a flash to take selfies?",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT"
   },
   {
@@ -3869,11 +4041,11 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Send your selfies to Telegram, google photos or by mail.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT"
   },
   {
@@ -3884,10 +4056,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Slideshow of your best selfies.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "resources-coming_soon.jpg"
   },
@@ -3898,10 +4070,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin show current spotify playback of any devices.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "spotify"
     ],
@@ -3916,10 +4087,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Create a server for displaying any Lyrics and Canvas from Spotify.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "spotify",
       "canvas",
@@ -3935,10 +4106,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Control your mirror with a StreamDeck by elgato©.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "icons-Sample-access_time.jpg"
   },
@@ -3949,10 +4120,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "You can remote-control plugins within Telegram.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "telegram"
     ],
@@ -3967,10 +4137,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin allow to auto-update if an update is detected.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "resources-update.jpg"
   },
@@ -3981,10 +4151,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Control the sound volume level of your mirror.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "volume",
       "warning",
@@ -4001,10 +4170,10 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Allow to send a welcome on start of MagicMirror².",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "notification",
       "warning"
@@ -4018,10 +4187,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugins allows to play YouTube video.",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "youtube"
     ],
@@ -4035,10 +4203,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Allow to cast a YouTube video on MagicMirror².",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 2,
+    "hasGithubIssues": false,
     "tags": [
       "cast",
       "youtube"
@@ -4056,7 +4223,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 42
+    "stars": 42,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-F1",
@@ -4071,7 +4239,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FAA-Delay",
@@ -4083,6 +4252,7 @@
     "issues": [],
     "outdated": "Deprecated. API changed (look at issue 3).",
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "faa",
       "airports"
@@ -4098,11 +4268,11 @@
     "maintainerURL": "https://github.com/jimbydude",
     "description": "This is a fork of Ebens module above. This version can handle multi-user and uses MMM-Face-Reco-DNN to hide/show modules based on user logged in.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 11,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "img-readme-face-recognition-guest-smai.jpg"
   },
@@ -4117,6 +4287,7 @@
       "No image found."
     ],
     "stars": 90,
+    "hasGithubIssues": true,
     "tags": [
       "face",
       "recognition",
@@ -4136,7 +4307,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 78
+    "stars": 78,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Faces",
@@ -4147,6 +4319,7 @@
     "description": "Yet Another Facial Recognition system, with admin tooling to make all the AI/ML easy to maintain and supporting hardware acceleration.",
     "issues": [],
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "facial recognition"
     ],
@@ -4165,6 +4338,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "facial recognition"
     ],
@@ -4182,6 +4356,7 @@
     ],
     "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore.",
     "stars": 49,
+    "hasGithubIssues": true,
     "tags": [
       "facial recognition"
     ],
@@ -4197,7 +4372,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Farevarsel",
@@ -4211,6 +4387,7 @@
       "No image found."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -4223,7 +4400,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-fbPageCounter",
@@ -4236,7 +4414,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Repo has been archived at 2022-06-20.",
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FearAndGreedIndex",
@@ -4248,7 +4427,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FF-cht-sh",
@@ -4259,6 +4439,7 @@
     "description": "Display random or your most treasured <a target=\"_blank\" href=\"https://cht.sh\">cheat sheets</a> and learn something new while you have your cup of coffee.",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "cheat sheet",
       "cht.sh",
@@ -4277,7 +4458,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FF-digital-rain",
@@ -4289,7 +4471,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FF-Evan-Roth-Red-Lines",
@@ -4301,7 +4484,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FF-Genius-Lyrics",
@@ -4315,6 +4499,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshot.jpg"
   },
@@ -4327,6 +4512,7 @@
     "description": "Show radiation charts from <a target=\"_blank\" href=\"https://multigeiger.citysensor.de\">https://multigeiger.citysensor.de</a>.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "radiation",
       "multigeiger"
@@ -4345,6 +4531,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshot.jpg"
   },
@@ -4357,6 +4544,7 @@
     "description": "Inject Ricardo Cabello's (<a target=\"_blank\" href=\"https://github.com/mrdoob\">mrdoob</a>) <a target=\"_blank\" href=\"https://github.com/mrdoob/stats.js\">stats.js</a> to display FPS, MS and MEM consumption.",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "fps",
       "memory"
@@ -4374,7 +4562,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FF-XKCD",
@@ -4386,7 +4575,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FHEM",
@@ -4399,6 +4589,7 @@
       "No image found."
     ],
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "fhem",
       "home automation"
@@ -4415,6 +4606,7 @@
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2024-01-22.",
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "parcel",
       "posti",
@@ -4433,7 +4625,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-fitbit",
@@ -4445,7 +4638,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 26
+    "stars": 26,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FlagRise",
@@ -4457,7 +4651,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Flatastic",
@@ -4473,6 +4668,7 @@
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -4488,7 +4684,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-flick-gestures",
@@ -4502,6 +4699,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "flick",
       "board",
@@ -4520,6 +4718,7 @@
       "No image found."
     ],
     "stars": 12,
+    "hasGithubIssues": true,
     "tags": [
       "flickr"
     ],
@@ -4535,6 +4734,7 @@
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2024-01-22.",
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "flights",
       "flightradar24"
@@ -4568,6 +4768,7 @@
     "description": "A flight radar that display airplane/flight details of what is currently flying in the airspace above some location.",
     "issues": [],
     "stars": 19,
+    "hasGithubIssues": true,
     "tags": [
       "flights",
       "iata/icao",
@@ -4587,6 +4788,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 10,
+    "hasGithubIssues": true,
     "license": "Apache-2.0",
     "image": "screenshot-at-the-window.jpg"
   },
@@ -4600,7 +4802,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 16
+    "stars": 16,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Flo",
@@ -4612,7 +4815,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FloGraph",
@@ -4624,7 +4828,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-FMI",
@@ -4638,6 +4843,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 14,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-1.jpg"
   },
@@ -4652,7 +4858,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 57
+    "stars": 57,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Formula1",
@@ -4663,6 +4870,7 @@
     "description": "Display the driver standings from the current Formula 1 season.",
     "issues": [],
     "stars": 28,
+    "hasGithubIssues": true,
     "tags": [
       "formula1"
     ],
@@ -4680,6 +4888,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "fortnite"
     ],
@@ -4695,7 +4904,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Fortune",
@@ -4709,6 +4919,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Capture2.jpg"
   },
@@ -4721,6 +4932,7 @@
     "description": "Controlling an RGB-LED strip around a smart mirror with or without touch input. It provides features for static background lighting, highly customizable effects on notifications and party lighting.",
     "issues": [],
     "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "led strip",
       "ws2801",
@@ -4742,10 +4954,11 @@
     "maintainerURL": "",
     "description": "[FR] Affiche les flux rss de <a target=\"_blank\" href=\"https://www.francetvinfo.fr/\">franceinfo</a> sur MagicMirror².",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
+      "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "FRINFO.jpg"
   },
@@ -4758,6 +4971,7 @@
     "description": "Display data from your FreeBox v6 server (Revolution) from the french ISP free.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "freebox",
       "monitor"
@@ -4777,6 +4991,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -4791,6 +5006,7 @@
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": false,
     "tags": [
       "callmonitor"
     ],
@@ -4805,6 +5021,7 @@
     "description": "The module builds charts to your FRÖLING pellet boiler based on data from the FRÖLING Connect API. Inspiration and code base comes from <a target=\"_blank\" href=\"https://github.com/TA2k/ioBroker.froeling\">TA2k/ioBroker.froeling</a>.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "magicmirrir",
       "fröling connect",
@@ -4821,10 +5038,11 @@
     "maintainerURL": "",
     "description": "Fronius Solar Module. Display data from a Fronius Solar Inverter.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Fronius2",
@@ -4835,6 +5053,7 @@
     "description": "Displays data from a Fronius Solar Inverter, supports auto-off inverters and can be used as a data source for <a target=\"_blank\" href=\"https://github.com/deg0nz/MMM-EnergyMonitor\">MMM-EnergyMonitor</a>.",
     "issues": [],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "varta",
       "energy",
@@ -4856,6 +5075,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "example_dab.jpg"
   },
@@ -4871,6 +5091,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "examples-example.jpg"
   },
@@ -4883,6 +5104,7 @@
     "description": "Display Gas Station prices.",
     "issues": [],
     "stars": 56,
+    "hasGithubIssues": true,
     "tags": [
       "fuel price",
       "gas station"
@@ -4899,6 +5121,7 @@
     "description": "Shows Today's and Tomorrow's \"funny\" holidays around world (datasource &lt;<a target=\"_blank\" href=\"http://www.webcal.fi%3E\">www.webcal.fi&gt;</a>).",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "calendar"
     ],
@@ -4914,6 +5137,7 @@
     "description": "Displays Budapest public transport information directly from the Futár webservice.",
     "issues": [],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "futar",
       "transport",
@@ -4932,6 +5156,7 @@
     "description": "Displays a grid simulating the <a target=\"_blank\" href=\"https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life\">Game of Life</a>.",
     "issues": [],
     "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "game of life"
     ],
@@ -4948,7 +5173,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GasMonitor",
@@ -4959,6 +5185,7 @@
     "description": "Monitor your gas tank level on your mirror.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "gasmonitor"
     ],
@@ -4976,6 +5203,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "doc-screenshot-MMM-GConnect.jpg"
   },
@@ -4988,6 +5216,7 @@
     "description": "Track your GCP (Google Cloud Platform) activity.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "gcp",
       "billing"
@@ -5007,6 +5236,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Capture.jpg"
   },
@@ -5018,10 +5248,11 @@
     "maintainerURL": "",
     "description": "Displays a Word Clock written in German.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Gestures",
@@ -5034,6 +5265,7 @@
       "No image found."
     ],
     "stars": 40,
+    "hasGithubIssues": true,
     "tags": [
       "gesture",
       "gestures"
@@ -5051,6 +5283,7 @@
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "ghin",
       "golf"
@@ -5067,7 +5300,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GitHub-Notifications",
@@ -5081,7 +5315,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Gitlab-MergeRequests",
@@ -5095,6 +5330,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Sample.jpg"
   },
@@ -5109,7 +5345,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Archived. Repo has been archived at 2020-06-10.",
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Globe",
@@ -5123,6 +5360,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 66,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5135,6 +5373,7 @@
     "description": "Show a list of unread gmails.",
     "issues": [],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "mirror email"
     ],
@@ -5151,7 +5390,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 44
+    "stars": 44,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GoogleAssistant",
@@ -5160,10 +5400,9 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror² with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a> . [Maintained].",
-    "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
-    ],
+    "issues": [],
     "stars": 79,
+    "hasGithubIssues": false,
     "tags": [
       "google assistant",
       "voice",
@@ -5188,7 +5427,8 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore.",
-    "stars": 116
+    "stars": 116,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GoogleBirthdaysProvider",
@@ -5201,6 +5441,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 27,
+    "hasGithubIssues": true,
     "license": "BSD-3-Clause",
     "image": "screenshot.jpg"
   },
@@ -5215,6 +5456,7 @@
       "No image found."
     ],
     "stars": 53,
+    "hasGithubIssues": true,
     "tags": [
       "google",
       "calendar"
@@ -5230,6 +5472,7 @@
     "description": "See what's playing in your Google Cast device.",
     "issues": [],
     "stars": 23,
+    "hasGithubIssues": true,
     "tags": [
       "google",
       "google cast",
@@ -5251,6 +5494,7 @@
       "No image found."
     ],
     "stars": 12,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -5264,6 +5508,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": ".screenshots-theme_insetShadow.jpg"
   },
@@ -5278,6 +5523,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "tags": [
       "google fit"
     ],
@@ -5296,6 +5542,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -5308,7 +5555,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 21
+    "stars": 21,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GoogleMaps-Tracking",
@@ -5319,6 +5567,7 @@
     "description": "Tracking of multiple objects on a google map. Position can be updated by a notification.",
     "issues": [],
     "stars": 13,
+    "hasGithubIssues": true,
     "tags": [
       "google maps",
       "marker"
@@ -5338,6 +5587,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 85,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "img-coordinates.jpg"
   },
@@ -5350,6 +5600,7 @@
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": [],
     "stars": 153,
+    "hasGithubIssues": true,
     "tags": [
       "googlephotos"
     ],
@@ -5366,7 +5617,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 22
+    "stars": 22,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GoogleShoppingList",
@@ -5379,6 +5631,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 21,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5391,6 +5644,7 @@
     "description": "Display Google Tasks with Planned View.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "scheduler"
     ],
@@ -5409,6 +5663,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 7,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "MMM-GoogleTrafficTimes.jpg"
   },
@@ -5421,6 +5676,7 @@
     "description": "Lists travel times to requested locations taking into account Google traffic information with \"classic view\".",
     "issues": [],
     "stars": 12,
+    "hasGithubIssues": true,
     "tags": [
       "traffic",
       "googlemap"
@@ -5437,6 +5693,7 @@
     "description": "Text-to-Speech module with Google Cloud TTS API. Give a voice to your Mirror.",
     "issues": [],
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "text-to-speech",
       "tts",
@@ -5455,7 +5712,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': Error: Invalid version: \"0.1\""
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GPIO-Notifications",
@@ -5466,6 +5724,7 @@
     "description": "Send notifications based on GPIO events. Can be used as PIR module and with rotary encoders.",
     "issues": [],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "gpio"
     ],
@@ -5483,6 +5742,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": ".github-screenshot.jpg"
   },
@@ -5497,7 +5757,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Repo has been archived at 2022-02-27.",
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GrafanaChart",
@@ -5509,7 +5770,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 32
+    "stars": 32,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-GroveGestures",
@@ -5520,6 +5782,7 @@
     "description": "Detecting 3D gesture with GroveGesture Sensor(PAJ7620u2).",
     "issues": [],
     "stars": 33,
+    "hasGithubIssues": true,
     "tags": [
       "grove gesture",
       "gesture",
@@ -5537,6 +5800,7 @@
     "description": "Display data from Growatt Inveter. Support multiple Growatt Inverter types.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "growatt"
     ],
@@ -5557,6 +5821,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -5568,6 +5833,7 @@
     "description": "Display status data from Growatt Inveter. Support multiple Growatt Inverter types. Made to work in conjunction with <a target=\"_blank\" href=\"https://github.com/mumblebaj/MMM-Growatt\">MMM-Growatt</a> or independently.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "growatt"
     ],
@@ -5586,6 +5852,7 @@
       "No image found."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -5600,6 +5867,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 18,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshots-MM_landscape_DefaultTheme.jpg"
   },
@@ -5613,7 +5881,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HappyHours",
@@ -5627,7 +5896,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HASS",
@@ -5638,6 +5908,7 @@
     "description": "An alternate home-assistant integration.",
     "issues": [],
     "stars": 30,
+    "hasGithubIssues": true,
     "tags": [
       "home-assistant"
     ],
@@ -5654,7 +5925,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HebrewCalendar",
@@ -5666,7 +5938,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "Hello-Lucy",
@@ -5678,6 +5951,7 @@
     "issues": [],
     "outdated": "Abandoned. No reactions to issues since years. The installation instructions do not work with up-to-date systems.",
     "stars": 45,
+    "hasGithubIssues": true,
     "tags": [
       "voice recognition",
       "speech to text"
@@ -5695,7 +5969,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 23
+    "stars": 23,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HH-LocalTransport",
@@ -5708,6 +5983,7 @@
       "No image found."
     ],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "hvv"
@@ -5725,6 +6001,7 @@
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "hvv",
@@ -5740,10 +6017,11 @@
     "maintainerURL": "https://github.com/Snille",
     "description": "Module to hide everything on screen. With a lot of features and customizations.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-History",
@@ -5757,6 +6035,7 @@
       "No image found."
     ],
     "stars": 25,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -5769,7 +6048,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Hive",
@@ -5781,7 +6061,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HK-Transport-ETA",
@@ -5792,6 +6073,7 @@
     "description": "Display Estimated Time of Arrival (ETA) of Hong Kong public transport.",
     "issues": [],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "kmb",
       "public transport",
@@ -5812,6 +6094,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "GPL-3.0",
     "image": "docs-result.jpg"
   },
@@ -5825,7 +6108,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 18
+    "stars": 18,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-home-presence",
@@ -5839,6 +6123,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -5851,7 +6136,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 21
+    "stars": 21,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-homeassistant-sensors",
@@ -5861,10 +6147,11 @@
     "maintainerURL": "",
     "description": "Display information from Home Assistant using the home assistant REST API.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 59
+    "stars": 59,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-homeassistant-sensors",
@@ -5875,6 +6162,7 @@
     "description": "Fork of leinich module. Many new features added. Display information from Home Assistant using the home assistant REST API.",
     "issues": [],
     "stars": 59,
+    "hasGithubIssues": true,
     "tags": [
       "home assistant",
       "ha"
@@ -5895,6 +6183,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "screenshots-1.jpg"
   },
@@ -5907,6 +6196,7 @@
     "description": "Displays information from Home Assistant using Home Assistant Templates to render any HTML you want for the module. Includes support for Material Design Icons, Websockets for fast updating, and auto reconnect on Home Assistant restarts. Allows you to show or hide a whole module based on a Home Assistant Template as well.",
     "issues": [],
     "stars": 77,
+    "hasGithubIssues": true,
     "tags": [
       "home assistant"
     ],
@@ -5923,7 +6213,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HomeConnect",
@@ -5936,6 +6227,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "HomeConnectDeveloperApplicationConfiguration.jpg"
   },
@@ -5948,6 +6240,7 @@
     "description": "Shows values and warnings from HomeMatic smart home components and system variables as text and/or icons. Highly flexible and customizable design.",
     "issues": [],
     "stars": 12,
+    "hasGithubIssues": true,
     "tags": [
       "homematic",
       "smarthome"
@@ -5964,6 +6257,7 @@
     "description": "Requests device information from the HomeMatic CCU and displays them grouped by the assigned room.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "homematic",
       "smarthome",
@@ -5980,10 +6274,11 @@
     "maintainerURL": "https://github.com/spitzlbergerj",
     "description": "Shows values from HomeMatic smart home radiator and wall thermostats.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-horoscope",
@@ -5994,6 +6289,7 @@
     "description": "Displays Daily Horoscope.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "horoscope"
     ],
@@ -6012,6 +6308,7 @@
       "No image found."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -6024,7 +6321,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HTMLSnippet",
@@ -6035,7 +6333,9 @@
     "description": "Module to include arbitrary HTML snippets in an iframe (script tags work).",
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
-    ]
+    ],
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HTTPRequestDisplay",
@@ -6048,7 +6348,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore.",
-    "stars": 18
+    "stars": 18,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Hue",
@@ -6060,7 +6361,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 28
+    "stars": 28,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Hue-Controller",
@@ -6072,7 +6374,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Hue-Controller-2",
@@ -6085,6 +6388,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "assets-imgs-MMM-Hue-Controller-2-screenshot.jpg"
   },
@@ -6098,7 +6402,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HumanCalendar",
@@ -6110,7 +6415,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HumanClock",
@@ -6122,7 +6428,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-HVIEW-Snapshot",
@@ -6137,6 +6444,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -6148,6 +6456,7 @@
     "description": "MMM-ICA is a module for connecting to the Swedish grocery store ICA API and get information.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "ica",
       "mat",
@@ -6168,6 +6477,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "MMM-iCal-ToDo.jpg"
   },
@@ -6182,6 +6492,7 @@
       "No image found."
     ],
     "stars": 24,
+    "hasGithubIssues": true,
     "tags": [
       "icloud"
     ],
@@ -6197,7 +6508,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-IDF-LOCALTRANSPORT",
@@ -6208,6 +6520,7 @@
     "description": "Local transport in IDF (STIF) module based on <a target=\"_blank\" href=\"https://github.com/da4throux/MMM-Paris-RATP-PG\">MMM-Paris-RATP-PG</a>.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "paris",
@@ -6229,6 +6542,7 @@
     "description": "Display next bus/tramway/metro/train in the Paris/Ile-de-France région in France using IDFM API.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "idf-transport",
       "public transport",
@@ -6246,6 +6560,7 @@
     "description": "Display estimated departures for public transport stops in the Czech Republic.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "bus stop",
       "tram stop",
@@ -6266,6 +6581,7 @@
       "No image found."
     ],
     "stars": 52,
+    "hasGithubIssues": true,
     "tags": [
       "iframe"
     ],
@@ -6283,6 +6599,7 @@
     ],
     "outdated": "Abandoned. Repo has been archived at 2019-03-08.",
     "stars": 25,
+    "hasGithubIssues": true,
     "tags": [
       "iframe"
     ],
@@ -6298,7 +6615,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-iFrame-Ping",
@@ -6309,6 +6627,7 @@
     "description": "An iFrame module to display any web content to your MagicMirror² (including YouTube, IP cameras, etc.). Several functionalities like auto-refresh, Ping the URL before to display it and last update time display. See also <a target=\"_blank\" href=\"https://forum.magicmirror.builders/topic/9750/mmm-smartwebdisplay-display-web-contents-including-youtube-on-your-mm\">MMM-SmartWebDisplay</a>.",
     "issues": [],
     "stars": 33,
+    "hasGithubIssues": true,
     "tags": [
       "iframe",
       "ping"
@@ -6326,7 +6645,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 20
+    "stars": 20,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Ilevia-Lille",
@@ -6337,6 +6657,7 @@
     "description": "time to the next buses, tramways from a list of stations / lines for Lille (Ilevia).",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "lille",
@@ -6356,6 +6677,7 @@
       "No image found."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "imagefilewatcher"
     ],
@@ -6371,7 +6693,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 40
+    "stars": 41,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ImagesPhotos",
@@ -6382,6 +6705,7 @@
     "description": "Show images and photos.",
     "issues": [],
     "stars": 38,
+    "hasGithubIssues": true,
     "tags": [
       "photos",
       "images"
@@ -6398,6 +6722,7 @@
     "description": "Display real-time estimations for public transport stops in Bratislava, Slovakia.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "bus stop",
       "tram stop",
@@ -6419,6 +6744,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -6429,9 +6755,11 @@
     "maintainerURL": "",
     "description": "The module emits the notification \"INDOOR_TEMPERATURE\" to display the indoor temperature received via a subscribed MQTT topic in the default <a target=\"_blank\" href=\"https://github.com/MagicMirrorOrg/MagicMirror/tree/develop/modules/default/currentweather\">Current Weather module</a>.",
     "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": false,
     "tags": [
       "mqtt",
       "indoor_temperature"
@@ -6448,7 +6776,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Instagram",
@@ -6460,7 +6789,8 @@
     "issues": [
       "No image found."
     ],
-    "stars": 40,
+    "stars": 39,
+    "hasGithubIssues": true,
     "tags": [
       "traffic"
     ],
@@ -6475,6 +6805,7 @@
     "description": "Display your Instagram photos and comments. It makes use of the new Facebook Instagram Graph API.",
     "issues": [],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "instagram",
       "entertainment"
@@ -6510,6 +6841,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "images-1.jpg"
   },
@@ -6523,7 +6855,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "internet-monitor",
@@ -6532,8 +6865,11 @@
     "maintainer": "BrianHepler",
     "maintainerURL": "",
     "description": "Display internet statistics such as strength and speed information.",
-    "issues": [],
+    "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
+    ],
     "stars": 7,
+    "hasGithubIssues": false,
     "tags": [
       "internet",
       "speed"
@@ -6552,6 +6888,7 @@
       "No image found."
     ],
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "iobroker",
       "iot",
@@ -6572,7 +6909,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ip",
@@ -6582,7 +6920,8 @@
     "maintainerURL": "",
     "description": "Display IPv4/IPv6 Network Address.",
     "issues": [],
-    "stars": 23,
+    "stars": 24,
+    "hasGithubIssues": true,
     "tags": [
       "network interfaces",
       "ip"
@@ -6600,7 +6939,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 24
+    "stars": 24,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-IPT",
@@ -6612,7 +6952,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-IQAir",
@@ -6624,7 +6965,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-IronManGIF",
@@ -6637,6 +6979,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Resources-screenshot.jpg"
   },
@@ -6650,7 +6993,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': Error: Invalid version: \"1.0\""
     ],
-    "stars": 5
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ISS",
@@ -6663,7 +7007,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 16
+    "stars": 16,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ISS-Live",
@@ -6673,7 +7018,8 @@
     "maintainerURL": "",
     "description": "Displays live video from the International Space Station.",
     "issues": [],
-    "stars": 3,
+    "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "iss",
       "livestream"
@@ -6709,6 +7055,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshots-floorplan_animated.jpg"
   },
@@ -6723,6 +7070,7 @@
       "No image found."
     ],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "magicmirror-module",
       "eink",
@@ -6741,7 +7089,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Jast",
@@ -6751,7 +7100,8 @@
     "maintainerURL": "https://github.com/jalibu",
     "description": "A simple but powerful vertical, horizontal or static stock ticker based on Yahoo's finance API. Supports international stocks, crypto currencies and index symbols. No API key required.",
     "issues": [],
-    "stars": 61,
+    "stars": 62,
+    "hasGithubIssues": true,
     "tags": [
       "stock",
       "stocks",
@@ -6777,7 +7127,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 19
+    "stars": 19,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-JEOPARDY-Enhanced",
@@ -6789,7 +7140,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-JewishDate",
@@ -6801,7 +7153,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "JIR-tarifa-luz",
@@ -6812,6 +7165,7 @@
     "description": "This module shows the different ranges of electricity prices in Spain during the day.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "javascript"
     ],
@@ -6828,7 +7182,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-JNV",
@@ -6842,6 +7197,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Example_de.jpg"
   },
@@ -6855,7 +7211,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-jokes",
@@ -6865,9 +7222,11 @@
     "maintainerURL": "",
     "description": "Load random jokes from the web.",
     "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": false,
     "tags": [
       "jokes"
     ],
@@ -6884,6 +7243,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 15,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "sample.jpg"
   },
@@ -6898,7 +7258,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. Repo has been archived at 2020-08-03.",
-    "stars": 17
+    "stars": 17,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-JsonGraph",
@@ -6910,7 +7271,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-JSONStatusChecker",
@@ -6921,6 +7283,7 @@
     "description": "Display a True/False status from any JSON source (e.g. VPN Connected/Disconnected).",
     "issues": [],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "status",
       "json",
@@ -6937,7 +7300,8 @@
     "maintainerURL": "",
     "description": "Creates a table filled by a list gathered from a JSON request, and puts all variables of the object in its own table column.",
     "issues": [],
-    "stars": 23,
+    "stars": 24,
+    "hasGithubIssues": true,
     "tags": [
       "json",
       "table"
@@ -6954,6 +7318,7 @@
     "description": "Display data from any Web/REST API that return JSON.",
     "issues": [],
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "remote control",
       "control",
@@ -6975,6 +7340,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "JustForToday_Cropped (1).jpg"
   },
@@ -6988,7 +7354,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 8
+    "stars": 8,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Kanji-Random",
@@ -7001,6 +7368,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -7013,6 +7381,7 @@
     "description": "A module for getting bluetooth remote control and keyboard inputs.",
     "issues": [],
     "stars": 16,
+    "hasGithubIssues": true,
     "tags": [
       "fire stick",
       "remote control",
@@ -7031,7 +7400,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Keypress",
@@ -7044,6 +7414,7 @@
       "No image found."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "numpad",
       "remote control",
@@ -7063,6 +7434,7 @@
     ],
     "outdated": "Abandoned. Repo has been archived at 2020-12-10.",
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "skolmat",
       "köket by sodexo",
@@ -7080,7 +7452,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-kudos",
@@ -7093,6 +7466,7 @@
       "No image found."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "tags": [
       "screen"
     ],
@@ -7106,7 +7480,8 @@
     "maintainerURL": "",
     "description": "Station monitor for the Karlsruhe/Germany local transport (KVV) bus, tram and train system.",
     "issues": [],
-    "stars": 10,
+    "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "kvv",
       "vbk",
@@ -7128,6 +7503,7 @@
       "`package.json` issue: No repository field."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "lametro"
     ],
@@ -7144,7 +7520,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Launch",
@@ -7157,7 +7534,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 16
+    "stars": 16,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LCDControl",
@@ -7170,6 +7548,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "lcd",
       "pir"
@@ -7187,6 +7566,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Screenshot.jpg"
   },
@@ -7198,7 +7578,8 @@
     "maintainerURL": "",
     "description": "Learn a (new foreign language) word every time you look in the mirror.",
     "issues": [],
-    "stars": 6,
+    "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "learn",
       "language",
@@ -7215,7 +7596,8 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "A module to control the color (and pong game parameters) of led strips via MQTT.",
     "issues": [],
-    "stars": 1,
+    "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "led",
       "ws2801",
@@ -7239,6 +7621,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-demo.jpg"
   },
@@ -7252,7 +7635,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LibrespotJava",
@@ -7261,9 +7645,12 @@
     "maintainer": "l3d00m",
     "maintainerURL": "",
     "description": "Display the song you are currently streaming on your <a target=\"_blank\" href=\"https://github.com/librespot-org/librespot-java\">Librespot Java</a> Spotify Speaker.",
-    "issues": [],
+    "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
+    ],
     "outdated": "Abandoned. Repo has been archived at 2023-10-01.",
     "stars": 4,
+    "hasGithubIssues": false,
     "tags": [
       "spotify"
     ],
@@ -7281,7 +7668,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-lichess-daily",
@@ -7293,7 +7681,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Liquipedia-Matches",
@@ -7306,6 +7695,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -7320,6 +7710,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 8,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "Screenshots-Schematics-Potentiometer.jpg"
   },
@@ -7334,6 +7725,7 @@
       "`package.json` issue: No description"
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "spotify lyrics",
       "lyrics",
@@ -7353,6 +7745,7 @@
       "`package.json` issue: No repository field."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "linky",
       "enedis",
@@ -7372,7 +7765,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LocalEvents",
@@ -7384,7 +7778,8 @@
     "issues": [
       "An error occurred while getting information from 'package.json': Error: Invalid version: \"1.0\""
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LocalTemperature",
@@ -7396,7 +7791,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 22
+    "stars": 22,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LocalTransport",
@@ -7408,7 +7804,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 40
+    "stars": 40,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LocalVideoPlayer",
@@ -7420,7 +7817,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LogExt",
@@ -7432,7 +7830,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Logging",
@@ -7445,6 +7844,7 @@
       "No image found."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "logging",
       "logs"
@@ -7461,7 +7861,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LOLESPORTS-SCHEDULES",
@@ -7472,6 +7873,7 @@
     "description": "Display League of Legends league schedules.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "esports",
       "league of legends"
@@ -7488,6 +7890,7 @@
     "description": "Display League of Legends league standings.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "esports",
       "league of legends"
@@ -7507,6 +7910,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "preview.jpg"
   },
@@ -7521,6 +7925,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "Example.jpg"
   },
@@ -7534,7 +7939,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Lottery",
@@ -7547,7 +7953,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. Developer is no longer active. Missing instructions to install dependency 'request'.",
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Loxone",
@@ -7560,6 +7967,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "getControlUuid.jpg"
   },
@@ -7573,7 +7981,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-LunarDate",
@@ -7584,6 +7993,7 @@
     "description": "Displays the lunar date of today (Chinese Zodiac).",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "lunar date"
     ],
@@ -7600,6 +8010,7 @@
     "issues": [],
     "outdated": "Deprecated. Doesn't work anymore (API is down).",
     "stars": 17,
+    "hasGithubIssues": true,
     "tags": [
       "mirror ui",
       "modular"
@@ -7617,7 +8028,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-lyft",
@@ -7629,7 +8041,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 8
+    "stars": 8,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MacAddressScan",
@@ -7640,6 +8053,7 @@
     "description": "A module which determines the status of devices on the network based on their MAC address. It can also look up devices by IP addresses or hostnames. This module is an enhanced clone of the excellent MMM-NetworkScanner module by <a target=\"_blank\" href=\"https://github.com/ianperrin\">Ian Perrin</a>.",
     "issues": [],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "network",
       "scanner"
@@ -7661,6 +8075,7 @@
       "No image found."
     ],
     "stars": 17,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -7676,6 +8091,7 @@
       "No image found."
     ],
     "stars": 68,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -7689,7 +8105,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Outdated: Only works for Rio 2016 Summer Olympics.",
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MagicMirror-Ping-Module",
@@ -7701,7 +8118,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MagicMirror-QuoteCatalog",
@@ -7712,6 +8130,7 @@
     "description": "Displays a random quote from various movies, books, and people.",
     "issues": [],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "quotes"
     ],
@@ -7728,7 +8147,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 41
+    "stars": 43,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MagicSuperHero",
@@ -7743,6 +8163,7 @@
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -7757,6 +8178,7 @@
       "`package.json` issue: No license field."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "email",
       "messages",
@@ -7773,6 +8195,7 @@
     "description": "Display the current marine weather (water and air temperatures, wind and wave conditions).",
     "issues": [],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "marine weather",
       "sea weather",
@@ -7799,6 +8222,7 @@
       "No image found."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "markdown",
       "productivity"
@@ -7816,7 +8240,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MarsWeather",
@@ -7831,7 +8256,8 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”.",
       "No image found."
     ],
-    "stars": 0,
+    "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -7845,6 +8271,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "skolmat",
       "mashie",
@@ -7863,7 +8290,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Mattermost",
@@ -7877,6 +8305,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "accesstoken.jpg"
   },
@@ -7890,7 +8319,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MBTA",
@@ -7902,7 +8332,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MD",
@@ -7914,7 +8345,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Memo",
@@ -7926,7 +8358,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 33
+    "stars": 34,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Meniny",
@@ -7936,9 +8369,11 @@
     "maintainerURL": "",
     "description": "Display Swedish name of day.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MensaMax",
@@ -7951,6 +8386,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "mensmax",
       "speiseplan"
@@ -7967,7 +8403,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MercedesMe",
@@ -7978,6 +8415,7 @@
     "description": "Displays EV/Fuel status and Range of Mercedes cars.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "mercedes"
     ],
@@ -7994,7 +8432,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MHZ19",
@@ -8009,6 +8448,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": ".github-example.jpg"
   },
@@ -8022,7 +8462,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MicrosoftToDo",
@@ -8033,6 +8474,7 @@
     "description": "Displays your Microsoft To Do tasks on your mirror.",
     "issues": [],
     "stars": 71,
+    "hasGithubIssues": true,
     "tags": [
       "todo",
       "microsoft"
@@ -8050,7 +8492,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MinecraftStatus",
@@ -8061,6 +8504,7 @@
     "description": "Player status of Minecraft server.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "minecraft"
     ],
@@ -8077,7 +8521,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MirrorMirrorOnTheWall",
@@ -8090,6 +8535,7 @@
       "No image found."
     ],
     "stars": 88,
+    "hasGithubIssues": true,
     "tags": [
       "alexa",
       "aws iot",
@@ -8110,7 +8556,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "mm-hsl-timetable",
@@ -8122,7 +8569,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "mm-music-player",
@@ -8135,7 +8583,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. No installation instructions. It no longer seems to work.",
-    "stars": 19
+    "stars": 19,
+    "hasGithubIssues": true
   },
   {
     "name": "MM-Remote",
@@ -8147,7 +8596,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 52
+    "stars": 54,
+    "hasGithubIssues": true
   },
   {
     "name": "mm-tkl-timetable",
@@ -8157,9 +8607,11 @@
     "maintainerURL": "",
     "description": "Display departures for public transport in Tampere region - Finland.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM_ncdeck",
@@ -8174,7 +8626,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-amazon-photos",
@@ -8187,6 +8640,7 @@
       "`package.json` issue: No repository field."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "amazon-photos"
     ],
@@ -8205,6 +8659,7 @@
       "No image found."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -8218,7 +8673,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Deprecated. food2fork API isn't reachable anymore.",
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-helium-wallet",
@@ -8232,6 +8688,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot-uah.jpg"
   },
@@ -8247,6 +8704,7 @@
       "No image found."
     ],
     "stars": 42,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -8260,6 +8718,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "brickell-station-colored.jpg"
   },
@@ -8272,6 +8731,7 @@
     "description": "Display Minecraft server status and shows list of active players.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "minecraft",
       "game stats"
@@ -8287,10 +8747,12 @@
     "maintainerURL": "",
     "description": "Show an image of the current moon phase.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
     "outdated": "Abandoned. Repo has been archived at 2023-10-16.",
-    "stars": 19
+    "stars": 19,
+    "hasGithubIssues": false
   },
   {
     "name": "mmm-nest-cameras",
@@ -8302,7 +8764,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-nest-status",
@@ -8315,6 +8778,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 36,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "icons-icon-fan-white.jpg"
   },
@@ -8327,6 +8791,7 @@
     "description": "Display current electrical spot prices in northen Europe (also works in Germany).",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "eon",
       "electricity",
@@ -8345,7 +8810,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 32
+    "stars": 32,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-pins",
@@ -8359,6 +8825,7 @@
       "No image found."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "pins"
     ],
@@ -8388,9 +8855,11 @@
     "maintainerURL": "",
     "description": "Display a scrolling stocks ticker.",
     "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": false,
     "tags": [
       "stock",
       "stocks"
@@ -8409,6 +8878,7 @@
       "No image found."
     ],
     "stars": 39,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -8424,6 +8894,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -8436,7 +8907,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-udr",
@@ -8448,7 +8920,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "mmm-uk-pollen-forecast",
@@ -8461,6 +8934,7 @@
       "`package.json` issue: No repository field."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "pollen",
       "count",
@@ -8494,6 +8968,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 29,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "Screenshot1.jpg"
   },
@@ -8507,7 +8982,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "mmpm",
@@ -8519,7 +8995,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 161
+    "stars": 164,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-mmpm",
@@ -8532,6 +9009,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "mmpm",
       "magicmirror-package-manager",
@@ -8561,7 +9039,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 13
+    "stars": 14,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ModuleHandler",
@@ -8575,6 +9054,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-screenshot2.jpg"
   },
@@ -8589,6 +9069,7 @@
       "No image found."
     ],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "monkeypatch"
     ],
@@ -8603,6 +9084,7 @@
     "description": "Create schedules to control when other modules are shown, hidden or dimmed and to send notifications to other modules.",
     "issues": [],
     "stars": 95,
+    "hasGithubIssues": true,
     "tags": [
       "scheduler"
     ],
@@ -8620,6 +9102,7 @@
       "No image found."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "button",
       "raspberry"
@@ -8636,7 +9119,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 19
+    "stars": 21,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Moon",
@@ -8648,7 +9132,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MoonPhase",
@@ -8661,7 +9146,8 @@
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 46,
+    "stars": 49,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "images-2019-06-22-example-moons.jpg"
   },
@@ -8673,7 +9159,8 @@
     "maintainerURL": "https://github.com/btastic",
     "description": "Moonraker API integration for Klipper powered 3D printers.",
     "issues": [],
-    "stars": 2,
+    "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "moonraker",
       "klipper",
@@ -8697,6 +9184,7 @@
       "No compatible or wrong license field in 'package.json'. Without that, we can't use an image."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT License"
   },
   {
@@ -8710,6 +9198,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "motion",
       "control"
@@ -8727,7 +9216,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. No installation instructions.",
-    "stars": 49
+    "stars": 49,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MotionDetector",
@@ -8739,7 +9229,8 @@
     "issues": [
       "No image found."
     ],
-    "stars": 45,
+    "stars": 46,
+    "hasGithubIssues": true,
     "tags": [
       "motion detection"
     ],
@@ -8758,7 +9249,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MovieInfo",
@@ -8769,6 +9261,7 @@
     "description": "Display information about upcoming movies (title, cover, genre, rating, plot) or discover movies with custom filters.",
     "issues": [],
     "stars": 13,
+    "hasGithubIssues": true,
     "tags": [
       "upcoming movies"
     ],
@@ -8787,6 +9280,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 17,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "MMM-MovieListings_left.jpg"
   },
@@ -8802,6 +9296,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 10,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "Capture1.jpg"
   },
@@ -8815,9 +9310,11 @@
     "issues": [
       "`package.json` issue: license should be a valid SPDX license expression",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No compatible or wrong license field in 'package.json'. Without that, we can't use an image."
     ],
     "stars": 2,
+    "hasGithubIssues": false,
     "license": "GPLv3"
   },
   {
@@ -8835,6 +9332,7 @@
     ],
     "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore. Use MMM-Mopidy-MPD instead.",
     "stars": 13,
+    "hasGithubIssues": true,
     "license": "MIT License"
   },
   {
@@ -8846,6 +9344,7 @@
     "description": "Play m3u radio streams. Controllable by touch and notification.",
     "issues": [],
     "stars": 8,
+    "hasGithubIssues": true,
     "tags": [
       "sound",
       "radio",
@@ -8867,6 +9366,7 @@
       "No image found."
     ],
     "stars": 5,
+    "hasGithubIssues": true,
     "tags": [
       "buttons",
       "touch"
@@ -8883,7 +9383,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MQTT",
@@ -8894,6 +9395,7 @@
     "description": "A module that subscribes topics from MQTT message queues, and displays the payload values in a table, with configurable labels.",
     "issues": [],
     "stars": 55,
+    "hasGithubIssues": true,
     "tags": [
       "smarthome",
       "home-automation",
@@ -8915,7 +9417,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MQTT-Publisher",
@@ -8929,7 +9432,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MQTTbind",
@@ -8939,7 +9443,8 @@
     "maintainerURL": "",
     "description": "A module to subscribe to MQTT topics and forward the payload (as it is) as notification and vice versa. Features QoS, Clean Session, Retained Messages and Shortcuts.",
     "issues": [],
-    "stars": 1,
+    "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "mqtt"
     ],
@@ -8954,7 +9459,8 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "A powerful module that subscribes to MQTT broker and read/send MQTT messages and MM Notifications with a lot of individual setup/rules. Allows you to integrate MM into smart home like Home Assistant. Powerful automation with structured Noti and MQTT dictionaries rules (e.g. one mqtt message could trigger many predefined noti, and one mm-noti could trigger different predefined mqtt messages).",
     "issues": [],
-    "stars": 20,
+    "stars": 21,
+    "hasGithubIssues": true,
     "tags": [
       "mqtt"
     ],
@@ -8973,7 +9479,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 13
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MTA-NextBus",
@@ -8988,6 +9495,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -8999,6 +9507,7 @@
     "description": "Fetches a random MTG card on a configured interval and displays this.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "mtg",
       "scryfall"
@@ -9016,7 +9525,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-mumble",
@@ -9028,7 +9538,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MusicButler",
@@ -9040,7 +9551,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MusicOnDemand",
@@ -9051,6 +9563,7 @@
     "description": "Play music with deezer on a browser in the background.",
     "issues": [],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "musicondemand",
       "music",
@@ -9070,6 +9583,7 @@
       "`package.json` issue: No description"
     ],
     "stars": 25,
+    "hasGithubIssues": true,
     "tags": [
       "public transport",
       "mvv",
@@ -9087,6 +9601,7 @@
     "description": "Module to display public transport 🚐 from Munich in Germany.",
     "issues": [],
     "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "public transport",
       "mvg",
@@ -9105,7 +9620,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 57
+    "stars": 57,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyCommute",
@@ -9116,6 +9632,7 @@
     "description": "Displays your commute times to several destinations. Highly configurable.",
     "issues": [],
     "stars": 37,
+    "hasGithubIssues": true,
     "tags": [
       "traffic",
       "commute"
@@ -10097,17 +10614,16 @@
     "maintainer": "Jan-Bart",
     "maintainerURL": "",
     "description": "Display upcoming trains between 2 NMBS/SNCB stations (Belgium).",
-    "issues": [
-      "`package.json` issue: license should be a valid SPDX license expression",
-      "No compatible or wrong license field in 'package.json'. Without that, we can't use an image."
-    ],
+    "issues": [],
     "stars": 1,
     "tags": [
       "nmbs",
-      "public transport belgium",
+      "public transport",
+      "belgium",
       "sncb"
     ],
-    "license": "GPLv3"
+    "license": "GPL-3.0-only",
+    "image": "screenshots-screenshot.jpg"
   },
   {
     "name": "MMM-NOAA3",
@@ -10668,6 +11184,7 @@
     ],
     "outdated": "Abandoned. No reactions to issues since years. Only works with API version 2.5!",
     "stars": 38,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "icons-iconsets.jpg"
   },
@@ -11801,8 +12318,8 @@
     "stars": 39,
     "tags": [
       "public transport",
-      "public transport berlin",
-      "public transport brandenburg"
+      "berlin",
+      "brandenburg"
     ],
     "license": "MIT",
     "image": "img-MMM-PublicTransport_screenshot.jpg"
@@ -13703,6 +14220,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -14534,11 +15052,11 @@
     "maintainerURL": "https://github.com/vita10gy",
     "description": "Display wait times and upcoming park hours from theme parks including Disney Parks, Universal Studios, SeaWorld, Six Flags, and dozens more.",
     "issues": [
-      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": false,
     "license": "MIT",
     "image": "wait-times-demo.jpg"
   },
@@ -15978,7 +16496,7 @@
       "vw"
     ],
     "license": "MIT",
-    "image": "git-ProgressBar_fluent.jpg"
+    "image": "git-normal_screenshot.jpg"
   },
   {
     "name": "MMM-WeeklySchedule",
