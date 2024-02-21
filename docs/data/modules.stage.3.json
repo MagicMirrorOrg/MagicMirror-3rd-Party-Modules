@@ -8,6 +8,7 @@
     "description": "Display Xiaomi LYWSDCGQ 01ZM Temperature and Humidity sensor values directly AND Nova SDS011 PM Air Quality sensor data.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "xiaomi",
       "temperature",
@@ -30,6 +31,7 @@
       "No image found."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "1 second a day"
     ],
@@ -44,6 +46,7 @@
     "description": "Show 4 consecutive 12-hr forecast, provided by <a target=\"_blank\" href=\"https://www.weather.gov/documentation/services-web-api\">NOAA National Weather Service API</a>. No user registration nor API-key required.",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "weather",
       "forecast",
@@ -61,6 +64,7 @@
     "description": "Simple display of today, tomorrow &amp; next-day, designed to work with MMM-Weather-Now. Now uses Open Weather as WeatherBit reduced the free service to an unusable level :( If you installed an older version ( &lt; 18 Oct 2022 ), please update and get a new api key!",
     "issues": [],
     "stars": 32,
+    "hasGithubIssues": true,
     "tags": [
       "weather",
       "forecast"
@@ -78,7 +82,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AC-aseag",
@@ -92,6 +97,7 @@
       "No image found."
     ],
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -101,8 +107,11 @@
     "maintainer": "maxbethge",
     "maintainerURL": "",
     "description": "Display weather information using the AccuWeather API.",
-    "issues": [],
-    "stars": 2,
+    "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
+    ],
+    "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "weather"
     ],
@@ -118,6 +127,7 @@
     "description": "Display a candle burning down towards a specific date (e.g. an advent candle).",
     "issues": [],
     "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "buttons"
     ],
@@ -134,7 +144,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AirbarHelper",
@@ -149,6 +160,7 @@
       "No image found."
     ],
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -162,6 +174,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "air polution",
       "airly"
@@ -177,6 +190,7 @@
     "description": "Simple display of air quality based on the US AirNow API.",
     "issues": [],
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "air",
       "quality"
@@ -193,6 +207,7 @@
     "description": "Display the air quality index for a certain location.",
     "issues": [],
     "stars": 31,
+    "hasGithubIssues": true,
     "tags": [
       "aqi",
       "air-quality"
@@ -208,9 +223,11 @@
     "maintainerURL": "",
     "description": "Fork from CFenner's repo and extended with a new layout setting to print location data as a header.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Airtable",
@@ -221,6 +238,7 @@
     "description": "Module to display tables from Airtable.",
     "issues": [],
     "stars": 13,
+    "hasGithubIssues": true,
     "tags": [
       "airtable",
       "magic-mirror-table",
@@ -238,6 +256,7 @@
     "description": "Alarm Clock Module (touch and non-touch).",
     "issues": [],
     "stars": 47,
+    "hasGithubIssues": true,
     "tags": [
       "alarm clock"
     ],
@@ -257,6 +276,7 @@
       "No image found."
     ],
     "stars": 51,
+    "hasGithubIssues": true,
     "license": "MIT"
   },
   {
@@ -268,6 +288,7 @@
     "description": "The MMM-AlexaControl module allows you to control your Mirror with Alexa (every device that support Wemos devices). You can turn it on and off, change the page and send notifications to other modules.",
     "issues": [],
     "stars": 41,
+    "hasGithubIssues": true,
     "tags": [
       "alexacontrol",
       "wemos",
@@ -287,6 +308,7 @@
       "No image found."
     ],
     "stars": 17,
+    "hasGithubIssues": true,
     "tags": [
       "alexaonoff",
       "wemos",
@@ -305,6 +327,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "allsvenskan",
       "football",
@@ -322,6 +345,7 @@
     "description": "Ambient brightness detection and Auto-Brightness of the mirror modules accordingly.",
     "issues": [],
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "ambient brightness",
       "ambient",
@@ -341,7 +365,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "anniversarymodule",
@@ -353,7 +378,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AnyList",
@@ -366,6 +392,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "anylist.jpg"
   },
@@ -379,7 +406,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AOE2-STATS",
@@ -393,6 +421,7 @@
       "`package.json` issue: No license field."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "aoe2",
       "age of empire 2"
@@ -409,6 +438,7 @@
       "No image found."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "apex legends"
     ],
@@ -425,6 +455,7 @@
       "No image found."
     ],
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "remote control",
       "control",
@@ -442,7 +473,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 11
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AQI",
@@ -452,7 +484,6 @@
     "maintainerURL": "",
     "description": "Module to get the Air Quality Index (AQI) using the World Air Quality Index project API.",
     "issues": [],
-    "stars": 10,
     "tags": [
       "transport",
       "air",
@@ -9650,7 +9681,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-mycroft-wakeword",
@@ -9660,9 +9692,11 @@
     "maintainerURL": "https://github.com/smartgic",
     "description": "When a Mycroft AI wake word is detected, an image is displayed and when the recording is done the image disappears.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MyDutchWeather",
@@ -9673,6 +9707,7 @@
     "description": "Displays local Dutch weather from the KNMI 10-minutes netwerk.",
     "issues": [],
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "weer",
       "weerbericht",
@@ -9692,6 +9727,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 30,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -9704,6 +9740,7 @@
     "description": "Displays Minecraft server(s) informations.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "raspberry",
       "minecraft"
@@ -9719,9 +9756,11 @@
     "maintainerURL": "",
     "description": "Display a compact monthly calendar view.",
     "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+      "There is no `package.json`. We need this file to gather information about the module for the module list page.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MyPrayerTimes",
@@ -9734,6 +9773,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -9746,6 +9786,7 @@
     "description": "Module to display today's scores for your favourite teams across multiple sports.",
     "issues": [],
     "stars": 63,
+    "hasGithubIssues": true,
     "tags": [
       "sports"
     ],
@@ -9763,6 +9804,7 @@
       "No image found."
     ],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "raspberry",
       "sensehat"
@@ -9778,6 +9820,7 @@
     "description": "Connect to a MySQL database, run a select query (one value) and display the result.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "mysql"
     ],
@@ -9793,6 +9836,7 @@
     "description": "Run a SQL SELECT against a MySQL database and display the results in an HTML table.",
     "issues": [],
     "stars": 8,
+    "hasGithubIssues": true,
     "tags": [
       "mysql"
     ],
@@ -9812,7 +9856,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyStudyLife",
@@ -9823,6 +9868,7 @@
     "description": "Displays upcoming classes, tasks and exams from the <a target=\"_blank\" href=\"https://www.mystudylife.com\">My Study Life</a> app and website.",
     "issues": [],
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "mystudylife",
       "study"
@@ -9840,7 +9886,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyTraktSeries",
@@ -9853,6 +9900,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "preview.jpg"
   },
@@ -9869,6 +9917,7 @@
       "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
     ],
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "example.jpg"
   },
@@ -9885,6 +9934,7 @@
       "No image found."
     ],
     "stars": 7,
+    "hasGithubIssues": true,
     "license": "ISC"
   },
   {
@@ -9896,6 +9946,7 @@
     "description": "A video player with buttons to select a video to play.",
     "issues": [],
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "video",
       "player"
@@ -9912,6 +9963,7 @@
     "description": "Displays information about your Volvo from the Volvo Connect API.",
     "issues": [],
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "volvo",
       "myvolvo",
@@ -9932,6 +9984,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "node_modules-npm-node_modules-read-node_modules-mute-stream-coverage-lcov-report-sort-arrow-sprite.jpg"
   },
@@ -9942,8 +9995,11 @@
     "maintainer": "martinkooij",
     "maintainerURL": "",
     "description": "Weather module based on the Weatherbit API.",
-    "issues": [],
+    "issues": [
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
+    ],
     "stars": 4,
+    "hasGithubIssues": false,
     "tags": [
       "\"magic",
       "mirror\"",
@@ -9964,6 +10020,7 @@
       "No image found."
     ],
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "words",
       "random"
@@ -9979,7 +10036,8 @@
     "description": "A MagicMirror² Module for Nagios.",
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2023-03-09.",
-    "stars": 6,
+    "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "nagios"
     ],
@@ -9996,7 +10054,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Namnsdag",
@@ -10011,7 +10070,8 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Nantes-TAN",
@@ -10022,6 +10082,7 @@
     "description": "time to the next buses, tramways or navibus from a list of stations / lines for Nantes (TAN).",
     "issues": [],
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "paris",
@@ -10041,7 +10102,8 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-nasaastropic",
@@ -10056,6 +10118,7 @@
     ],
     "outdated": "Abandoned. No reactions to issues and PRs since years. Uses deprecated package 'request'. Use MMM-APOD instead.",
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "nasa",
       "astronomy",
@@ -10073,7 +10136,8 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-NatureRemo",
@@ -10084,8 +10148,7 @@
     "description": "Displays sensor data collected by <a target=\"_blank\" href=\"https://en.nature.global\">Nature Remo</a> devices.",
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
-    ],
-    "stars": 1
+    ]
   },
   {
     "name": "MMM-Navigate",

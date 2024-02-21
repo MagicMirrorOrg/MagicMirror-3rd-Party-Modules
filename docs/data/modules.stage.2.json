@@ -7,7 +7,8 @@
     "maintainerURL": "",
     "description": "Display Xiaomi LYWSDCGQ 01ZM Temperature and Humidity sensor values directly AND Nova SDS011 PM Air Quality sensor data.",
     "issues": [],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-1-Second-A-Day",
@@ -17,7 +18,8 @@
     "maintainerURL": "https://github.com/GaryLChew",
     "description": "Record daily 1-second-clips and automatically generate a 1-second-a-day video of your life.",
     "issues": [],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-2Day-NOAA-Forecast",
@@ -27,7 +29,8 @@
     "maintainerURL": "https://github.com/jinserk",
     "description": "Show 4 consecutive 12-hr forecast, provided by <a target=\"_blank\" href=\"https://www.weather.gov/documentation/services-web-api\">NOAA National Weather Service API</a>. No user registration nor API-key required.",
     "issues": [],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-3Day-Forecast",
@@ -37,7 +40,8 @@
     "maintainerURL": "https://github.com/nigel-daniels",
     "description": "Simple display of today, tomorrow &amp; next-day, designed to work with MMM-Weather-Now. Now uses Open Weather as WeatherBit reduced the free service to an unusable level :( If you installed an older version ( &lt; 18 Oct 2022 ), please update and get a new api key!",
     "issues": [],
-    "stars": 32
+    "stars": 32,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AareGuru",
@@ -47,7 +51,8 @@
     "maintainerURL": "https://github.com/buge",
     "description": "Displays the temperature from <a target=\"_blank\" href=\"https://aare.guru\">aare.guru</a> for the river Aare in Switzerland (in Brienz, Interlaken, Thun, Bern, Hagneck, Biel or Brugg).",
     "issues": [],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AC-aseag",
@@ -57,7 +62,8 @@
     "maintainerURL": "https://github.com/j-hiller",
     "description": "Displays departures for ASEAG busses in Aachen, Germany.",
     "issues": [],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AccuWeatherForecastDeluxe",
@@ -67,7 +73,8 @@
     "maintainerURL": "",
     "description": "Display weather information using the AccuWeather API.",
     "issues": [],
-    "stars": 2
+    "stars": 3,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Advent",
@@ -77,7 +84,8 @@
     "maintainerURL": "",
     "description": "Display a candle burning down towards a specific date (e.g. an advent candle).",
     "issues": [],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-air-raid-monitor-ua",
@@ -87,7 +95,8 @@
     "maintainerURL": "https://github.com/PavlenkoM",
     "description": "This module shows the current status of air raid sirens in Ukraine.",
     "issues": [],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AirbarHelper",
@@ -97,7 +106,8 @@
     "maintainerURL": "",
     "description": "Module to add touch input to your mirror using a ~$50 usb plug and play sensor.",
     "issues": [],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Airly",
@@ -107,7 +117,8 @@
     "maintainerURL": "",
     "description": "Air pollution in Polish cities. Data from <a target=\"_blank\" href=\"https://airly.eu/\">airly</a>.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AirNow",
@@ -117,7 +128,8 @@
     "maintainerURL": "https://github.com/nigel-daniels",
     "description": "Simple display of air quality based on the US AirNow API.",
     "issues": [],
-    "stars": 6
+    "stars": 6,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AirQuality",
@@ -127,7 +139,8 @@
     "maintainerURL": "",
     "description": "Display the air quality index for a certain location.",
     "issues": [],
-    "stars": 31
+    "stars": 31,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AirQuality",
@@ -137,7 +150,8 @@
     "maintainerURL": "",
     "description": "Fork from CFenner's repo and extended with a new layout setting to print location data as a header.",
     "issues": [],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-Airtable",
@@ -147,7 +161,8 @@
     "maintainerURL": "",
     "description": "Module to display tables from Airtable.",
     "issues": [],
-    "stars": 13
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AlarmClock",
@@ -157,7 +172,8 @@
     "maintainerURL": "",
     "description": "Alarm Clock Module (touch and non-touch).",
     "issues": [],
-    "stars": 47
+    "stars": 47,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-alexa",
@@ -167,7 +183,8 @@
     "maintainerURL": "",
     "description": "Amazon Alexa integration with using JavaScript only.",
     "issues": [],
-    "stars": 51
+    "stars": 51,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AlexaControl",
@@ -177,7 +194,8 @@
     "maintainerURL": "",
     "description": "The MMM-AlexaControl module allows you to control your Mirror with Alexa (every device that support Wemos devices). You can turn it on and off, change the page and send notifications to other modules.",
     "issues": [],
-    "stars": 41
+    "stars": 41,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AlexaOnOff",
@@ -187,7 +205,8 @@
     "maintainerURL": "",
     "description": "Simple Mirror Control from External Home Assistant (Alexa/Google Home/HASS.io).",
     "issues": [],
-    "stars": 17
+    "stars": 17,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AllsvenskanStandings",
@@ -197,7 +216,8 @@
     "maintainerURL": "",
     "description": "Shows the current standings of Allsvenskan (the top Swedish football league).",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AmbientBrightnessDetection",
@@ -207,7 +227,8 @@
     "maintainerURL": "https://github.com/eric-h-st",
     "description": "Ambient brightness detection and Auto-Brightness of the mirror modules accordingly.",
     "issues": [],
-    "stars": 10
+    "stars": 10,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AmLich",
@@ -217,7 +238,8 @@
     "maintainerURL": "",
     "description": "Am Lich - Lunar Date - Vietnamese Language.",
     "issues": [],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "anniversarymodule",
@@ -227,7 +249,8 @@
     "maintainerURL": "",
     "description": "Show a table of upcoming birthdays for a list of people you provided. Nice not to forget birthdays.",
     "issues": [],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AnyList",
@@ -237,7 +260,8 @@
     "maintainerURL": "",
     "description": "Module to display a list from the AnyList app.",
     "issues": [],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AoC",
@@ -247,7 +271,8 @@
     "maintainerURL": "https://github.com/JonasTriki",
     "description": "Displays a private leaderboard in Advent of Code.",
     "issues": [],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AOE2-STATS",
@@ -257,7 +282,8 @@
     "maintainerURL": "",
     "description": "Display Age of Empire stats by player ID.",
     "issues": [],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-ApexLegends",
@@ -267,7 +293,8 @@
     "maintainerURL": "",
     "description": "Shows stats (level, kills and global rank) for players of Apex Legends.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Api",
@@ -277,7 +304,8 @@
     "maintainerURL": "",
     "description": "A somewhat RESTful(ish) API.",
     "issues": [],
-    "stars": 18
+    "stars": 18,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-APOD",
@@ -287,7 +315,8 @@
     "maintainerURL": "",
     "description": "Display the last Astronomy Picture Of the Day (APOD). This is an evolution of MMM-nasaastropic. Supports image and video and display title, description and copyright.",
     "issues": [],
-    "stars": 11
+    "stars": 13,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-AQI",
@@ -296,8 +325,7 @@
     "maintainer": "ryck",
     "maintainerURL": "",
     "description": "Module to get the Air Quality Index (AQI) using the World Air Quality Index project API.",
-    "issues": [],
-    "stars": 10
+    "issues": []
   },
   {
     "name": "MMM-aqicn",
@@ -6816,7 +6844,8 @@
     "maintainerURL": "",
     "description": "A module that connects to the Mycroft messagebus.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-mycroft-wakeword",
@@ -6826,7 +6855,8 @@
     "maintainerURL": "https://github.com/smartgic",
     "description": "When a Mycroft AI wake word is detected, an image is displayed and when the recording is done the image disappears.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MyDutchWeather",
@@ -6836,7 +6866,8 @@
     "maintainerURL": "",
     "description": "Displays local Dutch weather from the KNMI 10-minutes netwerk.",
     "issues": [],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyGarbage",
@@ -6846,7 +6877,8 @@
     "maintainerURL": "",
     "description": "Displays your Custom Garbage Calendar.",
     "issues": [],
-    "stars": 30
+    "stars": 30,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyMinecraft",
@@ -6856,7 +6888,8 @@
     "maintainerURL": "https://github.com/framboise-pi",
     "description": "Displays Minecraft server(s) informations.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyMonthlyCalendar",
@@ -6866,7 +6899,8 @@
     "maintainerURL": "",
     "description": "Display a compact monthly calendar view.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MyPrayerTimes",
@@ -6876,7 +6910,8 @@
     "maintainerURL": "",
     "description": "MyPrayerTimes is a simple module, that calculate prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API.",
     "issues": [],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyScoreboard",
@@ -6886,7 +6921,8 @@
     "maintainerURL": "",
     "description": "Module to display today's scores for your favourite teams across multiple sports.",
     "issues": [],
-    "stars": 63
+    "stars": 63,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MySenseHat",
@@ -6896,7 +6932,8 @@
     "maintainerURL": "https://github.com/framboise-pi",
     "description": "Raspberry Pi SenseHat Module. Show sensors values, display pixelart and more.",
     "issues": [],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MySQLData",
@@ -6906,7 +6943,8 @@
     "maintainerURL": "",
     "description": "Connect to a MySQL database, run a select query (one value) and display the result.",
     "issues": [],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MysqlQuery",
@@ -6916,7 +6954,8 @@
     "maintainerURL": "",
     "description": "Run a SQL SELECT against a MySQL database and display the results in an HTML table.",
     "issues": [],
-    "stars": 8
+    "stars": 8,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyStandings",
@@ -6926,7 +6965,8 @@
     "maintainerURL": "",
     "description": "Display ESPN standings for major US Sports and international soccer leagues.",
     "issues": [],
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyStudyLife",
@@ -6936,7 +6976,8 @@
     "maintainerURL": "",
     "description": "Displays upcoming classes, tasks and exams from the <a target=\"_blank\" href=\"https://www.mystudylife.com\">My Study Life</a> app and website.",
     "issues": [],
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyTraffic",
@@ -6946,7 +6987,8 @@
     "maintainerURL": "",
     "description": "Real Time Dutch traffic information from the ANWB. Module is dead for now (there is a PR which seems to fix it).",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyTraktSeries",
@@ -6956,7 +6998,8 @@
     "maintainerURL": "",
     "description": "Display your show's watch progress in a private list in your <a target=\"_blank\" href=\"https://trakt.tv\">trakt.tv</a> account.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyTransitTime",
@@ -6966,7 +7009,8 @@
     "maintainerURL": "",
     "description": "Display step by step directions to a location and provide an estimated time of arrival using Google Maps API.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyTTC",
@@ -6976,7 +7020,8 @@
     "maintainerURL": "",
     "description": "Displays Toronto Transit schedule for your selected routes and stops.",
     "issues": [],
-    "stars": 7
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyVideoPlayer",
@@ -6986,7 +7031,8 @@
     "maintainerURL": "",
     "description": "A video player with buttons to select a video to play.",
     "issues": [],
-    "stars": 2
+    "stars": 2,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyVolvo",
@@ -6996,7 +7042,8 @@
     "maintainerURL": "https://github.com/mazim-co",
     "description": "Displays information about your Volvo from the Volvo Connect API.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyWastePickup",
@@ -7006,7 +7053,8 @@
     "maintainerURL": "",
     "description": "Displays your schedule for Toronto curb-side waste collection.",
     "issues": [],
-    "stars": 11
+    "stars": 11,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-MyWeather",
@@ -7016,7 +7064,8 @@
     "maintainerURL": "",
     "description": "Weather module based on the Weatherbit API.",
     "issues": [],
-    "stars": 4
+    "stars": 4,
+    "hasGithubIssues": false
   },
   {
     "name": "MMM-MyWordsRandomed",
@@ -7026,7 +7075,8 @@
     "maintainerURL": "https://github.com/framboise-pi",
     "description": "Display sentences built with randomed words.",
     "issues": [],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-nagios",
@@ -7037,7 +7087,8 @@
     "description": "A MagicMirror² Module for Nagios.",
     "issues": [],
     "outdated": "Abandoned. Repo has been archived at 2023-03-09.",
-    "stars": 6
+    "stars": 7,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-NameDay",
@@ -7047,7 +7098,8 @@
     "maintainerURL": "",
     "description": "Nameday module (multiple countries).",
     "issues": [],
-    "stars": 5
+    "stars": 5,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Namnsdag",
@@ -7057,7 +7109,8 @@
     "maintainerURL": "https://github.com/Menturan",
     "description": "Displays Swedish name of the day.",
     "issues": [],
-    "stars": 0
+    "stars": 0,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-Nantes-TAN",
@@ -7067,7 +7120,8 @@
     "maintainerURL": "",
     "description": "time to the next buses, tramways or navibus from a list of stations / lines for Nantes (TAN).",
     "issues": [],
-    "stars": 3
+    "stars": 3,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-NASA",
@@ -7078,7 +7132,8 @@
     "description": "Stunning imagery and information about your universe. Choose from a host of categories. Looks amazing on your mirror!",
     "issues": [],
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-    "stars": 12
+    "stars": 12,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-nasaastropic",
@@ -7089,7 +7144,8 @@
     "description": "Display NASA's astronomy picture of the day.",
     "issues": [],
     "outdated": "Abandoned. No reactions to issues and PRs since years. Uses deprecated package 'request'. Use MMM-APOD instead.",
-    "stars": 9
+    "stars": 9,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-NatureCalendar",
@@ -7099,7 +7155,8 @@
     "maintainerURL": "",
     "description": "Simple calendar. Optional Rotating Nature Scenes. Optional color schemes. 17 different languages.",
     "issues": [],
-    "stars": 1
+    "stars": 1,
+    "hasGithubIssues": true
   },
   {
     "name": "MMM-NatureRemo",
@@ -7108,8 +7165,7 @@
     "maintainer": "mtatsuma",
     "maintainerURL": "https://github.com/mtatsuma",
     "description": "Displays sensor data collected by <a target=\"_blank\" href=\"https://en.nature.global\">Nature Remo</a> devices.",
-    "issues": [],
-    "stars": 1
+    "issues": []
   },
   {
     "name": "MMM-Navigate",

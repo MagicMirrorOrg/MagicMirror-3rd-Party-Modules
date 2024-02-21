@@ -8,6 +8,7 @@
     "description": "Display Xiaomi LYWSDCGQ 01ZM Temperature and Humidity sensor values directly AND Nova SDS011 PM Air Quality sensor data.",
     "issues": 3,
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "xiaomi",
       "temperature",
@@ -29,6 +30,7 @@
     "description": "Record daily 1-second-clips and automatically generate a 1-second-a-day video of your life.",
     "issues": 6,
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "1 second a day"
     ],
@@ -44,6 +46,7 @@
     "description": "Show 4 consecutive 12-hr forecast, provided by <a target=\"_blank\" href=\"https://www.weather.gov/documentation/services-web-api\">NOAA National Weather Service API</a>. No user registration nor API-key required.",
     "issues": 2,
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "weather",
       "forecast",
@@ -62,6 +65,7 @@
     "description": "Simple display of today, tomorrow &amp; next-day, designed to work with MMM-Weather-Now. Now uses Open Weather as WeatherBit reduced the free service to an unusable level :( If you installed an older version ( &lt; 18 Oct 2022 ), please update and get a new api key!",
     "issues": 8,
     "stars": 32,
+    "hasGithubIssues": true,
     "tags": [
       "weather",
       "forecast"
@@ -79,6 +83,7 @@
     "description": "Displays the temperature from <a target=\"_blank\" href=\"https://aare.guru\">aare.guru</a> for the river Aare in Switzerland (in Brienz, Interlaken, Thun, Bern, Hagneck, Biel or Brugg).",
     "issues": 6,
     "stars": 11,
+    "hasGithubIssues": true,
     "lastCommit": "2023-06-13T21:43:26+02:00"
   },
   {
@@ -90,6 +95,7 @@
     "description": "Displays departures for ASEAG busses in Aachen, Germany.",
     "issues": 9,
     "stars": 2,
+    "hasGithubIssues": true,
     "license": "MIT",
     "lastCommit": "2022-07-14T23:06:51+02:00"
   },
@@ -100,8 +106,9 @@
     "maintainer": "maxbethge",
     "maintainerURL": "",
     "description": "Display weather information using the AccuWeather API.",
-    "issues": 2,
-    "stars": 2,
+    "issues": 3,
+    "stars": 3,
+    "hasGithubIssues": false,
     "tags": [
       "weather"
     ],
@@ -118,6 +125,7 @@
     "description": "Display a candle burning down towards a specific date (e.g. an advent candle).",
     "issues": 7,
     "stars": 11,
+    "hasGithubIssues": true,
     "tags": [
       "buttons"
     ],
@@ -134,6 +142,7 @@
     "description": "This module shows the current status of air raid sirens in Ukraine.",
     "issues": 6,
     "stars": 7,
+    "hasGithubIssues": true,
     "lastCommit": "2022-10-11T19:29:43+03:00"
   },
   {
@@ -145,6 +154,7 @@
     "description": "Module to add touch input to your mirror using a ~$50 usb plug and play sensor.",
     "issues": 11,
     "stars": 6,
+    "hasGithubIssues": true,
     "license": "MIT",
     "lastCommit": "2020-09-26T11:55:52-07:00"
   },
@@ -157,6 +167,7 @@
     "description": "Air pollution in Polish cities. Data from <a target=\"_blank\" href=\"https://airly.eu/\">airly</a>.",
     "issues": 6,
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "air polution",
       "airly"
@@ -173,6 +184,7 @@
     "description": "Simple display of air quality based on the US AirNow API.",
     "issues": 7,
     "stars": 6,
+    "hasGithubIssues": true,
     "tags": [
       "air",
       "quality"
@@ -190,6 +202,7 @@
     "description": "Display the air quality index for a certain location.",
     "issues": 1,
     "stars": 31,
+    "hasGithubIssues": true,
     "tags": [
       "aqi",
       "air-quality"
@@ -205,8 +218,9 @@
     "maintainer": "cslev",
     "maintainerURL": "",
     "description": "Fork from CFenner's repo and extended with a new layout setting to print location data as a header.",
-    "issues": 5,
+    "issues": 6,
     "stars": 0,
+    "hasGithubIssues": false,
     "lastCommit": "2021-11-04T08:39:54+08:00"
   },
   {
@@ -218,6 +232,7 @@
     "description": "Module to display tables from Airtable.",
     "issues": 7,
     "stars": 13,
+    "hasGithubIssues": true,
     "tags": [
       "airtable",
       "magic-mirror-table",
@@ -236,6 +251,7 @@
     "description": "Alarm Clock Module (touch and non-touch).",
     "issues": 6,
     "stars": 47,
+    "hasGithubIssues": true,
     "tags": [
       "alarm clock"
     ],
@@ -252,6 +268,7 @@
     "description": "Amazon Alexa integration with using JavaScript only.",
     "issues": 9,
     "stars": 51,
+    "hasGithubIssues": true,
     "license": "MIT",
     "lastCommit": "2016-11-08T21:32:41+01:00"
   },
@@ -264,6 +281,7 @@
     "description": "The MMM-AlexaControl module allows you to control your Mirror with Alexa (every device that support Wemos devices). You can turn it on and off, change the page and send notifications to other modules.",
     "issues": 5,
     "stars": 41,
+    "hasGithubIssues": true,
     "tags": [
       "alexacontrol",
       "wemos",
@@ -282,6 +300,7 @@
     "description": "Simple Mirror Control from External Home Assistant (Alexa/Google Home/HASS.io).",
     "issues": 9,
     "stars": 17,
+    "hasGithubIssues": true,
     "tags": [
       "alexaonoff",
       "wemos",
@@ -299,6 +318,7 @@
     "description": "Shows the current standings of Allsvenskan (the top Swedish football league).",
     "issues": 8,
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "allsvenskan",
       "football",
@@ -317,6 +337,7 @@
     "description": "Ambient brightness detection and Auto-Brightness of the mirror modules accordingly.",
     "issues": 6,
     "stars": 10,
+    "hasGithubIssues": true,
     "tags": [
       "ambient brightness",
       "ambient",
@@ -336,6 +357,7 @@
     "description": "Am Lich - Lunar Date - Vietnamese Language.",
     "issues": 4,
     "stars": 2,
+    "hasGithubIssues": true,
     "lastCommit": "2021-09-01T01:29:06+07:00"
   },
   {
@@ -347,6 +369,7 @@
     "description": "Show a table of upcoming birthdays for a list of people you provided. Nice not to forget birthdays.",
     "issues": 13,
     "stars": 5,
+    "hasGithubIssues": true,
     "lastCommit": "2023-01-14T09:10:19-05:00"
   },
   {
@@ -358,6 +381,7 @@
     "description": "Module to display a list from the AnyList app.",
     "issues": 6,
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "anylist.jpg",
     "lastCommit": "2023-11-05T22:03:05-08:00"
@@ -371,6 +395,7 @@
     "description": "Displays a private leaderboard in Advent of Code.",
     "issues": 5,
     "stars": 3,
+    "hasGithubIssues": true,
     "lastCommit": "2018-12-03T00:55:24+01:00"
   },
   {
@@ -382,6 +407,7 @@
     "description": "Display Age of Empire stats by player ID.",
     "issues": 9,
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "aoe2",
       "age of empire 2"
@@ -397,6 +423,7 @@
     "description": "Shows stats (level, kills and global rank) for players of Apex Legends.",
     "issues": 7,
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "apex legends"
     ],
@@ -412,6 +439,7 @@
     "description": "A somewhat RESTful(ish) API.",
     "issues": 10,
     "stars": 18,
+    "hasGithubIssues": true,
     "tags": [
       "remote control",
       "control",
@@ -428,7 +456,8 @@
     "maintainerURL": "",
     "description": "Display the last Astronomy Picture Of the Day (APOD). This is an evolution of MMM-nasaastropic. Supports image and video and display title, description and copyright.",
     "issues": 6,
-    "stars": 11,
+    "stars": 13,
+    "hasGithubIssues": true,
     "lastCommit": "2020-07-07T12:24:07+02:00"
   },
   {
@@ -439,7 +468,6 @@
     "maintainerURL": "",
     "description": "Module to get the Air Quality Index (AQI) using the World Air Quality Index project API.",
     "issues": 7,
-    "stars": 10,
     "tags": [
       "transport",
       "air",
@@ -9169,6 +9197,7 @@
     "description": "A module that connects to the Mycroft messagebus.",
     "issues": 4,
     "stars": 1,
+    "hasGithubIssues": true,
     "lastCommit": "2022-08-25T14:49:28+02:00"
   },
   {
@@ -9178,8 +9207,9 @@
     "maintainer": "smartgic",
     "maintainerURL": "https://github.com/smartgic",
     "description": "When a Mycroft AI wake word is detected, an image is displayed and when the recording is done the image disappears.",
-    "issues": 4,
+    "issues": 5,
     "stars": 1,
+    "hasGithubIssues": false,
     "lastCommit": "2022-02-03T11:09:41-05:00"
   },
   {
@@ -9191,6 +9221,7 @@
     "description": "Displays local Dutch weather from the KNMI 10-minutes netwerk.",
     "issues": 5,
     "stars": 4,
+    "hasGithubIssues": true,
     "tags": [
       "weer",
       "weerbericht",
@@ -9209,6 +9240,7 @@
     "description": "Displays your Custom Garbage Calendar.",
     "issues": 5,
     "stars": 30,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg",
     "lastCommit": "2023-06-13T11:34:44+02:00"
@@ -9222,6 +9254,7 @@
     "description": "Displays Minecraft server(s) informations.",
     "issues": 7,
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "raspberry",
       "minecraft"
@@ -9237,8 +9270,9 @@
     "maintainer": "htilburgs",
     "maintainerURL": "",
     "description": "Display a compact monthly calendar view.",
-    "issues": 5,
+    "issues": 6,
     "stars": 1,
+    "hasGithubIssues": false,
     "lastCommit": "2023-06-21T14:15:00+02:00"
   },
   {
@@ -9250,6 +9284,7 @@
     "description": "MyPrayerTimes is a simple module, that calculate prayer times for any location around the world, based on a variety of calculation methods currently used in Muslim communities using the Aladhan API.",
     "issues": 5,
     "stars": 9,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "screenshot.jpg",
     "lastCommit": "2020-04-02T20:43:51-04:00"
@@ -9263,6 +9298,7 @@
     "description": "Module to display today's scores for your favourite teams across multiple sports.",
     "issues": 7,
     "stars": 63,
+    "hasGithubIssues": true,
     "tags": [
       "sports"
     ],
@@ -9279,6 +9315,7 @@
     "description": "Raspberry Pi SenseHat Module. Show sensors values, display pixelart and more.",
     "issues": 9,
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "raspberry",
       "sensehat"
@@ -9295,6 +9332,7 @@
     "description": "Connect to a MySQL database, run a select query (one value) and display the result.",
     "issues": 1,
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "mysql"
     ],
@@ -9311,6 +9349,7 @@
     "description": "Run a SQL SELECT against a MySQL database and display the results in an HTML table.",
     "issues": 7,
     "stars": 8,
+    "hasGithubIssues": true,
     "tags": [
       "mysql"
     ],
@@ -9327,6 +9366,7 @@
     "description": "Display ESPN standings for major US Sports and international soccer leagues.",
     "issues": 9,
     "stars": 12,
+    "hasGithubIssues": true,
     "lastCommit": "2022-01-05T20:44:12-06:00"
   },
   {
@@ -9338,6 +9378,7 @@
     "description": "Displays upcoming classes, tasks and exams from the <a target=\"_blank\" href=\"https://www.mystudylife.com\">My Study Life</a> app and website.",
     "issues": 9,
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "mystudylife",
       "study"
@@ -9355,6 +9396,7 @@
     "description": "Real Time Dutch traffic information from the ANWB. Module is dead for now (there is a PR which seems to fix it).",
     "issues": 4,
     "stars": 1,
+    "hasGithubIssues": true,
     "lastCommit": "2023-11-06T20:14:22+01:00"
   },
   {
@@ -9366,6 +9408,7 @@
     "description": "Display your show's watch progress in a private list in your <a target=\"_blank\" href=\"https://trakt.tv\">trakt.tv</a> account.",
     "issues": 5,
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "preview.jpg",
     "lastCommit": "2018-06-12T16:46:43+01:00"
@@ -9379,6 +9422,7 @@
     "description": "Display step by step directions to a location and provide an estimated time of arrival using Google Maps API.",
     "issues": 6,
     "stars": 1,
+    "hasGithubIssues": true,
     "license": "ISC",
     "image": "example.jpg",
     "lastCommit": "2023-10-10T11:18:14-04:00"
@@ -9392,6 +9436,7 @@
     "description": "Displays Toronto Transit schedule for your selected routes and stops.",
     "issues": 10,
     "stars": 7,
+    "hasGithubIssues": true,
     "license": "ISC",
     "lastCommit": "2017-07-06T22:48:39-04:00"
   },
@@ -9404,6 +9449,7 @@
     "description": "A video player with buttons to select a video to play.",
     "issues": 7,
     "stars": 2,
+    "hasGithubIssues": true,
     "tags": [
       "video",
       "player"
@@ -9421,6 +9467,7 @@
     "description": "Displays information about your Volvo from the Volvo Connect API.",
     "issues": 2,
     "stars": 1,
+    "hasGithubIssues": true,
     "tags": [
       "volvo",
       "myvolvo",
@@ -9439,6 +9486,7 @@
     "description": "Displays your schedule for Toronto curb-side waste collection.",
     "issues": 7,
     "stars": 11,
+    "hasGithubIssues": true,
     "license": "MIT",
     "image": "node_modules-npm-node_modules-read-node_modules-mute-stream-coverage-lcov-report-sort-arrow-sprite.jpg",
     "lastCommit": "2022-03-12T21:41:36-05:00"
@@ -9450,8 +9498,9 @@
     "maintainer": "martinkooij",
     "maintainerURL": "",
     "description": "Weather module based on the Weatherbit API.",
-    "issues": 8,
+    "issues": 9,
     "stars": 4,
+    "hasGithubIssues": false,
     "tags": [
       "\"magic",
       "mirror\"",
@@ -9471,6 +9520,7 @@
     "description": "Display sentences built with randomed words.",
     "issues": 7,
     "stars": 0,
+    "hasGithubIssues": true,
     "tags": [
       "words",
       "random"
@@ -9487,7 +9537,8 @@
     "description": "A MagicMirror\u00b2 Module for Nagios.",
     "issues": 6,
     "outdated": "Abandoned. Repo has been archived at 2023-03-09.",
-    "stars": 6,
+    "stars": 7,
+    "hasGithubIssues": true,
     "tags": [
       "nagios"
     ],
@@ -9504,6 +9555,7 @@
     "description": "Nameday module (multiple countries).",
     "issues": 5,
     "stars": 5,
+    "hasGithubIssues": true,
     "lastCommit": "2021-08-11T21:56:05+02:00"
   },
   {
@@ -9515,6 +9567,7 @@
     "description": "Displays Swedish name of the day.",
     "issues": 9,
     "stars": 0,
+    "hasGithubIssues": true,
     "lastCommit": "2023-10-05T18:29:16+02:00"
   },
   {
@@ -9526,6 +9579,7 @@
     "description": "time to the next buses, tramways or navibus from a list of stations / lines for Nantes (TAN).",
     "issues": 6,
     "stars": 3,
+    "hasGithubIssues": true,
     "tags": [
       "localtransport",
       "paris",
@@ -9545,6 +9599,7 @@
     "issues": 6,
     "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
     "stars": 12,
+    "hasGithubIssues": true,
     "lastCommit": "2019-03-02T21:42:53-05:00"
   },
   {
@@ -9557,6 +9612,7 @@
     "issues": 8,
     "outdated": "Abandoned. No reactions to issues and PRs since years. Uses deprecated package 'request'. Use MMM-APOD instead.",
     "stars": 9,
+    "hasGithubIssues": true,
     "tags": [
       "nasa",
       "astronomy",
@@ -9574,6 +9630,7 @@
     "description": "Simple calendar. Optional Rotating Nature Scenes. Optional color schemes. 17 different languages.",
     "issues": 4,
     "stars": 1,
+    "hasGithubIssues": true,
     "lastCommit": "2019-11-23T22:40:32-05:00"
   },
   {
@@ -15691,7 +15748,7 @@
     ],
     "license": "MIT",
     "image": "git-normal_screenshot.jpg",
-    "lastCommit": "2024-02-20T07:38:32+01:00"
+    "lastCommit": "2024-02-20T21:17:13+01:00"
   },
   {
     "name": "MMM-WeeklySchedule",

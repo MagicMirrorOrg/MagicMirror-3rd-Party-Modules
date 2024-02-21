@@ -26,10 +26,10 @@
   "homepage": "https://github.com/KristjanESPERANTO/MagicMirror-3rd-Party-Modules#readme",
   "devDependencies": {
     "@eslint/js": "^8.56.0",
-    "@stylistic/eslint-plugin": "^1.6.1",
+    "@stylistic/eslint-plugin": "^1.6.2",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
-    "husky": "^9.0.10",
+    "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "markdownlint-cli": "^0.39.0",
     "prettier": "^3.2.5",
