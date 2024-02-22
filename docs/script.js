@@ -344,23 +344,27 @@ async function initiate () {
 function DarkMode(){
   const header = document.getElementsByTagName("header")[0];
   const body = document.getElementsByTagName("body")[0];
-  const reset_botton = document.getElementById("reset-button");
+  const reset_button = document.getElementById("reset-button");
   const sort_button = document.getElementById("sort-dropdown");
   if(darkMode.checked){
-    console.log("enabled");
+    //console.log("enabled");
     header.style. backgroundColor = "#222";
     header.style.color = "#e9e9e9"
-    body.sty.backgroundColor = "#222";
+    body.style.backgroundColor = "#222";
     sort_button.style.color = "#ddd";
-    sort_button.style.backgroundColor = "white";
+    sort_button.style.backgroundColor = "#555";
+    reset_button.style.color = "#ddd";
+    reset_button.style.backgroundColor  = "#555";
   }
   else{
-    console.log("disbaled");
+    //console.log("disbaled");
     header.style. backgroundColor = "#e9e9e9";
     header.style.color = "#222";
-    body.sty.backgroundColor = "#e9e9e9";
+    body.style.backgroundColor = "#e9e9e9";
     sort_button.style.color = "#555";
     sort_button.style.backgroundColor = "#ddd";
+    reset_button.style.color = "#555";
+    reset_button.style.backgroundColor  = "#ddd";
   }
 }
 
