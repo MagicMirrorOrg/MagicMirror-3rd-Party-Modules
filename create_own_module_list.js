@@ -21,7 +21,7 @@ function createModuleList () {
     module.maintainer = module.url.split("/")[3];
     module.name = module.url.split("/")[4];
     module.maintainerURL = "";
-    if (typeof module.description !== undefined) {
+    if (typeof module.description === "undefined") {
       module.description = "";
     }
 
