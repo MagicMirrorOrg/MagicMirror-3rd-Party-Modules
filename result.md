@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-13T17:37:31+02:00
+Last update: 2024-05-14T05:37:27+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-13T17:37:31+02:00
 | modules analyzed     |   1154   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7173   |
+| issues               |   7168   |
 | modules at github    |   1142   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -1985,7 +1985,7 @@ Last update: 2024-05-13T17:37:31+02:00
 7. Deprecated: Found `getYear()` in file `MMM-DynamicWeather.ts`: Replace `getYear()` by `getFullYear()`.
 8. Deprecated: Found `api.openweathermap.org/data/2.5` in file `MMM-DynamicWeather.ts`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
 9. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
-10. Deprecated: Found `require("request")` in file `node_helper.js`: Replace it with built-in fetch.
+10. Recommendation: Found `require('https')` in file `node_helper.js`: Replace 'https' by 'node:https'.
 11. Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`.
 12. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
@@ -5470,12 +5470,7 @@ Last update: 2024-05-13T17:37:31+02:00
 
 ### [MMM-MoonPhase by NolanKingdon](https://github.com/NolanKingdon/MMM-MoonPhase)
 
-1. `package.json` issue: No repository field.
-2. There are no keywords in 'package.json'. We would use them as tags on the module list page.
-3. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
-4. Recommendation: Found `new Date()` in file `node_helper.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
-5. Deprecated: Found `"grunt"` in file `package.json`: Grunt is practically unmaintained. Move on to something better.
-6. Recommendation: Replace eslintrc by new flat config.
+1. Recommendation: Replace eslintrc by new flat config.
 
 ### [MMM-moonraker by btastic](https://github.com/btastic/MMM-moonraker)
 
@@ -5710,7 +5705,7 @@ Last update: 2024-05-13T17:37:31+02:00
 
 ### [MMM-Multimonth by BKeyport](https://github.com/BKeyport/MMM-Multimonth)
 
-1. Issue: The license in the package.json (MIT-Modern-Variant) doesn't match the license file (NOASSERTION).
+1. Issue: The license in the package.json (MIT) doesn't match the license file (NOASSERTION).
 2. No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image.
 3. Recommendation: Found `new Date()` in file `MMM-Multimonth.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 

@@ -3698,7 +3698,7 @@
     ],
     "image": "cloudy_example.jpg",
     "defaultSortWeight": 11,
-    "lastCommit": "2024-05-04T21:11:15-04:00"
+    "lastCommit": "2024-05-13T20:43:45-04:00"
   },
   {
     "name": "MMM-EARTH",
@@ -9771,9 +9771,14 @@
     "issues": true,
     "stars": 49,
     "license": "MIT",
-    "image": "images-2019-06-22-example-moons.jpg",
-    "defaultSortWeight": 5,
-    "lastCommit": "2024-01-02T20:55:56-05:00"
+    "tags": [
+      "moon",
+      "phase",
+      "astronomy"
+    ],
+    "image": "images-2023-09-15-example-moons.jpg",
+    "defaultSortWeight": 0,
+    "lastCommit": "2024-05-13T19:59:54-04:00"
   },
   {
     "name": "MMM-moonraker",
@@ -10195,7 +10200,7 @@
       "calendar"
     ],
     "defaultSortWeight": 2,
-    "lastCommit": "2024-05-12T15:06:30-07:00"
+    "lastCommit": "2024-05-13T15:40:43-07:00"
   },
   {
     "name": "MMM-mumble",
