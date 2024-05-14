@@ -8769,7 +8769,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": [],
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "tags": [
       "mealie",
