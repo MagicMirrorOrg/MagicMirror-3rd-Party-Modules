@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-14T15:30:20.372Z",
+  "lastUpdate": "2024-05-15T03:30:19.944Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -7381,7 +7381,7 @@
     },
     {
       "id": "schnibel/MMM-Memo",
-      "gitHubDataLastUpdate": "2024-04-28T15:30:18.488Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:07.671Z",
       "gitHubData": {
         "issues": 5,
         "stars": 34,
@@ -7395,7 +7395,7 @@
     },
     {
       "id": "andersarstrand/MMM-Meniny",
-      "gitHubDataLastUpdate": "2024-04-28T15:30:19.000Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:08.151Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7409,7 +7409,7 @@
     },
     {
       "id": "fuerst/MMM-MensaMax",
-      "gitHubDataLastUpdate": "2024-04-28T15:30:19.430Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:08.590Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -7423,7 +7423,7 @@
     },
     {
       "id": "wiesty/MMM-Mensamuc",
-      "gitHubDataLastUpdate": "2024-04-28T15:30:19.868Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:09.092Z",
       "gitHubData": {
         "issues": 0,
         "stars": 6,
@@ -7437,7 +7437,7 @@
     },
     {
       "id": "ashishtank/MMM-MercedesMe",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:08.890Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:09.535Z",
       "gitHubData": {
         "issues": 3,
         "stars": 2,
@@ -7451,7 +7451,7 @@
     },
     {
       "id": "Bangee44/MMM-meteoblueCurrent",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:09.311Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:09.917Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -7465,7 +7465,7 @@
     },
     {
       "id": "bugsounet/MMM-MeteoFrance",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:09.726Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:10.302Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7474,12 +7474,12 @@
         "disabled": false,
         "defaultBranch": "master",
         "has_issues": true,
-        "lastCommit": "2024-04-21T12:04:28Z"
+        "lastCommit": "2024-05-08T08:10:22Z"
       }
     },
     {
       "id": "awitwicki/MMM-MHZ19",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:10.134Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:10.678Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -7493,7 +7493,7 @@
     },
     {
       "id": "bibaldo/MMM-MiBiciTuBici",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:10.555Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:11.074Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7507,9 +7507,9 @@
     },
     {
       "id": "thobach/MMM-MicrosoftToDo",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:10.960Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:11.457Z",
       "gitHubData": {
-        "issues": 9,
+        "issues": 10,
         "stars": 74,
         "license": "MIT",
         "archived": false,
@@ -7521,7 +7521,7 @@
     },
     {
       "id": "SAR71/MMM-MieleAtHome",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:11.356Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:11.870Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -7535,7 +7535,7 @@
     },
     {
       "id": "ralberth/MMM-MinecraftStatus",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:11.696Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:12.277Z",
       "gitHubData": {
         "issues": 4,
         "stars": 1,
@@ -7549,7 +7549,7 @@
     },
     {
       "id": "blixhavn/MMM-Minigjenbruksstasjon",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:12.082Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:12.702Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -7563,7 +7563,7 @@
     },
     {
       "id": "joanaz/MMM-MirrorMirrorOnTheWall",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:12.468Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:13.127Z",
       "gitHubData": {
         "issues": 21,
         "stars": 88,
@@ -7577,7 +7577,7 @@
     },
     {
       "id": "thess/MMM-MktIndex",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:12.899Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:13.517Z",
       "gitHubData": {
         "issues": 2,
         "stars": 1,
@@ -7605,7 +7605,7 @@
     },
     {
       "id": "muilpp/MM-concert-calendar",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:13.280Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:13.976Z",
       "gitHubData": {
         "issues": 0,
         "stars": 5,
@@ -7619,7 +7619,7 @@
     },
     {
       "id": "ZakarFin/mm-hsl-timetable",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:13.704Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:14.411Z",
       "gitHubData": {
         "issues": 1,
         "stars": 5,
@@ -7633,7 +7633,7 @@
     },
     {
       "id": "masters1222/mm-music-player",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:14.366Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:15.135Z",
       "gitHubData": {
         "issues": 8,
         "stars": 19,
@@ -7647,10 +7647,10 @@
     },
     {
       "id": "Klettner/MM-Remote",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:14.774Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:15.551Z",
       "gitHubData": {
         "issues": 2,
-        "stars": 55,
+        "stars": 59,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -7661,7 +7661,7 @@
     },
     {
       "id": "eerotal/mm-tkl-timetable",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:15.215Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:16.024Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7675,7 +7675,7 @@
     },
     {
       "id": "motey/MMM_ncdeck",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:15.607Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:16.484Z",
       "gitHubData": {
         "issues": 2,
         "stars": 2,
@@ -7689,7 +7689,7 @@
     },
     {
       "id": "sthuber90/mmm-amazon-photos",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:16.005Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:16.871Z",
       "gitHubData": {
         "issues": 9,
         "stars": 3,
@@ -7703,7 +7703,7 @@
     },
     {
       "id": "jhwelch/mmm-cta",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:16.422Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:17.314Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7717,7 +7717,7 @@
     },
     {
       "id": "michael5r/mmm-dropbox",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:16.881Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:17.715Z",
       "gitHubData": {
         "issues": 1,
         "stars": 5,
@@ -7731,7 +7731,7 @@
     },
     {
       "id": "spectroman/mmm-food2fork-recipes",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:17.284Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:18.152Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -7745,7 +7745,7 @@
     },
     {
       "id": "michael5r/mmm-hue-lights",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:17.676Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:18.542Z",
       "gitHubData": {
         "issues": 7,
         "stars": 42,
@@ -7759,7 +7759,7 @@
     },
     {
       "id": "istvanfedak/mmm-miami-transit",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:18.135Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:19.028Z",
       "gitHubData": {
         "issues": 5,
         "stars": 0,
@@ -7773,7 +7773,7 @@
     },
     {
       "id": "ItsMeBrille/MMm-MinecraftServer",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:18.532Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:19.431Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -7787,7 +7787,7 @@
     },
     {
       "id": "spectroman/mmm-moon-phases",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:18.982Z",
+      "gitHubDataLastUpdate": "2024-05-15T03:30:19.846Z",
       "gitHubData": {
         "issues": 9,
         "stars": 19,

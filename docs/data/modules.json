@@ -9199,7 +9199,7 @@
     "maintainerURL": "https://github.com/Klettner",
     "description": "Android \ud83d\udcf1 and Windows-desktop \ud83d\udcbb app to control your MagicMirror\u00b2 remotely. (Shutdown, reboot, toggle monitor on/off, change brightness of monitor, custom-commands, etc.).",
     "issues": true,
-    "stars": 55,
+    "stars": 59,
     "license": "MIT",
     "image": "LauncherIcon-MMM-Remote-LauncherIcon.jpg",
     "defaultSortWeight": 5,
@@ -13879,7 +13879,7 @@
     "license": "MIT",
     "image": "screenshotRainForecast.jpg",
     "defaultSortWeight": 7,
-    "lastCommit": "2024-01-17T13:09:30+01:00"
+    "lastCommit": "2024-05-14T22:39:01+02:00"
   },
   {
     "name": "random_quotes",
