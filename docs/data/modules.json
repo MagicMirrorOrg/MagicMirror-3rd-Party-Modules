@@ -9611,7 +9611,7 @@
     "maintainerURL": "https://github.com/Bee-Mar",
     "description": "An unofficial MagicMirror\u00b2 3rd Party Package Manager. Automates searching, installation, removal, updating, and upgrading of MagicMirror\u00b2 modules.",
     "issues": true,
-    "stars": 171,
+    "stars": 175,
     "license": "MIT",
     "image": "assets-MMPM-UI-Homepage.jpg",
     "defaultSortWeight": 0,
@@ -9741,7 +9741,7 @@
     "maintainerURL": "",
     "description": "Display your calendar events in a monthly calendar view.",
     "issues": true,
-    "stars": 22,
+    "stars": 23,
     "license": "MIT",
     "image": "screenshot.jpg",
     "defaultSortWeight": 3,
@@ -17011,10 +17011,16 @@
     "description": "Retrieves school meal menus from the LinqConnect (formerly Titan Schools) API (api.linqconnect.com).",
     "issues": true,
     "stars": 6,
+    "tags": [
+      "breakfast",
+      "lunch",
+      "menu",
+      "school"
+    ],
     "license": "ISC",
     "image": "docs-screenshot.jpg",
-    "defaultSortWeight": 8,
-    "lastCommit": "2023-10-09T22:50:56-06:00"
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-05-15T01:07:17-07:00"
   },
   {
     "name": "MMM-TMB",

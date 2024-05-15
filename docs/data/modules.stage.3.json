@@ -9519,7 +9519,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 171,
+    "stars": 175,
     "license": "MIT",
     "image": "assets-MMPM-UI-Homepage.jpg"
   },
@@ -9648,7 +9648,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 22,
+    "stars": 23,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -16819,11 +16819,14 @@
     "maintainer": "evanhsu",
     "maintainerURL": "",
     "description": "Retrieves school meal menus from the LinqConnect (formerly Titan Schools) API (api.linqconnect.com).",
-    "issues": [
-      "`package.json` issue: No repository field.",
-      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
-    ],
+    "issues": [],
     "stars": 6,
+    "tags": [
+      "breakfast",
+      "lunch",
+      "menu",
+      "school"
+    ],
     "license": "ISC",
     "image": "docs-screenshot.jpg"
   },

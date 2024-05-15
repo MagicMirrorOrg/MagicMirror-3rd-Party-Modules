@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-15T03:30:19.944Z",
+  "lastUpdate": "2024-05-15T15:30:20.835Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -7801,7 +7801,7 @@
     },
     {
       "id": "michael5r/mmm-nest-cameras",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:19.377Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:08.011Z",
       "gitHubData": {
         "issues": 2,
         "stars": 9,
@@ -7815,7 +7815,7 @@
     },
     {
       "id": "michael5r/mmm-nest-status",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:19.761Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:08.469Z",
       "gitHubData": {
         "issues": 4,
         "stars": 37,
@@ -7829,7 +7829,7 @@
     },
     {
       "id": "cSharpBastard/mmm-nordic-electrical-spot-prices",
-      "gitHubDataLastUpdate": "2024-04-29T03:30:20.257Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:08.965Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -7843,7 +7843,7 @@
     },
     {
       "id": "paphko/mmm-openhabfloorplan",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:09.189Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:09.411Z",
       "gitHubData": {
         "issues": 0,
         "stars": 32,
@@ -7857,7 +7857,7 @@
     },
     {
       "id": "ptrbld/mmm-pins",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:09.616Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:09.909Z",
       "gitHubData": {
         "issues": 5,
         "stars": 3,
@@ -7871,7 +7871,7 @@
     },
     {
       "id": "elaniobro/mmm-stocks",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:10.103Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:10.401Z",
       "gitHubData": {
         "issues": 1,
         "stars": 6,
@@ -7885,7 +7885,7 @@
     },
     {
       "id": "MichMich/mmm-systemtemperature",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:10.500Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:10.803Z",
       "gitHubData": {
         "issues": 9,
         "stars": 39,
@@ -7899,7 +7899,7 @@
     },
     {
       "id": "moejetz/mmm-toggle-by-mqtt",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:10.925Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:11.251Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -7913,7 +7913,7 @@
     },
     {
       "id": "wzooff/mmm-uah-currency",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:11.303Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:11.722Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -7927,7 +7927,7 @@
     },
     {
       "id": "crimsonclyde/mmm-udr",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:11.668Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:12.127Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -7941,7 +7941,7 @@
     },
     {
       "id": "szech/mmm-uk-pollen-forecast",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:12.058Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:12.525Z",
       "gitHubData": {
         "issues": 1,
         "stars": 1,
@@ -7955,7 +7955,7 @@
     },
     {
       "id": "paphko/mmm-weatherchart",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:12.412Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:12.897Z",
       "gitHubData": {
         "issues": 10,
         "stars": 30,
@@ -7969,7 +7969,7 @@
     },
     {
       "id": "spectroman/mmm-zabbix-alerts",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:12.804Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:13.309Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -7983,10 +7983,10 @@
     },
     {
       "id": "Bee-Mar/mmpm",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:13.203Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:13.718Z",
       "gitHubData": {
-        "issues": 1,
-        "stars": 171,
+        "issues": 2,
+        "stars": 175,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -7997,7 +7997,7 @@
     },
     {
       "id": "Bee-Mar/MMM-mmpm",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:13.609Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:14.136Z",
       "gitHubData": {
         "issues": 1,
         "stars": 2,
@@ -8011,7 +8011,7 @@
     },
     {
       "id": "Snille/MMM-Modulebar",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:13.968Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:14.528Z",
       "gitHubData": {
         "issues": 2,
         "stars": 14,
@@ -8025,7 +8025,7 @@
     },
     {
       "id": "ahmedwab/MMM-ModuleHandler",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:14.395Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:15.067Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -8039,7 +8039,7 @@
     },
     {
       "id": "MMRIZE/MMM-ModuleMonkeyPatch",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:14.776Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:15.514Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -8053,7 +8053,7 @@
     },
     {
       "id": "ianperrin/MMM-ModuleScheduler",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:15.127Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:15.877Z",
       "gitHubData": {
         "issues": 10,
         "stars": 95,
@@ -8067,7 +8067,7 @@
     },
     {
       "id": "balassy/MMM-ModuleToggleButton",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:15.536Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:16.388Z",
       "gitHubData": {
         "issues": 1,
         "stars": 6,
@@ -8081,10 +8081,10 @@
     },
     {
       "id": "kolbyjack/MMM-MonthlyCalendar",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:15.907Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:16.830Z",
       "gitHubData": {
         "issues": 9,
-        "stars": 22,
+        "stars": 23,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -8095,7 +8095,7 @@
     },
     {
       "id": "EnderFlop/MMM-Moon",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:16.289Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:17.267Z",
       "gitHubData": {
         "issues": 3,
         "stars": 3,
@@ -8109,21 +8109,21 @@
     },
     {
       "id": "NolanKingdon/MMM-MoonPhase",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:16.682Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:17.669Z",
       "gitHubData": {
-        "issues": 4,
+        "issues": 3,
         "stars": 49,
         "license": "MIT",
         "archived": false,
         "disabled": false,
         "defaultBranch": "master",
         "has_issues": true,
-        "lastCommit": "2024-01-03T01:55:56Z"
+        "lastCommit": "2024-05-13T23:59:54Z"
       }
     },
     {
       "id": "btastic/MMM-moonraker",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:17.143Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:18.194Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -8137,7 +8137,7 @@
     },
     {
       "id": "coderpussy/MMM-Mopidy-MPD",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:17.547Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:18.658Z",
       "gitHubData": {
         "issues": 1,
         "stars": 2,
@@ -8151,7 +8151,7 @@
     },
     {
       "id": "bugsounet/EXT-Motion",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:17.984Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:19.106Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -8165,7 +8165,7 @@
     },
     {
       "id": "yusinv/MMM-Motion-Camera",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:18.386Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:19.512Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -8179,7 +8179,7 @@
     },
     {
       "id": "nischi/MMM-MotionControl",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:18.788Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:19.999Z",
       "gitHubData": {
         "issues": 1,
         "stars": 6,
@@ -8193,7 +8193,7 @@
     },
     {
       "id": "alexyak/motiondetector",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:19.187Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:20.386Z",
       "gitHubData": {
         "issues": 5,
         "stars": 49,
@@ -8207,7 +8207,7 @@
     },
     {
       "id": "rejas/MMM-MotionDetector",
-      "gitHubDataLastUpdate": "2024-04-30T03:30:19.605Z",
+      "gitHubDataLastUpdate": "2024-05-15T15:30:20.819Z",
       "gitHubData": {
         "issues": 10,
         "stars": 50,

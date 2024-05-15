@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-15T05:37:22+02:00
+Last update: 2024-05-15T17:37:39+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-15T05:37:22+02:00
 | modules analyzed     |   1154   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7168   |
+| issues               |   7164   |
 | modules at github    |   1142   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -9558,15 +9558,11 @@ Last update: 2024-05-15T05:37:22+02:00
 
 ### [MMM-TitanSchoolMealMenu by evanhsu](https://github.com/evanhsu/MMM-TitanSchoolMealMenu)
 
-1. `package.json` issue: No repository field.
-2. There are no keywords in 'package.json'. We would use them as tags on the module list page.
-3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
-4. Recommendation: Found `axios` in file `TitanSchoolsClient.js`: Replace it with built-in fetch.
-5. Recommendation: Found `new Date()` in file `TitanSchoolsClient.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
-6. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
-7. Recommendation: Found `axios` in file `api-response-shape.test.js`: Replace it with built-in fetch.
-8. Warning: No LICENSE file.
-9. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+1. Recommendation: Found `axios` in file `TitanSchoolsClient.js`: Replace it with built-in fetch.
+2. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
+3. Recommendation: Found `axios` in file `api-response-shape.test.js`: Replace it with built-in fetch.
+4. Warning: No LICENSE file.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-TMB by jaumebosch](https://github.com/jaumebosch/MMM-TMB)
 
