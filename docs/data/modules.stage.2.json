@@ -7267,7 +7267,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "A powerful module that subscribes to MQTT broker and read/send MQTT messages and MM Notifications with a lot of individual setup/rules. Allows you to integrate MM into smart home like Home Assistant. Powerful automation with structured Noti and MQTT dictionaries rules (e.g. one mqtt message could trigger many predefined noti, and one mm-noti could trigger different predefined mqtt messages).",
     "issues": [],
-    "stars": 22,
+    "stars": 23,
     "license": "MIT"
   },
   {
@@ -7303,7 +7303,7 @@
     "maintainerURL": "https://github.com/crisvdn",
     "description": "Fetches a random MTG card on a configured interval and displays this.",
     "issues": [],
-    "stars": 1,
+    "stars": 3,
     "license": "MIT"
   },
   {
@@ -7316,7 +7316,7 @@
     "description": "Display multiple mini-calendars at the same time.",
     "issues": [],
     "stars": 11,
-    "license": "NOASSERTION"
+    "license": "MIT"
   },
   {
     "name": "MMM-mumble",

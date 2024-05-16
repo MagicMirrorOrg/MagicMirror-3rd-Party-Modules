@@ -10042,7 +10042,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "A powerful module that subscribes to MQTT broker and read/send MQTT messages and MM Notifications with a lot of individual setup/rules. Allows you to integrate MM into smart home like Home Assistant. Powerful automation with structured Noti and MQTT dictionaries rules (e.g. one mqtt message could trigger many predefined noti, and one mm-noti could trigger different predefined mqtt messages).",
     "issues": [],
-    "stars": 22,
+    "stars": 23,
     "license": "MIT",
     "tags": [
       "mqtt"
@@ -10091,7 +10091,7 @@
     "maintainerURL": "https://github.com/crisvdn",
     "description": "Fetches a random MTG card on a configured interval and displays this.",
     "issues": [],
-    "stars": 1,
+    "stars": 3,
     "license": "MIT",
     "tags": [
       "mtg",
@@ -10107,15 +10107,13 @@
     "maintainer": "BKeyport",
     "maintainerURL": "https://github.com/BKeyport",
     "description": "Display multiple mini-calendars at the same time.",
-    "issues": [
-      "Issue: The license in the package.json (MIT) doesn't match the license file (NOASSERTION).",
-      "No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image."
-    ],
+    "issues": [],
     "stars": 11,
-    "license": "NOASSERTION",
+    "license": "MIT",
     "tags": [
       "calendar"
-    ]
+    ],
+    "image": "screenshot-horizontal.jpg"
   },
   {
     "name": "MMM-mumble",

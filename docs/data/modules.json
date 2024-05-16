@@ -10128,7 +10128,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "A powerful module that subscribes to MQTT broker and read/send MQTT messages and MM Notifications with a lot of individual setup/rules. Allows you to integrate MM into smart home like Home Assistant. Powerful automation with structured Noti and MQTT dictionaries rules (e.g. one mqtt message could trigger many predefined noti, and one mm-noti could trigger different predefined mqtt messages).",
     "issues": true,
-    "stars": 22,
+    "stars": 23,
     "license": "MIT",
     "tags": [
       "mqtt"
@@ -10175,7 +10175,7 @@
     "maintainerURL": "https://github.com/crisvdn",
     "description": "Fetches a random MTG card on a configured interval and displays this.",
     "issues": true,
-    "stars": 1,
+    "stars": 3,
     "license": "MIT",
     "tags": [
       "mtg",
@@ -10195,11 +10195,12 @@
     "description": "Display multiple mini-calendars at the same time.",
     "issues": true,
     "stars": 11,
-    "license": "NOASSERTION",
+    "license": "MIT",
     "tags": [
       "calendar"
     ],
-    "defaultSortWeight": 2,
+    "image": "screenshot-horizontal.jpg",
+    "defaultSortWeight": 0,
     "lastCommit": "2024-05-13T15:40:43-07:00"
   },
   {
@@ -16782,7 +16783,7 @@
     "license": "ISC",
     "image": "images-MMM-Tesla3.jpg",
     "defaultSortWeight": 10,
-    "lastCommit": "2023-11-18T16:40:20-05:00"
+    "lastCommit": "2024-05-15T21:28:11-04:00"
   },
   {
     "name": "MMM-TeslaLogger",
@@ -18405,7 +18406,7 @@
     "stars": 2,
     "license": "GPL-3.0",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 6,
+    "defaultSortWeight": 7,
     "lastCommit": "2022-05-16T10:36:10+02:00"
   },
   {
