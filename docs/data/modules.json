@@ -11509,7 +11509,7 @@
     "stars": 1,
     "license": "ISC",
     "image": "examples-1.jpg",
-    "defaultSortWeight": 926,
+    "defaultSortWeight": 927,
     "lastCommit": "2022-05-16T14:29:28-04:00"
   },
   {
@@ -16256,7 +16256,7 @@
     "license": "MIT",
     "image": "public-assets-images-StravaWeekInBike.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-04-23T14:10:43-04:00"
+    "lastCommit": "2024-05-16T21:21:38-04:00"
   },
   {
     "name": "EXT-StreamDeck",
