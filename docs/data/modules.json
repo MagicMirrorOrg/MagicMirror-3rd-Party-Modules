@@ -264,22 +264,6 @@
     "lastCommit": "2024-04-30T08:19:34+00:00"
   },
   {
-    "name": "MMM-AirQuality",
-    "category": "Weather",
-    "url": "https://github.com/cslev/MMM-AirQuality",
-    "id": "cslev/MMM-AirQuality",
-    "maintainer": "cslev",
-    "maintainerURL": "",
-    "description": "Fork from CFenner's repo and extended with a new layout setting to print location data as a header.",
-    "issues": true,
-    "stars": 0,
-    "hasGithubIssues": false,
-    "license": "MIT",
-    "image": "header.jpg",
-    "defaultSortWeight": 6,
-    "lastCommit": "2021-11-04T08:39:54+08:00"
-  },
-  {
     "name": "MMM-Airtable",
     "category": "Utility / IOT / 3rd Party / Integration",
     "url": "https://github.com/yashatgit/MMM-Airtable",
@@ -10993,7 +10977,7 @@
     "maintainerURL": "",
     "description": "Display your Netatmo in/outdoor weather station data.",
     "issues": true,
-    "stars": 33,
+    "stars": 34,
     "license": "MIT",
     "tags": [
       "netatmo",
@@ -11066,7 +11050,7 @@
     "maintainerURL": "",
     "description": "Display a solid wifi logo as network signal based on ping speed.",
     "issues": true,
-    "stars": 37,
+    "stars": 38,
     "license": "MIT",
     "tags": [
       "network"
@@ -11382,7 +11366,7 @@
     "maintainerURL": "https://github.com/Jalibu",
     "description": "Client implementation for German NINA Warn API. Supports alerts of KatWarn, Biwapp and Mowas.",
     "issues": true,
-    "stars": 21,
+    "stars": 22,
     "license": "MIT",
     "tags": [
       "nina",
@@ -13403,6 +13387,24 @@
     "lastCommit": "2021-03-22T10:50:19-03:00"
   },
   {
+    "name": "MMM-PrixCarburants",
+    "category": "Transport / Travel",
+    "url": "https://github.com/bugsounet/MMM-PrixCarburants",
+    "id": "bugsounet/MMM-PrixCarburants",
+    "maintainer": "bugsounet",
+    "maintainerURL": "",
+    "description": "[FR] Ce module permet d'afficher les prix des carburants des stations francaise.<br />[EN] Display fuel prices (France only).",
+    "issues": true,
+    "tags": [
+      "french",
+      "carburant"
+    ],
+    "license": "MIT",
+    "image": "screenshot.jpg",
+    "defaultSortWeight": 1,
+    "lastCommit": "2024-05-16T19:10:08+02:00"
+  },
+  {
     "name": "MMM-profile",
     "category": "Entertainment / Misc",
     "url": "https://github.com/kurtern84/MMM-profile",
@@ -13952,7 +13954,7 @@
       "quran"
     ],
     "image": "screenshot.jpg",
-    "defaultSortWeight": 2,
+    "defaultSortWeight": 3,
     "lastCommit": "2022-05-17T15:12:06+07:00"
   },
   {
@@ -16404,7 +16406,7 @@
     "id": "git-pesche/MMM-SwissSmartUrbanHeatMap",
     "maintainer": "git-pesche",
     "maintainerURL": "",
-    "description": "Allows you to view climatic data from stations of the measuring network <a target=\"_blank\" href=\"https://smart-urban-heat-map.ch/\">Smart Urban Heat Map Bern</a> (temperature &amp; humidity)",
+    "description": "Allows you to view climatic data from stations of the measuring network <a target=\"_blank\" href=\"https://smart-urban-heat-map.ch/\">Smart Urban Heat Map Bern</a> (temperature &amp; humidity).",
     "issues": true,
     "defaultSortWeight": 3,
     "lastCommit": "2024-05-12T13:31:12+02:00"
@@ -16500,7 +16502,7 @@
     "id": "dientuki/MMM-SystemInfo",
     "maintainer": "dientuki",
     "maintainerURL": "https://github.com/dientuki",
-    "description": "Get a lot of system stats from a PC board like Cpu usage, ram usage, disk usage, Cpu temperature, volume, internet status and private ip and status, beside that you can configure your WiFi network to create a QR code",
+    "description": "Get a lot of system stats from a PC board like CPU usage, ram usage, disk usage, CPU temperature, volume, internet status and private IP and status, beside that you can configure your WiFi network to create a QR code.",
     "issues": true,
     "defaultSortWeight": 4,
     "lastCommit": "2024-05-03T19:54:54-03:00"

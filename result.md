@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-17T05:37:25+02:00
+Last update: 2024-05-17T17:37:25+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-17T05:37:25+02:00
 | modules analyzed     |   1154   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7162   |
+| issues               |   7159   |
 | modules at github    |   1142   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -133,14 +133,6 @@ Last update: 2024-05-17T05:37:25+02:00
 ### [MMM-AirQuality by CFenner](https://github.com/CFenner/MMM-AirQuality)
 
 1. Recommendation: Replace eslintrc by new flat config.
-
-### [MMM-AirQuality by cslev](https://github.com/cslev/MMM-AirQuality)
-
-1. There is no `package.json`. We need this file to gather information about the module for the module list page.
-2. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-3. Typo: Found `Magic Mirror` in file `MMM-AirQuality.js`: Replace it with `MagicMirror²`.
-4. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
-5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-Airtable by yashatgit](https://github.com/yashatgit/MMM-Airtable)
 
@@ -5669,7 +5661,7 @@ Last update: 2024-05-17T05:37:25+02:00
 1. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 2. Information: There are updates for 2 dependencie(s):
    - jsonpath-plus  5.0.1  →  9.0.0
-   - mqtt           4.3.7  →  5.6.0
+   - mqtt           4.3.7  →  5.6.1
 
 
 ### [MMM-MQTTfloorplan by DMailMan](https://github.com/DMailMan/MMM-MQTTfloorplan)
@@ -7527,6 +7519,11 @@ Last update: 2024-05-17T05:37:25+02:00
 3. Recommendation: Found `new Date()` in file `MMM-Pregnancy.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 4. Deprecated: Found `getYear()` in file `MMM-Pregnancy.js`: Replace `getYear()` by `getFullYear()`.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-PrixCarburants by bugsounet](https://github.com/bugsounet/MMM-PrixCarburants)
+
+1. `package.json` issue: No repository field.
+2. Recommendation: Found `new Date()` in file `MMM-PrixCarburants.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 
 ### [MMM-profile by kurtern84](https://github.com/kurtern84/MMM-profile)
 
