@@ -3088,7 +3088,7 @@
     "maintainerURL": "https://github.com/EbenKouao",
     "description": "This module allows you to access profiles using face recognition. This works on the back of OpenCV face recognition module. Program this script to control applicances e.g. Smart Plugs, or lights based on an individual's face profile being recognized.",
     "issues": [],
-    "stars": 80,
+    "stars": 81,
     "license": "MIT"
   },
   {
@@ -12864,6 +12864,16 @@
     "stars": 1,
     "hasGithubIssues": false,
     "license": "MIT"
+  },
+  {
+    "name": "EXT-VLCServer",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-VLCServer",
+    "id": "bugsounet/EXT-VLCServer",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "This plugin play wanted media on MagicMirror² with VLC.",
+    "issues": []
   },
   {
     "name": "MMM-VocabularyTrainer",

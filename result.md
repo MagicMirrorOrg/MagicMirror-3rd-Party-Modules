@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-05-18T05:37:15+02:00
+Last update: 2024-05-18T17:37:24+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1154   |
+| modules analyzed     |   1155   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7159   |
-| modules at github    |   1142   |
+| issues               |   7160   |
+| modules at github    |   1143   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -2749,12 +2749,10 @@ Last update: 2024-05-18T05:37:15+02:00
 
 ### [EXT-FreeboxTV by bugsounet](https://github.com/bugsounet/EXT-FreeboxTV)
 
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
-   - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+1. Information: There are updates for 3 dependencie(s):
+   - @eslint/js  ^8.57.0  →   ^9.3.0
+   - esbuild     ^0.21.2  →  ^0.21.3
+   - eslint      ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-FrenchHoroscope by Amand-M](https://github.com/Amand-M/MMM-FrenchHoroscope)
@@ -5722,12 +5720,10 @@ Last update: 2024-05-18T05:37:15+02:00
 
 ### [EXT-MusicPlayer by bugsounet](https://github.com/bugsounet/EXT-MusicPlayer)
 
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
-   - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+1. Information: There are updates for 3 dependencie(s):
+   - @eslint/js  ^8.57.0  →   ^9.3.0
+   - esbuild     ^0.21.2  →  ^0.21.3
+   - eslint      ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-mvgmunich by mrVragec](https://github.com/mrVragec/MMM-mvgmunich)
@@ -7708,12 +7704,10 @@ Last update: 2024-05-18T05:37:15+02:00
 
 ### [EXT-RadioPlayer by bugsounet](https://github.com/bugsounet/EXT-RadioPlayer)
 
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
-   - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+1. Information: There are updates for 3 dependencie(s):
+   - @eslint/js  ^8.57.0  →   ^9.3.0
+   - esbuild     ^0.21.2  →  ^0.21.3
+   - eslint      ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-RaiderIO by jwcnewton](https://github.com/jwcnewton/MMM-RaiderIO)
@@ -8627,10 +8621,11 @@ Last update: 2024-05-18T05:37:15+02:00
 ### [MMM-SimpleNotifyTrashDay by sabo10o29](https://github.com/sabo10o29/MMM-SimpleNotifyTrashDay)
 
 1. Typo: Found `Magic Mirror` in file `MMM-SimpleNotifyTrashDay.js`: Replace it with `MagicMirror²`.
-2. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-3. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
-4. Warning: No LICENSE file.
-5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+2. Recommendation: Found `new Date()` in file `MMM-SimpleNotifyTrashDay.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
+3. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+4. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
+5. Warning: No LICENSE file.
+6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-SimpleText by SaltyRiver](https://github.com/SaltyRiver/MMM-SimpleText)
 

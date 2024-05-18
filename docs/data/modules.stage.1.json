@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-18T03:30:06.028Z",
+  "lastUpdate": "2024-05-18T15:30:07.052Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -10854,6 +10854,16 @@
       "maintainer": "erikmohn",
       "maintainerURL": "",
       "description": "Display weather data from weather stations available at vindsiden.no (Norway).",
+      "issues": []
+    },
+    {
+      "name": "EXT-VLCServer",
+      "category": "Extended plugins for MMM-GoogleAssistant",
+      "url": "https://github.com/bugsounet/EXT-VLCServer",
+      "id": "bugsounet/EXT-VLCServer",
+      "maintainer": "bugsounet",
+      "maintainerURL": "https://wiki.bugsounet.fr",
+      "description": "This plugin play wanted media on MagicMirror² with VLC.",
       "issues": []
     },
     {

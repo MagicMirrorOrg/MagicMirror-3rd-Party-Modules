@@ -1,17 +1,17 @@
 {
-  "moduleCounter": 1154,
-  "modulesWithImageCounter": 788,
+  "moduleCounter": 1155,
+  "modulesWithImageCounter": 789,
   "modulesWithIssuesCounter": 1143,
-  "issueCounter": 7159,
-  "lastUpdate": "2024-05-18T05:37:15+02:00",
+  "issueCounter": 7160,
+  "lastUpdate": "2024-05-18T17:37:24+02:00",
   "repositoryHoster": {
-    "github": 1142,
+    "github": 1143,
     "gitlab": 11,
     "bitbucket": 1
   },
   "maintainer": {
+    "bugsounet": 42,
     "mykle1": 42,
-    "bugsounet": 41,
     "MMRIZE": 20,
     "fewieden": 15,
     "Tom-Hirschberger": 14,

@@ -4274,7 +4274,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 80,
+    "stars": 81,
     "license": "MIT",
     "image": "img-readme-face-recognition-guest-smai.jpg"
   },
@@ -13632,7 +13632,7 @@
       "mmm-googleassistant",
       "radio"
     ],
-    "image": "Logos-ES-Cadena_DIAL.jpg"
+    "image": "radio.jpg"
   },
   {
     "name": "MMM-RaiderIO",
@@ -17829,6 +17829,24 @@
     "hasGithubIssues": false,
     "license": "MIT",
     "image": "images-MMM-Vindsiden.jpg"
+  },
+  {
+    "name": "EXT-VLCServer",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-VLCServer",
+    "id": "bugsounet/EXT-VLCServer",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "This plugin play wanted media on MagicMirror² with VLC.",
+    "issues": [],
+    "tags": [
+      "mmm-googleassistant",
+      "vlc",
+      "media",
+      "player"
+    ],
+    "license": "MIT",
+    "image": "vlc-logo.jpg"
   },
   {
     "name": "MMM-VocabularyTrainer",

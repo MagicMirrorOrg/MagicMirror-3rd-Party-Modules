@@ -4321,7 +4321,7 @@
     "maintainerURL": "https://github.com/EbenKouao",
     "description": "This module allows you to access profiles using face recognition. This works on the back of OpenCV face recognition module. Program this script to control applicances e.g. Smart Plugs, or lights based on an individual's face profile being recognized.",
     "issues": true,
-    "stars": 80,
+    "stars": 81,
     "license": "MIT",
     "image": "img-readme-face-recognition-guest-smai.jpg",
     "defaultSortWeight": 6,
@@ -4563,7 +4563,7 @@
     "stars": 1,
     "license": "ISC",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 7,
+    "defaultSortWeight": 8,
     "lastCommit": "2022-05-18T17:08:05+02:00"
   },
   {
@@ -5090,7 +5090,7 @@
     ],
     "image": "resources-FreeboxTV.jpg",
     "defaultSortWeight": 3,
-    "lastCommit": "2024-03-08T17:25:15+01:00"
+    "lastCommit": "2024-05-18T15:51:05+02:00"
   },
   {
     "name": "MMM-FrenchHoroscope",
@@ -10256,7 +10256,7 @@
     ],
     "image": "resources-Screenshot.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-04-21T14:21:01+02:00"
+    "lastCommit": "2024-05-18T15:47:46+02:00"
   },
   {
     "name": "MMM-mvgmunich",
@@ -13766,9 +13766,9 @@
       "mmm-googleassistant",
       "radio"
     ],
-    "image": "Logos-ES-Cadena_DIAL.jpg",
+    "image": "radio.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-04-22T21:10:18+02:00"
+    "lastCommit": "2024-05-18T15:48:27+02:00"
   },
   {
     "name": "MMM-RaiderIO",
@@ -15373,8 +15373,8 @@
     ],
     "license": "MIT",
     "image": "sc01.jpg",
-    "defaultSortWeight": 5,
-    "lastCommit": "2024-05-18T10:31:00+09:00"
+    "defaultSortWeight": 6,
+    "lastCommit": "2024-05-18T22:55:22+09:00"
   },
   {
     "name": "MMM-SimpleText",
@@ -18048,6 +18048,26 @@
     "image": "images-MMM-Vindsiden.jpg",
     "defaultSortWeight": 8,
     "lastCommit": "2016-11-05T17:09:09+01:00"
+  },
+  {
+    "name": "EXT-VLCServer",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-VLCServer",
+    "id": "bugsounet/EXT-VLCServer",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "This plugin play wanted media on MagicMirror\u00b2 with VLC.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
+    "issues": false,
+    "tags": [
+      "mmm-googleassistant",
+      "vlc",
+      "media",
+      "player"
+    ],
+    "license": "MIT",
+    "image": "vlc-logo.jpg",
+    "defaultSortWeight": 2,
+    "lastCommit": "2024-05-18T16:04:10+02:00"
   },
   {
     "name": "MMM-VocabularyTrainer",
