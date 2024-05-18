@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-17T17:37:25+02:00
+Last update: 2024-05-18T05:37:15+02:00
 
 ## Statistics
 
@@ -155,11 +155,11 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Alert by bugsounet](https://github.com/bugsounet/EXT-Alert)
 
 1. Information: There are updates for 7 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - alertifyjs                 ^1.13.1  →   ^1.14.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
    - sweetalert2               ^11.10.6  →  ^11.11.0
 
@@ -458,10 +458,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Background by bugsounet](https://github.com/bugsounet/EXT-Background)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -469,7 +469,7 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Deprecated: Found `omxplayer` in file `node_helper.js`: Try to replace it with `vlc`.
 2. Information: There are updates for 3 dependencie(s):
-   - eslint     ^8.56.0  →    ^9.2.0
+   - eslint     ^8.56.0  →    ^9.3.0
    - jimp      ^0.22.10  →  ^0.22.12
    - prettier    ^3.1.1  →    ^3.2.5
 
@@ -793,10 +793,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Bring by bugsounet](https://github.com/bugsounet/EXT-Bring)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -812,10 +812,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Browser by bugsounet](https://github.com/bugsounet/EXT-Browser)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.56.0  →    ^9.2.0
+   - @eslint/js                 ^8.56.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.56.0  →    ^9.2.0
+   - eslint                     ^8.56.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -1327,7 +1327,7 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-CoupleDays by wiesty](https://github.com/wiesty/MMM-CoupleDays)
 
 1. Information: There are updates for 3 dependencie(s):
-   - eslint    ^8.56.0  →   ^9.2.0
+   - eslint    ^8.56.0  →   ^9.3.0
    - moment    ^2.29.4  →  ^2.30.1
    - prettier   ^3.1.1  →   ^3.2.5
 
@@ -2750,10 +2750,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-FreeboxTV by bugsounet](https://github.com/bugsounet/EXT-FreeboxTV)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -2982,10 +2982,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-Glassy by bugsounet](https://github.com/bugsounet/MMM-Glassy)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -3191,10 +3191,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Governor by bugsounet](https://github.com/bugsounet/EXT-Governor)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -3962,10 +3962,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Internet by bugsounet](https://github.com/bugsounet/EXT-Internet)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -4281,10 +4281,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Keyboard by bugsounet](https://github.com/bugsounet/EXT-Keyboard)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -4419,10 +4419,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Librespot by bugsounet](https://github.com/bugsounet/EXT-Librespot)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -4961,10 +4961,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-MeteoFrance by bugsounet](https://github.com/bugsounet/MMM-MeteoFrance)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -5489,10 +5489,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. No image found.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -5723,10 +5723,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-MusicPlayer by bugsounet](https://github.com/bugsounet/EXT-MusicPlayer)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -6159,10 +6159,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-NetatmoThermostat by bugsounet](https://github.com/bugsounet/MMM-NetatmoThermostat)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -6915,10 +6915,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Pages by bugsounet](https://github.com/bugsounet/EXT-Pages)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -7115,10 +7115,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Photos by bugsounet](https://github.com/bugsounet/EXT-Photos)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -7174,10 +7174,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Deprecated: Found `new Buffer(` in file `progressbar.js`: This is deprecated. Please update: <https://nodejs.org/api/buffer.html>.
 2. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
    - long-press-event            ^2.4.6  →    ^2.5.0
 
@@ -7185,10 +7185,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Pir by bugsounet](https://github.com/bugsounet/EXT-Pir)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -7594,10 +7594,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-PublicTransportHafas by KristjanESPERANTO](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas)
 
 1. Information: There are updates for 7 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - dayjs                     ^1.11.10  →  ^1.11.11
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - globals                    ^15.0.0  →   ^15.2.0
    - markdownlint-cli           ^0.39.0  →   ^0.40.0
    - stylelint                  ^16.3.1  →   ^16.5.0
@@ -7709,10 +7709,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-RadioPlayer by bugsounet](https://github.com/bugsounet/EXT-RadioPlayer)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -8255,10 +8255,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Typo: Found `Magic Mirror` in file `MMM-Saint.css`: Replace it with `MagicMirror²`.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -8305,10 +8305,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Deprecated: Found `new Buffer(` in file `progressbar.js`: This is deprecated. Please update: <https://nodejs.org/api/buffer.html>.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -8389,10 +8389,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Recommendation: Found `XMLHttpRequest` in file `webcam.js`: Replace it with built-in fetch.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -8400,10 +8400,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. No image found.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -8417,10 +8417,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. No image found.
 2. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
    - nodemailer                 ^6.9.11  →   ^6.9.13
 
@@ -8428,10 +8428,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-SelfiesViewer by bugsounet](https://github.com/bugsounet/EXT-SelfiesViewer)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -8982,20 +8982,20 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Spotify by bugsounet](https://github.com/bugsounet/EXT-Spotify)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
 ### [EXT-SpotifyCanvasLyrics by bugsounet](https://github.com/bugsounet/EXT-SpotifyCanvasLyrics)
 
 1. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
    - protobufjs                  ^7.2.6  →    ^7.3.0
 
@@ -9133,10 +9133,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @elgato-stream-deck/node    ^6.0.0  →    ^6.2.0
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -9359,10 +9359,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -9741,9 +9741,9 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [MMM-TranslinkBrisbane by dekinet](https://github.com/dekinet/MMM-TranslinkBrisbane)
 
 1. Information: There are updates for 4 dependencie(s):
-   - @eslint/js                ^8.56.0  →   ^9.2.0
+   - @eslint/js                ^8.56.0  →   ^9.3.0
    - @stylistic/eslint-plugin   ^1.6.0  →   ^2.1.0
-   - eslint                    ^8.56.0  →   ^9.2.0
+   - eslint                    ^8.56.0  →   ^9.3.0
    - node-html-parser          ^6.1.12  →  ^6.1.13
 
 
@@ -9968,10 +9968,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Updates by bugsounet](https://github.com/bugsounet/EXT-Updates)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -10179,10 +10179,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-Volume by bugsounet](https://github.com/bugsounet/EXT-Volume)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -10470,10 +10470,10 @@ Last update: 2024-05-17T17:37:25+02:00
 
 1. No image found.
 2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.10  →  ^10.3.15
 
 
@@ -10759,10 +10759,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-YouTube by bugsounet](https://github.com/bugsounet/EXT-YouTube)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
@@ -10786,10 +10786,10 @@ Last update: 2024-05-17T17:37:25+02:00
 ### [EXT-YouTubeCast by bugsounet](https://github.com/bugsounet/EXT-YouTubeCast)
 
 1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.2.0
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.57.0  →    ^9.2.0
+   - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
 
 
