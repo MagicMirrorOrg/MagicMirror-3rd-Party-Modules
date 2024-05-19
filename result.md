@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-18T17:37:24+02:00
+Last update: 2024-05-19T05:37:27+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-18T17:37:24+02:00
 | modules analyzed     |   1155   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7160   |
+| issues               |   7162   |
 | modules at github    |   1143   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -1976,10 +1976,12 @@ Last update: 2024-05-18T17:37:24+02:00
 6. Recommendation: Found `new Date()` in file `MMM-DynamicWeather.ts`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 7. Deprecated: Found `getYear()` in file `MMM-DynamicWeather.ts`: Replace `getYear()` by `getFullYear()`.
 8. Deprecated: Found `api.openweathermap.org/data/2.5` in file `MMM-DynamicWeather.ts`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
-9. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
-10. Recommendation: Found `require('https')` in file `node_helper.js`: Replace 'https' by 'node:https'.
-11. Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`.
-12. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+9. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+10. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+11. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
+12. Recommendation: Found `require('https')` in file `node_helper.js`: Replace 'https' by 'node:https'.
+13. Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`.
+14. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-EARTH by mykle1](https://github.com/mykle1/MMM-EARTH)
 

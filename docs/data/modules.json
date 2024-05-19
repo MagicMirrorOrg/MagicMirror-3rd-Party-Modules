@@ -3544,7 +3544,7 @@
     "stars": 1,
     "license": "MIT",
     "defaultSortWeight": 6,
-    "lastCommit": "2023-11-17T11:25:49+01:00"
+    "lastCommit": "2024-05-18T19:29:44+02:00"
   },
   {
     "name": "MMM-DropboxWallpaper",
@@ -3681,8 +3681,8 @@
       "weather"
     ],
     "image": "cloudy_example.jpg",
-    "defaultSortWeight": 11,
-    "lastCommit": "2024-05-13T20:43:45-04:00"
+    "defaultSortWeight": 13,
+    "lastCommit": "2024-05-18T22:16:54-04:00"
   },
   {
     "name": "MMM-EARTH",
@@ -11984,7 +11984,7 @@
     "maintainerURL": "https://github.com/Fabrizz",
     "description": "Highly customizable module that displays what you are listening to in Spotify. Works with <a target=\"_blank\" href=\"https://github.com/Fabrizz/MMM-LiveLyrics\">MMM-LiveLyrics</a> and allows theming other modules!",
     "issues": true,
-    "stars": 44,
+    "stars": 45,
     "license": "MIT",
     "tags": [
       "spotify",
@@ -12088,7 +12088,7 @@
     "maintainerURL": "",
     "description": "Display current weather as image based on the Openmap Weather API data with different formatting.",
     "issues": true,
-    "stars": 25,
+    "stars": 26,
     "license": "MIT",
     "image": "MMM-OpenmapWeather-display.jpg",
     "defaultSortWeight": 6,
@@ -12225,7 +12225,7 @@
     "maintainerURL": "https://github.com/themox",
     "description": "A more detailed Oura data display including readiness scores and heart rate data.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "defaultSortWeight": 3,
     "lastCommit": "2022-07-20T06:33:59-04:00"
   },

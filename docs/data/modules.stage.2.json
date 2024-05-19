@@ -8559,7 +8559,7 @@
     "maintainerURL": "https://github.com/Fabrizz",
     "description": "Highly customizable module that displays what you are listening to in Spotify. Works with <a target=\"_blank\" href=\"https://github.com/Fabrizz/MMM-LiveLyrics\">MMM-LiveLyrics</a> and allows theming other modules!",
     "issues": [],
-    "stars": 44,
+    "stars": 45,
     "license": "MIT"
   },
   {
@@ -8631,7 +8631,7 @@
     "maintainerURL": "",
     "description": "Display current weather as image based on the Openmap Weather API data with different formatting.",
     "issues": [],
-    "stars": 25,
+    "stars": 26,
     "license": "MIT"
   },
   {
@@ -8737,7 +8737,7 @@
     "maintainerURL": "https://github.com/themox",
     "description": "A more detailed Oura data display including readiness scores and heart rate data.",
     "issues": [],
-    "stars": 2
+    "stars": 3
   },
   {
     "name": "MMM-Overwatch",

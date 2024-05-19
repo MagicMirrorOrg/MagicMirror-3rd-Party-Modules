@@ -11859,7 +11859,7 @@
     "maintainerURL": "https://github.com/Fabrizz",
     "description": "Highly customizable module that displays what you are listening to in Spotify. Works with <a target=\"_blank\" href=\"https://github.com/Fabrizz/MMM-LiveLyrics\">MMM-LiveLyrics</a> and allows theming other modules!",
     "issues": [],
-    "stars": 44,
+    "stars": 45,
     "license": "MIT",
     "tags": [
       "spotify",
@@ -11962,7 +11962,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 25,
+    "stars": 26,
     "license": "MIT",
     "image": "MMM-OpenmapWeather-display.jpg"
   },
@@ -12104,7 +12104,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 3
   },
   {
     "name": "MMM-Overwatch",
