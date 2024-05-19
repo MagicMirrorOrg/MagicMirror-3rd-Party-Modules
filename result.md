@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-19T05:37:27+02:00
+Last update: 2024-05-19T17:37:12+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-05-19T05:37:27+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1155   |
 | maintainer           |    647   |
-| modules with issues  |   1143   |
-| issues               |   7162   |
+| modules with issues  |   1142   |
+| issues               |   7160   |
 | modules at github    |   1143   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -2751,10 +2751,11 @@ Last update: 2024-05-19T05:37:27+02:00
 
 ### [EXT-FreeboxTV by bugsounet](https://github.com/bugsounet/EXT-FreeboxTV)
 
-1. Information: There are updates for 3 dependencie(s):
-   - @eslint/js  ^8.57.0  →   ^9.3.0
-   - esbuild     ^0.21.2  →  ^0.21.3
-   - eslint      ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.3.0
+   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
+   - esbuild                   ^0.21.2  →  ^0.21.3
+   - eslint                    ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-FrenchHoroscope by Amand-M](https://github.com/Amand-M/MMM-FrenchHoroscope)
@@ -3019,11 +3020,6 @@ Last update: 2024-05-19T05:37:27+02:00
 3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 4. Warning: No LICENSE file.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
-
-### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
-
-1. Recommendation: Found local copy of `jquery.min.js`. Instead of a local copy, it would be better to add jQuery to the dependencies in `package.json`.
-2. Outdated: Local jQuery file `jquery.min.js` seems to be outdated. jQuery v3.7 or higher is recommended.
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
 
@@ -5722,10 +5718,11 @@ Last update: 2024-05-19T05:37:27+02:00
 
 ### [EXT-MusicPlayer by bugsounet](https://github.com/bugsounet/EXT-MusicPlayer)
 
-1. Information: There are updates for 3 dependencie(s):
-   - @eslint/js  ^8.57.0  →   ^9.3.0
-   - esbuild     ^0.21.2  →  ^0.21.3
-   - eslint      ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.3.0
+   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
+   - esbuild                   ^0.21.2  →  ^0.21.3
+   - eslint                    ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-mvgmunich by mrVragec](https://github.com/mrVragec/MMM-mvgmunich)
@@ -7596,7 +7593,7 @@ Last update: 2024-05-19T05:37:27+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - dayjs                     ^1.11.10  →  ^1.11.11
    - eslint                     ^8.57.0  →    ^9.3.0
-   - globals                    ^15.0.0  →   ^15.2.0
+   - globals                    ^15.0.0  →   ^15.3.0
    - markdownlint-cli           ^0.39.0  →   ^0.40.0
    - stylelint                  ^16.3.1  →   ^16.5.0
 
@@ -7706,10 +7703,11 @@ Last update: 2024-05-19T05:37:27+02:00
 
 ### [EXT-RadioPlayer by bugsounet](https://github.com/bugsounet/EXT-RadioPlayer)
 
-1. Information: There are updates for 3 dependencie(s):
-   - @eslint/js  ^8.57.0  →   ^9.3.0
-   - esbuild     ^0.21.2  →  ^0.21.3
-   - eslint      ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.3.0
+   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
+   - esbuild                   ^0.21.2  →  ^0.21.3
+   - eslint                    ^8.57.0  →   ^9.3.0
 
 
 ### [MMM-RaiderIO by jwcnewton](https://github.com/jwcnewton/MMM-RaiderIO)

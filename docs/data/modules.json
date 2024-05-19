@@ -4826,7 +4826,7 @@
     "maintainerURL": "https://github.com/E3V3A",
     "description": "A flight radar that display airplane/flight details of what is currently flying in the airspace above some location.",
     "issues": true,
-    "stars": 19,
+    "stars": 20,
     "license": "MIT",
     "tags": [
       "flights",
@@ -4861,7 +4861,7 @@
     "maintainerURL": "",
     "description": "A classic flip clock that is powered by the awesome <a target=\"_blank\" href=\"https://pqina.nl/flip\">flip plugin</a>.",
     "issues": true,
-    "stars": 16,
+    "stars": 17,
     "license": "MIT",
     "image": "example.jpg",
     "defaultSortWeight": 8,
@@ -5090,7 +5090,7 @@
     ],
     "image": "resources-FreeboxTV.jpg",
     "defaultSortWeight": 3,
-    "lastCommit": "2024-05-18T15:51:05+02:00"
+    "lastCommit": "2024-05-19T12:10:35+02:00"
   },
   {
     "name": "MMM-FrenchHoroscope",
@@ -5565,7 +5565,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror\u00b2 with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
-    "issues": true,
+    "issues": false,
     "stars": 83,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -5579,8 +5579,8 @@
       "smart home"
     ],
     "image": "resources-previewFS.jpg",
-    "defaultSortWeight": -1,
-    "lastCommit": "2024-05-04T17:58:08+02:00"
+    "defaultSortWeight": -3,
+    "lastCommit": "2024-05-19T17:25:57+02:00"
   },
   {
     "name": "MMM-GoogleAssistant",
@@ -10256,7 +10256,7 @@
     ],
     "image": "resources-Screenshot.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-18T15:47:46+02:00"
+    "lastCommit": "2024-05-19T12:18:13+02:00"
   },
   {
     "name": "MMM-mvgmunich",
@@ -13402,7 +13402,7 @@
     "license": "MIT",
     "image": "screenshot.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2024-05-16T19:10:08+02:00"
+    "lastCommit": "2024-05-19T12:31:40+02:00"
   },
   {
     "name": "MMM-profile",
@@ -13768,7 +13768,7 @@
     ],
     "image": "radio.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-18T15:48:27+02:00"
+    "lastCommit": "2024-05-19T12:03:39+02:00"
   },
   {
     "name": "MMM-RaiderIO",
@@ -18067,7 +18067,7 @@
     "license": "MIT",
     "image": "vlc-logo.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-05-18T16:04:10+02:00"
+    "lastCommit": "2024-05-19T12:13:03+02:00"
   },
   {
     "name": "MMM-VocabularyTrainer",

@@ -4782,7 +4782,7 @@
     "maintainerURL": "https://github.com/E3V3A",
     "description": "A flight radar that display airplane/flight details of what is currently flying in the airspace above some location.",
     "issues": [],
-    "stars": 19,
+    "stars": 20,
     "license": "MIT",
     "tags": [
       "flights",
@@ -4817,7 +4817,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 16,
+    "stars": 17,
     "license": "MIT",
     "image": "example.jpg"
   },
