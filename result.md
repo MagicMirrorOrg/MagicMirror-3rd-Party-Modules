@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-20T05:37:13+02:00
+Last update: 2024-05-20T17:37:29+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-05-20T05:37:13+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1157   |
 | maintainer           |    647   |
-| modules with issues  |   1144   |
-| issues               |   7170   |
+| modules with issues  |   1142   |
+| issues               |   7168   |
 | modules at github    |   1145   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -808,16 +808,6 @@ Last update: 2024-05-20T05:37:13+02:00
 4. Deprecated: Found `require("request")` in file `bring-profile.js`: Replace it with built-in fetch.
 5. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
 6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
-
-### [EXT-Browser by bugsounet](https://github.com/bugsounet/EXT-Browser)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.56.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
-   - esbuild                    ^0.20.2  →   ^0.21.3
-   - eslint                     ^8.56.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
-
 
 ### [MMM-Bubi by balassy](https://github.com/balassy/MMM-Bubi)
 
@@ -7595,18 +7585,6 @@ Last update: 2024-05-20T05:37:13+02:00
 ### [MMM-PublicTransportBerlin by deg0nz](https://github.com/deg0nz/MMM-PublicTransportBerlin)
 
 1. Recommendation: Replace eslintrc by new flat config.
-
-### [MMM-PublicTransportHafas by KristjanESPERANTO](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas)
-
-1. Information: There are updates for 7 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
-   - dayjs                     ^1.11.10  →  ^1.11.11
-   - eslint                     ^8.57.0  →    ^9.3.0
-   - globals                    ^15.0.0  →   ^15.3.0
-   - markdownlint-cli           ^0.39.0  →   ^0.40.0
-   - stylelint                  ^16.3.1  →   ^16.5.0
-
 
 ### [MMM-PublicTransportVVO by ChristianGeie](https://github.com/ChristianGeie/MMM-PublicTransportVVO)
 

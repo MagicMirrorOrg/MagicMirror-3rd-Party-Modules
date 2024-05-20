@@ -1544,7 +1544,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display any internet web page like a real browser in fullscreen.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": true,
+    "issues": false,
     "stars": 0,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -1553,8 +1553,8 @@
       "browser"
     ],
     "image": "EXT-Browser.jpg",
-    "defaultSortWeight": 4,
-    "lastCommit": "2024-03-18T00:35:58+01:00"
+    "defaultSortWeight": 3,
+    "lastCommit": "2024-05-20T11:44:01+02:00"
   },
   {
     "name": "MMM-Bubi",
@@ -13558,7 +13558,7 @@
     "maintainer": "KristjanESPERANTO",
     "maintainerURL": "",
     "description": "Displays departure information for public transportation in Germany and some other European countries. The <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client\">hafas-client</a> is used to query the information. The interface of the Deutsche Bahn is used as standard, this includes most of the local networks with buses, trams, etc. However, <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client/blob/main/p/readme.md\">other hafas interfaces</a> can also be used.",
-    "issues": true,
+    "issues": false,
     "stars": 14,
     "license": "MIT",
     "tags": [
@@ -13567,7 +13567,7 @@
     ],
     "image": "img-Goerdelerring_all.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2024-04-03T00:11:32+02:00"
+    "lastCommit": "2024-05-20T12:43:32+02:00"
   },
   {
     "name": "MMM-PublicTransportVVO",
@@ -15386,7 +15386,7 @@
     "license": "MIT",
     "image": "sc01.jpg",
     "defaultSortWeight": 6,
-    "lastCommit": "2024-05-18T22:55:22+09:00"
+    "lastCommit": "2024-05-20T21:55:06+09:00"
   },
   {
     "name": "MMM-SimpleText",
