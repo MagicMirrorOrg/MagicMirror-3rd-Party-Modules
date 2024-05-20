@@ -12715,7 +12715,7 @@
     "maintainerURL": "",
     "description": "A python script that puts your display to sleep, if your smartphone/smartwatch is not connected to the WiFi network.",
     "issues": true,
-    "stars": 27,
+    "stars": 28,
     "defaultSortWeight": 5,
     "lastCommit": "2020-05-18T15:43:17+02:00"
   },
@@ -12728,7 +12728,7 @@
     "maintainerURL": "",
     "description": "Display stats from Pi-Hole DNS ad blocking.",
     "issues": true,
-    "stars": 70,
+    "stars": 71,
     "license": "MIT",
     "tags": [
       "pi-hole"
@@ -12816,7 +12816,7 @@
     "maintainerURL": "",
     "description": "After a configurated time without any user interaction the display will turn off and hide all modules for economy mode. It will wake up with a PIR sensor.",
     "issues": true,
-    "stars": 17,
+    "stars": 21,
     "license": "MIT",
     "tags": [
       "screen",
@@ -13411,13 +13411,25 @@
     "id": "kurtern84/MMM-profile",
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
-    "description": "A simple module to show a profilpicture with your name and wheater report for your MagicMirrorDisplays Swedish name of the day.",
+    "description": "A simple module to show a profilpicture with your name and wheater report.",
     "issues": true,
     "stars": 5,
     "license": "MIT",
     "image": "Screenshot-MMM-Profile.jpg",
     "defaultSortWeight": 6,
     "lastCommit": "2019-02-18T18:19:22+01:00"
+  },
+  {
+    "name": "MMM-ProfileAndWeatherAlerts",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
+    "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
+    "maintainer": "kurtern84",
+    "maintainerURL": "https://github.com/kurtern84",
+    "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
+    "issues": true,
+    "defaultSortWeight": 6,
+    "lastCommit": "2024-05-19T23:38:28+02:00"
   },
   {
     "name": "MMM-ProfileControl",
@@ -18583,6 +18595,26 @@
     "image": "screenshot.jpg",
     "defaultSortWeight": 5,
     "lastCommit": "2022-09-06T08:37:46+01:00"
+  },
+  {
+    "name": "EXT-Website",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-Website",
+    "id": "bugsounet/EXT-Website",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "Application to configure MMM-GoogleAssistant from your browser.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
+    "issues": true,
+    "tags": [
+      "mmm-googleassistant",
+      "interface",
+      "website",
+      "ext"
+    ],
+    "license": "MIT",
+    "image": "website-assets-img-FavIcon.jpg",
+    "defaultSortWeight": 5,
+    "lastCommit": "2024-05-19T16:51:17+02:00"
   },
   {
     "name": "MMM-WebSpeechTTS",

@@ -12592,7 +12592,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 27
+    "stars": 28
   },
   {
     "name": "MMM-pihole-stats",
@@ -12603,7 +12603,7 @@
     "maintainerURL": "",
     "description": "Display stats from Pi-Hole DNS ad blocking.",
     "issues": [],
-    "stars": 70,
+    "stars": 71,
     "license": "MIT",
     "tags": [
       "pi-hole"
@@ -12685,7 +12685,7 @@
     "maintainerURL": "",
     "description": "After a configurated time without any user interaction the display will turn off and hide all modules for economy mode. It will wake up with a PIR sensor.",
     "issues": [],
-    "stars": 17,
+    "stars": 21,
     "license": "MIT",
     "tags": [
       "screen",
@@ -13285,13 +13285,27 @@
     "id": "kurtern84/MMM-profile",
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
-    "description": "A simple module to show a profilpicture with your name and wheater report for your MagicMirrorDisplays Swedish name of the day.",
+    "description": "A simple module to show a profilpicture with your name and wheater report.",
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
     "stars": 5,
     "license": "MIT",
     "image": "Screenshot-MMM-Profile.jpg"
+  },
+  {
+    "name": "MMM-ProfileAndWeatherAlerts",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
+    "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
+    "maintainer": "kurtern84",
+    "maintainerURL": "https://github.com/kurtern84",
+    "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
+    "issues": [
+      "`package.json` issue: No repository field.",
+      "`package.json` issue: No license field.",
+      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
+    ]
   },
   {
     "name": "MMM-ProfileControl",
@@ -18365,6 +18379,24 @@
       "alerts"
     ],
     "image": "screenshot.jpg"
+  },
+  {
+    "name": "EXT-Website",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-Website",
+    "id": "bugsounet/EXT-Website",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "Application to configure MMM-GoogleAssistant from your browser.",
+    "issues": [],
+    "tags": [
+      "mmm-googleassistant",
+      "interface",
+      "website",
+      "ext"
+    ],
+    "license": "MIT",
+    "image": "website-assets-img-FavIcon.jpg"
   },
   {
     "name": "MMM-WebSpeechTTS",

@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-05-19T17:37:12+02:00
+Last update: 2024-05-20T05:37:13+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1155   |
+| modules analyzed     |   1157   |
 | maintainer           |    647   |
-| modules with issues  |   1142   |
-| issues               |   7160   |
-| modules at github    |   1143   |
+| modules with issues  |   1144   |
+| issues               |   7170   |
+| modules at github    |   1145   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -7528,6 +7528,16 @@ Last update: 2024-05-19T17:37:12+02:00
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [MMM-ProfileAndWeatherAlerts by kurtern84](https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts)
+
+1. `package.json` issue: No repository field.
+2. `package.json` issue: No license field.
+3. There are no keywords in 'package.json'. We would use them as tags on the module list page.
+4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+5. Deprecated: Found `require("request")` in file `node_helper.js`: Replace it with built-in fetch.
+6. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
+7. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
 ### [MMM-ProfileControl by Tom-Hirschberger](https://github.com/Tom-Hirschberger/MMM-ProfileControl)
 
 1. Recommendation: Replace eslintrc by new flat config.
@@ -10431,6 +10441,12 @@ Last update: 2024-05-19T17:37:12+02:00
 3. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 4. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [EXT-Website by bugsounet](https://github.com/bugsounet/EXT-Website)
+
+1. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+2. Recommendation: Found local copy of `jquery.min.js`. Instead of a local copy, it would be better to add jQuery to the dependencies in `package.json`.
+3. Outdated: Local jQuery file `jquery.min.js` seems to be outdated. jQuery v3.7 or higher is recommended.
 
 ### [MMM-Webuntis by thyed](https://github.com/thyed/MMM-Webuntis)
 

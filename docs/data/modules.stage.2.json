@@ -9096,7 +9096,7 @@
     "maintainerURL": "",
     "description": "A python script that puts your display to sleep, if your smartphone/smartwatch is not connected to the WiFi network.",
     "issues": [],
-    "stars": 27
+    "stars": 28
   },
   {
     "name": "MMM-pihole-stats",
@@ -9107,7 +9107,7 @@
     "maintainerURL": "",
     "description": "Display stats from Pi-Hole DNS ad blocking.",
     "issues": [],
-    "stars": 70,
+    "stars": 71,
     "license": "MIT"
   },
   {
@@ -9168,7 +9168,7 @@
     "maintainerURL": "",
     "description": "After a configurated time without any user interaction the display will turn off and hide all modules for economy mode. It will wake up with a PIR sensor.",
     "issues": [],
-    "stars": 17,
+    "stars": 21,
     "license": "MIT"
   },
   {
@@ -9593,10 +9593,20 @@
     "id": "kurtern84/MMM-profile",
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
-    "description": "A simple module to show a profilpicture with your name and wheater report for your MagicMirrorDisplays Swedish name of the day.",
+    "description": "A simple module to show a profilpicture with your name and wheater report.",
     "issues": [],
     "stars": 5,
     "license": "MIT"
+  },
+  {
+    "name": "MMM-ProfileAndWeatherAlerts",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
+    "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
+    "maintainer": "kurtern84",
+    "maintainerURL": "https://github.com/kurtern84",
+    "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
+    "issues": []
   },
   {
     "name": "MMM-ProfileControl",
@@ -13258,6 +13268,16 @@
     "issues": [],
     "stars": 6,
     "license": "MIT"
+  },
+  {
+    "name": "EXT-Website",
+    "category": "Extended plugins for MMM-GoogleAssistant",
+    "url": "https://github.com/bugsounet/EXT-Website",
+    "id": "bugsounet/EXT-Website",
+    "maintainer": "bugsounet",
+    "maintainerURL": "https://wiki.bugsounet.fr",
+    "description": "Application to configure MMM-GoogleAssistant from your browser.",
+    "issues": []
   },
   {
     "name": "MMM-WebSpeechTTS",

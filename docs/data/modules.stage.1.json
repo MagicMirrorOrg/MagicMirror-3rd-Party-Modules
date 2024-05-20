@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-19T15:30:06.676Z",
+  "lastUpdate": "2024-05-20T03:30:06.356Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -8100,7 +8100,17 @@
       "id": "kurtern84/MMM-profile",
       "maintainer": "kurtern84",
       "maintainerURL": "https://github.com/kurtern84",
-      "description": "A simple module to show a profilpicture with your name and wheater report for your MagicMirrorDisplays Swedish name of the day.",
+      "description": "A simple module to show a profilpicture with your name and wheater report.",
+      "issues": []
+    },
+    {
+      "name": "MMM-ProfileAndWeatherAlerts",
+      "category": "Entertainment / Misc",
+      "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
+      "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
+      "maintainer": "kurtern84",
+      "maintainerURL": "https://github.com/kurtern84",
+      "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
       "issues": []
     },
     {
@@ -11187,6 +11197,16 @@
       "maintainer": "PjTewkesbury",
       "maintainerURL": "",
       "description": "Displays HTTP POST webhook notifications on screen and supports templates for alert message formatting.",
+      "issues": []
+    },
+    {
+      "name": "EXT-Website",
+      "category": "Extended plugins for MMM-GoogleAssistant",
+      "url": "https://github.com/bugsounet/EXT-Website",
+      "id": "bugsounet/EXT-Website",
+      "maintainer": "bugsounet",
+      "maintainerURL": "https://wiki.bugsounet.fr",
+      "description": "Application to configure MMM-GoogleAssistant from your browser.",
       "issues": []
     },
     {
