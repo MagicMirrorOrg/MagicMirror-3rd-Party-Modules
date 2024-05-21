@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-20T15:30:06.509Z",
+  "lastUpdate": "2024-05-21T03:30:07.044Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -7320,14 +7320,13 @@
     },
     {
       "name": "MMM-OpenWeatherForecast",
-      "category": "Outdated Modules",
-      "url": "https://github.com/jclarke0000/MMM-OpenWeatherForecast",
-      "id": "jclarke0000/MMM-OpenWeatherForecast",
-      "maintainer": "jclarke0000",
+      "category": "Weather",
+      "url": "https://github.com/Tom-Hirschberger/MMM-OpenWeatherForecast",
+      "id": "Tom-Hirschberger/MMM-OpenWeatherForecast",
+      "maintainer": "Tom-Hirschberger",
       "maintainerURL": "",
       "description": "Displays current, hourly and daily forecast information using data from the OpenWeather One Call API.",
-      "issues": [],
-      "outdated": "Abandoned. No reactions to issues since years. Only works with API version 2.5!"
+      "issues": []
     },
     {
       "name": "MMM-OpenWeatherMapForecast",

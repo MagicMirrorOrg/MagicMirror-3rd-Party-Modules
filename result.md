@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-20T17:37:29+02:00
+Last update: 2024-05-21T05:37:26+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-20T17:37:29+02:00
 | modules analyzed     |   1157   |
 | maintainer           |    647   |
 | modules with issues  |   1142   |
-| issues               |   7168   |
+| issues               |   7169   |
 | modules at github    |   1145   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -6777,19 +6777,20 @@ Last update: 2024-05-20T17:37:29+02:00
 4. Warning: No LICENSE file.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
-### [MMM-OpenWeatherForecast by jclarke0000](https://github.com/jclarke0000/MMM-OpenWeatherForecast)
+### [MMM-OpenWeatherForecast by Tom-Hirschberger](https://github.com/Tom-Hirschberger/MMM-OpenWeatherForecast)
 
-0. This module is outdated: Abandoned. No reactions to issues since years. Only works with API version 2.5!
 1. There are no keywords in 'package.json'. We would use them as tags on the module list page.
 2. Typo: Found `Magic Mirror` in file `MMM-OpenWeatherForecast.js`: Replace it with `MagicMirror²`.
-3. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
-4. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
-5. Recommendation: Found `axios` in file `node_helper.js`: Replace it with built-in fetch.
-6. Deprecated: Found `api.openweathermap.org/data/2.5` in file `node_helper.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
-7. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
-8. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
-9. Warning: No LICENSE file.
-10. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+3. Deprecated: Found `api.openweathermap.org/data/2.5` in file `MMM-OpenWeatherForecast.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
+4. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+5. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
+6. Deprecated: Found `api.openweathermap.org/data/2.5` in file `README.md`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
+7. Recommendation: Found `axios` in file `node_helper.js`: Replace it with built-in fetch.
+8. Deprecated: Found `api.openweathermap.org/data/2.5` in file `node_helper.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
+9. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
+10. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
+11. Warning: No LICENSE file.
+12. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-OpenWeatherMapForecast by MarcLandis](https://github.com/MarcLandis/MMM-OpenWeatherMapForecast)
 
@@ -9341,12 +9342,13 @@ Last update: 2024-05-20T17:37:29+02:00
 ### [EXT-TelegramBot by bugsounet](https://github.com/bugsounet/EXT-TelegramBot)
 
 1. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-2. Information: There are updates for 5 dependencie(s):
+2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →    ^9.3.0
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
    - glob                      ^10.3.12  →  ^10.3.15
+   - node-telegram-bot-api      ^0.65.1  →   ^0.66.0
 
 
 ### [MMM-TelegramCommands by doctorfree](https://github.com/doctorfree/MMM-TelegramCommands)

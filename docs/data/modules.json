@@ -116,7 +116,7 @@
     "maintainerURL": "",
     "description": "Display weather information using the AccuWeather API.",
     "issues": true,
-    "stars": 3,
+    "stars": 4,
     "tags": [
       "weather"
     ],
@@ -12137,19 +12137,17 @@
   },
   {
     "name": "MMM-OpenWeatherForecast",
-    "category": "Outdated Modules",
-    "url": "https://github.com/jclarke0000/MMM-OpenWeatherForecast",
-    "id": "jclarke0000/MMM-OpenWeatherForecast",
-    "maintainer": "jclarke0000",
+    "category": "Weather",
+    "url": "https://github.com/Tom-Hirschberger/MMM-OpenWeatherForecast",
+    "id": "Tom-Hirschberger/MMM-OpenWeatherForecast",
+    "maintainer": "Tom-Hirschberger",
     "maintainerURL": "",
     "description": "Displays current, hourly and daily forecast information using data from the OpenWeather One Call API.",
     "issues": true,
-    "outdated": "Abandoned. No reactions to issues since years. Only works with API version 2.5!",
-    "stars": 42,
     "license": "MIT",
-    "image": "icons-iconsets.jpg",
-    "defaultSortWeight": 910,
-    "lastCommit": "2022-03-12T19:57:32-05:00"
+    "image": "MMM-OpenWeatherForecast.jpg",
+    "defaultSortWeight": 12,
+    "lastCommit": "2024-05-20T21:19:35+02:00"
   },
   {
     "name": "MMM-OpenWeatherMapForecast",
