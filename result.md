@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-05-21T05:37:26+02:00
+Last update: 2024-05-21T17:37:20+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1157   |
+| modules analyzed     |   1158   |
 | maintainer           |    647   |
-| modules with issues  |   1142   |
-| issues               |   7169   |
-| modules at github    |   1145   |
+| modules with issues  |   1143   |
+| issues               |   7173   |
+| modules at github    |   1146   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -3002,6 +3002,13 @@ Last update: 2024-05-21T05:37:26+02:00
 6. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 7. Warning: No LICENSE file.
 8. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-GmailNotifier by kurtern84](https://github.com/kurtern84/MMM-GmailNotifier)
+
+1. `package.json` issue: No description
+2. `package.json` issue: No repository field.
+3. There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”.
+4. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-google-route by mrdis](https://github.com/mrdis/MMM-google-route)
 

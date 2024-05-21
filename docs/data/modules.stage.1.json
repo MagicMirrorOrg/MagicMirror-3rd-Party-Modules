@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-21T03:30:07.044Z",
+  "lastUpdate": "2024-05-21T15:30:07.318Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -3345,6 +3345,16 @@
       "maintainer": "shaneapowell",
       "maintainerURL": "",
       "description": "Show a list of unread gmails.",
+      "issues": []
+    },
+    {
+      "name": "MMM-GmailNotifier",
+      "category": "Utility / IOT / 3rd Party / Integration",
+      "url": "https://github.com/kurtern84/MMM-GmailNotifier",
+      "id": "kurtern84/MMM-GmailNotifier",
+      "maintainer": "kurtern84",
+      "maintainerURL": "https://github.com/kurtern84",
+      "description": "MMM-GmailNotifier is a MagicMirror module that displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
       "issues": []
     },
     {
@@ -8104,7 +8114,7 @@
     },
     {
       "name": "MMM-ProfileAndWeatherAlerts",
-      "category": "Entertainment / Misc",
+      "category": "Weather",
       "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
       "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
       "maintainer": "kurtern84",

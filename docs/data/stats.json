@@ -1,11 +1,11 @@
 {
-  "moduleCounter": 1157,
-  "modulesWithImageCounter": 790,
-  "modulesWithIssuesCounter": 1142,
-  "issueCounter": 7169,
-  "lastUpdate": "2024-05-21T05:37:26+02:00",
+  "moduleCounter": 1158,
+  "modulesWithImageCounter": 791,
+  "modulesWithIssuesCounter": 1143,
+  "issueCounter": 7173,
+  "lastUpdate": "2024-05-21T17:37:20+02:00",
   "repositoryHoster": {
-    "github": 1145,
+    "github": 1146,
     "gitlab": 11,
     "bitbucket": 1
   },
@@ -87,6 +87,7 @@
     "jboucly": 3,
     "tderflinger": 3,
     "thobach": 3,
+    "kurtern84": 3,
     "spydersoft-consulting": 3,
     "dekinet": 3,
     "skuethe": 3,
@@ -187,7 +188,6 @@
     "croxis": 2,
     "PjTewkesbury": 2,
     "MikeBishop": 2,
-    "kurtern84": 2,
     "bogenpirat": 2,
     "CatoAntonsen": 2,
     "sabo10o29": 2,

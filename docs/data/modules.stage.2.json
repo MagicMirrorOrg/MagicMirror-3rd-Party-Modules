@@ -433,7 +433,7 @@
     "maintainerURL": "",
     "description": "This module provides Arduino serial communication support with Raspberry PI. Arduino sends the sensor's data value to the module using Python. Your next favorite Plug&amp;Play utility module.",
     "issues": [],
-    "stars": 16
+    "stars": 17
   },
   {
     "name": "MMM-Astrology",
@@ -527,7 +527,7 @@
     "maintainerURL": "https://github.com/Fifteen15Studios",
     "description": "Set 1 or more schedules to dim and brighten your screen at specific times.",
     "issues": [],
-    "stars": 26,
+    "stars": 27,
     "license": "MIT"
   },
   {
@@ -3967,6 +3967,16 @@
     "issues": [],
     "stars": 10,
     "license": "MIT"
+  },
+  {
+    "name": "MMM-GmailNotifier",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/kurtern84/MMM-GmailNotifier",
+    "id": "kurtern84/MMM-GmailNotifier",
+    "maintainer": "kurtern84",
+    "maintainerURL": "https://github.com/kurtern84",
+    "description": "MMM-GmailNotifier is a MagicMirror module that displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
+    "issues": []
   },
   {
     "name": "MMM-google-route",
@@ -9598,7 +9608,7 @@
   },
   {
     "name": "MMM-ProfileAndWeatherAlerts",
-    "category": "Entertainment / Misc",
+    "category": "Weather",
     "url": "https://github.com/kurtern84/MMM-ProfileAndWeatherAlerts",
     "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
     "maintainer": "kurtern84",
