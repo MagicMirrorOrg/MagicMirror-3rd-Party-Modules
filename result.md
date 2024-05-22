@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-21T17:37:20+02:00
+Last update: 2024-05-22T05:37:23+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-05-21T17:37:20+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1158   |
 | maintainer           |    647   |
-| modules with issues  |   1143   |
-| issues               |   7173   |
+| modules with issues  |   1146   |
+| issues               |   7177   |
 | modules at github    |   1146   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -160,7 +160,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - alertifyjs                 ^1.13.1  →   ^1.14.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
    - sweetalert2               ^11.10.6  →  ^11.11.0
 
 
@@ -462,7 +462,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-BackgroundSlideshow by darickc](https://github.com/darickc/MMM-BackgroundSlideshow)
@@ -797,7 +797,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-bringList by rseidt](https://github.com/rseidt/MMM-bringList)
@@ -808,6 +808,15 @@ Last update: 2024-05-21T17:37:20+02:00
 4. Deprecated: Found `require("request")` in file `bring-profile.js`: Replace it with built-in fetch.
 5. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
 6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [EXT-Browser by bugsounet](https://github.com/bugsounet/EXT-Browser)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                 ^8.56.0  →    ^9.3.0
+   - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
+   - eslint                     ^8.56.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
+
 
 ### [MMM-Bubi by balassy](https://github.com/balassy/MMM-Bubi)
 
@@ -2741,11 +2750,12 @@ Last update: 2024-05-21T17:37:20+02:00
 
 ### [EXT-FreeboxTV by bugsounet](https://github.com/bugsounet/EXT-FreeboxTV)
 
-1. Information: There are updates for 4 dependencie(s):
-   - @eslint/js                ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
-   - esbuild                   ^0.21.2  →  ^0.21.3
-   - eslint                    ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 5 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
+   - @stylistic/eslint-plugin     1.8.0  →     2.1.0
+   - esbuild                    ^0.21.2  →   ^0.21.3
+   - eslint                     ^8.57.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
 
 
 ### [MMM-FrenchHoroscope by Amand-M](https://github.com/Amand-M/MMM-FrenchHoroscope)
@@ -2977,7 +2987,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-Globe by Eunanibus](https://github.com/Eunanibus/MMM-Globe)
@@ -3008,7 +3018,8 @@ Last update: 2024-05-21T17:37:20+02:00
 1. `package.json` issue: No description
 2. `package.json` issue: No repository field.
 3. There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”.
-4. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+4. Issue: The license in the package.json (ISC) doesn't match the license file (MIT).
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-google-route by mrdis](https://github.com/mrdis/MMM-google-route)
 
@@ -3017,6 +3028,15 @@ Last update: 2024-05-21T17:37:20+02:00
 3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 4. Warning: No LICENSE file.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
+   - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
+   - eslint                     ^8.57.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
+
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
 
@@ -3188,7 +3208,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-GPIO-HANDLER by Sjohn21](https://github.com/Sjohn21/MMM-GPIO-HANDLER)
@@ -3959,7 +3979,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [internet-monitor by BrianHepler](https://github.com/BrianHepler/internet-monitor)
@@ -4278,7 +4298,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [KeyDisplayed by l0b5ter](https://github.com/l0b5ter/KeyDisplayed)
@@ -4416,7 +4436,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-LibrespotJava by l3d00m](https://github.com/l3d00m/MMM-LibrespotJava)
@@ -4958,7 +4978,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-MHZ19 by awitwicki](https://github.com/awitwicki/MMM-MHZ19)
@@ -5486,7 +5506,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-Motion-Camera by yusinv](https://github.com/yusinv/MMM-Motion-Camera)
@@ -5715,11 +5735,12 @@ Last update: 2024-05-21T17:37:20+02:00
 
 ### [EXT-MusicPlayer by bugsounet](https://github.com/bugsounet/EXT-MusicPlayer)
 
-1. Information: There are updates for 4 dependencie(s):
-   - @eslint/js                ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
-   - esbuild                   ^0.21.2  →  ^0.21.3
-   - eslint                    ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 5 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
+   - @stylistic/eslint-plugin     1.8.0  →     2.1.0
+   - esbuild                    ^0.21.2  →   ^0.21.3
+   - eslint                     ^8.57.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
 
 
 ### [MMM-mvgmunich by mrVragec](https://github.com/mrVragec/MMM-mvgmunich)
@@ -6155,7 +6176,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-network-signal by PoOwAa](https://github.com/PoOwAa/MMM-network-signal)
@@ -6912,7 +6933,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-Pages-Screencast by jboucly](https://github.com/jboucly/MMM-Pages-Screencast)
@@ -7112,7 +7133,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [PiDisplaySleep by RpDp-git](https://github.com/RpDp-git/PiDisplaySleep)
@@ -7171,7 +7192,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
    - long-press-event            ^2.4.6  →    ^2.5.0
 
 
@@ -7182,7 +7203,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-PIR by mboskamp](https://github.com/mboskamp/MMM-PIR)
@@ -7699,11 +7720,12 @@ Last update: 2024-05-21T17:37:20+02:00
 
 ### [EXT-RadioPlayer by bugsounet](https://github.com/bugsounet/EXT-RadioPlayer)
 
-1. Information: There are updates for 4 dependencie(s):
-   - @eslint/js                ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    1.8.0  →    2.1.0
-   - esbuild                   ^0.21.2  →  ^0.21.3
-   - eslint                    ^8.57.0  →   ^9.3.0
+1. Information: There are updates for 5 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
+   - @stylistic/eslint-plugin     1.8.0  →     2.1.0
+   - esbuild                    ^0.21.2  →   ^0.21.3
+   - eslint                     ^8.57.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
 
 
 ### [MMM-RaiderIO by jwcnewton](https://github.com/jwcnewton/MMM-RaiderIO)
@@ -8249,7 +8271,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-Sbanken by reidarw](https://github.com/reidarw/MMM-Sbanken)
@@ -8299,7 +8321,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-Screen-Powersave-Notification by Tom-Hirschberger](https://github.com/Tom-Hirschberger/MMM-Screen-Powersave-Notification)
@@ -8383,7 +8405,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [EXT-SelfiesFlash by bugsounet](https://github.com/bugsounet/EXT-SelfiesFlash)
@@ -8394,7 +8416,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-Selfieshot by BrianHepler](https://github.com/BrianHepler/MMM-Selfieshot)
@@ -8411,7 +8433,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
    - nodemailer                 ^6.9.11  →   ^6.9.13
 
 
@@ -8422,7 +8444,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-SendNotificationButton by ralberth](https://github.com/ralberth/MMM-SendNotificationButton)
@@ -8977,7 +8999,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [EXT-SpotifyCanvasLyrics by bugsounet](https://github.com/bugsounet/EXT-SpotifyCanvasLyrics)
@@ -8987,7 +9009,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
    - protobufjs                  ^7.2.6  →    ^7.3.0
 
 
@@ -9128,7 +9150,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-SugarValue by balharrie](https://github.com/balharrie/MMM-SugarValue)
@@ -9354,7 +9376,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
    - node-telegram-bot-api      ^0.65.1  →   ^0.66.0
 
 
@@ -9964,7 +9986,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-uptimekuma by MikeBishop](https://github.com/MikeBishop/MMM-uptimekuma)
@@ -10106,6 +10128,15 @@ Last update: 2024-05-21T17:37:20+02:00
 6. Recommendation: Found `require("http")` in file `node_helper.js`: Replace "http" by "node:http".
 7. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [EXT-VLCServer by bugsounet](https://github.com/bugsounet/EXT-VLCServer)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.3.0
+   - @stylistic/eslint-plugin     1.8.0  →     2.1.0
+   - eslint                     ^8.57.0  →    ^9.3.0
+   - glob                      ^10.3.15  →  ^10.3.16
+
+
 ### [MMM-VocabularyTrainer by fewieden](https://github.com/fewieden/MMM-VocabularyTrainer)
 
 1. Outdated: Found `MichMich/MagicMirror` in file `MMM-VocabularyTrainer.js`: Replace it by `MagicMirrorOrg/MagicMirror`.
@@ -10175,7 +10206,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.8.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-volumio-playing by mrdis](https://github.com/mrdis/MMM-volumio-playing)
@@ -10472,7 +10503,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.6.3  →    ^2.1.0
    - esbuild                    ^0.20.1  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →  ^10.3.15
+   - glob                      ^10.3.10  →  ^10.3.16
 
 
 ### [MMM-WestBerksBinDay by hdurdle](https://github.com/hdurdle/MMM-WestBerksBinDay)
@@ -10761,7 +10792,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.2  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-YouTube-API by C4TFLY](https://github.com/C4TFLY/MMM-YouTube-API)
@@ -10788,7 +10819,7 @@ Last update: 2024-05-21T17:37:20+02:00
    - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
    - esbuild                    ^0.20.2  →   ^0.21.3
    - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.12  →  ^10.3.15
+   - glob                      ^10.3.12  →  ^10.3.16
 
 
 ### [MMM-YouTubeWebView by doctorfree](https://gitlab.com/doctorfree/MMM-YouTubeWebView)

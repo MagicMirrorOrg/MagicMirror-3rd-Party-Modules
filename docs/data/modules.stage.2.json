@@ -3953,7 +3953,7 @@
     "maintainerURL": "",
     "description": "Displays live image of our planet.",
     "issues": [],
-    "stars": 66,
+    "stars": 67,
     "license": "MIT"
   },
   {
@@ -3976,7 +3976,9 @@
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
     "description": "MMM-GmailNotifier is a MagicMirror module that displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
-    "issues": []
+    "issues": [],
+    "stars": 0,
+    "license": "MIT"
   },
   {
     "name": "MMM-google-route",
@@ -4146,7 +4148,7 @@
     "maintainerURL": "https://github.com/hermanho",
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": [],
-    "stars": 159,
+    "stars": 160,
     "license": "MIT"
   },
   {
@@ -8686,7 +8688,8 @@
     "maintainer": "Tom-Hirschberger",
     "maintainerURL": "",
     "description": "Displays current, hourly and daily forecast information using data from the OpenWeather One Call API.",
-    "issues": []
+    "issues": [],
+    "stars": 0
   },
   {
     "name": "MMM-OpenWeatherMapForecast",

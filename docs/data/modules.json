@@ -1544,7 +1544,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Display any internet web page like a real browser in fullscreen.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "stars": 0,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -1553,7 +1553,7 @@
       "browser"
     ],
     "image": "EXT-Browser.jpg",
-    "defaultSortWeight": 3,
+    "defaultSortWeight": 4,
     "lastCommit": "2024-05-20T11:44:01+02:00"
   },
   {
@@ -5518,7 +5518,7 @@
     "maintainerURL": "",
     "description": "Displays live image of our planet.",
     "issues": true,
-    "stars": 66,
+    "stars": 67,
     "license": "MIT",
     "image": "screenshot.jpg",
     "defaultSortWeight": 8,
@@ -5551,9 +5551,10 @@
     "maintainerURL": "https://github.com/kurtern84",
     "description": "MMM-GmailNotifier is a MagicMirror module that displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
     "issues": true,
-    "license": "ISC",
+    "stars": 0,
+    "license": "MIT",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 3,
+    "defaultSortWeight": 4,
     "lastCommit": "2024-05-21T16:46:51+02:00"
   },
   {
@@ -5579,7 +5580,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror\u00b2 with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
-    "issues": false,
+    "issues": true,
     "stars": 83,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -5593,7 +5594,7 @@
       "smart home"
     ],
     "image": "resources-previewFS.jpg",
-    "defaultSortWeight": -3,
+    "defaultSortWeight": -2,
     "lastCommit": "2024-05-19T17:25:57+02:00"
   },
   {
@@ -5786,7 +5787,7 @@
     "maintainerURL": "https://github.com/hermanho",
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": true,
-    "stars": 159,
+    "stars": 160,
     "license": "MIT",
     "tags": [
       "googlephotos"
@@ -12158,6 +12159,7 @@
     "maintainerURL": "",
     "description": "Displays current, hourly and daily forecast information using data from the OpenWeather One Call API.",
     "issues": true,
+    "stars": 0,
     "license": "MIT",
     "image": "MMM-OpenWeatherForecast.jpg",
     "defaultSortWeight": 12,
@@ -18081,7 +18083,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin play wanted media on MagicMirror\u00b2 with VLC.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "tags": [
       "mmm-googleassistant",
       "vlc",
@@ -18090,7 +18092,7 @@
     ],
     "license": "MIT",
     "image": "vlc-logo.jpg",
-    "defaultSortWeight": 2,
+    "defaultSortWeight": 3,
     "lastCommit": "2024-05-19T12:13:03+02:00"
   },
   {

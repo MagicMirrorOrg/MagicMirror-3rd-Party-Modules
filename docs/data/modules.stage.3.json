@@ -5468,7 +5468,7 @@
       "`package.json` issue: No description",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 66,
+    "stars": 67,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5499,9 +5499,11 @@
     "issues": [
       "`package.json` issue: No description",
       "`package.json` issue: No repository field.",
-      "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
+      "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”.",
+      "Issue: The license in the package.json (ISC) doesn't match the license file (MIT)."
     ],
-    "license": "ISC",
+    "stars": 0,
+    "license": "MIT",
     "image": "screenshot.jpg"
   },
   {
@@ -5734,7 +5736,7 @@
     "maintainerURL": "https://github.com/hermanho",
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": [],
-    "stars": 159,
+    "stars": 160,
     "license": "MIT",
     "tags": [
       "googlephotos"
@@ -12034,6 +12036,7 @@
     "issues": [
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
+    "stars": 0,
     "license": "MIT",
     "image": "MMM-OpenWeatherForecast.jpg"
   },
