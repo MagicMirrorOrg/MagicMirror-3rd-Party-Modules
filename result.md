@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-22T05:37:23+02:00
+Last update: 2024-05-22T17:37:40+02:00
 
 ## Statistics
 
@@ -7553,7 +7553,7 @@ Last update: 2024-05-22T05:37:23+02:00
 2. `package.json` issue: No license field.
 3. There are no keywords in 'package.json'. We would use them as tags on the module list page.
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-5. Deprecated: Found `require("request")` in file `node_helper.js`: Replace it with built-in fetch.
+5. Recommendation: Found `'node-fetch'` in file `node_helper.js`: Replace it with built-in fetch.
 6. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
 7. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 

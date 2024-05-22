@@ -13443,7 +13443,7 @@
     "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
     "issues": true,
     "defaultSortWeight": 6,
-    "lastCommit": "2024-05-21T09:45:16+02:00"
+    "lastCommit": "2024-05-22T17:18:42+02:00"
   },
   {
     "name": "MMM-ProfileControl",
@@ -15366,7 +15366,7 @@
     "license": "MIT",
     "image": "overlays-01.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-03-01T21:55:28+03:00"
+    "lastCommit": "2024-05-22T12:38:41+03:00"
   },
   {
     "name": "MMM-SimpleLogo",
