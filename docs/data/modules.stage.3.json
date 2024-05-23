@@ -1644,7 +1644,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
-    "stars": 2,
+    "stars": 3,
     "hasGithubIssues": false,
     "tags": [
       "buttons"
@@ -1710,7 +1710,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 44,
+    "stars": 46,
     "license": "MIT",
     "tags": [
       "calendar",
@@ -2004,7 +2004,7 @@
     "maintainerURL": "https://github.com/shbatm",
     "description": "Rotate modules, to save space on screen.",
     "issues": [],
-    "stars": 38,
+    "stars": 37,
     "license": "MIT",
     "tags": [
       "carousel",

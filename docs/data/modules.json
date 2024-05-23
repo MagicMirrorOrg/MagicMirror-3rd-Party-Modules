@@ -1687,7 +1687,7 @@
     "maintainerURL": "",
     "description": "More complicated, but also more powerful: multiple buttons, configurable notifications, different actions on short and long press.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "hasGithubIssues": false,
     "tags": [
       "buttons"
@@ -1755,7 +1755,7 @@
     "maintainerURL": "",
     "description": "Extended calendar and event view.",
     "issues": true,
-    "stars": 44,
+    "stars": 46,
     "license": "MIT",
     "tags": [
       "calendar",
@@ -2055,7 +2055,7 @@
     "maintainerURL": "https://github.com/shbatm",
     "description": "Rotate modules, to save space on screen.",
     "issues": false,
-    "stars": 38,
+    "stars": 37,
     "license": "MIT",
     "tags": [
       "carousel",
@@ -13443,7 +13443,7 @@
     "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
     "issues": true,
     "defaultSortWeight": 6,
-    "lastCommit": "2024-05-22T17:18:42+02:00"
+    "lastCommit": "2024-05-22T17:35:25+02:00"
   },
   {
     "name": "MMM-ProfileControl",
@@ -17461,7 +17461,7 @@
     "issues": true,
     "stars": 2,
     "license": "MIT",
-    "defaultSortWeight": 4,
+    "defaultSortWeight": 5,
     "lastCommit": "2022-05-22T19:13:31+01:00"
   },
   {
