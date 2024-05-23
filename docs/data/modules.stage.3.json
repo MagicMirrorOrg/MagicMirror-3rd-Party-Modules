@@ -13094,7 +13094,7 @@
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 9
+    "stars": 10
   },
   {
     "name": "MMM-Pollen-FR",

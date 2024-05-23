@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-23T05:37:26+02:00
+Last update: 2024-05-23T17:37:26+02:00
 
 ## Statistics
 
@@ -5674,7 +5674,7 @@ Last update: 2024-05-23T05:37:26+02:00
 1. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 2. Information: There are updates for 2 dependencie(s):
    - jsonpath-plus  5.0.1  →  9.0.0
-   - mqtt           4.3.7  →  5.6.1
+   - mqtt           4.3.7  →  5.6.2
 
 
 ### [MMM-MQTTfloorplan by DMailMan](https://github.com/DMailMan/MMM-MQTTfloorplan)
