@@ -5770,10 +5770,13 @@
     "maintainer": "ryan-d-williams",
     "maintainerURL": "",
     "description": "Display Google Sheets data. Highly customizable.",
-    "issues": [
-      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+    "issues": [],
+    "stars": 22,
+    "tags": [
+      "googlesheets"
     ],
-    "stars": 22
+    "license": "MIT",
+    "image": "screenshots-Orders_Custom.jpg"
   },
   {
     "name": "MMM-GoogleShoppingList",
@@ -13286,13 +13289,16 @@
     "maintainerURL": "",
     "description": "[FR] Ce module permet d'afficher les prix des carburants des stations francaise.<br />[EN] Display fuel prices (France only).",
     "issues": [
-      "`package.json` issue: No repository field."
+      "`package.json` issue: No repository field.",
+      "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
+    "stars": 2,
+    "hasGithubIssues": false,
+    "license": "MIT",
     "tags": [
       "french",
       "carburant"
     ],
-    "license": "MIT",
     "image": "screenshot.jpg"
   },
   {
@@ -13322,7 +13328,10 @@
       "`package.json` issue: No repository field.",
       "`package.json` issue: No license field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
-    ]
+    ],
+    "stars": 0,
+    "license": "MIT",
+    "image": "screenshot.jpg"
   },
   {
     "name": "MMM-ProfileControl",
@@ -13369,7 +13378,7 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page.",
       "No image found."
     ],
-    "stars": 45,
+    "stars": 44,
     "license": "MIT"
   },
   {
@@ -13450,7 +13459,7 @@
     "maintainerURL": "",
     "description": "Displays departure information for public transportation in Germany and some other European countries. The <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client\">hafas-client</a> is used to query the information. The interface of the Deutsche Bahn is used as standard, this includes most of the local networks with buses, trams, etc. However, <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client/blob/main/p/readme.md\">other hafas interfaces</a> can also be used.",
     "issues": [],
-    "stars": 14,
+    "stars": 16,
     "license": "MIT",
     "tags": [
       "public transport",
@@ -13603,7 +13612,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 16
+    "stars": 17
   },
   {
     "name": "MMM-Questrade",
@@ -13640,7 +13649,7 @@
     "maintainerURL": "",
     "description": "Show a random quote from an online collection of quotations by authors, celebrities, and newsmakers. Multi language supported.",
     "issues": [],
-    "stars": 27,
+    "stars": 28,
     "tags": [
       "quotes"
     ],

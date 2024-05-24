@@ -9595,7 +9595,10 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "[FR] Ce module permet d'afficher les prix des carburants des stations francaise.<br />[EN] Display fuel prices (France only).",
-    "issues": []
+    "issues": [],
+    "stars": 2,
+    "hasGithubIssues": false,
+    "license": "MIT"
   },
   {
     "name": "MMM-profile",
@@ -9617,7 +9620,9 @@
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
     "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
-    "issues": []
+    "issues": [],
+    "stars": 0,
+    "license": "MIT"
   },
   {
     "name": "MMM-ProfileControl",
@@ -9652,7 +9657,7 @@
     "maintainerURL": "",
     "description": "This Module adds the ability to have different layouts for different profiles.",
     "issues": [],
-    "stars": 45,
+    "stars": 44,
     "license": "MIT"
   },
   {
@@ -9712,7 +9717,7 @@
     "maintainerURL": "",
     "description": "Displays departure information for public transportation in Germany and some other European countries. The <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client\">hafas-client</a> is used to query the information. The interface of the Deutsche Bahn is used as standard, this includes most of the local networks with buses, trams, etc. However, <a target=\"_blank\" href=\"https://github.com/public-transport/hafas-client/blob/main/p/readme.md\">other hafas interfaces</a> can also be used.",
     "issues": [],
-    "stars": 14,
+    "stars": 16,
     "license": "MIT"
   },
   {
@@ -9822,7 +9827,7 @@
     "maintainerURL": "",
     "description": "Show QRCode image of encoded text.",
     "issues": [],
-    "stars": 16
+    "stars": 17
   },
   {
     "name": "MMM-Questrade",
@@ -9855,7 +9860,7 @@
     "maintainerURL": "",
     "description": "Show a random quote from an online collection of quotations by authors, celebrities, and newsmakers. Multi language supported.",
     "issues": [],
-    "stars": 27
+    "stars": 28
   },
   {
     "name": "EXT-RadioPlayer",
