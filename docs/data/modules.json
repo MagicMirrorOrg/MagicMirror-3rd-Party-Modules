@@ -134,7 +134,7 @@
     "maintainerURL": "",
     "description": "A fork of maxbethge's weather module. This version fixes the hourly forecast and includes a missing icon for \"hot\" weather. It also disables a few options that break the layout.",
     "issues": true,
-    "stars": 0,
+    "stars": 1,
     "hasGithubIssues": false,
     "tags": [
       "weather"
@@ -16294,7 +16294,7 @@
     "license": "MIT",
     "image": "public-assets-images-StravaWeekInBike.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-16T21:21:38-04:00"
+    "lastCommit": "2024-05-24T21:44:33-04:00"
   },
   {
     "name": "EXT-StreamDeck",

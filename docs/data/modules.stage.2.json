@@ -91,7 +91,7 @@
     "maintainerURL": "",
     "description": "A fork of maxbethge's weather module. This version fixes the hourly forecast and includes a missing icon for \"hot\" weather. It also disables a few options that break the layout.",
     "issues": [],
-    "stars": 0,
+    "stars": 1,
     "hasGithubIssues": false
   },
   {
