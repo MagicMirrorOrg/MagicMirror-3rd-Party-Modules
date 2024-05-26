@@ -5029,8 +5029,8 @@
       "franceinfo"
     ],
     "image": "FRINFO.jpg",
-    "defaultSortWeight": 1,
-    "lastCommit": "2024-03-08T20:51:08+01:00"
+    "defaultSortWeight": 0,
+    "lastCommit": "2024-05-26T11:11:20+02:00"
   },
   {
     "name": "MMM-Freebox",
@@ -5484,7 +5484,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module allows to add a glass effect to MagicMirror\u00b2 modules.",
-    "issues": true,
+    "issues": false,
     "stars": 1,
     "license": "MIT",
     "tags": [
@@ -5492,8 +5492,8 @@
       "background"
     ],
     "image": "Screenshot.jpg",
-    "defaultSortWeight": 0,
-    "lastCommit": "2024-04-27T11:11:02+02:00"
+    "defaultSortWeight": -1,
+    "lastCommit": "2024-05-26T11:12:01+02:00"
   },
   {
     "name": "MMM-Globe",
@@ -5580,7 +5580,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror\u00b2 with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
-    "issues": true,
+    "issues": false,
     "stars": 83,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -5594,8 +5594,8 @@
       "smart home"
     ],
     "image": "resources-previewFS.jpg",
-    "defaultSortWeight": -2,
-    "lastCommit": "2024-05-19T17:25:57+02:00"
+    "defaultSortWeight": -3,
+    "lastCommit": "2024-05-26T11:08:13+02:00"
   },
   {
     "name": "MMM-GoogleAssistant",
@@ -11049,7 +11049,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module display your Netatmo Thermostat informations.",
-    "issues": true,
+    "issues": false,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -11058,8 +11058,8 @@
       "smart home"
     ],
     "image": "resources-A_Screenshot_0.jpg",
-    "defaultSortWeight": 0,
-    "lastCommit": "2024-04-26T21:40:27+02:00"
+    "defaultSortWeight": -1,
+    "lastCommit": "2024-05-26T11:10:50+02:00"
   },
   {
     "name": "MMM-network-signal",
@@ -13866,7 +13866,7 @@
     "maintainerURL": "",
     "description": "Displays a Precipitation Radar for your location.",
     "issues": true,
-    "stars": 13,
+    "stars": 14,
     "license": "MIT",
     "image": "images-img1.jpg",
     "defaultSortWeight": 4,
@@ -13964,7 +13964,7 @@
     "maintainerURL": "https://github.com/jacopo1891",
     "description": "Display a random quote from various authorship using Ninjas API.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "license": "MIT",
     "tags": [
       "quotes"
@@ -14031,7 +14031,7 @@
     "maintainerURL": "https://github.com/juliankern",
     "description": "Displays the live timetable of the German pop culture TV/Streaming channel RocketBeansTV.",
     "issues": true,
-    "stars": 1,
+    "stars": 2,
     "defaultSortWeight": 7,
     "lastCommit": "2020-06-04T00:46:05+02:00"
   },
@@ -14184,7 +14184,7 @@
     "maintainerURL": "",
     "description": "Cleanly shutdown (or reboot) your mirror, edit which modules are shown on your mirror and turn your monitor off and on from a simple website, i.e. from your smartphone.",
     "issues": true,
-    "stars": 478,
+    "stars": 482,
     "license": "MIT",
     "tags": [
       "remote control",
@@ -14714,8 +14714,8 @@
       "french"
     ],
     "image": "Screenshot.jpg",
-    "defaultSortWeight": 2,
-    "lastCommit": "2024-04-18T20:44:21+02:00"
+    "defaultSortWeight": 1,
+    "lastCommit": "2024-05-26T11:10:27+02:00"
   },
   {
     "name": "MMM-Sbanken",

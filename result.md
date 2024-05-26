@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-26T05:37:23+02:00
+Last update: 2024-05-26T17:37:02+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-05-26T05:37:23+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1158   |
 | maintainer           |    647   |
-| modules with issues  |   1145   |
-| issues               |   7176   |
+| modules with issues  |   1142   |
+| issues               |   7171   |
 | modules at github    |   1146   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -2727,7 +2727,6 @@ Last update: 2024-05-26T05:37:23+02:00
 ### [MMM-FranceInfo by bugsounet](https://github.com/bugsounet/MMM-FranceInfo)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Typo: Found `Magic Mirror` in file `MMM-FranceInfo.css`: Replace it with `MagicMirror²`.
 
 ### [MMM-Freebox by bugsounet](https://github.com/bugsounet/MMM-Freebox)
 
@@ -2981,16 +2980,6 @@ Last update: 2024-05-26T05:37:23+02:00
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
-### [MMM-Glassy by bugsounet](https://github.com/bugsounet/MMM-Glassy)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.12  →  ^10.4.1
-
-
 ### [MMM-Globe by Eunanibus](https://github.com/Eunanibus/MMM-Globe)
 
 1. There is no `package.json`. We need this file to gather information about the module for the module list page.
@@ -3029,17 +3018,6 @@ Last update: 2024-05-26T05:37:23+02:00
 3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 4. Warning: No LICENSE file.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
-
-### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
-
-1. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.21.3  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.15  →  ^10.4.1
-   - pm2                         ^5.3.1  →   ^5.4.0
-
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
 
@@ -5728,12 +5706,13 @@ Last update: 2024-05-26T05:37:23+02:00
 
 ### [EXT-MusicPlayer by bugsounet](https://github.com/bugsounet/EXT-MusicPlayer)
 
-1. Information: There are updates for 5 dependencie(s):
+1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.3.0
    - @stylistic/eslint-plugin     1.8.0  →    2.1.0
    - esbuild                    ^0.21.2  →  ^0.21.4
    - eslint                     ^8.57.0  →   ^9.3.0
    - glob                      ^10.3.15  →  ^10.4.1
+   - usb                        ^2.12.1  →  ^2.13.0
 
 
 ### [MMM-mvgmunich by mrVragec](https://github.com/mrVragec/MMM-mvgmunich)
@@ -6161,16 +6140,6 @@ Last update: 2024-05-26T05:37:23+02:00
 9. Recommendation: Found `new Date()` in file `node_helper.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 10. Deprecated: Found `"grunt"` in file `package.json`: Grunt is practically unmaintained. Move on to something better.
 11. Recommendation: Replace eslintrc by new flat config.
-
-### [MMM-NetatmoThermostat by bugsounet](https://github.com/bugsounet/MMM-NetatmoThermostat)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.12  →  ^10.4.1
-
 
 ### [MMM-network-signal by PoOwAa](https://github.com/PoOwAa/MMM-network-signal)
 
@@ -8260,13 +8229,6 @@ Last update: 2024-05-26T05:37:23+02:00
 ### [MMM-Saint by bugsounet](https://github.com/bugsounet/MMM-Saint)
 
 1. Typo: Found `Magic Mirror` in file `MMM-Saint.css`: Replace it with `MagicMirror²`.
-2. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.12  →  ^10.4.1
-
 
 ### [MMM-Sbanken by reidarw](https://github.com/reidarw/MMM-Sbanken)
 
