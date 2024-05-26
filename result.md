@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-25T17:37:19+02:00
+Last update: 2024-05-26T05:37:23+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-05-25T17:37:19+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1158   |
 | maintainer           |    647   |
-| modules with issues  |   1146   |
-| issues               |   7177   |
+| modules with issues  |   1145   |
+| issues               |   7176   |
 | modules at github    |   1146   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -4973,16 +4973,6 @@ Last update: 2024-05-25T17:37:19+02:00
 8. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 9. Warning: No LICENSE file.
 10. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
-
-### [MMM-MeteoFrance by bugsounet](https://github.com/bugsounet/MMM-MeteoFrance)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.12  →  ^10.4.1
-
 
 ### [MMM-MHZ19 by awitwicki](https://github.com/awitwicki/MMM-MHZ19)
 

@@ -261,7 +261,7 @@
     ],
     "image": ".github-preview-good.jpg",
     "defaultSortWeight": -1,
-    "lastCommit": "2024-04-30T08:19:34+00:00"
+    "lastCommit": "2024-05-26T01:33:35+00:00"
   },
   {
     "name": "MMM-Airtable",
@@ -3675,7 +3675,7 @@
     "maintainerURL": "",
     "description": "A heavily configurable module to display different animations based on current weather and show customized event effects.",
     "issues": true,
-    "stars": 28,
+    "stars": 29,
     "license": "MIT",
     "tags": [
       "weather"
@@ -3915,7 +3915,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "Embed one or multiple websites with there URL.",
     "issues": true,
-    "stars": 15,
+    "stars": 17,
     "license": "MIT",
     "tags": [
       "embed",
@@ -8361,9 +8361,9 @@
       "league of legends"
     ],
     "license": "MIT",
-    "image": "screenshots-screenshot_default.jpg",
+    "image": "screenshots-screenshot_2column_offset.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-02-19T22:29:03-08:00"
+    "lastCommit": "2024-05-25T19:17:06-05:00"
   },
   {
     "name": "MMM-Looko2-aq",
@@ -8978,7 +8978,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "[FR] Affiche les informations de pr\u00e9visions actuelles, horaires et quotidiennes \u00e0 l'aide des donn\u00e9es de l'API M\u00e9t\u00e9oFrance.<br />[EN] Displays current, hourly and daily forecast information using data from MeteoFrance API.",
-    "issues": true,
+    "issues": false,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -8987,8 +8987,8 @@
       "french"
     ],
     "image": "screenshot.jpg",
-    "defaultSortWeight": 1,
-    "lastCommit": "2024-05-08T10:10:22+02:00"
+    "defaultSortWeight": 0,
+    "lastCommit": "2024-05-25T18:36:20+02:00"
   },
   {
     "name": "MMM-MHZ19",

@@ -2638,7 +2638,7 @@
     "maintainerURL": "",
     "description": "A heavily configurable module to display different animations based on current weather and show customized event effects.",
     "issues": [],
-    "stars": 28,
+    "stars": 29,
     "license": "MIT"
   },
   {
@@ -2796,7 +2796,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "Embed one or multiple websites with there URL.",
     "issues": [],
-    "stars": 15,
+    "stars": 17,
     "license": "MIT"
   },
   {

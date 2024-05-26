@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-25T15:30:19.751Z",
+  "lastUpdate": "2024-05-26T03:30:21.805Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -2999,7 +2999,7 @@
     },
     {
       "id": "skastenholz/MMM-DVB",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:07.013Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:07.740Z",
       "gitHubData": {
         "issues": 1,
         "stars": 13,
@@ -3013,7 +3013,7 @@
     },
     {
       "id": "carstendirks/MMM-DWD-Pollen",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:07.398Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:08.146Z",
       "gitHubData": {
         "issues": 0,
         "stars": 12,
@@ -3027,7 +3027,7 @@
     },
     {
       "id": "DavidLSmyth/DWD-RealtimeIrishRail",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:07.905Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:08.840Z",
       "gitHubData": {
         "issues": 1,
         "stars": 1,
@@ -3041,7 +3041,7 @@
     },
     {
       "id": "LukeSkywalker92/MMM-DWD-WarnWeather",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:08.314Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:09.261Z",
       "gitHubData": {
         "issues": 12,
         "stars": 63,
@@ -3055,7 +3055,7 @@
     },
     {
       "id": "Toreke/MMM-Dynamic-Modules",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:08.672Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:09.622Z",
       "gitHubData": {
         "issues": 1,
         "stars": 11,
@@ -3069,21 +3069,21 @@
     },
     {
       "id": "scottcl88/MMM-DynamicWeather",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:09.078Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:11.999Z",
       "gitHubData": {
-        "issues": 5,
-        "stars": 28,
+        "issues": 4,
+        "stars": 29,
         "license": "MIT",
         "archived": false,
         "disabled": false,
         "defaultBranch": "master",
         "has_issues": true,
-        "lastCommit": "2024-05-05T01:11:15Z"
+        "lastCommit": "2024-05-19T02:16:54Z"
       }
     },
     {
       "id": "mykle1/MMM-EARTH",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:09.498Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:12.411Z",
       "gitHubData": {
         "issues": 1,
         "stars": 59,
@@ -3097,7 +3097,7 @@
     },
     {
       "id": "mykle1/MMM-EARTH-Live",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:09.916Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:12.803Z",
       "gitHubData": {
         "issues": 0,
         "stars": 26,
@@ -3111,7 +3111,7 @@
     },
     {
       "id": "mykle1/MMM-Earthquake",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:10.329Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:13.213Z",
       "gitHubData": {
         "issues": 0,
         "stars": 7,
@@ -3125,7 +3125,7 @@
     },
     {
       "id": "rcollie/MMM-EarthquakeMonitor",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:10.726Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:13.652Z",
       "gitHubData": {
         "issues": 1,
         "stars": 1,
@@ -3139,7 +3139,7 @@
     },
     {
       "id": "KristjanESPERANTO/MMM-EasyPix",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:11.144Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:14.073Z",
       "gitHubData": {
         "issues": 0,
         "stars": 5,
@@ -3153,7 +3153,7 @@
     },
     {
       "id": "parnic/MMM-Ecobee",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:11.548Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:14.515Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -3167,7 +3167,7 @@
     },
     {
       "id": "rehne/MMM-Ecosia-Tree-Counter",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:11.944Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:14.896Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -3181,7 +3181,7 @@
     },
     {
       "id": "tttooommm56/MMM-Ecowatt",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:12.402Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:15.305Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -3195,7 +3195,7 @@
     },
     {
       "id": "mscharl/MMM-edgerouter-throughput",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:12.817Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:15.723Z",
       "gitHubData": {
         "issues": 4,
         "stars": 3,
@@ -3209,7 +3209,7 @@
     },
     {
       "id": "sourceforge807/MMM-EFA-departures",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:13.280Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:16.213Z",
       "gitHubData": {
         "issues": 2,
         "stars": 1,
@@ -3223,7 +3223,7 @@
     },
     {
       "id": "moinahmed001/MMM-ELMPrayerTime",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:13.685Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:16.605Z",
       "gitHubData": {
         "issues": 2,
         "stars": 0,
@@ -3237,7 +3237,7 @@
     },
     {
       "id": "balassy/MMM-Elvira",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:14.078Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:16.997Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -3251,10 +3251,10 @@
     },
     {
       "id": "Tom-Hirschberger/MMM-EmbedURL",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:14.478Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:17.416Z",
       "gitHubData": {
         "issues": 0,
-        "stars": 15,
+        "stars": 17,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -3265,7 +3265,7 @@
     },
     {
       "id": "nitpum/MMM-EmbedYoutube",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:14.855Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:17.743Z",
       "gitHubData": {
         "issues": 8,
         "stars": 32,
@@ -3279,7 +3279,7 @@
     },
     {
       "id": "jirsis/emt",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:15.240Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:18.130Z",
       "gitHubData": {
         "issues": 2,
         "stars": 1,
@@ -3293,7 +3293,7 @@
     },
     {
       "id": "TheRaulXP/MMM-EMTValencia",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:15.980Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:18.897Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -3307,7 +3307,7 @@
     },
     {
       "id": "deg0nz/MMM-EnergyMonitor",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:16.374Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:19.253Z",
       "gitHubData": {
         "issues": 2,
         "stars": 2,
@@ -3321,7 +3321,7 @@
     },
     {
       "id": "matt-thurling/MMM-EnphaseSolar",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:16.759Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:19.749Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -3447,7 +3447,7 @@
     },
     {
       "id": "late4marshmellow/MMM-EUElectricityPrice",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:17.169Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:20.181Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -3867,7 +3867,7 @@
     },
     {
       "id": "jannekalliola/MMM-FiElectricityPrice",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:17.556Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:20.558Z",
       "gitHubData": {
         "issues": 1,
         "stars": 4,
@@ -4567,7 +4567,7 @@
     },
     {
       "id": "Eunanibus/MMM-Globe",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:18.039Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:20.942Z",
       "gitHubData": {
         "issues": 6,
         "stars": 39,
@@ -4959,7 +4959,7 @@
     },
     {
       "id": "brentpabst/MMM-gpsd",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:18.432Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:21.336Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -4973,7 +4973,7 @@
     },
     {
       "id": "mochman/MMM-GPSWeather",
-      "gitHubDataLastUpdate": "2024-05-11T03:30:18.857Z",
+      "gitHubDataLastUpdate": "2024-05-26T03:30:21.752Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
