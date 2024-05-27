@@ -4613,7 +4613,7 @@
     "maintainerURL": "",
     "description": "Display information from Home Assistant using the home assistant REST API.",
     "issues": [],
-    "stars": 60,
+    "stars": 61,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -4756,7 +4756,7 @@
     "maintainerURL": "",
     "description": "Include arbitrary HTML snippets in an iframe (script tags work).",
     "issues": [],
-    "stars": 11,
+    "stars": 12,
     "license": "GPL-3.0"
   },
   {
@@ -4944,7 +4944,7 @@
     "maintainerURL": "",
     "description": "A simple way to add an iFrame of any web content. Supports multiple URLs and will rotate between them. Works with static pages or streams like Nest Cam, D-Link Cameras, Twitch.tv, YouTube and more.",
     "issues": [],
-    "stars": 53
+    "stars": 54
   },
   {
     "name": "iFrame",

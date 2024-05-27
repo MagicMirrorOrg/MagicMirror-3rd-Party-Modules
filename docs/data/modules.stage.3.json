@@ -6375,7 +6375,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
-    "stars": 60,
+    "stars": 61,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -6572,7 +6572,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 11,
+    "stars": 12,
     "license": "GPL-3.0",
     "image": "HTMLSnippet-screenshot-grafana.jpg"
   },
@@ -6828,7 +6828,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 53,
+    "stars": 54,
     "tags": [
       "iframe"
     ],

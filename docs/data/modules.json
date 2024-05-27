@@ -6427,7 +6427,7 @@
     "maintainerURL": "",
     "description": "Display information from Home Assistant using the home assistant REST API.",
     "issues": true,
-    "stars": 60,
+    "stars": 61,
     "hasGithubIssues": false,
     "license": "MIT",
     "defaultSortWeight": 6,
@@ -6624,7 +6624,7 @@
     "maintainerURL": "",
     "description": "Include arbitrary HTML snippets in an iframe (script tags work).",
     "issues": true,
-    "stars": 11,
+    "stars": 12,
     "license": "GPL-3.0",
     "image": "HTMLSnippet-screenshot-grafana.jpg",
     "defaultSortWeight": 3,
@@ -6885,7 +6885,7 @@
     "maintainerURL": "",
     "description": "A simple way to add an iFrame of any web content. Supports multiple URLs and will rotate between them. Works with static pages or streams like Nest Cam, D-Link Cameras, Twitch.tv, YouTube and more.",
     "issues": true,
-    "stars": 53,
+    "stars": 54,
     "tags": [
       "iframe"
     ],
@@ -8874,7 +8874,7 @@
     ],
     "image": "MMM-MealieMenu-screenshot.jpg",
     "defaultSortWeight": -1,
-    "lastCommit": "2024-04-29T08:11:40-06:00"
+    "lastCommit": "2024-05-27T04:40:06+00:00"
   },
   {
     "name": "MMM-Memo",
@@ -11005,7 +11005,7 @@
     ],
     "image": ".github-preview.bubbles.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-05-24T13:42:39+00:00"
+    "lastCommit": "2024-05-27T09:47:23+00:00"
   },
   {
     "name": "MMM-Netatmo-Presence",
@@ -17906,7 +17906,7 @@
     "license": "MIT",
     "image": "screenshots-default.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-26T21:33:05-05:00"
+    "lastCommit": "2024-05-27T08:08:32-07:00"
   },
   {
     "name": "MMM-ValuesByNotification",
