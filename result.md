@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-05-26T17:37:02+02:00
+Last update: 2024-05-27T05:37:22+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1158   |
+| modules analyzed     |   1159   |
 | maintainer           |    647   |
-| modules with issues  |   1142   |
-| issues               |   7171   |
-| modules at github    |   1146   |
+| modules with issues  |   1143   |
+| issues               |   7176   |
+| modules at github    |   1147   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -9984,6 +9984,14 @@ Last update: 2024-05-26T17:37:02+02:00
 4. Recommendation: Found `XMLHttpRequest` in file `MMM-uv-index.js`: Replace it with built-in fetch.
 5. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-VALORANTESPORTS-SCHEDULES by xadamxk](https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES)
+
+1. Recommendation: Found `new Date()` in file `MMM-VALORANTESPORTS-SCHEDULES.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
+2. Recommendation: Found `require("https")` in file `node_helper.js`: Replace "https" by "node:https".
+3. Outdated: Found `MichMich/MagicMirror` in file `readme.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
+4. Warning: No LICENSE file.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-ValuesByNotification by Tom-Hirschberger](https://github.com/Tom-Hirschberger/MMM-ValuesByNotification)
 

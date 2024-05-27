@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-26T15:30:06.063Z",
+  "lastUpdate": "2024-05-27T03:30:06.592Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -10763,6 +10763,16 @@
       "maintainer": "thariq-shanavas",
       "maintainerURL": "",
       "description": "Displays UV Index from openweathermap.org OneCall API 3.0.",
+      "issues": []
+    },
+    {
+      "name": "MMM-VALORANTESPORTS-SCHEDULES",
+      "category": "Sports",
+      "url": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+      "id": "xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+      "maintainer": "xadamxk",
+      "maintainerURL": "https://github.com/xadamxk",
+      "description": "Display Valorant Esports league schedules on your magic mirror.",
       "issues": []
     },
     {

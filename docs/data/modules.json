@@ -171,7 +171,7 @@
     "maintainerURL": "",
     "description": "Display trashcollection days of the Afvalwijzer service in the Netherlands.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "license": "MIT",
     "tags": [
       "trashcollection"
@@ -5485,7 +5485,7 @@
     "maintainerURL": "",
     "description": "This module allows to add a glass effect to MagicMirror\u00b2 modules.",
     "issues": false,
-    "stars": 1,
+    "stars": 4,
     "license": "MIT",
     "tags": [
       "glassy",
@@ -9275,7 +9275,7 @@
     ],
     "image": "screenshot.jpg",
     "defaultSortWeight": 13,
-    "lastCommit": "2024-03-03T21:24:39-06:00"
+    "lastCommit": "2024-05-26T15:25:44-05:00"
   },
   {
     "name": "mmm-dropbox",
@@ -17891,6 +17891,24 @@
     "lastCommit": "2024-04-19T16:28:55-06:00"
   },
   {
+    "name": "MMM-VALORANTESPORTS-SCHEDULES",
+    "category": "Sports",
+    "url": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+    "id": "xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+    "maintainer": "xadamxk",
+    "maintainerURL": "https://github.com/xadamxk",
+    "description": "Display Valorant Esports league schedules on your magic mirror.",
+    "issues": true,
+    "tags": [
+      "esports",
+      "valorant"
+    ],
+    "license": "MIT",
+    "image": "screenshots-default.jpg",
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-05-26T21:33:05-05:00"
+  },
+  {
     "name": "MMM-ValuesByNotification",
     "category": "Utility / IOT / 3rd Party / Integration",
     "url": "https://github.com/Tom-Hirschberger/MMM-ValuesByNotification",
@@ -18638,7 +18656,7 @@
     "license": "MIT",
     "image": "website-assets-img-FavIcon.jpg",
     "defaultSortWeight": 5,
-    "lastCommit": "2024-05-19T16:51:17+02:00"
+    "lastCommit": "2024-05-26T18:59:58+02:00"
   },
   {
     "name": "MMM-WebSpeechTTS",

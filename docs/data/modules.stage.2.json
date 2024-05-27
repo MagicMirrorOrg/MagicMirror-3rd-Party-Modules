@@ -114,7 +114,7 @@
     "maintainerURL": "",
     "description": "Display trashcollection days of the Afvalwijzer service in the Netherlands.",
     "issues": [],
-    "stars": 2,
+    "stars": 3,
     "license": "MIT"
   },
   {
@@ -3929,7 +3929,7 @@
     "maintainerURL": "",
     "description": "This module allows to add a glass effect to MagicMirror² modules.",
     "issues": [],
-    "stars": 1,
+    "stars": 4,
     "license": "MIT"
   },
   {
@@ -12759,6 +12759,16 @@
     "stars": 1,
     "hasGithubIssues": false,
     "license": "MIT"
+  },
+  {
+    "name": "MMM-VALORANTESPORTS-SCHEDULES",
+    "category": "Sports",
+    "url": "https://github.com/xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+    "id": "xadamxk/MMM-VALORANTESPORTS-SCHEDULES",
+    "maintainer": "xadamxk",
+    "maintainerURL": "https://github.com/xadamxk",
+    "description": "Display Valorant Esports league schedules on your magic mirror.",
+    "issues": []
   },
   {
     "name": "MMM-ValuesByNotification",
