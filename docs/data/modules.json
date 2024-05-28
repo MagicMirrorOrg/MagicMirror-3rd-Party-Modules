@@ -6935,7 +6935,7 @@
     "maintainerURL": "https://github.com/AgP42",
     "description": "An iFrame module to display any web content to your MagicMirror\u00b2 (including YouTube, IP cameras, etc.). Several functionalities like auto-refresh, Ping the URL before to display it and last update time display. See also <a target=\"_blank\" href=\"https://forum.magicmirror.builders/topic/9750/mmm-smartwebdisplay-display-web-contents-including-youtube-on-your-mm\">MMM-SmartWebDisplay</a>.",
     "issues": true,
-    "stars": 33,
+    "stars": 34,
     "tags": [
       "iframe",
       "ping"
@@ -7106,7 +7106,7 @@
     "description": "Load the images from a users Instagram feed. The images are displayed on the mirror and animated. API key required.",
     "issues": true,
     "outdated": "Deprecated. Doesn't work anymore. Checkout issue 17.",
-    "stars": 40,
+    "stars": 39,
     "tags": [
       "traffic"
     ],
@@ -11005,7 +11005,7 @@
     ],
     "image": ".github-preview.bubbles.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-05-27T09:47:23+00:00"
+    "lastCommit": "2024-05-27T16:34:47+00:00"
   },
   {
     "name": "MMM-Netatmo-Presence",
@@ -16294,7 +16294,7 @@
     "license": "MIT",
     "image": "public-assets-images-StravaWeekInBike.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-24T21:44:33-04:00"
+    "lastCommit": "2024-05-27T20:06:36-04:00"
   },
   {
     "name": "EXT-StreamDeck",

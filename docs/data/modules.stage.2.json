@@ -4980,7 +4980,7 @@
     "maintainerURL": "https://github.com/AgP42",
     "description": "An iFrame module to display any web content to your MagicMirror² (including YouTube, IP cameras, etc.). Several functionalities like auto-refresh, Ping the URL before to display it and last update time display. See also <a target=\"_blank\" href=\"https://forum.magicmirror.builders/topic/9750/mmm-smartwebdisplay-display-web-contents-including-youtube-on-your-mm\">MMM-SmartWebDisplay</a>.",
     "issues": [],
-    "stars": 33
+    "stars": 34
   },
   {
     "name": "MMM-iHaveBeenThere",
@@ -5098,7 +5098,7 @@
     "description": "Load the images from a users Instagram feed. The images are displayed on the mirror and animated. API key required.",
     "issues": [],
     "outdated": "Deprecated. Doesn't work anymore. Checkout issue 17.",
-    "stars": 40
+    "stars": 39
   },
   {
     "name": "MMM-Instagram2020",
