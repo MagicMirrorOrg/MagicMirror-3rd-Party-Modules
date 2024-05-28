@@ -5555,7 +5555,7 @@
     "license": "MIT",
     "image": "screenshot.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-21T16:46:51+02:00"
+    "lastCommit": "2024-05-28T08:42:09+02:00"
   },
   {
     "name": "MMM-google-route",
@@ -7462,7 +7462,7 @@
     "maintainerURL": "https://github.com/jalibu",
     "description": "A simple but powerful vertical, horizontal or static stock ticker based on Yahoo's finance API. Supports international stocks, crypto currencies and index symbols. No API key required.",
     "issues": true,
-    "stars": 63,
+    "stars": 64,
     "license": "MIT",
     "tags": [
       "stock",
@@ -7758,7 +7758,7 @@
     "maintainerURL": "",
     "description": "Getting bluetooth remote control and keyboard inputs.",
     "issues": true,
-    "stars": 16,
+    "stars": 15,
     "license": "MIT",
     "tags": [
       "fire stick",
@@ -11005,7 +11005,7 @@
     ],
     "image": ".github-preview.bubbles.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-05-27T16:34:47+00:00"
+    "lastCommit": "2024-05-28T14:48:23+00:00"
   },
   {
     "name": "MMM-Netatmo-Presence",
@@ -12188,8 +12188,8 @@
     ],
     "license": "MIT",
     "image": "screenshots-MMM-OpenWeatherMapForecast.jpg",
-    "defaultSortWeight": 6,
-    "lastCommit": "2024-04-23T16:34:39+02:00"
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-05-28T11:59:52+02:00"
   },
   {
     "name": "MMM-OsloCityBike",

@@ -7390,7 +7390,7 @@
     "maintainerURL": "https://github.com/jalibu",
     "description": "A simple but powerful vertical, horizontal or static stock ticker based on Yahoo's finance API. Supports international stocks, crypto currencies and index symbols. No API key required.",
     "issues": [],
-    "stars": 63,
+    "stars": 64,
     "license": "MIT",
     "tags": [
       "stock",
@@ -7681,7 +7681,7 @@
     "maintainerURL": "",
     "description": "Getting bluetooth remote control and keyboard inputs.",
     "issues": [],
-    "stars": 16,
+    "stars": 15,
     "license": "MIT",
     "tags": [
       "fire stick",

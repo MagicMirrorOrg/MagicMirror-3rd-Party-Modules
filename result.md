@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-28T05:37:30+02:00
+Last update: 2024-05-28T17:37:00+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-28T05:37:30+02:00
 | modules analyzed     |   1159   |
 | maintainer           |    647   |
 | modules with issues  |   1143   |
-| issues               |   7176   |
+| issues               |   7174   |
 | modules at github    |   1147   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -5645,7 +5645,7 @@ Last update: 2024-05-28T05:37:30+02:00
 1. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 2. Information: There are updates for 2 dependencie(s):
    - jsonpath-plus  5.0.1  →  9.0.0
-   - mqtt           4.3.7  →  5.6.2
+   - mqtt           4.3.7  →  5.7.0
 
 
 ### [MMM-MQTTfloorplan by DMailMan](https://github.com/DMailMan/MMM-MQTTfloorplan)
@@ -6785,12 +6785,10 @@ Last update: 2024-05-28T05:37:30+02:00
 ### [MMM-OpenWeatherMapForecast by MarcLandis](https://github.com/MarcLandis/MMM-OpenWeatherMapForecast)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Deprecated: Found `api.openweathermap.org/data/2.5` in file `MMM-OpenWeatherMapForecast.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
-3. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
-4. Deprecated: Found `api.openweathermap.org/data/2.5` in file `README.md`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
-5. Deprecated: Found `api.openweathermap.org/data/2.5` in file `node_helper.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
-6. Warning: No LICENSE file.
-7. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+2. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+3. Deprecated: Found `api.openweathermap.org/data/2.5` in file `node_helper.js`: OpenWeather API 2.5 will be deprecated in June 2024. Please update to 3.0.
+4. Warning: No LICENSE file.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-OsloCityBike by TobbenTM](https://github.com/TobbenTM/MMM-OsloCityBike)
 
