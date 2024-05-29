@@ -6971,6 +6971,16 @@
     "license": "MIT"
   },
   {
+    "name": "MMM-ModulesGroupsRotation",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/mezderman/MMM-ModulesGroupsRotation",
+    "id": "mezderman/MMM-ModulesGroupsRotation",
+    "maintainer": "mezderman",
+    "maintainerURL": "https://github.com/mezderman",
+    "description": "MMM-ModulesGroupsRotation is a MagicMirror² module that groups modules and toggles their visibility over time",
+    "issues": []
+  },
+  {
     "name": "MMM-ModuleToggleButton",
     "category": "Development / Core MagicMirror²",
     "url": "https://github.com/balassy/MMM-ModuleToggleButton",
@@ -8573,6 +8583,16 @@
     "issues": [],
     "stars": 45,
     "license": "MIT"
+  },
+  {
+    "name": "MMM-OnSpotifyDude",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/mezderman/MMM-OnSpotifyDude",
+    "id": "mezderman/MMM-OnSpotifyDude",
+    "maintainer": "mezderman",
+    "maintainerURL": "https://github.com/mezderman",
+    "description": "The Dude from The Big Lebowski providing some laid-back commentary on the currently playing song on Spotify. Using OpenAI LLM",
+    "issues": []
   },
   {
     "name": "MMM-OnThisDay",
@@ -11633,6 +11653,16 @@
     "issues": [],
     "stars": 48,
     "license": "MIT"
+  },
+  {
+    "name": "MMM-Strava-Last-Activity-Map",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/tylerstambaugh/MMM-Strava-Last-Activity-Map",
+    "id": "tylerstambaugh/MMM-Strava-Last-Activity-Map",
+    "maintainer": "tylerstambaugh",
+    "maintainerURL": "https://github.com/tylerstambaugh",
+    "description": "Shows the map of your last public activity uploaded to <a target=\"_blank\" href=\"https://www.strava.com\">Strava</a> along with the title, date, distance and time.",
+    "issues": []
   },
   {
     "name": "MMM-StravaWeekInBike",

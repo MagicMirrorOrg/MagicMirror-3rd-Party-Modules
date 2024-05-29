@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-05-28T17:37:00+02:00
+Last update: 2024-05-29T05:37:21+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1159   |
-| maintainer           |    647   |
-| modules with issues  |   1143   |
-| issues               |   7174   |
-| modules at github    |   1147   |
+| modules analyzed     |   1162   |
+| maintainer           |    648   |
+| modules with issues  |   1144   |
+| issues               |   7186   |
+| modules at github    |   1150   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -151,18 +151,6 @@ Last update: 2024-05-28T17:37:00+02:00
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 5. Typo: Found `MagicMirror2` in file `package.json`: Replace it with `MagicMirror²`.
 6. Recommendation: Replace eslintrc by new flat config.
-
-### [EXT-Alert by bugsounet](https://github.com/bugsounet/EXT-Alert)
-
-1. Information: There are updates for 7 dependencie(s):
-   - @eslint/js                 ^8.57.0  →    ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →    ^2.1.0
-   - alertifyjs                 ^1.13.1  →   ^1.14.0
-   - esbuild                    ^0.20.2  →   ^0.21.4
-   - eslint                     ^8.57.0  →    ^9.3.0
-   - glob                      ^10.3.10  →   ^10.4.1
-   - sweetalert2               ^11.10.6  →  ^11.11.0
-
 
 ### [MMM-AlertExt by MMRIZE](https://github.com/MMRIZE/MMM-AlertExt)
 
@@ -5422,6 +5410,13 @@ Last update: 2024-05-28T17:37:00+02:00
 7. Recommendation: Found `new Date()` in file `node_helper.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 8. Recommendation: Replace eslintrc by new flat config.
 
+### [MMM-ModulesGroupsRotation by mezderman](https://github.com/mezderman/MMM-ModulesGroupsRotation)
+
+1. There is no `package.json`. We need this file to gather information about the module for the module list page.
+2. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+3. Warning: No LICENSE file.
+4. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
 ### [MMM-ModuleToggleButton by balassy](https://github.com/balassy/MMM-ModuleToggleButton)
 
 1. No image found.
@@ -6688,6 +6683,15 @@ Last update: 2024-05-28T17:37:00+02:00
 7. Deprecated: Found `new Buffer(` in file `vibrant.worker.min.js`: This is deprecated. Please update: <https://nodejs.org/api/buffer.html>.
 8. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [MMM-OnSpotifyDude by mezderman](https://github.com/mezderman/MMM-OnSpotifyDude)
+
+1. `package.json` issue: No description
+2. `package.json` issue: No repository field.
+3. There are no keywords in 'package.json'. We would use them as tags on the module list page.
+4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+5. Warning: No LICENSE file.
+6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
 ### [MMM-OnThisDay by nkl-kst](https://github.com/nkl-kst/MMM-OnThisDay)
 
 1. Recommendation: Found `uses: actions/setup-node@v3` in file `ci.yml`: Replace it with v4.
@@ -6885,16 +6889,6 @@ Last update: 2024-05-28T17:37:00+02:00
 3. Typo: Found `Magic Mirror` in file `readme.md`: Replace it with `MagicMirror²`.
 4. Outdated: Found `MichMich/MagicMirror` in file `readme.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 5. Recommendation: Replace eslintrc by new flat config.
-
-### [EXT-Pages by bugsounet](https://github.com/bugsounet/EXT-Pages)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.10  →  ^10.4.1
-
 
 ### [MMM-Pages-Screencast by jboucly](https://github.com/jboucly/MMM-Pages-Screencast)
 
@@ -9088,6 +9082,14 @@ Last update: 2024-05-28T17:37:00+02:00
 8. Recommendation: Found `new Date()` in file `MMM-Strava.test.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 9. Recommendation: Replace eslintrc by new flat config.
 
+### [MMM-Strava-Last-Activity-Map by tylerstambaugh](https://github.com/tylerstambaugh/MMM-Strava-Last-Activity-Map)
+
+1. There is no `package.json`. We need this file to gather information about the module for the module list page.
+2. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
+4. Recommendation: Found `axios` in file `node_helper.js`: Replace it with built-in fetch.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
 ### [MMM-StravaWeekInBike by tylerstambaugh](https://github.com/tylerstambaugh/MMM-StravaWeekInBike)
 
 1. There is no `package.json`. We need this file to gather information about the module for the module list page.
@@ -9325,14 +9327,6 @@ Last update: 2024-05-28T17:37:00+02:00
 ### [EXT-TelegramBot by bugsounet](https://github.com/bugsounet/EXT-TelegramBot)
 
 1. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-2. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.3.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.3.0
-   - glob                      ^10.3.12  →  ^10.4.1
-   - node-telegram-bot-api      ^0.65.1  →  ^0.66.0
-
 
 ### [MMM-TelegramCommands by doctorfree](https://github.com/doctorfree/MMM-TelegramCommands)
 

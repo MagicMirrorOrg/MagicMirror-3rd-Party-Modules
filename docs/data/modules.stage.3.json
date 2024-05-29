@@ -9624,6 +9624,18 @@
     "image": ".github-example.jpg"
   },
   {
+    "name": "MMM-ModulesGroupsRotation",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/mezderman/MMM-ModulesGroupsRotation",
+    "id": "mezderman/MMM-ModulesGroupsRotation",
+    "maintainer": "mezderman",
+    "maintainerURL": "https://github.com/mezderman",
+    "description": "MMM-ModulesGroupsRotation is a MagicMirror² module that groups modules and toggles their visibility over time",
+    "issues": [
+      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+    ]
+  },
+  {
     "name": "MMM-ModuleToggleButton",
     "category": "Development / Core MagicMirror²",
     "url": "https://github.com/balassy/MMM-ModuleToggleButton",
@@ -11887,6 +11899,22 @@
       "spotify connect"
     ],
     "image": ".github-content-banner-social.jpg"
+  },
+  {
+    "name": "MMM-OnSpotifyDude",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/mezderman/MMM-OnSpotifyDude",
+    "id": "mezderman/MMM-OnSpotifyDude",
+    "maintainer": "mezderman",
+    "maintainerURL": "https://github.com/mezderman",
+    "description": "The Dude from The Big Lebowski providing some laid-back commentary on the currently playing song on Spotify. Using OpenAI LLM",
+    "issues": [
+      "`package.json` issue: No description",
+      "`package.json` issue: No repository field.",
+      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
+    ],
+    "license": "MIT",
+    "image": "screenshots-screenshot2.jpg"
   },
   {
     "name": "MMM-OnThisDay",
@@ -16098,6 +16126,18 @@
       "strava"
     ],
     "image": ".github-example-chart-recent.jpg"
+  },
+  {
+    "name": "MMM-Strava-Last-Activity-Map",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/tylerstambaugh/MMM-Strava-Last-Activity-Map",
+    "id": "tylerstambaugh/MMM-Strava-Last-Activity-Map",
+    "maintainer": "tylerstambaugh",
+    "maintainerURL": "https://github.com/tylerstambaugh",
+    "description": "Shows the map of your last public activity uploaded to <a target=\"_blank\" href=\"https://www.strava.com\">Strava</a> along with the title, date, distance and time.",
+    "issues": [
+      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+    ]
   },
   {
     "name": "MMM-StravaWeekInBike",

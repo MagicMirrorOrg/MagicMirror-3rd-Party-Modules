@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-05-28T15:30:19.286Z",
+  "lastUpdate": "2024-05-29T03:30:21.364Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -2341,7 +2341,7 @@
     },
     {
       "id": "dathbe/MMM-CustomText",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:09.517Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:08.894Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -6597,7 +6597,7 @@
     },
     {
       "id": "mykle1/MMM-Launch",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:10.037Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:09.408Z",
       "gitHubData": {
         "issues": 2,
         "stars": 16,
@@ -6611,7 +6611,7 @@
     },
     {
       "id": "Txukie/MMM-LCDControl",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:10.471Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:09.758Z",
       "gitHubData": {
         "issues": 4,
         "stars": 6,
@@ -6625,7 +6625,7 @@
     },
     {
       "id": "JulianEgbert/MMM-LeagueOfLegends",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:11.004Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:10.222Z",
       "gitHubData": {
         "issues": 1,
         "stars": 1,
@@ -6639,7 +6639,7 @@
     },
     {
       "id": "thekampany/MMM-learnlanguage",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:11.477Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:10.709Z",
       "gitHubData": {
         "issues": 1,
         "stars": 7,
@@ -6653,7 +6653,7 @@
     },
     {
       "id": "Tom-Hirschberger/MMM-LEDStripControl",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:11.862Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:11.071Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -6667,7 +6667,7 @@
     },
     {
       "id": "Tomadelostacos/MMM-LesJoiesDuCode",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:12.285Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:11.510Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -6681,7 +6681,7 @@
     },
     {
       "id": "tristanburke/MMM-Letterboxd",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:12.717Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:11.965Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -6695,7 +6695,7 @@
     },
     {
       "id": "bugsounet/EXT-Librespot",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:13.132Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:12.379Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -6709,7 +6709,7 @@
     },
     {
       "id": "l3d00m/MMM-LibrespotJava",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:13.588Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:12.840Z",
       "gitHubData": {
         "issues": 0,
         "stars": 4,
@@ -6723,7 +6723,7 @@
     },
     {
       "id": "mykle1/MMM-LICE",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:13.976Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:13.229Z",
       "gitHubData": {
         "issues": 3,
         "stars": 11,
@@ -6737,7 +6737,7 @@
     },
     {
       "id": "tonymorris/MMM-lichess-daily",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:14.733Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:13.960Z",
       "gitHubData": {
         "issues": 2,
         "stars": 7,
@@ -6751,7 +6751,7 @@
     },
     {
       "id": "buxxi/MMM-Liquipedia-Matches",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:15.110Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:14.403Z",
       "gitHubData": {
         "issues": 1,
         "stars": 1,
@@ -6765,7 +6765,7 @@
     },
     {
       "id": "mcintyrehh/MMM-Live-Stream-TV",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:15.565Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:14.778Z",
       "gitHubData": {
         "issues": 4,
         "stars": 8,
@@ -6779,7 +6779,7 @@
     },
     {
       "id": "Fabrizz/MMM-LiveLyrics",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:16.040Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:15.202Z",
       "gitHubData": {
         "issues": 3,
         "stars": 6,
@@ -6793,7 +6793,7 @@
     },
     {
       "id": "djey47/MMM-LKY-TIC",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:16.591Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:15.676Z",
       "gitHubData": {
         "issues": 3,
         "stars": 1,
@@ -6807,7 +6807,7 @@
     },
     {
       "id": "qunu/MMM-LoadShedding",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:17.058Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:16.152Z",
       "gitHubData": {
         "issues": 1,
         "stars": 0,
@@ -6821,7 +6821,7 @@
     },
     {
       "id": "dwoolridge/MMM-LocalEvents",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:17.509Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:16.595Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -6835,7 +6835,7 @@
     },
     {
       "id": "glitch452/MMM-LocalTemperature",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:17.951Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:17.060Z",
       "gitHubData": {
         "issues": 9,
         "stars": 22,
@@ -6849,7 +6849,7 @@
     },
     {
       "id": "CFenner/MMM-LocalTransport",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:18.392Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:17.498Z",
       "gitHubData": {
         "issues": 20,
         "stars": 42,
@@ -6863,7 +6863,7 @@
     },
     {
       "id": "RayTCosgrove/MMM-LocalVideoPlayer",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:18.790Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:17.910Z",
       "gitHubData": {
         "issues": 2,
         "stars": 1,
@@ -6877,7 +6877,7 @@
     },
     {
       "id": "MMRIZE/MMM-LogExt",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:19.196Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:18.358Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -6891,9 +6891,9 @@
     },
     {
       "id": "shbatm/MMM-Logging",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:19.619Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:18.767Z",
       "gitHubData": {
-        "issues": 2,
+        "issues": 5,
         "stars": 5,
         "license": "MIT",
         "archived": false,
@@ -6905,7 +6905,7 @@
     },
     {
       "id": "cslev/MMM-loldht22",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:20.032Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:19.148Z",
       "gitHubData": {
         "issues": 1,
         "stars": 0,
@@ -6919,7 +6919,7 @@
     },
     {
       "id": "xadamxk/MMM-LOLESPORTS-SCHEDULES",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:20.474Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:19.571Z",
       "gitHubData": {
         "issues": 2,
         "stars": 4,
@@ -6933,7 +6933,7 @@
     },
     {
       "id": "xadamxk/MMM-LOLESPORTS-STANDINGS",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:20.937Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:19.967Z",
       "gitHubData": {
         "issues": 3,
         "stars": 1,
@@ -6942,12 +6942,12 @@
         "disabled": false,
         "defaultBranch": "master",
         "has_issues": true,
-        "lastCommit": "2024-02-20T06:29:03Z"
+        "lastCommit": "2024-05-26T00:17:06Z"
       }
     },
     {
       "id": "marska/MMM-Looko2-aq",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:21.371Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:20.415Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -6961,7 +6961,7 @@
     },
     {
       "id": "Dobherrmann/MMM-Losung",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:21.771Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:20.869Z",
       "gitHubData": {
         "issues": 1,
         "stars": 2,
@@ -6975,7 +6975,7 @@
     },
     {
       "id": "tbouron/MMM-LothianBuses",
-      "gitHubDataLastUpdate": "2024-05-14T03:30:22.215Z",
+      "gitHubDataLastUpdate": "2024-05-29T03:30:21.288Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
