@@ -6122,7 +6122,7 @@
     "maintainerURL": "",
     "description": "Voice control based on based on Sphinx and Alexa.",
     "issues": [],
-    "stars": 17,
+    "stars": 16,
     "license": "NOASSERTION"
   },
   {
@@ -6146,7 +6146,7 @@
     "maintainerURL": "",
     "description": "Module to help developers to start building their own modules for the MagicMirror².",
     "issues": [],
-    "stars": 70,
+    "stars": 71,
     "license": "MIT"
   },
   {
@@ -6194,7 +6194,7 @@
     "maintainerURL": "",
     "description": "Prevent screen burn-in on your MagicMirror².",
     "issues": [],
-    "stars": 43,
+    "stars": 44,
     "license": "MIT"
   },
   {
@@ -6229,7 +6229,7 @@
     "maintainerURL": "",
     "description": "Display the current marine weather (water and air temperatures, wind and wave conditions).",
     "issues": [],
-    "stars": 7,
+    "stars": 8,
     "license": "MIT"
   },
   {
@@ -6350,7 +6350,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": [],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT"
   },
   {

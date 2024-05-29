@@ -8457,7 +8457,7 @@
       "Issue: The license in the package.json (MIT) doesn't match the license file (NOASSERTION).",
       "No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image."
     ],
-    "stars": 17,
+    "stars": 16,
     "license": "NOASSERTION"
   },
   {
@@ -8488,7 +8488,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
-    "stars": 70,
+    "stars": 71,
     "license": "MIT"
   },
   {
@@ -8545,7 +8545,7 @@
     "maintainerURL": "",
     "description": "Prevent screen burn-in on your MagicMirror².",
     "issues": [],
-    "stars": 43,
+    "stars": 44,
     "license": "MIT",
     "tags": [
       "screensaver",
@@ -8600,7 +8600,7 @@
     "maintainerURL": "",
     "description": "Display the current marine weather (water and air temperatures, wind and wave conditions).",
     "issues": [],
-    "stars": 7,
+    "stars": 8,
     "license": "MIT",
     "tags": [
       "marine weather",
@@ -8773,7 +8773,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": [],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT",
     "tags": [
       "mealie",
