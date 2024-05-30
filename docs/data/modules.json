@@ -8344,7 +8344,7 @@
     "license": "MIT",
     "image": "screenshots-default.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-02-19T22:10:14-08:00"
+    "lastCommit": "2024-05-29T22:18:34-05:00"
   },
   {
     "name": "MMM-LOLESPORTS-STANDINGS",
@@ -8885,7 +8885,7 @@
     "maintainerURL": "",
     "description": "Add one to many memo notes (\"post-it look &amp; feel\"). Content is manageable through HTTP get requests.",
     "issues": true,
-    "stars": 34,
+    "stars": 33,
     "license": "MIT",
     "image": "img-MMM-Memo-Blues.jpg",
     "defaultSortWeight": 11,
@@ -9094,7 +9094,7 @@
     "maintainerURL": "",
     "description": "Alexa voice control to show/hide modules, search for images or Youtube video, and display them with the search term on the mirror.",
     "issues": true,
-    "stars": 88,
+    "stars": 89,
     "license": "MIT",
     "tags": [
       "alexa",

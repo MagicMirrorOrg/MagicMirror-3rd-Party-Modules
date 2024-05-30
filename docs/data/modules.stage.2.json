@@ -6362,7 +6362,7 @@
     "maintainerURL": "",
     "description": "Add one to many memo notes (\"post-it look &amp; feel\"). Content is manageable through HTTP get requests.",
     "issues": [],
-    "stars": 34,
+    "stars": 33,
     "license": "MIT"
   },
   {
@@ -6516,7 +6516,7 @@
     "maintainerURL": "",
     "description": "Alexa voice control to show/hide modules, search for images or Youtube video, and display them with the search term on the mirror.",
     "issues": [],
-    "stars": 88,
+    "stars": 89,
     "license": "MIT"
   },
   {
