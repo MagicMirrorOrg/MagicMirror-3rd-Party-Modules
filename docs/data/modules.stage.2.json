@@ -3975,7 +3975,7 @@
     "id": "kurtern84/MMM-GmailNotifier",
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
-    "description": "MMM-GmailNotifier is a MagicMirror module that displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
+    "description": "Displays the user's Gmail profile picture and name, and checks for unread emails in the inbox.",
     "issues": [],
     "stars": 0,
     "license": "MIT"
@@ -6977,8 +6977,9 @@
     "id": "mezderman/MMM-ModulesGroupsRotation",
     "maintainer": "mezderman",
     "maintainerURL": "https://github.com/mezderman",
-    "description": "MMM-ModulesGroupsRotation is a MagicMirror² module that groups modules and toggles their visibility over time",
-    "issues": []
+    "description": "Group modules and toggle their visibility over time.",
+    "issues": [],
+    "stars": 1
   },
   {
     "name": "MMM-ModuleToggleButton",
@@ -8591,7 +8592,7 @@
     "id": "mezderman/MMM-OnSpotifyDude",
     "maintainer": "mezderman",
     "maintainerURL": "https://github.com/mezderman",
-    "description": "The Dude from The Big Lebowski providing some laid-back commentary on the currently playing song on Spotify. Using OpenAI LLM",
+    "description": "The Dude from The Big Lebowski providing some laid-back commentary on the currently playing song on Spotify. Using OpenAI LLM.",
     "issues": []
   },
   {
@@ -9639,7 +9640,7 @@
     "id": "kurtern84/MMM-ProfileAndWeatherAlerts",
     "maintainer": "kurtern84",
     "maintainerURL": "https://github.com/kurtern84",
-    "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.)",
+    "description": "A module  that shows profile picture (optional), name (optional) and shows extream weather warnings from metalerts 2.0 (Yr.no.).",
     "issues": [],
     "stars": 0,
     "license": "MIT"
