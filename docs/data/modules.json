@@ -1799,7 +1799,7 @@
       "cx3"
     ],
     "defaultSortWeight": 2,
-    "lastCommit": "2024-04-29T09:02:31+02:00"
+    "lastCommit": "2024-05-31T10:23:08+02:00"
   },
   {
     "name": "MMM-CalendarExt3Timeline",
@@ -3635,7 +3635,7 @@
     "tags": [
       "irishrail"
     ],
-    "defaultSortWeight": 9,
+    "defaultSortWeight": 10,
     "lastCommit": "2022-05-31T12:48:16+01:00"
   },
   {
@@ -10279,7 +10279,7 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Play any music found on a USB Key or in defined local directory.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
