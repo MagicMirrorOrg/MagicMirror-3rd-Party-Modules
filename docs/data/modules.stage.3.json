@@ -11914,6 +11914,7 @@
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
+    "stars": 1,
     "license": "MIT",
     "image": "screenshots-screenshot2.jpg"
   },
@@ -14648,7 +14649,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
-    "stars": 3,
+    "stars": 5,
     "license": "MIT"
   },
   {

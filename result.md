@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-05-30T17:37:32+02:00
+Last update: 2024-05-31T05:37:28+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-05-30T17:37:32+02:00
 | modules analyzed     |   1162   |
 | maintainer           |    648   |
 | modules with issues  |   1144   |
-| issues               |   7186   |
+| issues               |   7187   |
 | modules at github    |   1150   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -8590,8 +8590,9 @@ Last update: 2024-05-30T17:37:32+02:00
 2. Recommendation: Found `new Date()` in file `MMM-SimpleNotifyTrashDay.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 3. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 4. Typo: Found `Magic Mirror` in file `node_helper.js`: Replace it with `MagicMirror²`.
-5. Warning: No LICENSE file.
-6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+5. Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`.
+6. Warning: No LICENSE file.
+7. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-SimpleText by SaltyRiver](https://github.com/SaltyRiver/MMM-SimpleText)
 

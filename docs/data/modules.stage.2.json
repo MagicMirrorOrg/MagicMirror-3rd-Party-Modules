@@ -8593,7 +8593,8 @@
     "maintainer": "mezderman",
     "maintainerURL": "https://github.com/mezderman",
     "description": "The Dude from The Big Lebowski providing some laid-back commentary on the currently playing song on Spotify. Using OpenAI LLM.",
-    "issues": []
+    "issues": [],
+    "stars": 1
   },
   {
     "name": "MMM-OnThisDay",
@@ -10584,7 +10585,7 @@
     "maintainerURL": "",
     "description": "Change screen scenes by time and order with animation effect. Successor of MMM-Scenes since MM 2.25 (AnimateCSS is introduced).",
     "issues": [],
-    "stars": 3,
+    "stars": 5,
     "license": "MIT"
   },
   {
