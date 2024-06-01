@@ -5900,7 +5900,7 @@
     "license": "MIT",
     "image": "screen-01-minimal_look.jpg",
     "defaultSortWeight": 3,
-    "lastCommit": "2024-04-06T13:07:55+02:00"
+    "lastCommit": "2024-06-01T10:02:52+02:00"
   },
   {
     "name": "MMM-GoogleTTS",
@@ -11195,7 +11195,7 @@
     "maintainerURL": "https://github.com/PierreGode",
     "description": "Display your upcomming show's and movies from your next-episode account.",
     "issues": true,
-    "stars": 3,
+    "stars": 4,
     "license": "GPL-3.0",
     "tags": [
       "tvshows",
@@ -13501,7 +13501,7 @@
     ],
     "image": "examples-page_one-profile_two.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2023-11-27T15:51:25+01:00"
+    "lastCommit": "2024-06-01T12:52:26+02:00"
   },
   {
     "name": "MMM-Profilepicture",
@@ -13600,7 +13600,7 @@
     ],
     "image": "img-MMM-PublicTransport_screenshot.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-05-01T11:56:13+02:00"
+    "lastCommit": "2024-06-01T09:21:36+02:00"
   },
   {
     "name": "MMM-PublicTransportHafas",
