@@ -8244,7 +8244,7 @@
     "maintainerURL": "https://github.com/crice009",
     "description": "Graph daily low and high tide predictions for a given NOAA tide station, and measured data as it is reported. Data is pulled from <a target=\"_blank\" href=\"https://tidesandcurrents.noaa.gov/map/index.html\">NOAA-tidesandcurrents</a>. Data is a free service - no API key.",
     "issues": [],
-    "stars": 3,
+    "stars": 4,
     "license": "MIT"
   },
   {
@@ -8319,7 +8319,7 @@
     "description": "Display the song you are currently listening to on Spotify.",
     "issues": [],
     "outdated": "Abandoned. No reactions to issues since years. Depends on deprecated modules. MMM-OnSpotify is an alternative.",
-    "stars": 202,
+    "stars": 203,
     "license": "MIT"
   },
   {

@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-01T17:36:46+02:00
+Last update: 2024-06-02T05:37:29+02:00
 
 ## Statistics
 
@@ -459,7 +459,7 @@ Last update: 2024-06-01T17:36:46+02:00
 2. Information: There are updates for 3 dependencie(s):
    - eslint     ^8.56.0  →    ^9.4.0
    - jimp      ^0.22.10  →  ^0.22.12
-   - prettier    ^3.1.1  →    ^3.2.5
+   - prettier    ^3.1.1  →    ^3.3.0
 
 
 ### [MMM-BartTimes by falafel2222](https://github.com/falafel2222/MMM-BartTimes)
@@ -1038,7 +1038,7 @@ Last update: 2024-06-01T17:36:46+02:00
 2. Information: There are updates for 4 dependencie(s):
    - ical-generator   ^1.4.3  →   ^7.1.0
    - moment          ^2.23.0  →  ^2.30.1
-   - prettier         ^3.0.3  →   ^3.2.5
+   - prettier         ^3.0.3  →   ^3.3.0
    - tsdav            ^2.0.3  →   ^2.0.9
 
 
@@ -1317,7 +1317,7 @@ Last update: 2024-06-01T17:36:46+02:00
 1. Information: There are updates for 3 dependencie(s):
    - eslint    ^8.56.0  →   ^9.4.0
    - moment    ^2.29.4  →  ^2.30.1
-   - prettier   ^3.1.1  →   ^3.2.5
+   - prettier   ^3.1.1  →   ^3.3.0
 
 
 ### [MMM-covid19 by 0m4r](https://github.com/0m4r/MMM-covid19)

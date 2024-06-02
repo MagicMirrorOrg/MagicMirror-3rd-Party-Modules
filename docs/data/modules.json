@@ -10218,7 +10218,7 @@
     ],
     "image": "screenshot-horizontal.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-05-13T15:40:43-07:00"
+    "lastCommit": "2024-06-01T18:08:31-07:00"
   },
   {
     "name": "MMM-mumble",
@@ -11538,7 +11538,7 @@
     "maintainerURL": "https://github.com/crice009",
     "description": "Graph daily low and high tide predictions for a given NOAA tide station, and measured data as it is reported. Data is pulled from <a target=\"_blank\" href=\"https://tidesandcurrents.noaa.gov/map/index.html\">NOAA-tidesandcurrents</a>. Data is a free service - no API key.",
     "issues": true,
-    "stars": 3,
+    "stars": 4,
     "license": "MIT",
     "tags": [
       "tide",
@@ -11647,7 +11647,7 @@
     "description": "Display the song you are currently listening to on Spotify.",
     "issues": true,
     "outdated": "Abandoned. No reactions to issues since years. Depends on deprecated modules. MMM-OnSpotify is an alternative.",
-    "stars": 202,
+    "stars": 203,
     "license": "MIT",
     "tags": [
       "spotify"
@@ -16319,7 +16319,7 @@
     "description": "Shows the map of your last public activity uploaded to <a target=\"_blank\" href=\"https://www.strava.com\">Strava</a> along with the title, date, distance and time.",
     "issues": true,
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-28T20:15:56-04:00"
+    "lastCommit": "2024-06-01T16:11:36-04:00"
   },
   {
     "name": "MMM-StravaWeekInBike",
@@ -16334,7 +16334,7 @@
     "license": "MIT",
     "image": "public-assets-images-StravaWeekInBike.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-27T20:06:36-04:00"
+    "lastCommit": "2024-06-01T16:10:08-04:00"
   },
   {
     "name": "EXT-StreamDeck",
