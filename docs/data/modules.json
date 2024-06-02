@@ -4235,7 +4235,7 @@
     "maintainerURL": "",
     "description": "Add some EyeCandy to your mirror. You can even choose your own local images or internet images.",
     "issues": true,
-    "stars": 44,
+    "stars": 45,
     "license": "MIT",
     "image": "pix-1.jpg",
     "defaultSortWeight": 5,
@@ -4300,7 +4300,7 @@
     "maintainerURL": "",
     "description": "All new version of Face Recognition with Open CV 4.1 and Deep Neural Network.",
     "issues": true,
-    "stars": 89,
+    "stars": 91,
     "license": "MIT",
     "tags": [
       "face",

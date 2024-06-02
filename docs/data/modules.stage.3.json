@@ -4185,7 +4185,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 44,
+    "stars": 45,
     "license": "MIT",
     "image": "pix-1.jpg"
   },
@@ -4253,7 +4253,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 89,
+    "stars": 91,
     "license": "MIT",
     "tags": [
       "face",
