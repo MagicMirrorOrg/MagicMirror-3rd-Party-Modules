@@ -4646,7 +4646,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 26
+    "stars": 25
   },
   {
     "name": "MMM-FlagRise",
@@ -4730,7 +4730,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 12,
+    "stars": 11,
     "license": "MIT",
     "tags": [
       "flickr"

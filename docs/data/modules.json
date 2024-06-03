@@ -1780,7 +1780,7 @@
       "agenda"
     ],
     "defaultSortWeight": 1,
-    "lastCommit": "2024-05-06T13:23:46+02:00"
+    "lastCommit": "2024-06-03T11:44:22+02:00"
   },
   {
     "name": "MMM-CalendarExt3Journal",
@@ -4693,7 +4693,7 @@
     "maintainerURL": "",
     "description": "Display your Fitbit statistics.",
     "issues": true,
-    "stars": 26,
+    "stars": 25,
     "defaultSortWeight": 5,
     "lastCommit": "2016-12-15T23:34:59+00:00"
   },
@@ -4768,7 +4768,7 @@
     "maintainerURL": "",
     "description": "Load last 20 images posted to user's Flickr photostream to mirror and animate them. API key required.",
     "issues": true,
-    "stars": 12,
+    "stars": 11,
     "license": "MIT",
     "tags": [
       "flickr"
@@ -10767,8 +10767,8 @@
     "stars": 5,
     "license": "MIT",
     "image": "screenshots-screenshot.jpg",
-    "defaultSortWeight": 5,
-    "lastCommit": "2021-08-11T21:56:05+02:00"
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-06-03T08:12:56+02:00"
   },
   {
     "name": "MMM-Namnsdag",
