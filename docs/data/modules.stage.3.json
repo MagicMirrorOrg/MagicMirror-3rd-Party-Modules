@@ -11875,7 +11875,7 @@
     "maintainerURL": "",
     "description": "Simple On-Screen Menu for controlling the MagicMirror².",
     "issues": [],
-    "stars": 61,
+    "stars": 60,
     "license": "MIT",
     "tags": [
       "menu",
@@ -11893,7 +11893,7 @@
     "maintainerURL": "https://github.com/Fabrizz",
     "description": "Highly customizable module that displays what you are listening to in Spotify. Works with <a target=\"_blank\" href=\"https://github.com/Fabrizz/MMM-LiveLyrics\">MMM-LiveLyrics</a> and allows theming other modules!",
     "issues": [],
-    "stars": 45,
+    "stars": 47,
     "license": "MIT",
     "tags": [
       "spotify",
@@ -12139,7 +12139,7 @@
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 3,
+    "stars": 4,
     "license": "MIT",
     "image": "MMM-Oura-screenshot.jpg"
   },
@@ -12257,7 +12257,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 104,
+    "stars": 105,
     "license": "MIT",
     "image": "example.jpg"
   },

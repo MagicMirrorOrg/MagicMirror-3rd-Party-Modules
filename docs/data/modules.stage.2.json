@@ -8570,7 +8570,7 @@
     "maintainerURL": "",
     "description": "Simple On-Screen Menu for controlling the MagicMirror².",
     "issues": [],
-    "stars": 61,
+    "stars": 60,
     "license": "MIT"
   },
   {
@@ -8582,7 +8582,7 @@
     "maintainerURL": "https://github.com/Fabrizz",
     "description": "Highly customizable module that displays what you are listening to in Spotify. Works with <a target=\"_blank\" href=\"https://github.com/Fabrizz/MMM-LiveLyrics\">MMM-LiveLyrics</a> and allows theming other modules!",
     "issues": [],
-    "stars": 45,
+    "stars": 47,
     "license": "MIT"
   },
   {
@@ -8758,7 +8758,7 @@
     "maintainerURL": "https://github.com/erchenger",
     "description": "Allows you to see last night's sleep data from your Oura sleep tracker. WIP.",
     "issues": [],
-    "stars": 3,
+    "stars": 4,
     "license": "MIT"
   },
   {
@@ -8852,7 +8852,7 @@
     "maintainerURL": "",
     "description": "Rotate out pages of modules.",
     "issues": [],
-    "stars": 104,
+    "stars": 105,
     "license": "MIT"
   },
   {
