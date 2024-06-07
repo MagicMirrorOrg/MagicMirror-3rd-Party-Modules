@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-06-03T17:37:43+02:00
+Last update: 2024-06-07T17:41:19+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1162   |
-| maintainer           |    648   |
+| modules analyzed     |   1163   |
+| maintainer           |    649   |
 | modules with issues  |   1144   |
-| issues               |   7187   |
-| modules at github    |   1150   |
+| issues               |   7189   |
+| modules at github    |   1151   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -151,6 +151,15 @@ Last update: 2024-06-03T17:37:43+02:00
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 5. Typo: Found `MagicMirror2` in file `package.json`: Replace it with `MagicMirror²`.
 6. Recommendation: Replace eslintrc by new flat config.
+
+### [EXT-Alert by bugsounet](https://github.com/bugsounet/EXT-Alert)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.4.0
+   - @stylistic/eslint-plugin    ^1.8.1  →    ^2.1.0
+   - eslint                     ^8.57.0  →    ^9.4.0
+   - sweetalert2               ^11.11.0  →  ^11.11.1
+
 
 ### [MMM-AlertExt by MMRIZE](https://github.com/MMRIZE/MMM-AlertExt)
 
@@ -459,7 +468,7 @@ Last update: 2024-06-03T17:37:43+02:00
 2. Information: There are updates for 3 dependencie(s):
    - eslint     ^8.56.0  →    ^9.4.0
    - jimp      ^0.22.10  →  ^0.22.12
-   - prettier    ^3.1.1  →    ^3.3.0
+   - prettier    ^3.1.1  →    ^3.3.1
 
 
 ### [MMM-BartTimes by falafel2222](https://github.com/falafel2222/MMM-BartTimes)
@@ -1038,7 +1047,7 @@ Last update: 2024-06-03T17:37:43+02:00
 2. Information: There are updates for 4 dependencie(s):
    - ical-generator   ^1.4.3  →   ^7.1.0
    - moment          ^2.23.0  →  ^2.30.1
-   - prettier         ^3.0.3  →   ^3.3.0
+   - prettier         ^3.0.3  →   ^3.3.1
    - tsdav            ^2.0.3  →   ^2.0.9
 
 
@@ -1317,7 +1326,7 @@ Last update: 2024-06-03T17:37:43+02:00
 1. Information: There are updates for 3 dependencie(s):
    - eslint    ^8.56.0  →   ^9.4.0
    - moment    ^2.29.4  →  ^2.30.1
-   - prettier   ^3.1.1  →   ^3.3.0
+   - prettier   ^3.1.1  →   ^3.3.1
 
 
 ### [MMM-covid19 by 0m4r](https://github.com/0m4r/MMM-covid19)
@@ -4926,6 +4935,12 @@ Last update: 2024-06-03T17:37:43+02:00
 8. Deprecated: Found `require('request')` in file `node_helper.js`: Replace it with built-in fetch.
 9. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
 10. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-Metar by calonmerc](https://github.com/calonmerc/MMM-Metar)
+
+1. There is no `package.json`. We need this file to gather information about the module for the module list page.
+2. Warning: No LICENSE file.
+3. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-meteoblueCurrent by Bangee44](https://github.com/Bangee44/MMM-meteoblueCurrent)
 
@@ -8940,27 +8955,6 @@ Last update: 2024-06-03T17:37:43+02:00
 1. Recommendation: Found `axios` in file `Spotify.js`: Replace it with built-in fetch.
 2. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
 3. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
-
-### [EXT-Spotify by bugsounet](https://github.com/bugsounet/EXT-Spotify)
-
-1. Information: There are updates for 5 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.4.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.4.0
-   - glob                      ^10.3.12  →  ^10.4.1
-
-
-### [EXT-SpotifyCanvasLyrics by bugsounet](https://github.com/bugsounet/EXT-SpotifyCanvasLyrics)
-
-1. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                 ^8.57.0  →   ^9.4.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
-   - eslint                     ^8.57.0  →   ^9.4.0
-   - glob                      ^10.3.10  →  ^10.4.1
-   - protobufjs                  ^7.2.6  →   ^7.3.0
-
 
 ### [MMM-SpotifyConnectUI by CatoAntonsen](https://github.com/CatoAntonsen/MMM-SpotifyConnectUI)
 

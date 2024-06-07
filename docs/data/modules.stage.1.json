@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-06-03T15:30:07.237Z",
+  "lastUpdate": "2024-06-07T15:30:07.362Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -5411,6 +5411,16 @@
       "maintainer": "ashishtank",
       "maintainerURL": "",
       "description": "Displays EV/Fuel status and Range of Mercedes cars.",
+      "issues": []
+    },
+    {
+      "name": "MMM-Metar",
+      "category": "Weather",
+      "url": "https://github.com/calonmerc/MMM-Metar",
+      "id": "calonmerc/MMM-Metar",
+      "maintainer": "calonmerc",
+      "maintainerURL": "https://github.com/calonmerc",
+      "description": "Display raw METAR data for airports world-wide. (no formatting)",
       "issues": []
     },
     {

@@ -1,11 +1,11 @@
 {
-  "moduleCounter": 1162,
+  "moduleCounter": 1163,
   "modulesWithImageCounter": 795,
   "modulesWithIssuesCounter": 1144,
-  "issueCounter": 7187,
-  "lastUpdate": "2024-06-03T17:37:43+02:00",
+  "issueCounter": 7189,
+  "lastUpdate": "2024-06-07T17:41:19+02:00",
   "repositoryHoster": {
-    "github": 1150,
+    "github": 1151,
     "gitlab": 11,
     "bitbucket": 1
   },
@@ -423,6 +423,7 @@
     "andersarstrand": 1,
     "fuerst": 1,
     "ashishtank": 1,
+    "calonmerc": 1,
     "SAR71": 1,
     "thess": 1,
     "jclarke54": 1,

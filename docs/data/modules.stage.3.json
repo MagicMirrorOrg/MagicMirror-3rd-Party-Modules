@@ -46,7 +46,7 @@
     "maintainerURL": "",
     "description": "Show 4 consecutive 12-hr forecast, provided by <a target=\"_blank\" href=\"https://www.weather.gov/documentation/services-web-api\">NOAA National Weather Service API</a>. No user registration nor API-key required.",
     "issues": [],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT",
     "tags": [
       "weather",
@@ -111,7 +111,7 @@
     "maintainerURL": "",
     "description": "Display weather information using the AccuWeather API.",
     "issues": [],
-    "stars": 4,
+    "stars": 5,
     "tags": [
       "weather"
     ],
@@ -225,7 +225,7 @@
     "maintainerURL": "https://github.com/nigel-daniels",
     "description": "Simple display of air quality based on the US AirNow API.",
     "issues": [],
-    "stars": 7,
+    "stars": 9,
     "license": "MIT",
     "tags": [
       "air",
@@ -242,7 +242,7 @@
     "maintainerURL": "",
     "description": "Display the air quality index for a certain location.",
     "issues": [],
-    "stars": 31,
+    "stars": 33,
     "license": "MIT",
     "tags": [
       "aqi",
@@ -333,7 +333,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
-    "stars": 52,
+    "stars": 51,
     "license": "MIT"
   },
   {
@@ -8861,6 +8861,18 @@
       "mercedes"
     ],
     "image": "screenshots-appregistration.jpg"
+  },
+  {
+    "name": "MMM-Metar",
+    "category": "Weather",
+    "url": "https://github.com/calonmerc/MMM-Metar",
+    "id": "calonmerc/MMM-Metar",
+    "maintainer": "calonmerc",
+    "maintainerURL": "https://github.com/calonmerc",
+    "description": "Display raw METAR data for airports world-wide. (no formatting)",
+    "issues": [
+      "There is no `package.json`. We need this file to gather information about the module for the module list page."
+    ]
   },
   {
     "name": "MMM-meteoblueCurrent",
