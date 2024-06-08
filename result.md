@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-06-07T17:41:19+02:00
+Last update: 2024-06-08T05:37:20+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1163   |
-| maintainer           |    649   |
-| modules with issues  |   1144   |
-| issues               |   7189   |
-| modules at github    |   1151   |
+| modules analyzed     |   1164   |
+| maintainer           |    650   |
+| modules with issues  |   1145   |
+| issues               |   7194   |
+| modules at github    |   1152   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
 
@@ -2506,6 +2506,14 @@ Last update: 2024-06-07T17:41:19+02:00
 6. Deprecated: Found `require('request')` in file `node_helper.js`: Replace it with built-in fetch.
 7. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
 8. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-FieldHockey-FFH by mmourcia](https://github.com/mmourcia/MMM-FieldHockey-FFH)
+
+1. `package.json` issue: No repository field.
+2. There are no keywords in 'package.json'. We would use them as tags on the module list page.
+3. Deprecated: Found `require("request")` in file `node_helper.js`: Replace it with built-in fetch.
+4. Warning: No LICENSE file.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-FiElectricityPrice by jannekalliola](https://github.com/jannekalliola/MMM-FiElectricityPrice)
 

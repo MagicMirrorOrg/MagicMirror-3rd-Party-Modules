@@ -812,7 +812,7 @@
     "maintainerURL": "",
     "description": "Display stock prices and charts using Yahoo Finance API.",
     "issues": [],
-    "stars": 36,
+    "stars": 37,
     "license": "MIT",
     "tags": [
       "stock",
@@ -832,7 +832,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "outdated": "Abandoned. No reactions to issues since years. The documentation currently available does not work any more (<a href=\"https://github.com/MagicMirrorOrg/MagicMirror/issues/3398\">#3398</a>).",
-    "stars": 154,
+    "stars": 155,
     "license": "MIT",
     "image": "styles-loading.jpg"
   },
@@ -863,7 +863,7 @@
     "maintainerURL": "",
     "description": "Show fullscreen slideshow in background from images in a local folder. Great for a photo frame.",
     "issues": [],
-    "stars": 132,
+    "stars": 133,
     "license": "MIT",
     "tags": [
       "background",
@@ -4583,6 +4583,21 @@
       "fhem",
       "home automation"
     ]
+  },
+  {
+    "name": "MMM-FieldHockey-FFH",
+    "category": "Sports",
+    "url": "https://github.com/mmourcia/MMM-FieldHockey-FFH",
+    "id": "mmourcia/MMM-FieldHockey-FFH",
+    "maintainer": "mmourcia",
+    "maintainerURL": "https://github.com/mmourcia",
+    "description": "Display field hockey french rankings",
+    "issues": [
+      "`package.json` issue: No repository field.",
+      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
+    ],
+    "license": "MIT",
+    "image": "screenshots-MMM-Fieldhockey-FFH1.jpg"
   },
   {
     "name": "MMM-FiElectricityPrice",

@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-06-07T15:30:07.362Z",
+  "lastUpdate": "2024-06-08T03:30:07.219Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -2801,6 +2801,16 @@
       "maintainer": "BenRoe",
       "maintainerURL": "",
       "description": "Display Readings/Values from your FHEM device like temperature or humidity.",
+      "issues": []
+    },
+    {
+      "name": "MMM-FieldHockey-FFH",
+      "category": "Sports",
+      "url": "https://github.com/mmourcia/MMM-FieldHockey-FFH",
+      "id": "mmourcia/MMM-FieldHockey-FFH",
+      "maintainer": "mmourcia",
+      "maintainerURL": "https://github.com/mmourcia",
+      "description": "Display field hockey french rankings",
       "issues": []
     },
     {

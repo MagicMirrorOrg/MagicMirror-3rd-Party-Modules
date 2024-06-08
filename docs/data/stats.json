@@ -1,11 +1,11 @@
 {
-  "moduleCounter": 1163,
-  "modulesWithImageCounter": 795,
-  "modulesWithIssuesCounter": 1144,
-  "issueCounter": 7189,
-  "lastUpdate": "2024-06-07T17:41:19+02:00",
+  "moduleCounter": 1164,
+  "modulesWithImageCounter": 796,
+  "modulesWithIssuesCounter": 1145,
+  "issueCounter": 7194,
+  "lastUpdate": "2024-06-08T05:37:20+02:00",
   "repositoryHoster": {
-    "github": 1151,
+    "github": 1152,
     "gitlab": 11,
     "bitbucket": 1
   },
@@ -310,6 +310,7 @@
     "alanshen111": 1,
     "mabahj": 1,
     "Pip1405": 1,
+    "mmourcia": 1,
     "jannekalliola": 1,
     "joschi27": 1,
     "jancalve": 1,

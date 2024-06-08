@@ -840,7 +840,7 @@
     "maintainerURL": "",
     "description": "Display stock prices and charts using Yahoo Finance API.",
     "issues": true,
-    "stars": 36,
+    "stars": 37,
     "license": "MIT",
     "tags": [
       "stock",
@@ -860,7 +860,7 @@
     "description": "Easy, hands free Amazon Alexa integration; activated, simply by saying \"Alexa\".",
     "issues": true,
     "outdated": "Abandoned. No reactions to issues since years. The documentation currently available does not work any more (<a href=\"https://github.com/MagicMirrorOrg/MagicMirror/issues/3398\">#3398</a>).",
-    "stars": 154,
+    "stars": 155,
     "license": "MIT",
     "image": "styles-loading.jpg",
     "defaultSortWeight": 909,
@@ -895,7 +895,7 @@
     "maintainerURL": "",
     "description": "Show fullscreen slideshow in background from images in a local folder. Great for a photo frame.",
     "issues": true,
-    "stars": 132,
+    "stars": 133,
     "license": "MIT",
     "tags": [
       "background",
@@ -4633,6 +4633,20 @@
     "lastCommit": "2019-10-28T17:57:07+01:00"
   },
   {
+    "name": "MMM-FieldHockey-FFH",
+    "category": "Sports",
+    "url": "https://github.com/mmourcia/MMM-FieldHockey-FFH",
+    "id": "mmourcia/MMM-FieldHockey-FFH",
+    "maintainer": "mmourcia",
+    "maintainerURL": "https://github.com/mmourcia",
+    "description": "Display field hockey french rankings",
+    "issues": true,
+    "license": "MIT",
+    "image": "screenshots-MMM-Fieldhockey-FFH1.jpg",
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-06-07T18:29:39+02:00"
+  },
+  {
     "name": "MMM-FiElectricityPrice",
     "category": "Finance",
     "url": "https://github.com/jannekalliola/MMM-FiElectricityPrice",
@@ -7403,7 +7417,7 @@
     "license": "MIT",
     "image": "data-iss_cartodb.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-02-17T21:28:06+01:00"
+    "lastCommit": "2024-06-08T00:10:19+02:00"
   },
   {
     "name": "MMM-ISY",
@@ -9136,7 +9150,7 @@
     ],
     "image": "idx_table.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-04-17T15:54:57-04:00"
+    "lastCommit": "2024-06-07T11:41:50-04:00"
   },
   {
     "name": "MMM-MLB-Scoreboard",
