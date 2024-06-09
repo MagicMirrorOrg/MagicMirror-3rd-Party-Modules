@@ -1448,7 +1448,7 @@
     "maintainerURL": "",
     "description": "Shows stats (level, trophies and victories) for players of mobile game Brawl Stars.",
     "issues": true,
-    "stars": 1,
+    "stars": 2,
     "license": "MIT",
     "tags": [
       "brawl stars"
@@ -18858,9 +18858,12 @@
     "issues": true,
     "stars": 7,
     "license": "GPL-3.0",
+    "tags": [
+      "weather"
+    ],
     "image": ".github-preview.jpg",
-    "defaultSortWeight": 5,
-    "lastCommit": "2023-07-23T21:01:55+02:00"
+    "defaultSortWeight": 2,
+    "lastCommit": "2024-06-08T11:55:45+02:00"
   },
   {
     "name": "MMM-WH2600",

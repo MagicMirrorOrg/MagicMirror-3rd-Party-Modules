@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-08T05:37:20+02:00
+Last update: 2024-06-09T17:37:08+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-06-08T05:37:20+02:00
 | modules analyzed     |   1164   |
 | maintainer           |    650   |
 | modules with issues  |   1145   |
-| issues               |   7194   |
+| issues               |   7191   |
 | modules at github    |   1152   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -10478,11 +10478,8 @@ Last update: 2024-06-08T05:37:20+02:00
 
 ### [MMM-WetterOnline by bogenpirat](https://github.com/bogenpirat/MMM-WetterOnline)
 
-1. There are no keywords in 'package.json'. We would use them as tags on the module list page.
-2. Typo: Found `Magic Mirror` in file `MMM-WetterOnline.js`: Replace it with `MagicMirror²`.
-3. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
-4. Recommendation: Found `require('https')` in file `node_helper.js`: Replace 'https' by 'node:https'.
-5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+1. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
+2. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-WH2600 by st3v0rr](https://github.com/st3v0rr/MMM-WH2600)
 
@@ -10775,12 +10772,13 @@ Last update: 2024-06-08T05:37:20+02:00
 
 ### [EXT-YouTubeCast by bugsounet](https://github.com/bugsounet/EXT-YouTubeCast)
 
-1. Information: There are updates for 5 dependencie(s):
+1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
    - esbuild                    ^0.20.2  →  ^0.21.4
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
+   - uuid                        ^9.0.1  →  ^10.0.0
 
 
 ### [MMM-YouTubeWebView by doctorfree](https://gitlab.com/doctorfree/MMM-YouTubeWebView)

@@ -1412,7 +1412,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 1,
+    "stars": 2,
     "license": "MIT",
     "tags": [
       "brawl stars"
@@ -18637,11 +18637,12 @@
     "maintainer": "bogenpirat",
     "maintainerURL": "",
     "description": "Display weather data from WetterOnline.",
-    "issues": [
-      "There are no keywords in 'package.json'. We would use them as tags on the module list page."
-    ],
+    "issues": [],
     "stars": 7,
     "license": "GPL-3.0",
+    "tags": [
+      "weather"
+    ],
     "image": ".github-preview.jpg"
   },
   {
