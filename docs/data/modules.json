@@ -1737,7 +1737,7 @@
     "maintainerURL": "",
     "description": "Extended calendar and event view.",
     "issues": true,
-    "stars": 92,
+    "stars": 94,
     "license": "MIT",
     "tags": [
       "calendar"
@@ -1886,7 +1886,7 @@
     "maintainerURL": "",
     "description": "Display a weekly (n days) calendar view.",
     "issues": true,
-    "stars": 50,
+    "stars": 51,
     "license": "MIT",
     "image": "screenshots-With calendar title.jpg",
     "defaultSortWeight": 12,
@@ -5043,7 +5043,7 @@
       "franceinfo"
     ],
     "image": "FRINFO.jpg",
-    "defaultSortWeight": 0,
+    "defaultSortWeight": 1,
     "lastCommit": "2024-05-26T11:11:20+02:00"
   },
   {
@@ -5498,7 +5498,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module allows to add a glass effect to MagicMirror\u00b2 modules.",
-    "issues": false,
+    "issues": true,
     "stars": 4,
     "license": "MIT",
     "tags": [
@@ -5506,7 +5506,7 @@
       "background"
     ],
     "image": "Screenshot.jpg",
-    "defaultSortWeight": -1,
+    "defaultSortWeight": 0,
     "lastCommit": "2024-05-26T11:12:01+02:00"
   },
   {
@@ -5594,7 +5594,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror\u00b2 with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
-    "issues": false,
+    "issues": true,
     "stars": 83,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -5608,7 +5608,7 @@
       "smart home"
     ],
     "image": "resources-previewFS.jpg",
-    "defaultSortWeight": -3,
+    "defaultSortWeight": -2,
     "lastCommit": "2024-05-28T19:32:25+02:00"
   },
   {
@@ -9004,7 +9004,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "[FR] Affiche les informations de pr\u00e9visions actuelles, horaires et quotidiennes \u00e0 l'aide des donn\u00e9es de l'API M\u00e9t\u00e9oFrance.<br />[EN] Displays current, hourly and daily forecast information using data from MeteoFrance API.",
-    "issues": false,
+    "issues": true,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -9013,7 +9013,7 @@
       "french"
     ],
     "image": "screenshot.jpg",
-    "defaultSortWeight": 0,
+    "defaultSortWeight": 1,
     "lastCommit": "2024-05-25T18:36:20+02:00"
   },
   {
@@ -10243,8 +10243,8 @@
       "calendar"
     ],
     "image": "screenshot-horizontal.jpg",
-    "defaultSortWeight": 0,
-    "lastCommit": "2024-06-01T18:08:31-07:00"
+    "defaultSortWeight": 2,
+    "lastCommit": "2024-06-09T19:15:47-07:00"
   },
   {
     "name": "MMM-mumble",
@@ -11088,7 +11088,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module display your Netatmo Thermostat informations.",
-    "issues": false,
+    "issues": true,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -11097,7 +11097,7 @@
       "smart home"
     ],
     "image": "resources-A_Screenshot_0.jpg",
-    "defaultSortWeight": -1,
+    "defaultSortWeight": 0,
     "lastCommit": "2024-05-26T11:10:50+02:00"
   },
   {
@@ -12413,7 +12413,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin allows you to have animated pages.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "stars": 3,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -12422,7 +12422,7 @@
       "pages"
     ],
     "image": "example.jpg",
-    "defaultSortWeight": 3,
+    "defaultSortWeight": 4,
     "lastCommit": "2024-05-28T19:25:22+02:00"
   },
   {
@@ -14768,7 +14768,7 @@
       "french"
     ],
     "image": "Screenshot.jpg",
-    "defaultSortWeight": 1,
+    "defaultSortWeight": 2,
     "lastCommit": "2024-05-26T11:10:27+02:00"
   },
   {
@@ -16089,7 +16089,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin show current spotify playback of any devices.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "stars": 2,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -16098,7 +16098,7 @@
       "spotify"
     ],
     "image": "components-Spotify-Logo.jpg",
-    "defaultSortWeight": 3,
+    "defaultSortWeight": 4,
     "lastCommit": "2024-06-05T17:45:06+02:00"
   },
   {
@@ -16109,7 +16109,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "Create a server for displaying any Lyrics and Canvas from Spotify.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "stars": 2,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -16120,7 +16120,7 @@
       "lyrics"
     ],
     "image": "screenshot-landscape.jpg",
-    "defaultSortWeight": 2,
+    "defaultSortWeight": 3,
     "lastCommit": "2024-06-04T18:16:56+02:00"
   },
   {
@@ -16789,7 +16789,7 @@
       "telegram"
     ],
     "image": "screenshot-sc_fullsize.jpg",
-    "defaultSortWeight": 4,
+    "defaultSortWeight": 5,
     "lastCommit": "2024-05-29T05:27:31+02:00"
   },
   {

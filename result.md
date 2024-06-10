@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-09T17:37:08+02:00
+Last update: 2024-06-10T05:37:18+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-06-09T17:37:08+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1164   |
 | maintainer           |    650   |
-| modules with issues  |   1145   |
-| issues               |   7191   |
+| modules with issues  |   1152   |
+| issues               |   7203   |
 | modules at github    |   1152   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -154,9 +154,10 @@ Last update: 2024-06-09T17:37:08+02:00
 
 ### [EXT-Alert by bugsounet](https://github.com/bugsounet/EXT-Alert)
 
-1. Information: There are updates for 4 dependencie(s):
+1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →    ^9.4.0
    - @stylistic/eslint-plugin    ^1.8.1  →    ^2.1.0
+   - esbuild                    ^0.21.4  →   ^0.21.5
    - eslint                     ^8.57.0  →    ^9.4.0
    - sweetalert2               ^11.11.0  →  ^11.11.1
 
@@ -457,7 +458,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -792,7 +793,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.2  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
 
@@ -811,7 +812,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.56.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.21.3  →  ^0.21.4
+   - esbuild                    ^0.21.3  →  ^0.21.5
    - eslint                     ^8.56.0  →   ^9.4.0
    - glob                      ^10.3.15  →  ^10.4.1
 
@@ -2732,6 +2733,12 @@ Last update: 2024-06-09T17:37:08+02:00
 ### [MMM-FranceInfo by bugsounet](https://github.com/bugsounet/MMM-FranceInfo)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
+2. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
 
 ### [MMM-Freebox by bugsounet](https://github.com/bugsounet/MMM-Freebox)
 
@@ -2758,7 +2765,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin     1.8.0  →    2.1.0
-   - esbuild                    ^0.21.2  →  ^0.21.4
+   - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.15  →  ^10.4.1
 
@@ -2985,6 +2992,15 @@ Last update: 2024-06-09T17:37:08+02:00
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [MMM-Glassy by bugsounet](https://github.com/bugsounet/MMM-Glassy)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
+
 ### [MMM-Globe by Eunanibus](https://github.com/Eunanibus/MMM-Globe)
 
 1. There is no `package.json`. We need this file to gather information about the module for the module list page.
@@ -3023,6 +3039,15 @@ Last update: 2024-06-09T17:37:08+02:00
 3. Recommendation: The README seems not to have an install instruction (the words 'install' or 'installation' are missing). Please add one.
 4. Warning: No LICENSE file.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
 
@@ -3191,7 +3216,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -3962,7 +3987,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -4281,7 +4306,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -4419,7 +4444,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
    - pm2                         ^5.3.1  →   ^5.4.0
@@ -4963,6 +4988,15 @@ Last update: 2024-06-09T17:37:08+02:00
 9. Warning: No LICENSE file.
 10. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [MMM-MeteoFrance by bugsounet](https://github.com/bugsounet/MMM-MeteoFrance)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
+
 ### [MMM-MHZ19 by awitwicki](https://github.com/awitwicki/MMM-MHZ19)
 
 1. `package.json` issue: No description
@@ -5493,7 +5527,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -5700,6 +5734,8 @@ Last update: 2024-06-09T17:37:08+02:00
 ### [MMM-Multimonth by BKeyport](https://github.com/BKeyport/MMM-Multimonth)
 
 1. Recommendation: Found `new Date()` in file `MMM-Multimonth.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
+2. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
+3. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-mumble by ThePirateWhoSmellsOfSunflowers](https://github.com/ThePirateWhoSmellsOfSunflowers/MMM-mumble)
 
@@ -5727,7 +5763,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin     1.8.0  →    2.1.0
-   - esbuild                    ^0.21.2  →  ^0.21.4
+   - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.15  →  ^10.4.1
    - usb                        ^2.12.1  →  ^2.13.0
@@ -6158,6 +6194,15 @@ Last update: 2024-06-09T17:37:08+02:00
 9. Recommendation: Found `new Date()` in file `node_helper.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 10. Deprecated: Found `"grunt"` in file `package.json`: Grunt is practically unmaintained. Move on to something better.
 11. Recommendation: Replace eslintrc by new flat config.
+
+### [MMM-NetatmoThermostat by bugsounet](https://github.com/bugsounet/MMM-NetatmoThermostat)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
 
 ### [MMM-network-signal by PoOwAa](https://github.com/PoOwAa/MMM-network-signal)
 
@@ -6913,6 +6958,15 @@ Last update: 2024-06-09T17:37:08+02:00
 4. Outdated: Found `MichMich/MagicMirror` in file `readme.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 5. Recommendation: Replace eslintrc by new flat config.
 
+### [EXT-Pages by bugsounet](https://github.com/bugsounet/EXT-Pages)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
+
 ### [MMM-Pages-Screencast by jboucly](https://github.com/jboucly/MMM-Pages-Screencast)
 
 1. Typo: Found `MagicMirror2` in file `README.md`: Replace it with `MagicMirror²`.
@@ -7108,7 +7162,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -7167,7 +7221,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
    - long-press-event            ^2.4.6  →   ^2.5.0
@@ -7178,7 +7232,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -7701,7 +7755,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin     1.8.0  →    2.1.0
-   - esbuild                    ^0.21.2  →  ^0.21.4
+   - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.15  →  ^10.4.1
 
@@ -8244,6 +8298,12 @@ Last update: 2024-06-09T17:37:08+02:00
 ### [MMM-Saint by bugsounet](https://github.com/bugsounet/MMM-Saint)
 
 1. Typo: Found `Magic Mirror` in file `MMM-Saint.css`: Replace it with `MagicMirror²`.
+2. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
 
 ### [MMM-Sbanken by reidarw](https://github.com/reidarw/MMM-Sbanken)
 
@@ -8290,7 +8350,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
 
@@ -8374,7 +8434,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -8385,7 +8445,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -8402,7 +8462,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
    - nodemailer                 ^6.9.11  →  ^6.9.13
@@ -8413,7 +8473,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
 
@@ -8964,6 +9024,24 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
 3. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
+### [EXT-Spotify by bugsounet](https://github.com/bugsounet/EXT-Spotify)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
+
+### [EXT-SpotifyCanvasLyrics by bugsounet](https://github.com/bugsounet/EXT-SpotifyCanvasLyrics)
+
+1. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
+
 ### [MMM-SpotifyConnectUI by CatoAntonsen](https://github.com/CatoAntonsen/MMM-SpotifyConnectUI)
 
 1. There is no `package.json`. We need this file to gather information about the module for the module list page.
@@ -9107,7 +9185,7 @@ Last update: 2024-06-09T17:37:08+02:00
    - @elgato-stream-deck/node    ^6.0.0  →   ^6.2.0
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -9330,6 +9408,12 @@ Last update: 2024-06-09T17:37:08+02:00
 ### [EXT-TelegramBot by bugsounet](https://github.com/bugsounet/EXT-TelegramBot)
 
 1. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+2. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
+   - esbuild                   ^0.21.4  →  ^0.21.5
+   - eslint                    ^8.57.0  →   ^9.4.0
+
 
 ### [MMM-TelegramCommands by doctorfree](https://github.com/doctorfree/MMM-TelegramCommands)
 
@@ -9935,7 +10019,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -10092,7 +10176,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin     1.8.0  →    2.1.0
-   - esbuild                    ^0.21.3  →  ^0.21.4
+   - esbuild                    ^0.21.3  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.15  →  ^10.4.1
    - pm2                         ^5.3.1  →   ^5.4.0
@@ -10165,7 +10249,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.8.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
 
@@ -10462,7 +10546,7 @@ Last update: 2024-06-09T17:37:08+02:00
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
-   - esbuild                    ^0.20.1  →  ^0.21.4
+   - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
 
@@ -10748,7 +10832,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.2  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
 
@@ -10775,7 +10859,7 @@ Last update: 2024-06-09T17:37:08+02:00
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
-   - esbuild                    ^0.20.2  →  ^0.21.4
+   - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.12  →  ^10.4.1
    - uuid                        ^9.0.1  →  ^10.0.0

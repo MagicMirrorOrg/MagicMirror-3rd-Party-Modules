@@ -1692,7 +1692,7 @@
     "maintainerURL": "",
     "description": "Extended calendar and event view.",
     "issues": [],
-    "stars": 92,
+    "stars": 94,
     "license": "MIT",
     "tags": [
       "calendar"
@@ -1841,7 +1841,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 50,
+    "stars": 51,
     "license": "MIT",
     "image": "screenshots-With calendar title.jpg"
   },
