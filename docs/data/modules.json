@@ -2286,7 +2286,7 @@
     "maintainerURL": "",
     "description": "Display a random intro quote from <em>The Clone Wars</em> television series, seasons 1-6.",
     "issues": true,
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "image": "screenshot.jpg",
     "defaultSortWeight": 7,
@@ -2483,7 +2483,7 @@
     "description": "Display a count down to a date/event.",
     "issues": true,
     "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore. Try MMM-CountDown by daterrell instead.",
-    "stars": 36,
+    "stars": 35,
     "license": "MIT",
     "image": "screenshots-screenshot.jpg",
     "defaultSortWeight": 906,
@@ -2954,8 +2954,8 @@
     ],
     "license": "MIT",
     "image": "screenshots-daikin.jpg",
-    "defaultSortWeight": 7,
-    "lastCommit": "2020-09-30T18:23:37+02:00"
+    "defaultSortWeight": 6,
+    "lastCommit": "2024-06-10T12:17:55+02:00"
   },
   {
     "name": "MMM-DaikinAirbase",
