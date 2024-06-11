@@ -1924,7 +1924,7 @@
     "maintainerURL": "https://github.com/NateDee",
     "description": "Displays arrival times for the Chicago Transit Authority 'L' system buses and trains.",
     "issues": [],
-    "stars": 6
+    "stars": 7
   },
   {
     "name": "MMM-CuandoLlega",
@@ -2068,7 +2068,7 @@
     "maintainerURL": "",
     "description": "Simple display of dad jokes from icanhazdadjoke.com.",
     "issues": [],
-    "stars": 4,
+    "stars": 5,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -2167,7 +2167,7 @@
     "maintainerURL": "",
     "description": "Displays the daily Dilbert strip.",
     "issues": [],
-    "stars": 9,
+    "stars": 10,
     "license": "MIT"
   },
   {
@@ -3328,7 +3328,7 @@
     "id": "mmourcia/MMM-FieldHockey-FFH",
     "maintainer": "mmourcia",
     "maintainerURL": "https://github.com/mmourcia",
-    "description": "Display field hockey french rankings",
+    "description": "Display field hockey french rankings.",
     "issues": []
   },
   {

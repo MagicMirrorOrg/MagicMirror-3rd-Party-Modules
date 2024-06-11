@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-06-10T15:30:06.861Z",
+  "lastUpdate": "2024-06-11T15:30:08.342Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -2810,7 +2810,7 @@
       "id": "mmourcia/MMM-FieldHockey-FFH",
       "maintainer": "mmourcia",
       "maintainerURL": "https://github.com/mmourcia",
-      "description": "Display field hockey french rankings",
+      "description": "Display field hockey french rankings.",
       "issues": []
     },
     {

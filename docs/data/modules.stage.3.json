@@ -2677,7 +2677,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 7
   },
   {
     "name": "MMM-CuandoLlega",
@@ -2868,7 +2868,7 @@
     "issues": [
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 4,
+    "stars": 5,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
@@ -3001,7 +3001,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 9,
+    "stars": 10,
     "license": "MIT",
     "image": "dilbert.jpg"
   },
@@ -4591,7 +4591,7 @@
     "id": "mmourcia/MMM-FieldHockey-FFH",
     "maintainer": "mmourcia",
     "maintainerURL": "https://github.com/mmourcia",
-    "description": "Display field hockey french rankings",
+    "description": "Display field hockey french rankings.",
     "issues": [
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."

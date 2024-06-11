@@ -2725,7 +2725,7 @@
     "maintainerURL": "https://github.com/NateDee",
     "description": "Displays arrival times for the Chicago Transit Authority 'L' system buses and trains.",
     "issues": true,
-    "stars": 6,
+    "stars": 7,
     "defaultSortWeight": 6,
     "lastCommit": "2018-03-26T09:09:03-05:00"
   },
@@ -2913,7 +2913,7 @@
     "maintainerURL": "",
     "description": "Simple display of dad jokes from icanhazdadjoke.com.",
     "issues": true,
-    "stars": 4,
+    "stars": 5,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
@@ -3046,7 +3046,7 @@
     "maintainerURL": "",
     "description": "Displays the daily Dilbert strip.",
     "issues": true,
-    "stars": 9,
+    "stars": 10,
     "license": "MIT",
     "image": "dilbert.jpg",
     "defaultSortWeight": 6,
@@ -4639,7 +4639,7 @@
     "id": "mmourcia/MMM-FieldHockey-FFH",
     "maintainer": "mmourcia",
     "maintainerURL": "https://github.com/mmourcia",
-    "description": "Display field hockey french rankings",
+    "description": "Display field hockey french rankings.",
     "issues": true,
     "license": "MIT",
     "image": "screenshots-MMM-Fieldhockey-FFH1.jpg",
@@ -4829,7 +4829,7 @@
     "license": "MIT",
     "image": "data-flights_mapbox.jpg",
     "defaultSortWeight": 3,
-    "lastCommit": "2024-02-19T16:17:11+01:00"
+    "lastCommit": "2024-06-08T00:01:17+02:00"
   },
   {
     "name": "MMM-FlightsAbove",
@@ -8377,7 +8377,7 @@
     "license": "MIT",
     "image": "screenshots-screenshot_2column_offset.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-25T19:17:06-05:00"
+    "lastCommit": "2024-06-10T15:45:32-07:00"
   },
   {
     "name": "MMM-Looko2-aq",
@@ -17972,7 +17972,7 @@
     "license": "MIT",
     "image": "screenshots-default.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-05-27T08:08:32-07:00"
+    "lastCommit": "2024-06-10T15:46:54-07:00"
   },
   {
     "name": "MMM-ValuesByNotification",
