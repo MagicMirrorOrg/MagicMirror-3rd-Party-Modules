@@ -3759,7 +3759,7 @@
     "maintainerURL": "",
     "description": "The easiest way to show pictures on your mirror.",
     "issues": false,
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "tags": [
       "images",
@@ -3915,7 +3915,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "Embed one or multiple websites with there URL.",
     "issues": true,
-    "stars": 17,
+    "stars": 19,
     "license": "MIT",
     "tags": [
       "embed",
@@ -3937,7 +3937,7 @@
     "maintainerURL": "",
     "description": "Embed youtube video and playlist.",
     "issues": true,
-    "stars": 32,
+    "stars": 33,
     "license": "MIT",
     "defaultSortWeight": 8,
     "lastCommit": "2022-02-08T22:37:46+07:00"
@@ -4641,6 +4641,7 @@
     "maintainerURL": "https://github.com/mmourcia",
     "description": "Display field hockey french rankings.",
     "issues": true,
+    "stars": 0,
     "license": "MIT",
     "image": "screenshots-MMM-Fieldhockey-FFH1.jpg",
     "defaultSortWeight": 4,

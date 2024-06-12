@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-12T05:37:25+02:00
+Last update: 2024-06-12T17:37:23+02:00
 
 ## Statistics
 
@@ -3047,7 +3047,7 @@ Last update: 2024-06-12T05:37:25+02:00
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.4.0
-   - protobufjs                 ^7.3.0  →   ^7.3.1
+   - protobufjs                 ^7.3.0  →   ^7.3.2
 
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
@@ -7230,12 +7230,13 @@ Last update: 2024-06-12T05:37:25+02:00
 
 ### [EXT-Pir by bugsounet](https://github.com/bugsounet/EXT-Pir)
 
-1. Information: There are updates for 5 dependencie(s):
+1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.7.0  →   ^2.1.0
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
+   - nan                        ^2.19.0  →  ^2.20.0
 
 
 ### [MMM-PIR by mboskamp](https://github.com/mboskamp/MMM-PIR)
@@ -8443,12 +8444,13 @@ Last update: 2024-06-12T05:37:25+02:00
 ### [EXT-SelfiesFlash by bugsounet](https://github.com/bugsounet/EXT-SelfiesFlash)
 
 1. No image found.
-2. Information: There are updates for 5 dependencie(s):
+2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.4.0
    - @stylistic/eslint-plugin    ^1.6.3  →   ^2.1.0
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.4.0
    - glob                      ^10.3.10  →  ^10.4.1
+   - nan                        ^2.19.0  →  ^2.20.0
 
 
 ### [MMM-Selfieshot by BrianHepler](https://github.com/BrianHepler/MMM-Selfieshot)
@@ -9041,7 +9043,7 @@ Last update: 2024-06-12T05:37:25+02:00
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.4.0
-   - protobufjs                 ^7.3.0  →   ^7.3.1
+   - protobufjs                 ^7.3.0  →   ^7.3.2
 
 
 ### [MMM-SpotifyConnectUI by CatoAntonsen](https://github.com/CatoAntonsen/MMM-SpotifyConnectUI)

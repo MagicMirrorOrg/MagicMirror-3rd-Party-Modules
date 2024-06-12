@@ -2701,7 +2701,7 @@
     "maintainerURL": "",
     "description": "The easiest way to show pictures on your mirror.",
     "issues": [],
-    "stars": 5,
+    "stars": 6,
     "license": "MIT"
   },
   {
@@ -2796,7 +2796,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "Embed one or multiple websites with there URL.",
     "issues": [],
-    "stars": 17,
+    "stars": 19,
     "license": "MIT"
   },
   {
@@ -2808,7 +2808,7 @@
     "maintainerURL": "",
     "description": "Embed youtube video and playlist.",
     "issues": [],
-    "stars": 32,
+    "stars": 33,
     "license": "MIT"
   },
   {
@@ -3329,7 +3329,8 @@
     "maintainer": "mmourcia",
     "maintainerURL": "https://github.com/mmourcia",
     "description": "Display field hockey french rankings.",
-    "issues": []
+    "issues": [],
+    "stars": 0
   },
   {
     "name": "MMM-FiElectricityPrice",

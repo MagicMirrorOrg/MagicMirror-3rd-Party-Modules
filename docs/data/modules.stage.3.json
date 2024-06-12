@@ -3717,7 +3717,7 @@
     "maintainerURL": "",
     "description": "The easiest way to show pictures on your mirror.",
     "issues": [],
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "tags": [
       "images",
@@ -3864,7 +3864,7 @@
     "maintainerURL": "https://github.com/Tom-Hirschberger",
     "description": "Embed one or multiple websites with there URL.",
     "issues": [],
-    "stars": 17,
+    "stars": 19,
     "license": "MIT",
     "tags": [
       "embed",
@@ -3887,7 +3887,7 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page.",
       "No image found."
     ],
-    "stars": 32,
+    "stars": 33,
     "license": "MIT"
   },
   {
@@ -4596,6 +4596,7 @@
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
+    "stars": 0,
     "license": "MIT",
     "image": "screenshots-MMM-Fieldhockey-FFH1.jpg"
   },
