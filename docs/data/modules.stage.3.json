@@ -3062,7 +3062,7 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page.",
       "No image found."
     ],
-    "stars": 49,
+    "stars": 51,
     "license": "MIT"
   },
   {
@@ -3091,7 +3091,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 83,
+    "stars": 84,
     "license": "MIT",
     "image": "icons-iconsets.jpg"
   },
@@ -3166,7 +3166,7 @@
       "There is no `package.json`. We need this file to gather information about the module for the module list page.",
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 0,
+    "stars": 1,
     "hasGithubIssues": false,
     "license": "MIT",
     "image": "images-example1.jpg"
@@ -3182,7 +3182,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 14,
+    "stars": 15,
     "license": "MIT",
     "image": "images-example1.jpg"
   },
@@ -3212,7 +3212,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 1
+    "stars": 2
   },
   {
     "name": "EXT-Detector",
@@ -3370,7 +3370,7 @@
       "Issue: The license in the package.json (CC Zero) doesn't match the license file (CC0-1.0).",
       "No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image."
     ],
-    "stars": 8,
+    "stars": 9,
     "license": "CC0-1.0",
     "tags": [
       "discord"

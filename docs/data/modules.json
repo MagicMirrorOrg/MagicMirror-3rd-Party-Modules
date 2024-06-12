@@ -3104,7 +3104,7 @@
     "maintainerURL": "",
     "description": "Displays the daily XKCD web comic.",
     "issues": true,
-    "stars": 49,
+    "stars": 51,
     "license": "MIT",
     "defaultSortWeight": 8,
     "lastCommit": "2021-10-19T23:33:25-04:00"
@@ -3133,7 +3133,7 @@
     "description": "A weather module that displays current, hourly and daily forecast information using data from the Dark Sky API.",
     "issues": true,
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 83,
+    "stars": 84,
     "license": "MIT",
     "image": "icons-iconsets.jpg",
     "defaultSortWeight": 908,
@@ -3204,7 +3204,7 @@
     "maintainerURL": "https://github.com/kyle-kelly",
     "description": "A fork of <a target=\"_blank\" href=\"https://github.com/AdamMoses-GitHub/MMM-DCMetroTrainTimes\">MMM-DCMetroTrainTimes</a> (above) that also displays arrival times for buses.",
     "issues": true,
-    "stars": 0,
+    "stars": 1,
     "hasGithubIssues": false,
     "license": "MIT",
     "image": "images-example1.jpg",
@@ -3220,7 +3220,7 @@
     "maintainerURL": "",
     "description": "Displays the arrival time of trains to any station in the Washington DC subway metro system (WMATA) as well as incidents reported for any of the line colors.",
     "issues": true,
-    "stars": 14,
+    "stars": 15,
     "license": "MIT",
     "image": "images-example1.jpg",
     "defaultSortWeight": 9,
@@ -3250,7 +3250,7 @@
     "maintainerURL": "https://github.com/wouter-heerwegh",
     "description": "Retrieves live timings of busses for a specific bus stop.",
     "issues": true,
-    "stars": 1,
+    "stars": 2,
     "defaultSortWeight": 8,
     "lastCommit": "2020-10-30T17:32:11+01:00"
   },
@@ -3409,7 +3409,7 @@
     "maintainerURL": "",
     "description": "Display messages from discord channels.",
     "issues": true,
-    "stars": 8,
+    "stars": 9,
     "license": "CC0-1.0",
     "tags": [
       "discord"
@@ -4829,7 +4829,7 @@
     "license": "MIT",
     "image": "data-flights_mapbox.jpg",
     "defaultSortWeight": 3,
-    "lastCommit": "2024-06-08T00:01:17+02:00"
+    "lastCommit": "2024-06-11T23:45:26+02:00"
   },
   {
     "name": "MMM-FlightsAbove",
@@ -8888,7 +8888,7 @@
     ],
     "image": "MMM-MealieMenu-screenshot.jpg",
     "defaultSortWeight": -1,
-    "lastCommit": "2024-05-27T04:40:06+00:00"
+    "lastCommit": "2024-06-12T03:13:47+00:00"
   },
   {
     "name": "MMM-Memo",

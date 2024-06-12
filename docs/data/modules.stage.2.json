@@ -2214,7 +2214,7 @@
     "maintainerURL": "",
     "description": "Displays the daily XKCD web comic.",
     "issues": [],
-    "stars": 49,
+    "stars": 51,
     "license": "MIT"
   },
   {
@@ -2239,7 +2239,7 @@
     "description": "A weather module that displays current, hourly and daily forecast information using data from the Dark Sky API.",
     "issues": [],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 83
+    "stars": 84
   },
   {
     "name": "MMM-DarkSkyRadar",
@@ -2296,7 +2296,7 @@
     "maintainerURL": "https://github.com/kyle-kelly",
     "description": "A fork of <a target=\"_blank\" href=\"https://github.com/AdamMoses-GitHub/MMM-DCMetroTrainTimes\">MMM-DCMetroTrainTimes</a> (above) that also displays arrival times for buses.",
     "issues": [],
-    "stars": 0,
+    "stars": 1,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -2309,7 +2309,7 @@
     "maintainerURL": "",
     "description": "Displays the arrival time of trains to any station in the Washington DC subway metro system (WMATA) as well as incidents reported for any of the line colors.",
     "issues": [],
-    "stars": 14,
+    "stars": 15,
     "license": "MIT"
   },
   {
@@ -2333,7 +2333,7 @@
     "maintainerURL": "https://github.com/wouter-heerwegh",
     "description": "Retrieves live timings of busses for a specific bus stop.",
     "issues": [],
-    "stars": 1
+    "stars": 2
   },
   {
     "name": "EXT-Detector",
@@ -2443,7 +2443,7 @@
     "maintainerURL": "",
     "description": "Display messages from discord channels.",
     "issues": [],
-    "stars": 8,
+    "stars": 9,
     "license": "CC0-1.0"
   },
   {
