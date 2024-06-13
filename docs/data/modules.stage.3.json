@@ -5084,7 +5084,7 @@
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.",
       "No image found."
     ],
-    "stars": 4,
+    "stars": 5,
     "hasGithubIssues": false,
     "tags": [
       "callmonitor"

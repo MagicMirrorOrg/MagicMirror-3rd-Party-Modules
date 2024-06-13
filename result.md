@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-12T17:37:23+02:00
+Last update: 2024-06-13T05:38:07+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-06-12T17:37:23+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1164   |
 | maintainer           |    650   |
-| modules with issues  |   1152   |
-| issues               |   7203   |
+| modules with issues  |   1151   |
+| issues               |   7202   |
 | modules at github    |   1152   |
 | modules at gitlab    |     11   |
 | modules at bitbucket |      1   |
@@ -3042,11 +3042,13 @@ Last update: 2024-06-12T17:37:23+02:00
 
 ### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
 
-1. Information: There are updates for 5 dependencie(s):
+1. Information: There are updates for 7 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.4.0
+   - @grpc/grpc-js             ^1.10.8  →  ^1.10.9
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.4.0
+   - google-auth-library       ^9.10.0  →  ^9.11.0
    - protobufjs                 ^7.3.0  →   ^7.3.2
 
 
@@ -6195,15 +6197,6 @@ Last update: 2024-06-12T17:37:23+02:00
 9. Recommendation: Found `new Date()` in file `node_helper.js`: Consider replacing it by `new Date(Date.now())`. It's helpfull for time related debugging. : [#3252](https://github.com/MagicMirrorOrg/MagicMirror/issues/3252).
 10. Deprecated: Found `"grunt"` in file `package.json`: Grunt is practically unmaintained. Move on to something better.
 11. Recommendation: Replace eslintrc by new flat config.
-
-### [MMM-NetatmoThermostat by bugsounet](https://github.com/bugsounet/MMM-NetatmoThermostat)
-
-1. Information: There are updates for 4 dependencie(s):
-   - @eslint/js                ^8.57.0  →   ^9.4.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.1.0
-   - esbuild                   ^0.21.4  →  ^0.21.5
-   - eslint                    ^8.57.0  →   ^9.4.0
-
 
 ### [MMM-network-signal by PoOwAa](https://github.com/PoOwAa/MMM-network-signal)
 

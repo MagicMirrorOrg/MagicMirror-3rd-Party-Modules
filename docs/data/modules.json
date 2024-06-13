@@ -5130,7 +5130,7 @@
     "maintainerURL": "",
     "description": "FRITZ!Box Callmonitor. Display an alert when someone is calling and offers a call history.",
     "issues": true,
-    "stars": 4,
+    "stars": 5,
     "hasGithubIssues": false,
     "tags": [
       "callmonitor"
@@ -11089,7 +11089,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module display your Netatmo Thermostat informations.",
-    "issues": true,
+    "issues": false,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -11098,8 +11098,8 @@
       "smart home"
     ],
     "image": "resources-A_Screenshot_0.jpg",
-    "defaultSortWeight": 0,
-    "lastCommit": "2024-05-26T11:10:50+02:00"
+    "defaultSortWeight": -1,
+    "lastCommit": "2024-06-12T18:29:30+02:00"
   },
   {
     "name": "MMM-network-signal",
