@@ -5484,7 +5484,7 @@
       "`package.json` issue: No description",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 67,
+    "stars": 68,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5533,7 +5533,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 43,
+    "stars": 44,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5546,7 +5546,7 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror² with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
     "issues": [],
-    "stars": 83,
+    "stars": 85,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
@@ -5602,7 +5602,7 @@
     "maintainerURL": "https://github.com/randomBrainstormer",
     "description": "Get your Google Calendars in the shape of MagicMirror's default calendar.",
     "issues": [],
-    "stars": 61,
+    "stars": 62,
     "license": "MIT",
     "tags": [
       "google",
@@ -5692,7 +5692,7 @@
       "There are no keywords in 'package.json'. We would use them as tags on the module list page.",
       "No image found."
     ],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT"
   },
   {
@@ -5719,7 +5719,7 @@
     "maintainerURL": "https://github.com/MartinGris",
     "description": "Tracking of multiple objects on a google map. Position can be updated by a notification.",
     "issues": [],
-    "stars": 13,
+    "stars": 14,
     "license": "MIT",
     "tags": [
       "google maps",
@@ -5752,7 +5752,7 @@
     "maintainerURL": "https://github.com/hermanho",
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": [],
-    "stars": 160,
+    "stars": 162,
     "license": "MIT",
     "tags": [
       "googlephotos"
@@ -5805,7 +5805,7 @@
     "issues": [
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 21,
+    "stars": 22,
     "license": "MIT",
     "image": "screenshot.jpg"
   },
@@ -5850,7 +5850,7 @@
     "maintainerURL": "https://github.com/jacopo1891",
     "description": "Lists travel times to requested locations taking into account Google traffic information with \"classic view\".",
     "issues": [],
-    "stars": 11,
+    "stars": 12,
     "tags": [
       "traffic",
       "googlemap"

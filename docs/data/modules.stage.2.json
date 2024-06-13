@@ -3964,7 +3964,7 @@
     "maintainerURL": "",
     "description": "Displays live image of our planet.",
     "issues": [],
-    "stars": 67,
+    "stars": 68,
     "license": "MIT"
   },
   {
@@ -4000,7 +4000,7 @@
     "maintainerURL": "",
     "description": "Displays the two best routes from an origin to a destination, using Google Directions API.",
     "issues": [],
-    "stars": 43,
+    "stars": 44,
     "license": "MIT"
   },
   {
@@ -4012,7 +4012,7 @@
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "MMM-GoogleAssistant is an real embedded Google assistant on MagicMirror² with many <a target=\"_blank\" href=\"#extended-plugins-for-mmm-googleassistant\">plugins</a>.",
     "issues": [],
-    "stars": 83,
+    "stars": 85,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -4050,7 +4050,7 @@
     "maintainerURL": "https://github.com/randomBrainstormer",
     "description": "Get your Google Calendars in the shape of MagicMirror's default calendar.",
     "issues": [],
-    "stars": 61,
+    "stars": 62,
     "license": "MIT"
   },
   {
@@ -4111,7 +4111,7 @@
     "maintainerURL": "",
     "description": "Displays one list from Google Keep.",
     "issues": [],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT"
   },
   {
@@ -4135,7 +4135,7 @@
     "maintainerURL": "https://github.com/MartinGris",
     "description": "Tracking of multiple objects on a google map. Position can be updated by a notification.",
     "issues": [],
-    "stars": 13,
+    "stars": 14,
     "license": "MIT"
   },
   {
@@ -4159,7 +4159,7 @@
     "maintainerURL": "https://github.com/hermanho",
     "description": "Image gallery or wallpaper with your Google Photos account.",
     "issues": [],
-    "stars": 160,
+    "stars": 162,
     "license": "MIT"
   },
   {
@@ -4195,7 +4195,7 @@
     "maintainerURL": "",
     "description": "Display a google shoppinglist items.",
     "issues": [],
-    "stars": 21,
+    "stars": 22,
     "license": "MIT"
   },
   {
@@ -4230,7 +4230,7 @@
     "maintainerURL": "https://github.com/jacopo1891",
     "description": "Lists travel times to requested locations taking into account Google traffic information with \"classic view\".",
     "issues": [],
-    "stars": 11
+    "stars": 12
   },
   {
     "name": "MMM-GoogleTTS",
