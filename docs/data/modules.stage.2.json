@@ -629,6 +629,18 @@
     "license": "MIT"
   },
   {
+    "name": "MMM-Bash",
+    "category": "Development / Core MagicMirror²",
+    "url": "https://github.com/mathew-fleisch/MMM-Bash",
+    "id": "mathew-fleisch/MMM-Bash",
+    "maintainer": "mathew-fleisch",
+    "maintainerURL": "",
+    "description": "A simple module to run a bash/terminal command on a loop, displaying stdout/stderr to screen.",
+    "issues": [],
+    "stars": 2,
+    "license": "MIT"
+  },
+  {
     "name": "MMM-BCFerries",
     "category": "Transport / Travel",
     "url": "https://github.com/stonecrown/MMM-BCFerries",
@@ -2977,7 +2989,7 @@
     "maintainerURL": "",
     "description": "Display live scores of Euro 2024 football games.",
     "issues": [],
-    "stars": 1
+    "stars": 2
   },
   {
     "name": "MMM-EventHorizon",
