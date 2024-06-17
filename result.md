@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-17T05:37:16+02:00
+Last update: 2024-06-17T17:37:17+02:00
 
 ## Statistics
 
@@ -156,7 +156,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →    ^9.5.0
-   - @stylistic/eslint-plugin    ^1.8.1  →    ^2.2.0
+   - @stylistic/eslint-plugin    ^1.8.1  →    ^2.2.1
    - esbuild                    ^0.21.4  →   ^0.21.5
    - eslint                     ^8.57.0  →    ^9.5.0
    - sweetalert2               ^11.11.0  →  ^11.11.1
@@ -457,7 +457,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -800,7 +800,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -819,7 +819,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.56.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.1
    - esbuild                    ^0.21.3  →  ^0.21.5
    - eslint                     ^8.56.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
@@ -2743,7 +2743,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
 2. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -2772,7 +2772,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin     1.8.0  →    2.2.0
+   - @stylistic/eslint-plugin     1.8.0  →    2.2.1
    - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
@@ -3004,7 +3004,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -3052,7 +3052,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - eslint                    ^8.57.0  →   ^9.5.0
    - google-auth-library       ^9.10.0  →  ^9.11.0
    - protobufjs                 ^7.3.0  →   ^7.3.2
@@ -3224,7 +3224,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -3995,7 +3995,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -4314,7 +4314,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -4452,7 +4452,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -5001,7 +5001,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -5535,7 +5535,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. No image found.
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -5771,7 +5771,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin     1.8.0  →    2.2.0
+   - @stylistic/eslint-plugin     1.8.0  →    2.2.1
    - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
@@ -6962,7 +6962,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -7161,7 +7161,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -7220,7 +7220,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Deprecated: Found `new Buffer(` in file `progressbar.js`: This is deprecated. Please update: <https://nodejs.org/api/buffer.html>.
 2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -7231,7 +7231,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -7755,7 +7755,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin     1.8.0  →    2.2.0
+   - @stylistic/eslint-plugin     1.8.0  →    2.2.1
    - esbuild                    ^0.21.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
@@ -8301,7 +8301,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Typo: Found `Magic Mirror` in file `MMM-Saint.css`: Replace it with `MagicMirror²`.
 2. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -8350,7 +8350,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Deprecated: Found `new Buffer(` in file `progressbar.js`: This is deprecated. Please update: <https://nodejs.org/api/buffer.html>.
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -8434,7 +8434,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Recommendation: Found `XMLHttpRequest` in file `webcam.js`: Replace it with built-in fetch.
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -8445,7 +8445,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. No image found.
 2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -8463,7 +8463,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. No image found.
 2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -8474,7 +8474,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -9030,7 +9030,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
    - protobufjs                 ^7.3.0  →   ^7.3.2
@@ -9178,7 +9178,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Information: There are updates for 6 dependencie(s):
    - @elgato-stream-deck/node    ^6.0.0  →   ^6.2.0
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -9404,7 +9404,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
 2. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - esbuild                   ^0.21.4  →  ^0.21.5
    - eslint                    ^8.57.0  →   ^9.5.0
 
@@ -9785,7 +9785,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 4 dependencie(s):
    - @eslint/js                ^8.56.0  →   ^9.5.0
-   - @stylistic/eslint-plugin   ^1.6.0  →   ^2.2.0
+   - @stylistic/eslint-plugin   ^1.6.0  →   ^2.2.1
    - eslint                    ^8.56.0  →   ^9.5.0
    - node-html-parser          ^6.1.12  →  ^6.1.13
 
@@ -10012,7 +10012,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -10169,7 +10169,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin     1.8.0  →    2.2.0
+   - @stylistic/eslint-plugin     1.8.0  →    2.2.1
    - esbuild                    ^0.21.3  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
@@ -10242,7 +10242,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.8.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -10538,7 +10538,7 @@ Last update: 2024-06-17T05:37:16+02:00
 1. No image found.
 2. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.6.3  →   ^2.2.1
    - esbuild                    ^0.20.1  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
@@ -10824,7 +10824,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 5 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.2  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
@@ -10851,7 +10851,7 @@ Last update: 2024-06-17T05:37:16+02:00
 
 1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                 ^8.57.0  →   ^9.5.0
-   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.0
+   - @stylistic/eslint-plugin    ^1.7.0  →   ^2.2.1
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.12  →  ^10.4.1
