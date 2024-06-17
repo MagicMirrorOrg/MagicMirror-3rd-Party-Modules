@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-06-16T15:30:21.307Z",
+  "lastUpdate": "2024-06-17T03:30:20.449Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -241,7 +241,7 @@
     },
     {
       "id": "bugsounet/EXT-Alert",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:07.001Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:08.361Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -255,7 +255,7 @@
     },
     {
       "id": "MMRIZE/MMM-AlertExt",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:07.470Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:08.829Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -703,9 +703,9 @@
     },
     {
       "id": "bugsounet/EXT-Background",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:07.849Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:09.195Z",
       "gitHubData": {
-        "issues": 0,
+        "issues": 1,
         "stars": 1,
         "license": "MIT",
         "archived": false,
@@ -1235,7 +1235,7 @@
     },
     {
       "id": "bugsounet/EXT-Bring",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:08.311Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:09.585Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -1263,7 +1263,7 @@
     },
     {
       "id": "bugsounet/EXT-Browser",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:08.724Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:10.028Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -1599,7 +1599,7 @@
     },
     {
       "id": "Rallymen007/camera",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:09.152Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:10.469Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -2747,7 +2747,7 @@
     },
     {
       "id": "bugsounet/EXT-Detector",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:09.567Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:10.883Z",
       "gitHubData": {
         "issues": 1,
         "stars": 7,
@@ -3349,7 +3349,7 @@
     },
     {
       "id": "Arve/MMM-Entur-tavle",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:09.967Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:11.377Z",
       "gitHubData": {
         "issues": 0,
         "stars": 16,
@@ -3363,7 +3363,7 @@
     },
     {
       "id": "CharlesMorris78/MMM-EnvCanada",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:10.351Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:11.836Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -3377,7 +3377,7 @@
     },
     {
       "id": "mykle1/MMM-EOL",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:10.757Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:12.251Z",
       "gitHubData": {
         "issues": 1,
         "stars": 7,
@@ -3391,7 +3391,7 @@
     },
     {
       "id": "mumblebaj/MMM-EskomSePush",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:11.136Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:12.652Z",
       "gitHubData": {
         "issues": 0,
         "stars": 3,
@@ -3405,7 +3405,7 @@
     },
     {
       "id": "daniel-windsor/MMM-eswordoftheday",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:11.539Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:13.068Z",
       "gitHubData": {
         "issues": 2,
         "stars": 8,
@@ -3419,7 +3419,7 @@
     },
     {
       "id": "hansman84/MMM-ethereum",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:11.926Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:13.472Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -3433,7 +3433,7 @@
     },
     {
       "id": "AjaxCarroway/MMM-ethermine",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:12.709Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:14.239Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -3447,7 +3447,7 @@
     },
     {
       "id": "Helpi90/MMM-Ethos",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:13.131Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:14.643Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -3489,7 +3489,7 @@
     },
     {
       "id": "mykle1/MMM-EventHorizon",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:13.515Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:15.016Z",
       "gitHubData": {
         "issues": 2,
         "stars": 14,
@@ -3503,7 +3503,7 @@
     },
     {
       "id": "mykle1/MMM-Events",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:13.931Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:15.428Z",
       "gitHubData": {
         "issues": 0,
         "stars": 23,
@@ -3517,7 +3517,7 @@
     },
     {
       "id": "themox/MMM-EveryNews",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:14.364Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:15.950Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -3531,7 +3531,7 @@
     },
     {
       "id": "mykle1/MMM-EyeCandy",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:14.731Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:16.339Z",
       "gitHubData": {
         "issues": 2,
         "stars": 45,
@@ -3545,7 +3545,7 @@
     },
     {
       "id": "jupadin/MMM-F1",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:15.082Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:16.718Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -3559,7 +3559,7 @@
     },
     {
       "id": "nigel-daniels/MMM-FAA-Delay",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:15.449Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:17.086Z",
       "gitHubData": {
         "issues": 4,
         "stars": 2,
@@ -3573,7 +3573,7 @@
     },
     {
       "id": "jimbydude/MMM-Face-Multi-User-Recognition-SMAI",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:15.872Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:17.478Z",
       "gitHubData": {
         "issues": 0,
         "stars": 11,
@@ -3587,7 +3587,7 @@
     },
     {
       "id": "nischi/MMM-Face-Reco-DNN",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:16.225Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:17.835Z",
       "gitHubData": {
         "issues": 5,
         "stars": 91,
@@ -3601,10 +3601,10 @@
     },
     {
       "id": "EbenKouao/MMM-Face-Recognition-SMAI",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:16.654Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:18.268Z",
       "gitHubData": {
         "issues": 6,
-        "stars": 81,
+        "stars": 82,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -3615,7 +3615,7 @@
     },
     {
       "id": "njwilliams/MMM-Faces",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:17.045Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:18.703Z",
       "gitHubData": {
         "issues": 5,
         "stars": 10,
@@ -3629,7 +3629,7 @@
     },
     {
       "id": "JonasGoebel/MMM-Facial-Recognition",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:17.503Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:19.118Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -3643,7 +3643,7 @@
     },
     {
       "id": "normyx/MMM-Facial-Recognition-OCV3",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:17.871Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:19.522Z",
       "gitHubData": {
         "issues": 26,
         "stars": 49,
@@ -3657,7 +3657,7 @@
     },
     {
       "id": "alanshen111/facts",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:18.284Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:19.891Z",
       "gitHubData": {
         "issues": 0,
         "stars": 13,
@@ -3671,7 +3671,7 @@
     },
     {
       "id": "mabahj/MMM-Farevarsel",
-      "gitHubDataLastUpdate": "2024-06-02T15:30:18.689Z",
+      "gitHubDataLastUpdate": "2024-06-17T03:30:20.316Z",
       "gitHubData": {
         "issues": 0,
         "stars": 5,

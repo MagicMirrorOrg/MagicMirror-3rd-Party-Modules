@@ -4335,7 +4335,7 @@
     "maintainerURL": "https://github.com/EbenKouao",
     "description": "This module allows you to access profiles using face recognition. This works on the back of OpenCV face recognition module. Program this script to control applicances e.g. Smart Plugs, or lights based on an individual's face profile being recognized.",
     "issues": true,
-    "stars": 81,
+    "stars": 82,
     "license": "MIT",
     "image": "img-readme-face-recognition-guest-smai.jpg",
     "defaultSortWeight": 6,
@@ -11245,7 +11245,7 @@
     ],
     "image": "img-screenshot1.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2024-04-19T12:00:59+02:00"
+    "lastCommit": "2024-06-16T19:39:55+02:00"
   },
   {
     "name": "next-train-transilien",
