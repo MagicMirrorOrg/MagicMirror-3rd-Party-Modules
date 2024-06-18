@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-06-18T05:37:31+02:00
+Last update: 2024-06-18T17:36:57+02:00
 
 ## Statistics
 
@@ -159,7 +159,7 @@ Last update: 2024-06-18T05:37:31+02:00
    - @stylistic/eslint-plugin    ^1.8.1  →    ^2.2.1
    - esbuild                    ^0.21.4  →   ^0.21.5
    - eslint                     ^8.57.0  →    ^9.5.0
-   - sweetalert2               ^11.11.0  →  ^11.11.1
+   - sweetalert2               ^11.11.0  →  ^11.12.0
 
 
 ### [MMM-AlertExt by MMRIZE](https://github.com/MMRIZE/MMM-AlertExt)
@@ -3050,11 +3050,12 @@ Last update: 2024-06-18T05:37:31+02:00
 
 ### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
 
-1. Information: There are updates for 5 dependencie(s):
+1. Information: There are updates for 6 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.5.0
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.2.1
    - eslint                    ^8.57.0  →   ^9.5.0
    - google-auth-library       ^9.10.0  →  ^9.11.0
+   - pm2                        ^5.4.0  →   ^5.4.1
    - protobufjs                 ^7.3.0  →   ^7.3.2
 
 
@@ -4456,7 +4457,7 @@ Last update: 2024-06-18T05:37:31+02:00
    - esbuild                    ^0.20.2  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.10  →  ^10.4.1
-   - pm2                         ^5.3.1  →   ^5.4.0
+   - pm2                         ^5.3.1  →   ^5.4.1
 
 
 ### [MMM-LibrespotJava by l3d00m](https://github.com/l3d00m/MMM-LibrespotJava)
@@ -5706,7 +5707,7 @@ Last update: 2024-06-18T05:37:31+02:00
 1. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 2. Information: There are updates for 2 dependencie(s):
    - jsonpath-plus  5.0.1  →  9.0.0
-   - mqtt           4.3.7  →  5.7.0
+   - mqtt           4.3.7  →  5.7.1
 
 
 ### [MMM-MQTTfloorplan by DMailMan](https://github.com/DMailMan/MMM-MQTTfloorplan)
@@ -10173,7 +10174,7 @@ Last update: 2024-06-18T05:37:31+02:00
    - esbuild                    ^0.21.3  →  ^0.21.5
    - eslint                     ^8.57.0  →   ^9.5.0
    - glob                      ^10.3.15  →  ^10.4.1
-   - pm2                         ^5.3.1  →   ^5.4.0
+   - pm2                         ^5.3.1  →   ^5.4.1
 
 
 ### [MMM-VocabularyTrainer by fewieden](https://github.com/fewieden/MMM-VocabularyTrainer)

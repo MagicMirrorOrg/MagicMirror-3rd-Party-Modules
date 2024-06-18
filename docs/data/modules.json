@@ -4855,7 +4855,7 @@
     "maintainerURL": "https://github.com/E3V3A",
     "description": "A flight radar that display airplane/flight details of what is currently flying in the airspace above some location.",
     "issues": true,
-    "stars": 20,
+    "stars": 21,
     "license": "MIT",
     "tags": [
       "flights",
@@ -4947,7 +4947,7 @@
     "description": "Display weather based on forecast API (DarkSky).",
     "issues": true,
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 57,
+    "stars": 58,
     "defaultSortWeight": 906,
     "lastCommit": "2021-01-04T20:03:24-08:00"
   },
@@ -16932,7 +16932,7 @@
     "license": "MIT",
     "image": "doc-charge_starting.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2023-02-04T20:33:44+01:00"
+    "lastCommit": "2024-06-18T15:02:51+02:00"
   },
   {
     "name": "MMM-TeslaStatus",

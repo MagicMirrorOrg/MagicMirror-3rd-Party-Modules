@@ -3486,7 +3486,7 @@
     "maintainerURL": "https://github.com/E3V3A",
     "description": "A flight radar that display airplane/flight details of what is currently flying in the airspace above some location.",
     "issues": [],
-    "stars": 20,
+    "stars": 21,
     "license": "MIT"
   },
   {
@@ -3557,7 +3557,7 @@
     "description": "Display weather based on forecast API (DarkSky).",
     "issues": [],
     "outdated": "Deprecated. DarkSky API no longer works since 2023-03-31.",
-    "stars": 57
+    "stars": 58
   },
   {
     "name": "MMM-Formula1",
