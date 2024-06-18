@@ -4967,7 +4967,7 @@
     "maintainerURL": "",
     "description": "A simple way to add an iFrame of any web content. Supports multiple URLs and will rotate between them. Works with static pages or streams like Nest Cam, D-Link Cameras, Twitch.tv, YouTube and more.",
     "issues": [],
-    "stars": 54
+    "stars": 55
   },
   {
     "name": "iFrame",
@@ -5014,7 +5014,7 @@
     "maintainerURL": "",
     "description": "Visualizes your places where you have been traveled..or intend to go.",
     "issues": [],
-    "stars": 20
+    "stars": 19
   },
   {
     "name": "MMM-Ilevia-Lille",
@@ -5192,7 +5192,7 @@
     "maintainerURL": "",
     "description": "Display internet statistics such as strength and speed information.",
     "issues": [],
-    "stars": 7,
+    "stars": 8,
     "hasGithubIssues": false,
     "license": "MIT"
   },
@@ -5229,7 +5229,7 @@
     "maintainerURL": "",
     "description": "Display IPv4/IPv6 Network Address.",
     "issues": [],
-    "stars": 26,
+    "stars": 27,
     "license": "MIT"
   },
   {

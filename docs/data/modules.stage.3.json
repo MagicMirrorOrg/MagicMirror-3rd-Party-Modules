@@ -6861,7 +6861,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 54,
+    "stars": 55,
     "tags": [
       "iframe"
     ],
@@ -6929,7 +6929,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 20
+    "stars": 19
   },
   {
     "name": "MMM-Ilevia-Lille",
@@ -7179,7 +7179,7 @@
     "issues": [
       "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."
     ],
-    "stars": 7,
+    "stars": 8,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
@@ -7234,7 +7234,7 @@
     "maintainerURL": "",
     "description": "Display IPv4/IPv6 Network Address.",
     "issues": [],
-    "stars": 26,
+    "stars": 27,
     "license": "MIT",
     "tags": [
       "network interfaces",

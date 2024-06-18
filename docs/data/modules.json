@@ -6914,7 +6914,7 @@
     "maintainerURL": "",
     "description": "A simple way to add an iFrame of any web content. Supports multiple URLs and will rotate between them. Works with static pages or streams like Nest Cam, D-Link Cameras, Twitch.tv, YouTube and more.",
     "issues": true,
-    "stars": 54,
+    "stars": 55,
     "tags": [
       "iframe"
     ],
@@ -6983,7 +6983,7 @@
     "maintainerURL": "",
     "description": "Visualizes your places where you have been traveled..or intend to go.",
     "issues": true,
-    "stars": 20,
+    "stars": 19,
     "defaultSortWeight": 39,
     "lastCommit": "2021-01-09T20:50:29+01:00"
   },
@@ -7241,7 +7241,7 @@
     "maintainerURL": "",
     "description": "Display internet statistics such as strength and speed information.",
     "issues": true,
-    "stars": 7,
+    "stars": 8,
     "hasGithubIssues": false,
     "license": "MIT",
     "tags": [
@@ -7295,7 +7295,7 @@
     "maintainerURL": "",
     "description": "Display IPv4/IPv6 Network Address.",
     "issues": true,
-    "stars": 26,
+    "stars": 27,
     "license": "MIT",
     "tags": [
       "network interfaces",
