@@ -7443,7 +7443,7 @@
     "maintainerURL": "",
     "description": "Display status of lights and variables on a floor plan connected to an ISY-994i Device.",
     "issues": true,
-    "stars": 6,
+    "stars": 7,
     "license": "MIT",
     "image": "screenshots-floorplan_animated.jpg",
     "defaultSortWeight": 12,
@@ -11103,7 +11103,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "",
     "description": "This module display your Netatmo Thermostat informations.",
-    "issues": false,
+    "issues": true,
     "stars": 0,
     "license": "MIT",
     "tags": [
@@ -11112,7 +11112,7 @@
       "smart home"
     ],
     "image": "resources-A_Screenshot_0.jpg",
-    "defaultSortWeight": -1,
+    "defaultSortWeight": 0,
     "lastCommit": "2024-06-12T18:29:30+02:00"
   },
   {
@@ -16104,7 +16104,7 @@
     "maintainer": "bugsounet",
     "maintainerURL": "https://wiki.bugsounet.fr",
     "description": "This plugin show current spotify playback of any devices.<br /><br />This module has been defined to work only with MMM-GoogleAssistant.",
-    "issues": false,
+    "issues": true,
     "stars": 2,
     "hasGithubIssues": false,
     "license": "MIT",
@@ -16113,7 +16113,7 @@
       "spotify"
     ],
     "image": "components-Spotify-Logo.jpg",
-    "defaultSortWeight": 3,
+    "defaultSortWeight": 4,
     "lastCommit": "2024-06-14T23:19:08+02:00"
   },
   {
@@ -16786,6 +16786,23 @@
     ],
     "defaultSortWeight": 8,
     "lastCommit": "2017-04-13T01:45:58+02:00"
+  },
+  {
+    "name": "MMM-TelegramBot",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/MMRIZE/MMM-TelegramBot",
+    "id": "MMRIZE/MMM-TelegramBot",
+    "maintainer": "MMRIZE",
+    "maintainerURL": "",
+    "description": "Interact with MagicMirror via Telegram. (Revamped)",
+    "issues": true,
+    "tags": [
+      "telegram"
+    ],
+    "license": "MIT",
+    "image": "sc_fullsize.jpg",
+    "defaultSortWeight": 6,
+    "lastCommit": "2024-06-18T20:34:01+02:00"
   },
   {
     "name": "EXT-TelegramBot",

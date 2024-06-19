@@ -7377,7 +7377,7 @@
     "issues": [
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 6,
+    "stars": 7,
     "license": "MIT",
     "image": "screenshots-floorplan_animated.jpg"
   },
@@ -16603,6 +16603,21 @@
       "teamspeak",
       "client list"
     ]
+  },
+  {
+    "name": "MMM-TelegramBot",
+    "category": "Utility / IOT / 3rd Party / Integration",
+    "url": "https://github.com/MMRIZE/MMM-TelegramBot",
+    "id": "MMRIZE/MMM-TelegramBot",
+    "maintainer": "MMRIZE",
+    "maintainerURL": "",
+    "description": "Interact with MagicMirror via Telegram. (Revamped)",
+    "issues": [],
+    "tags": [
+      "telegram"
+    ],
+    "license": "MIT",
+    "image": "sc_fullsize.jpg"
   },
   {
     "name": "EXT-TelegramBot",
