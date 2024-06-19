@@ -932,7 +932,7 @@
     "stars": 2,
     "license": "MIT",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-06-11T11:58:57-07:00"
+    "lastCommit": "2024-06-19T05:45:35-07:00"
   },
   {
     "name": "MMM-BCFerries",
@@ -7005,7 +7005,7 @@
     ],
     "image": "MMM-Ilevia-Lille.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-06-17T08:21:43+02:00"
+    "lastCommit": "2024-06-19T09:22:12+02:00"
   },
   {
     "name": "MMM-ImageFileWatcher",
@@ -8286,7 +8286,7 @@
     "maintainerURL": "",
     "description": "Display the next public transport connections for a certain route.",
     "issues": true,
-    "stars": 42,
+    "stars": 43,
     "license": "MIT",
     "tags": [
       "public transport"
@@ -10259,7 +10259,7 @@
     ],
     "image": "screenshot-horizontal.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-06-09T19:15:47-07:00"
+    "lastCommit": "2024-06-18T21:33:26-07:00"
   },
   {
     "name": "MMM-mumble",
@@ -16884,7 +16884,7 @@
     ],
     "image": "examples-htu21-htu21.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2024-04-01T09:47:11+02:00"
+    "lastCommit": "2024-06-19T11:14:15+02:00"
   },
   {
     "name": "MMM-Tesla",

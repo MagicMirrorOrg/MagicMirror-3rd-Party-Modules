@@ -8201,7 +8201,7 @@
     "maintainerURL": "",
     "description": "Display the next public transport connections for a certain route.",
     "issues": [],
-    "stars": 42,
+    "stars": 43,
     "license": "MIT",
     "tags": [
       "public transport"
