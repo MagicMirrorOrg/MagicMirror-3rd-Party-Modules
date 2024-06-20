@@ -8895,7 +8895,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": false,
-    "stars": 7,
+    "stars": 8,
     "license": "MIT",
     "tags": [
       "mealie",
@@ -8995,6 +8995,7 @@
     "maintainerURL": "https://github.com/calonmerc",
     "description": "Display raw METAR data for airports world-wide. (no formatting)",
     "issues": true,
+    "stars": 0,
     "defaultSortWeight": 3,
     "lastCommit": "2024-06-03T15:07:43-05:00"
   },
@@ -9070,7 +9071,7 @@
     "maintainerURL": "",
     "description": "Displays your Microsoft To Do tasks on your mirror.",
     "issues": true,
-    "stars": 74,
+    "stars": 73,
     "license": "MIT",
     "tags": [
       "todo",
@@ -9157,7 +9158,7 @@
     "maintainerURL": "",
     "description": "Display market indicies using (free) Yahoo Finance API.",
     "issues": true,
-    "stars": 1,
+    "stars": 2,
     "license": "MIT",
     "tags": [
       "stock",
@@ -9197,7 +9198,7 @@
     "maintainerURL": "https://github.com/muilpp",
     "description": "Shows concerts around you of the bands you listen to the most.",
     "issues": true,
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "image": "mm concerts calendar.jpg",
     "defaultSortWeight": 7,
@@ -9244,7 +9245,7 @@
     "maintainerURL": "https://github.com/Klettner",
     "description": "Android \ud83d\udcf1 and Windows-desktop \ud83d\udcbb app to control your MagicMirror\u00b2 remotely. (Shutdown, reboot, toggle monitor on/off, change brightness of monitor, custom-commands, etc.).",
     "issues": true,
-    "stars": 59,
+    "stars": 58,
     "license": "MIT",
     "image": "LauncherIcon-MMM-Remote-LauncherIcon.jpg",
     "defaultSortWeight": 5,

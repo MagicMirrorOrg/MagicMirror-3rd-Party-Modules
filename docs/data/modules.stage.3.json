@@ -8806,7 +8806,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": [],
-    "stars": 7,
+    "stars": 8,
     "license": "MIT",
     "tags": [
       "mealie",
@@ -8905,7 +8905,8 @@
     "description": "Display raw METAR data for airports world-wide. (no formatting)",
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
-    ]
+    ],
+    "stars": 0
   },
   {
     "name": "MMM-meteoblueCurrent",
@@ -8979,7 +8980,7 @@
     "maintainerURL": "",
     "description": "Displays your Microsoft To Do tasks on your mirror.",
     "issues": [],
-    "stars": 74,
+    "stars": 73,
     "license": "MIT",
     "tags": [
       "todo",
@@ -9062,7 +9063,7 @@
     "maintainerURL": "",
     "description": "Display market indicies using (free) Yahoo Finance API.",
     "issues": [],
-    "stars": 1,
+    "stars": 2,
     "license": "MIT",
     "tags": [
       "stock",
@@ -9100,7 +9101,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 5,
+    "stars": 6,
     "license": "MIT",
     "image": "mm concerts calendar.jpg"
   },
@@ -9145,7 +9146,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 59,
+    "stars": 58,
     "license": "MIT",
     "image": "LauncherIcon-MMM-Remote-LauncherIcon.jpg"
   },

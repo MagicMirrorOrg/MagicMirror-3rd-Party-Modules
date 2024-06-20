@@ -6373,7 +6373,7 @@
     "maintainerURL": "https://github.com/zanix",
     "description": "Displays a weekly meal menu from the <a target=\"_blank\" href=\"https://mealie.io\">Mealie</a> recipe management app.",
     "issues": [],
-    "stars": 7,
+    "stars": 8,
     "license": "MIT"
   },
   {
@@ -6445,7 +6445,8 @@
     "maintainer": "calonmerc",
     "maintainerURL": "https://github.com/calonmerc",
     "description": "Display raw METAR data for airports world-wide. (no formatting)",
-    "issues": []
+    "issues": [],
+    "stars": 0
   },
   {
     "name": "MMM-meteoblueCurrent",
@@ -6502,7 +6503,7 @@
     "maintainerURL": "",
     "description": "Displays your Microsoft To Do tasks on your mirror.",
     "issues": [],
-    "stars": 74,
+    "stars": 73,
     "license": "MIT"
   },
   {
@@ -6561,7 +6562,7 @@
     "maintainerURL": "",
     "description": "Display market indicies using (free) Yahoo Finance API.",
     "issues": [],
-    "stars": 1,
+    "stars": 2,
     "license": "MIT"
   },
   {
@@ -6585,7 +6586,7 @@
     "maintainerURL": "https://github.com/muilpp",
     "description": "Shows concerts around you of the bands you listen to the most.",
     "issues": [],
-    "stars": 5,
+    "stars": 6,
     "license": "MIT"
   },
   {
@@ -6621,7 +6622,7 @@
     "maintainerURL": "https://github.com/Klettner",
     "description": "Android 📱 and Windows-desktop 💻 app to control your MagicMirror² remotely. (Shutdown, reboot, toggle monitor on/off, change brightness of monitor, custom-commands, etc.).",
     "issues": [],
-    "stars": 59,
+    "stars": 58,
     "license": "MIT"
   },
   {
