@@ -373,7 +373,7 @@
     ],
     "image": "public-AlexaLogoGrey.jpg",
     "defaultSortWeight": 4,
-    "lastCommit": "2024-03-26T17:34:17+01:00"
+    "lastCommit": "2024-06-19T22:28:53+02:00"
   },
   {
     "name": "MMM-AlexaOnOff",
@@ -1758,7 +1758,7 @@
     ],
     "image": "docs-Configuration-Views-legend-full-example.jpg",
     "defaultSortWeight": -1,
-    "lastCommit": "2024-03-17T11:38:04+01:00"
+    "lastCommit": "2024-06-19T20:01:54+02:00"
   },
   {
     "name": "MMM-CalendarExt3",
@@ -6003,7 +6003,7 @@
     ],
     "image": "examples-HC-SR501-HC-SR501-GPIO4.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-04-21T08:32:22+02:00"
+    "lastCommit": "2024-06-19T18:15:53+02:00"
   },
   {
     "name": "MMM-gpsd",
