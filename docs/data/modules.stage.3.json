@@ -9288,7 +9288,7 @@
     "maintainerURL": "https://github.com/ItsMeBrille",
     "description": "Display Minecraft server status and shows list of active players.",
     "issues": [],
-    "stars": 4,
+    "stars": 5,
     "tags": [
       "minecraft",
       "game stats"
@@ -9569,7 +9569,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 175,
+    "stars": 179,
     "license": "MIT",
     "image": "assets-MMPM-UI-Homepage.jpg"
   },
@@ -9584,7 +9584,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 2,
+    "stars": 4,
     "license": "MIT",
     "tags": [
       "mmpm",
@@ -9662,7 +9662,7 @@
     "maintainerURL": "",
     "description": "Create schedules to control when other modules are shown, hidden or dimmed and to send notifications to other modules.",
     "issues": [],
-    "stars": 95,
+    "stars": 96,
     "license": "MIT",
     "tags": [
       "scheduler"

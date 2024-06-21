@@ -9385,7 +9385,7 @@
     "maintainerURL": "https://github.com/ItsMeBrille",
     "description": "Display Minecraft server status and shows list of active players.",
     "issues": true,
-    "stars": 4,
+    "stars": 5,
     "tags": [
       "minecraft",
       "game stats"
@@ -9657,7 +9657,7 @@
     "maintainerURL": "https://github.com/Bee-Mar",
     "description": "An unofficial MagicMirror\u00b2 3rd Party Package Manager. Automates searching, installation, removal, updating, and upgrading of MagicMirror\u00b2 modules.",
     "issues": true,
-    "stars": 175,
+    "stars": 179,
     "license": "MIT",
     "image": "assets-MMPM-UI-Homepage.jpg",
     "defaultSortWeight": 0,
@@ -9672,7 +9672,7 @@
     "maintainerURL": "",
     "description": "Companion module for MMPM to enable hiding/showing of MagicMirror\u00b2 modules.",
     "issues": true,
-    "stars": 2,
+    "stars": 4,
     "license": "MIT",
     "tags": [
       "mmpm",
@@ -9751,7 +9751,7 @@
     "maintainerURL": "",
     "description": "Create schedules to control when other modules are shown, hidden or dimmed and to send notifications to other modules.",
     "issues": true,
-    "stars": 95,
+    "stars": 96,
     "license": "MIT",
     "tags": [
       "scheduler"
@@ -10517,8 +10517,8 @@
     "stars": 9,
     "license": "MIT",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 6,
-    "lastCommit": "2020-04-02T20:43:51-04:00"
+    "defaultSortWeight": 5,
+    "lastCommit": "2024-06-20T19:29:03+02:00"
   },
   {
     "name": "MMM-MyScoreboard",
@@ -13493,7 +13493,7 @@
     ],
     "image": "screenshot.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-05-19T12:31:40+02:00"
+    "lastCommit": "2024-06-20T18:41:56+02:00"
   },
   {
     "name": "MMM-profile",

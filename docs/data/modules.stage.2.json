@@ -6729,7 +6729,7 @@
     "maintainerURL": "https://github.com/ItsMeBrille",
     "description": "Display Minecraft server status and shows list of active players.",
     "issues": [],
-    "stars": 4
+    "stars": 5
   },
   {
     "name": "mmm-moon-phases",
@@ -6930,7 +6930,7 @@
     "maintainerURL": "https://github.com/Bee-Mar",
     "description": "An unofficial MagicMirror² 3rd Party Package Manager. Automates searching, installation, removal, updating, and upgrading of MagicMirror² modules.",
     "issues": [],
-    "stars": 175,
+    "stars": 179,
     "license": "MIT"
   },
   {
@@ -6942,7 +6942,7 @@
     "maintainerURL": "",
     "description": "Companion module for MMPM to enable hiding/showing of MagicMirror² modules.",
     "issues": [],
-    "stars": 2,
+    "stars": 4,
     "license": "MIT"
   },
   {
@@ -7001,7 +7001,7 @@
     "maintainerURL": "",
     "description": "Create schedules to control when other modules are shown, hidden or dimmed and to send notifications to other modules.",
     "issues": [],
-    "stars": 95,
+    "stars": 96,
     "license": "MIT"
   },
   {
