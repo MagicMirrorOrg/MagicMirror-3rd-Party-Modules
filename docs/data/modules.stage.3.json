@@ -1074,7 +1074,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 2
+    "stars": 3
   },
   {
     "name": "MMM-BinaryClock",
@@ -1122,7 +1122,7 @@
       "`package.json` issue: No repository field.",
       "There are no keywords in 'package.json'. We would use them as tags on the module list page."
     ],
-    "stars": 8,
+    "stars": 9,
     "license": "Apache-2.0",
     "image": "example.jpg"
   },

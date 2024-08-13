@@ -1101,7 +1101,7 @@
     "maintainerURL": "",
     "description": "Display cryptocurrency information from the Binance website.",
     "issues": true,
-    "stars": 2,
+    "stars": 3,
     "defaultSortWeight": 4,
     "lastCommit": "2022-11-05T20:46:22+03:00"
   },
@@ -1150,7 +1150,7 @@
     "maintainerURL": "https://github.com/amitchone",
     "description": "A simple, lightweight birthday reminder - specified either via simple JSON file or in <code>config.js</code>. Supports multiple languages.",
     "issues": true,
-    "stars": 8,
+    "stars": 9,
     "license": "Apache-2.0",
     "image": "example.jpg",
     "defaultSortWeight": 2,
@@ -9680,7 +9680,7 @@
       "tree"
     ],
     "image": "pollen_forecast.jpg",
-    "defaultSortWeight": 7,
+    "defaultSortWeight": 8,
     "lastCommit": "2022-08-13T12:20:39+01:00"
   },
   {
@@ -11435,7 +11435,7 @@
       "nfl"
     ],
     "image": ".github-global.jpg",
-    "defaultSortWeight": 11,
+    "defaultSortWeight": 12,
     "lastCommit": "2022-08-13T06:57:02+02:00"
   },
   {
@@ -15601,7 +15601,7 @@
     "license": "MIT",
     "image": "demo_screenshot.jpg",
     "defaultSortWeight": 5,
-    "lastCommit": "2024-04-18T20:11:46+02:00"
+    "lastCommit": "2024-08-13T16:30:31+02:00"
   },
   {
     "name": "MMM-SingleStock",

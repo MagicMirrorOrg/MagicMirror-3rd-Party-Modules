@@ -752,7 +752,7 @@
     "maintainerURL": "",
     "description": "Display cryptocurrency information from the Binance website.",
     "issues": [],
-    "stars": 2
+    "stars": 3
   },
   {
     "name": "MMM-BinaryClock",
@@ -786,7 +786,7 @@
     "maintainerURL": "https://github.com/amitchone",
     "description": "A simple, lightweight birthday reminder - specified either via simple JSON file or in <code>config.js</code>. Supports multiple languages.",
     "issues": [],
-    "stars": 8,
+    "stars": 9,
     "license": "Apache-2.0"
   },
   {
