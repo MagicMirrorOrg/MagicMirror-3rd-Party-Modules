@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-12T22:59:22+02:00
+Last update: 2024-08-13T05:43:52+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-08-12T22:59:22+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1174   |
 | maintainer           |    657   |
-| modules with issues  |   1161   |
-| issues               |   7246   |
+| modules with issues  |   1160   |
+| issues               |   7245   |
 | modules at github    |   1163   |
 | modules at gitlab    |     10   |
 | modules at bitbucket |      1   |
@@ -7700,23 +7700,6 @@ Last update: 2024-08-12T22:59:22+02:00
 ### [MMM-PublicTransportBerlin by deg0nz](https://github.com/deg0nz/MMM-PublicTransportBerlin)
 
 1. Recommendation: Replace eslintrc by new flat config.
-
-### [MMM-PublicTransportHafas by KristjanESPERANTO](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas)
-
-1. Information: There are updates for 12 dependencie(s):
-   - @eslint/js                  ^8.57.0  →    ^9.9.0
-   - @stylistic/eslint-plugin     ^2.1.0  →    ^2.6.2
-   - dayjs                      ^1.11.11  →  ^1.11.12
-   - eslint                      ^8.57.0  →    ^9.9.0
-   - globals                     ^15.3.0  →   ^15.9.0
-   - husky                       ^9.0.11  →    ^9.1.4
-   - lint-staged                 ^15.2.2  →   ^15.2.8
-   - markdownlint-cli            ^0.40.0  →   ^0.41.0
-   - prettier                     ^3.2.5  →    ^3.3.3
-   - stylelint                   ^16.5.0  →   ^16.8.1
-   - stylelint-config-standard   ^36.0.0  →   ^36.0.1
-   - stylelint-prettier           ^5.0.0  →    ^5.0.2
-
 
 ### [MMM-PublicTransportVVO by ChristianGeie](https://github.com/ChristianGeie/MMM-PublicTransportVVO)
 
