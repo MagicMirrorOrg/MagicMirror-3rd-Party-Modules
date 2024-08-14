@@ -2176,7 +2176,7 @@
     "maintainerURL": "",
     "description": "Directly cast from the MagicMirror\u00b2 server to a chromecast.",
     "issues": true,
-    "stars": 42,
+    "stars": 43,
     "license": "MIT",
     "defaultSortWeight": 8,
     "lastCommit": "2023-03-05T20:51:52+01:00"

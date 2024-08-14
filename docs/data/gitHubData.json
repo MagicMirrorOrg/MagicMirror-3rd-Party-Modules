@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-08-14T03:30:22.760Z",
+  "lastUpdate": "2024-08-14T15:30:20.184Z",
   "repositories": [
     {
       "id": "rubinho101/MMM-01ZM",
@@ -1669,7 +1669,7 @@
     },
     {
       "id": "mykle1/MMM-CARDS",
-      "gitHubDataLastUpdate": "2024-07-24T15:30:22.862Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:09.091Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -1683,9 +1683,9 @@
     },
     {
       "id": "shbatm/MMM-Carousel",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:09.512Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:09.577Z",
       "gitHubData": {
-        "issues": 10,
+        "issues": 11,
         "stars": 40,
         "license": "MIT",
         "archived": false,
@@ -1697,7 +1697,7 @@
     },
     {
       "id": "nischi/MMM-CECControl",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:09.958Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:10.060Z",
       "gitHubData": {
         "issues": 5,
         "stars": 13,
@@ -1711,7 +1711,7 @@
     },
     {
       "id": "mykle1/MMM-Census",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:10.376Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:10.583Z",
       "gitHubData": {
         "issues": 2,
         "stars": 5,
@@ -1725,7 +1725,7 @@
     },
     {
       "id": "xadamxk/MMM-CHAMPIONSQUEUE-LEADERBOARD",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:10.815Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:11.053Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -1739,7 +1739,7 @@
     },
     {
       "id": "MarinescuEvghenii/MMM-Chart",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:11.555Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:11.801Z",
       "gitHubData": {
         "issues": 1,
         "stars": 9,
@@ -1753,7 +1753,7 @@
     },
     {
       "id": "nout-kleef/MMM-Chess-Daily",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:12.000Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:12.235Z",
       "gitHubData": {
         "issues": 3,
         "stars": 8,
@@ -1767,10 +1767,10 @@
     },
     {
       "id": "flo80/MMM-chromecast",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:12.430Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:12.749Z",
       "gitHubData": {
         "issues": 5,
-        "stars": 42,
+        "stars": 43,
         "license": "MIT",
         "archived": false,
         "disabled": false,
@@ -1781,7 +1781,7 @@
     },
     {
       "id": "toddsantoro/MMM-Chuck-Norris",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:12.846Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:13.272Z",
       "gitHubData": {
         "issues": 1,
         "stars": 5,
@@ -1795,7 +1795,7 @@
     },
     {
       "id": "Andoramb/MMM-CivitAI",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:13.246Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:13.680Z",
       "gitHubData": {
         "issues": 1,
         "stars": 3,
@@ -1809,7 +1809,7 @@
     },
     {
       "id": "ianperrin/MMM-Clash-Royale",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:13.714Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:14.130Z",
       "gitHubData": {
         "issues": 1,
         "stars": 4,
@@ -1823,7 +1823,7 @@
     },
     {
       "id": "AdmiralMurtho/MMM-ClashofClans-Player",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:14.119Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:14.629Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -1837,7 +1837,7 @@
     },
     {
       "id": "chicohernando/MMM-ClashRoyaleChests",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:14.558Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:15.172Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -1851,7 +1851,7 @@
     },
     {
       "id": "mykle1/MMM-Climacell-Hourly",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:14.990Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:15.657Z",
       "gitHubData": {
         "issues": 0,
         "stars": 1,
@@ -1865,7 +1865,7 @@
     },
     {
       "id": "mykle1/MMM-Clockinese",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:15.448Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:16.127Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -1879,7 +1879,7 @@
     },
     {
       "id": "macd2point0/MMM-CloneWarsQuotes",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:15.889Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:16.596Z",
       "gitHubData": {
         "issues": 1,
         "stars": 6,
@@ -1893,7 +1893,7 @@
     },
     {
       "id": "rc7/MMM-ClosestFlight",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:16.340Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:17.020Z",
       "gitHubData": {
         "issues": 0,
         "stars": 2,
@@ -1907,7 +1907,7 @@
     },
     {
       "id": "mykle1/MMM-Cocktails",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:16.752Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:17.477Z",
       "gitHubData": {
         "issues": 2,
         "stars": 11,
@@ -1921,7 +1921,7 @@
     },
     {
       "id": "mlbonniec/MMM-Coinbase",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:17.168Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:18.022Z",
       "gitHubData": {
         "issues": 5,
         "stars": 12,
@@ -1935,7 +1935,7 @@
     },
     {
       "id": "glitch452/MMM-CoinMarketCap",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:17.587Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:18.489Z",
       "gitHubData": {
         "issues": 8,
         "stars": 36,
@@ -1949,7 +1949,7 @@
     },
     {
       "id": "marcomerens/coinsquaremodule",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:18.015Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:18.989Z",
       "gitHubData": {
         "issues": 0,
         "stars": 0,
@@ -1963,7 +1963,7 @@
     },
     {
       "id": "AdamMoses-GitHub/MMM-CollegeFootballTop25",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:18.402Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:19.420Z",
       "gitHubData": {
         "issues": 3,
         "stars": 2,
@@ -1977,7 +1977,7 @@
     },
     {
       "id": "vincep5/MMM-ComEdPrice",
-      "gitHubDataLastUpdate": "2024-07-25T03:30:18.803Z",
+      "gitHubDataLastUpdate": "2024-08-14T15:30:19.893Z",
       "gitHubData": {
         "issues": 2,
         "stars": 1,
