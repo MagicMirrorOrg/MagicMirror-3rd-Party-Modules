@@ -1783,7 +1783,7 @@
     "maintainerURL": "",
     "description": "Extended calendar and event view. Show calendar as agenda.",
     "issues": true,
-    "stars": 13,
+    "stars": 12,
     "license": "MIT",
     "tags": [
       "calendar",
@@ -1868,7 +1868,7 @@
     "maintainerURL": "",
     "description": "Display current timeline schedules. This is a plugin module for <code>MMM-CalendarExt2</code>.",
     "issues": true,
-    "stars": 16,
+    "stars": 17,
     "license": "MIT",
     "image": "timeline_static.jpg",
     "defaultSortWeight": 2,
@@ -2017,7 +2017,7 @@
     "maintainerURL": "https://github.com/chase-cromwell",
     "description": "Display upcoming assignments from Canvas LMS platform.",
     "issues": true,
-    "stars": 6,
+    "stars": 7,
     "defaultSortWeight": 8,
     "lastCommit": "2021-03-02T17:42:46+00:00"
   },
@@ -19231,6 +19231,20 @@
     "license": "MIT",
     "defaultSortWeight": 9,
     "lastCommit": "2017-10-05T09:49:38+02:00"
+  },
+  {
+    "name": "MMM-WOTD",
+    "category": "Education",
+    "url": "https://github.com/mumblebaj/MMM-WOTD",
+    "id": "mumblebaj/MMM-WOTD",
+    "maintainer": "mumblebaj",
+    "maintainerURL": "",
+    "description": "Yet another Word of the Day module for <a target=\"_blank\" href=\"https://magicmirror.builders/\">MagicMirror\u00b2</a>. Difference with this one is that you can select multiple languages and it will display as a carousel.",
+    "issues": true,
+    "license": "MIT",
+    "image": "image-1.jpg",
+    "defaultSortWeight": 5,
+    "lastCommit": "2024-02-22T20:47:34+02:00"
   },
   {
     "name": "MMM-WS281X-Server",

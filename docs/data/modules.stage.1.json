@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-08-13T15:30:07.690Z",
+  "lastUpdate": "2024-08-14T03:30:08.114Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -11576,6 +11576,16 @@
       "maintainer": "yawnsde",
       "maintainerURL": "",
       "description": "Displays low and high water time predictions for a given tide station, derived from worldtides.info.",
+      "issues": []
+    },
+    {
+      "name": "MMM-WOTD",
+      "category": "Education",
+      "url": "https://github.com/mumblebaj/MMM-WOTD",
+      "id": "mumblebaj/MMM-WOTD",
+      "maintainer": "mumblebaj",
+      "maintainerURL": "",
+      "description": "Yet another Word of the Day module for <a target=\"_blank\" href=\"https://magicmirror.builders/\">MagicMirror²</a>. Difference with this one is that you can select multiple languages and it will display as a carousel.",
       "issues": []
     },
     {

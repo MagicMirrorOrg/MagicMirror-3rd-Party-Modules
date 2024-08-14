@@ -1,16 +1,16 @@
 # Result of the module analysis
 
-Last update: 2024-08-13T17:37:48+02:00
+Last update: 2024-08-14T05:37:43+02:00
 
 ## Statistics
 
 |                      | number   |
 |:---------------------|:--------:|
-| modules analyzed     |   1174   |
+| modules analyzed     |   1175   |
 | maintainer           |    657   |
-| modules with issues  |   1160   |
-| issues               |   7245   |
-| modules at github    |   1163   |
+| modules with issues  |   1161   |
+| issues               |   7251   |
+| modules at github    |   1164   |
 | modules at gitlab    |     10   |
 | modules at bitbucket |      1   |
 
@@ -10709,6 +10709,15 @@ Last update: 2024-08-13T17:37:48+02:00
 6. Typo: Found `MagicMirror2` in file `package.json`: Replace it with `MagicMirror²`.
 7. Warning: No LICENSE file.
 8. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+
+### [MMM-WOTD by mumblebaj](https://github.com/mumblebaj/MMM-WOTD)
+
+1. There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”.
+2. Recommendation: Found `axios` in file `README.md`: Replace it with built-in fetch.
+3. Recommendation: Found `axios` in file `node_helper.js`: Replace it with built-in fetch.
+4. Typo: Found `Magic Mirror` in file `package.json`: Replace it with `MagicMirror²`.
+5. Recommendation: Found `axios` in file `package.json`: Replace it with built-in fetch.
+6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-WS281X-Server by coderpussy](https://github.com/coderpussy/MMM-WS281X-Server)
 

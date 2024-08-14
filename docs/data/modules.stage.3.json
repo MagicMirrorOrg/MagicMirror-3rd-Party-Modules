@@ -1741,7 +1741,7 @@
     "issues": [
       "No image found."
     ],
-    "stars": 13,
+    "stars": 12,
     "license": "MIT",
     "tags": [
       "calendar",
@@ -1826,7 +1826,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 16,
+    "stars": 17,
     "license": "MIT",
     "image": "timeline_static.jpg"
   },
@@ -1973,7 +1973,7 @@
     "issues": [
       "There is no `package.json`. We need this file to gather information about the module for the module list page."
     ],
-    "stars": 6
+    "stars": 7
   },
   {
     "name": "MMM-CardDavBirthdaysProvider",
@@ -19044,6 +19044,20 @@
       "flood"
     ],
     "license": "MIT"
+  },
+  {
+    "name": "MMM-WOTD",
+    "category": "Education",
+    "url": "https://github.com/mumblebaj/MMM-WOTD",
+    "id": "mumblebaj/MMM-WOTD",
+    "maintainer": "mumblebaj",
+    "maintainerURL": "",
+    "description": "Yet another Word of the Day module for <a target=\"_blank\" href=\"https://magicmirror.builders/\">MagicMirror²</a>. Difference with this one is that you can select multiple languages and it will display as a carousel.",
+    "issues": [
+      "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just “magicmirror” or “module”."
+    ],
+    "license": "MIT",
+    "image": "image-1.jpg"
   },
   {
     "name": "MMM-WS281X-Server",

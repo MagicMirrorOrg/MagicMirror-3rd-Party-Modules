@@ -1238,7 +1238,7 @@
     "maintainerURL": "",
     "description": "Extended calendar and event view. Show calendar as agenda.",
     "issues": [],
-    "stars": 13,
+    "stars": 12,
     "license": "MIT"
   },
   {
@@ -1298,7 +1298,7 @@
     "maintainerURL": "",
     "description": "Display current timeline schedules. This is a plugin module for <code>MMM-CalendarExt2</code>.",
     "issues": [],
-    "stars": 16,
+    "stars": 17,
     "license": "MIT"
   },
   {
@@ -1404,7 +1404,7 @@
     "maintainerURL": "https://github.com/chase-cromwell",
     "description": "Display upcoming assignments from Canvas LMS platform.",
     "issues": [],
-    "stars": 6
+    "stars": 7
   },
   {
     "name": "MMM-CardDavBirthdaysProvider",
@@ -13696,6 +13696,16 @@
     "description": "Displays low and high water time predictions for a given tide station, derived from worldtides.info.",
     "issues": [],
     "stars": 7
+  },
+  {
+    "name": "MMM-WOTD",
+    "category": "Education",
+    "url": "https://github.com/mumblebaj/MMM-WOTD",
+    "id": "mumblebaj/MMM-WOTD",
+    "maintainer": "mumblebaj",
+    "maintainerURL": "",
+    "description": "Yet another Word of the Day module for <a target=\"_blank\" href=\"https://magicmirror.builders/\">MagicMirror²</a>. Difference with this one is that you can select multiple languages and it will display as a carousel.",
+    "issues": []
   },
   {
     "name": "MMM-WS281X-Server",
