@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-15T05:37:25+02:00
+Last update: 2024-08-15T17:37:23+02:00
 
 ## Statistics
 
@@ -3075,16 +3075,11 @@ Last update: 2024-08-15T05:37:25+02:00
 ### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Information: There are updates for 9 dependencie(s):
-   - @eslint/js                     ^8.57.0  →   ^9.9.0
-   - @grpc/grpc-js                 ^1.10.10  →  ^1.11.1
-   - @stylistic/eslint-plugin        ^1.8.1  →   ^2.6.2
-   - cheerio                   ^1.0.0-rc.12  →   ^1.0.0
-   - esbuild                        ^0.22.0  →  ^0.23.0
-   - eslint                         ^8.57.0  →   ^9.9.0
-   - glob                           ^10.4.2  →  ^11.0.0
-   - google-auth-library            ^9.11.0  →  ^9.13.0
-   - pm2                             ^5.4.1  →   ^5.4.2
+2. Information: There are updates for 4 dependencie(s):
+   - @eslint/js                ^8.57.0  →   ^9.9.0
+   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.6.2
+   - eslint                    ^8.57.0  →   ^9.9.0
+   - glob                      ^10.4.5  →  ^11.0.0
 
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)

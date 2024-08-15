@@ -5662,7 +5662,7 @@
     ],
     "image": "resources-previewFS.jpg",
     "defaultSortWeight": -1,
-    "lastCommit": "2024-07-01T16:54:21+02:00"
+    "lastCommit": "2024-08-15T14:53:40+02:00"
   },
   {
     "name": "MMM-GoogleAssistant",
@@ -13167,12 +13167,12 @@
   },
   {
     "name": "MMM-PL_WOTD",
-    "category": "Entertainment / Misc",
+    "category": "Education",
     "url": "https://github.com/mjb527/MMM-PL_WOTD",
     "id": "mjb527/MMM-PL_WOTD",
     "maintainer": "mjb527",
     "maintainerURL": "",
-    "description": "Displays a Polish Word of the Day with examples and the English translations.",
+    "description": "Displays a Polish word of the day with examples and the English translations.",
     "issues": true,
     "stars": 0,
     "tags": [
@@ -18893,7 +18893,7 @@
     "license": "MIT",
     "image": "website-assets-img-FavIcon.jpg",
     "defaultSortWeight": 5,
-    "lastCommit": "2024-07-01T17:06:53+02:00"
+    "lastCommit": "2024-08-15T14:53:13+02:00"
   },
   {
     "name": "MMM-WebSpeechTTS",
@@ -19161,7 +19161,7 @@
   },
   {
     "name": "MMM-wordnik",
-    "category": "Utility / IOT / 3rd Party / Integration",
+    "category": "Education",
     "url": "https://github.com/SVendittelli/MMM-wordnik",
     "id": "SVendittelli/MMM-wordnik",
     "maintainer": "SVendittelli",
@@ -19174,7 +19174,7 @@
   },
   {
     "name": "MMM-WordOfTheDay",
-    "category": "Entertainment / Misc",
+    "category": "Education",
     "url": "https://github.com/jmwyds/MMM-WordOfTheDay",
     "id": "jmwyds/MMM-WordOfTheDay",
     "maintainer": "jmwyds",
@@ -19239,7 +19239,7 @@
     "id": "mumblebaj/MMM-WOTD",
     "maintainer": "mumblebaj",
     "maintainerURL": "",
-    "description": "Yet another Word of the Day module for <a target=\"_blank\" href=\"https://magicmirror.builders/\">MagicMirror\u00b2</a>. Difference with this one is that you can select multiple languages and it will display as a carousel.",
+    "description": "Yet another word of the day module. The special feature of this module is that you can select multiple languages and it will display as a carousel.",
     "issues": true,
     "license": "MIT",
     "image": "image-1.jpg",
