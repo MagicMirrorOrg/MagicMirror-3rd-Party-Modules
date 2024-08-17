@@ -13180,8 +13180,8 @@
     ],
     "license": "ISC",
     "image": "img-Word-of-the-Day-Example.jpg",
-    "defaultSortWeight": 8,
-    "lastCommit": "2021-03-15T23:10:36-04:00"
+    "defaultSortWeight": 7,
+    "lastCommit": "2024-08-16T15:00:01-04:00"
   },
   {
     "name": "MMM-PlaceInfo",
