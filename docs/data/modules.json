@@ -12497,8 +12497,8 @@
     "description": "Configure location and visibity of modules on defined pages.",
     "issues": true,
     "stars": 35,
-    "defaultSortWeight": 6,
-    "lastCommit": "2021-02-04T16:57:37-05:00"
+    "defaultSortWeight": 4,
+    "lastCommit": "2024-08-17T11:23:09-04:00"
   },
   {
     "name": "MMM-PageReader",
@@ -13866,7 +13866,7 @@
     "stars": 1,
     "license": "MIT",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 5,
+    "defaultSortWeight": 6,
     "lastCommit": "2022-08-17T09:10:56-07:00"
   },
   {

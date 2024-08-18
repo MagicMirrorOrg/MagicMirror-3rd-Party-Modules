@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-17T05:37:29+02:00
+Last update: 2024-08-18T17:43:31+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-08-17T05:37:29+02:00
 | modules analyzed     |   1175   |
 | maintainer           |    657   |
 | modules with issues  |   1161   |
-| issues               |   7250   |
+| issues               |   7249   |
 | modules at github    |   1164   |
 | modules at gitlab    |     10   |
 | modules at bitbucket |      1   |
@@ -6980,8 +6980,7 @@ Last update: 2024-08-17T05:37:29+02:00
 2. Typo: Found `Magic Mirror` in file `README.md`: Replace it with `MagicMirror²`.
 3. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-5. Warning: No LICENSE file.
-6. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
+5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-PageReader by dgburr](https://github.com/dgburr/MMM-PageReader)
 
@@ -8798,13 +8797,14 @@ Last update: 2024-08-17T05:37:29+02:00
 
 ### [EXT-SmartHome by bugsounet](https://github.com/bugsounet/EXT-SmartHome)
 
-1. Information: There are updates for 6 dependencie(s):
-   - @eslint/js                ^8.57.0  →   ^9.9.0
-   - @stylistic/eslint-plugin   ^1.8.1  →   ^2.6.4
-   - esbuild                   ^0.21.5  →  ^0.23.1
-   - eslint                    ^8.57.0  →   ^9.9.0
-   - glob                      ^10.4.2  →  ^11.0.0
-   - google-auth-library       ^9.11.0  →  ^9.13.0
+1. Information: There are updates for 7 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.9.0
+   - @stylistic/eslint-plugin    ^1.8.1  →    ^2.6.4
+   - esbuild                    ^0.21.5  →   ^0.23.1
+   - eslint                     ^8.57.0  →    ^9.9.0
+   - glob                       ^10.4.2  →   ^11.0.0
+   - google-auth-library        ^9.11.0  →   ^9.13.0
+   - googleapis                ^140.0.1  →  ^142.0.0
 
 
 ### [MMM-SmartTouch by EbenKouao](https://github.com/EbenKouao/MMM-SmartTouch)
