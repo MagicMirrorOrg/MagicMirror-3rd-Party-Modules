@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-19T05:37:26+02:00
+Last update: 2024-08-19T17:37:20+02:00
 
 ## Statistics
 
@@ -4985,8 +4985,8 @@ Last update: 2024-08-19T05:37:26+02:00
 
 1. There is no `package.json`. We need this file to gather information about the module for the module list page.
 2. No image found.
-3. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
-4. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
+3. Recommendation: Found `XMLHttpRequest` in file `MMM-Mensamuc.js`: Replace it with built-in fetch.
+4. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 5. Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.
 
 ### [MMM-MercedesMe by ashishtank](https://github.com/ashishtank/MMM-MercedesMe)
