@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-20T05:37:38+02:00
+Last update: 2024-08-20T17:37:21+02:00
 
 ## Statistics
 
@@ -8,8 +8,8 @@ Last update: 2024-08-20T05:37:38+02:00
 |:---------------------|:--------:|
 | modules analyzed     |   1175   |
 | maintainer           |    657   |
-| modules with issues  |   1161   |
-| issues               |   7249   |
+| modules with issues  |   1162   |
+| issues               |   7250   |
 | modules at github    |   1164   |
 | modules at gitlab    |     10   |
 | modules at bitbucket |      1   |
@@ -3075,12 +3075,13 @@ Last update: 2024-08-20T05:37:38+02:00
 ### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Information: There are updates for 5 dependencie(s):
+2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.9.0
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.6.4
    - esbuild                   ^0.23.0  →  ^0.23.1
    - eslint                    ^8.57.0  →   ^9.9.0
    - glob                      ^10.4.5  →  ^11.0.0
+   - google-auth-library       ^9.13.0  →  ^9.14.0
 
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
@@ -7695,6 +7696,18 @@ Last update: 2024-08-20T05:37:38+02:00
 
 1. Recommendation: Replace eslintrc by new flat config.
 
+### [MMM-PublicTransportHafas by KristjanESPERANTO](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas)
+
+1. Information: There are updates for 7 dependencie(s):
+   - @eslint/js                 ^8.57.0  →    ^9.9.0
+   - @stylistic/eslint-plugin    ^2.6.2  →    ^2.6.4
+   - dayjs                     ^1.11.12  →  ^1.11.13
+   - eslint                     ^8.57.0  →    ^9.9.0
+   - husky                       ^9.1.4  →    ^9.1.5
+   - lint-staged                ^15.2.8  →   ^15.2.9
+   - stylelint                  ^16.8.1  →   ^16.8.2
+
+
 ### [MMM-PublicTransportVVO by ChristianGeie](https://github.com/ChristianGeie/MMM-PublicTransportVVO)
 
 1. Recommendation: Found `XMLHttpRequest` in file `MMM-PublicTransportVVO.js`: Replace it with built-in fetch.
@@ -8803,7 +8816,7 @@ Last update: 2024-08-20T05:37:38+02:00
    - esbuild                    ^0.21.5  →   ^0.23.1
    - eslint                     ^8.57.0  →    ^9.9.0
    - glob                       ^10.4.2  →   ^11.0.0
-   - google-auth-library        ^9.11.0  →   ^9.13.0
+   - google-auth-library        ^9.11.0  →   ^9.14.0
    - googleapis                ^140.0.1  →  ^142.0.0
 
 
