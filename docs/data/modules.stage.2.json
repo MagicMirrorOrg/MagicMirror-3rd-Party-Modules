@@ -9967,6 +9967,16 @@
     "stars": 1
   },
   {
+    "name": "MMM-Quiz",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/Dennis-Rosenbaum/MMM-Quiz",
+    "id": "Dennis-Rosenbaum/MMM-Quiz",
+    "maintainer": "Dennis-Rosenbaum",
+    "maintainerURL": "",
+    "description": "Add a multiple choice quiz. Random questions are loaded usng the <a target=\"_blank\" href=\"https://the-trivia-api.com/\">Trivia API</a>.",
+    "issues": []
+  },
+  {
     "name": "MMM-Quotable",
     "category": "Entertainment / Misc",
     "url": "https://github.com/dfanica/MMM-Quotable",

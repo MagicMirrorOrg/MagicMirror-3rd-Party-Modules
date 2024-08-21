@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-08-21T03:30:08.039Z",
+  "lastUpdate": "2024-08-21T15:30:07.350Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -8422,6 +8422,16 @@
       "maintainer": "Daniel1145",
       "maintainerURL": "",
       "description": "Displays your Questrade positions.",
+      "issues": []
+    },
+    {
+      "name": "MMM-Quiz",
+      "category": "Entertainment / Misc",
+      "url": "https://github.com/Dennis-Rosenbaum/MMM-Quiz",
+      "id": "Dennis-Rosenbaum/MMM-Quiz",
+      "maintainer": "Dennis-Rosenbaum",
+      "maintainerURL": "",
+      "description": "Add a multiple choice quiz. Random questions are loaded usng the <a target=\"_blank\" href=\"https://the-trivia-api.com/\">Trivia API</a>.",
       "issues": []
     },
     {

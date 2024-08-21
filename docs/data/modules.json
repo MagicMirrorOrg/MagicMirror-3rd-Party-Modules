@@ -2447,7 +2447,7 @@
     ],
     "image": "examples-bash-curl.jpg",
     "defaultSortWeight": 0,
-    "lastCommit": "2024-08-20T16:56:48+02:00"
+    "lastCommit": "2024-08-21T13:27:58+02:00"
   },
   {
     "name": "MMM-connection-status",
@@ -13511,8 +13511,8 @@
     "stars": 2,
     "license": "MIT",
     "image": "MMM-PostDelivery-Norway.jpg",
-    "defaultSortWeight": 10,
-    "lastCommit": "2024-01-15T09:44:37+01:00"
+    "defaultSortWeight": 11,
+    "lastCommit": "2024-08-21T12:05:17+02:00"
   },
   {
     "name": "MMM-Postnord",
@@ -13944,6 +13944,18 @@
     "stars": 1,
     "defaultSortWeight": 5,
     "lastCommit": "2020-12-26T19:25:51-08:00"
+  },
+  {
+    "name": "MMM-Quiz",
+    "category": "Entertainment / Misc",
+    "url": "https://github.com/Dennis-Rosenbaum/MMM-Quiz",
+    "id": "Dennis-Rosenbaum/MMM-Quiz",
+    "maintainer": "Dennis-Rosenbaum",
+    "maintainerURL": "",
+    "description": "Add a multiple choice quiz. Random questions are loaded usng the <a target=\"_blank\" href=\"https://the-trivia-api.com/\">Trivia API</a>.",
+    "issues": true,
+    "defaultSortWeight": 2,
+    "lastCommit": "2024-05-14T12:53:23+02:00"
   },
   {
     "name": "MMM-Quotable",
@@ -17011,7 +17023,7 @@
     ],
     "image": "examples-htu21-htu21.jpg",
     "defaultSortWeight": 1,
-    "lastCommit": "2024-06-19T11:14:15+02:00"
+    "lastCommit": "2024-08-21T13:31:17+02:00"
   },
   {
     "name": "MMM-Tesla",

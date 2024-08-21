@@ -1,11 +1,11 @@
 {
-  "moduleCounter": 1175,
+  "moduleCounter": 1176,
   "modulesWithImageCounter": 802,
-  "modulesWithIssuesCounter": 1162,
-  "issueCounter": 7249,
-  "lastUpdate": "2024-08-21T05:37:31+02:00",
+  "modulesWithIssuesCounter": 1163,
+  "issueCounter": 7253,
+  "lastUpdate": "2024-08-21T17:37:22+02:00",
   "repositoryHoster": {
-    "github": 1164,
+    "github": 1165,
     "gitlab": 10,
     "bitbucket": 1
   },
@@ -537,6 +537,7 @@
     "ajones": 1,
     "JasonVonKrueger": 1,
     "Daniel1145": 1,
+    "Dennis-Rosenbaum": 1,
     "dfanica": 1,
     "Sispheor": 1,
     "jwcnewton": 1,
