@@ -10336,7 +10336,7 @@
     ],
     "image": "screenshot-horizontal.jpg",
     "defaultSortWeight": 2,
-    "lastCommit": "2024-08-13T00:06:32-07:00"
+    "lastCommit": "2024-08-20T15:43:13-07:00"
   },
   {
     "name": "MMM-mumble",
@@ -14553,8 +14553,8 @@
     "stars": 1,
     "license": "MIT",
     "image": "screenshot.jpg",
-    "defaultSortWeight": 6,
-    "lastCommit": "2024-07-23T08:12:38-05:00"
+    "defaultSortWeight": 5,
+    "lastCommit": "2024-08-20T15:11:15-05:00"
   },
   {
     "name": "MMM-RKI-Covid19",

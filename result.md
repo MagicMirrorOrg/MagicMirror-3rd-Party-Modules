@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-20T17:37:21+02:00
+Last update: 2024-08-21T05:37:31+02:00
 
 ## Statistics
 
@@ -9,7 +9,7 @@ Last update: 2024-08-20T17:37:21+02:00
 | modules analyzed     |   1175   |
 | maintainer           |    657   |
 | modules with issues  |   1162   |
-| issues               |   7250   |
+| issues               |   7249   |
 | modules at github    |   1164   |
 | modules at gitlab    |     10   |
 | modules at bitbucket |      1   |
@@ -8141,7 +8141,6 @@ Last update: 2024-08-20T17:37:21+02:00
 4. Typo: Found `Magic Mirror` in file `MMM-RingAlarm.js`: Replace it with `MagicMirror²`.
 5. Outdated: Found `MichMich/MagicMirror` in file `README.md`: Replace it by `MagicMirrorOrg/MagicMirror`.
 6. Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one.
-7. Recommendation: Replace eslintrc by new flat config.
 
 ### [MMM-RKI-Covid19 by fhinder](https://github.com/fhinder/MMM-RKI-Covid19)
 
