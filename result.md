@@ -1,6 +1,6 @@
 # Result of the module analysis
 
-Last update: 2024-08-21T17:37:22+02:00
+Last update: 2024-08-22T05:37:22+02:00
 
 ## Statistics
 
@@ -3075,13 +3075,14 @@ Last update: 2024-08-21T17:37:22+02:00
 ### [MMM-GoogleAssistant by bugsounet](https://github.com/bugsounet/MMM-GoogleAssistant)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Information: There are updates for 6 dependencie(s):
+2. Information: There are updates for 7 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.9.0
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.6.4
    - esbuild                   ^0.23.0  →  ^0.23.1
    - eslint                    ^8.57.0  →   ^9.9.0
    - glob                      ^10.4.5  →  ^11.0.0
    - google-auth-library       ^9.13.0  →  ^9.14.0
+   - protobufjs                 ^7.3.2  →   ^7.3.3
 
 
 ### [MMM-GoogleAssistant by gauravsacc](https://github.com/gauravsacc/MMM-GoogleAssistant)
@@ -9081,12 +9082,13 @@ Last update: 2024-08-21T17:37:22+02:00
 ### [EXT-SpotifyCanvasLyrics by bugsounet](https://github.com/bugsounet/EXT-SpotifyCanvasLyrics)
 
 1. Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.
-2. Information: There are updates for 5 dependencie(s):
+2. Information: There are updates for 6 dependencie(s):
    - @eslint/js                ^8.57.0  →   ^9.9.0
    - @stylistic/eslint-plugin   ^1.8.1  →   ^2.6.4
    - esbuild                   ^0.22.0  →  ^0.23.1
    - eslint                    ^8.57.0  →   ^9.9.0
    - glob                      ^10.4.2  →  ^11.0.0
+   - protobufjs                 ^7.3.2  →   ^7.3.3
 
 
 ### [MMM-SpotifyConnectUI by CatoAntonsen](https://github.com/CatoAntonsen/MMM-SpotifyConnectUI)
