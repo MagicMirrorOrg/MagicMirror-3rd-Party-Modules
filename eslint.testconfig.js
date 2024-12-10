@@ -1,8 +1,10 @@
+import eslintPluginDepend from "eslint-plugin-depend";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginJs from "@eslint/js";
 import globals from "globals";
 
 const config = [
+  eslintPluginDepend.configs["flat/recommended"],
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginJs.configs.recommended,
   {
@@ -27,6 +29,7 @@ const config = [
       "reportUnusedDisableDirectives": "off"
     },
     "rules": {
+      "depend/ban-dependencies": ["error", {"allowed": ["moment", "eslint-plugin-import"]}],
       "import/no-unresolved": "off",
       "no-prototype-builtins": "off",
       "no-redeclare": "off",
@@ -46,7 +49,14 @@ const config = [
       "reportUnusedDisableDirectives": "off"
     },
     "rules": {
+      "depend/ban-dependencies": ["error", {"allowed": ["moment", "eslint-plugin-import"]}],
       "import/no-unresolved": "off"
+    }
+  },
+  {
+    "files": ["package.json"],
+    "rules": {
+      "depend/ban-dependencies": ["error", {"allowed": ["moment", "eslint-plugin-import"]}]
     }
   }
 ];

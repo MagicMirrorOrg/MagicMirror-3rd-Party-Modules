@@ -1,3 +1,4 @@
+import eslintPluginDepend from "eslint-plugin-depend";
 import eslintPluginImport from "eslint-plugin-import";
 import eslintPluginJs from "@eslint/js";
 import eslintPluginJson from "@eslint/json";
@@ -6,6 +7,7 @@ import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import globals from "globals";
 
 const config = [
+  eslintPluginDepend.configs["flat/recommended"],
   eslintPluginImport.flatConfigs.recommended,
   eslintPluginJs.configs.all,
   {
@@ -44,6 +46,7 @@ const config = [
       ...eslintPluginJs.configs.all.rules,
       ...eslintPluginStylistic.configs["all-flat"].rules,
       "complexity": "off",
+      "depend/ban-dependencies": ["error", {"allowed": ["moment", "eslint-plugin-import"]}],
       "func-style": "off",
       "id-length": ["error", {"exceptions": ["a", "b"]}],
       "import/no-unresolved": "off",
