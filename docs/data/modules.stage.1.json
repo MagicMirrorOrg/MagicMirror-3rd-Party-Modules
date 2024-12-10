@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2024-11-26T23:06:46.456Z",
+  "lastUpdate": "2024-12-10T00:57:27.765Z",
   "modules": [
     {
       "name": "MMM-01ZM",
@@ -89,6 +89,16 @@
       "maintainer": "Jopyth",
       "maintainerURL": "",
       "description": "Display a candle burning down towards a specific date (e.g. an advent candle).",
+      "issues": []
+    },
+    {
+      "name": "MMM-Adventskalender",
+      "category": "Entertainment / Misc",
+      "url": "https://github.com/ChrisF1976/MMM-Adventskalender",
+      "id": "ChrisF1976/MMM-Adventskalender",
+      "maintainer": "ChrisF1976",
+      "maintainerURL": "",
+      "description": "Simple advent calendar. New in 2024. Will be updated in 2025.",
       "issues": []
     },
     {
@@ -451,6 +461,16 @@
       "maintainer": "AndyHazz",
       "maintainerURL": "",
       "description": "Display Aurora alerts when visibility is likely in the UK.",
+      "issues": []
+    },
+    {
+      "name": "MMM-AuthenticatedUptimeKuma",
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "url": "https://github.com/totoluto/MMM-AuthenticatedUptimeKuma",
+      "id": "totoluto/MMM-AuthenticatedUptimeKuma",
+      "maintainer": "totoluto",
+      "maintainerURL": "https://github.com/totoluto",
+      "description": "Display monitor data from selfhosted <a target=\"_blank\" href=\"https://github.com/louislam/uptime-kuma\">https://github.com/louislam/uptime-kuma</a>. Uses token authentication and does not need a public status page like MMM-uptimekuma. There are also more styling options and different values can be displayed.",
       "issues": []
     },
     {
@@ -3659,13 +3679,14 @@
     },
     {
       "name": "MMM-GoogleShoppingList",
-      "category": "Utility / IoT / 3rd Party / Integration",
+      "category": "Outdated Modules",
       "url": "https://github.com/Gismo150/MMM-GoogleShoppingList",
       "id": "Gismo150/MMM-GoogleShoppingList",
       "maintainer": "Gismo150",
       "maintainerURL": "",
       "description": "Display a google shoppinglist items.",
-      "issues": []
+      "issues": [],
+      "outdated": "Abandoned. No reactions to issues since years. Seems not to work anymore."
     },
     {
       "name": "MMM-GoogleTasks",
@@ -3715,6 +3736,16 @@
       "maintainer": "Tom-Hirschberger",
       "maintainerURL": "https://github.com/Tom-Hirschberger",
       "description": "Send notifications based on GPIO events. Can be used as PIR module and with rotary encoders.",
+      "issues": []
+    },
+    {
+      "name": "MMM-GPollen",
+      "category": "Weather",
+      "url": "https://github.com/martijndoes/MMM-GPollen",
+      "id": "martijndoes/MMM-GPollen",
+      "maintainer": "martijndoes",
+      "maintainerURL": "https://github.com/martijndoes",
+      "description": "Displays the pollen information (in table or map form) for your location based on the Google API.",
       "issues": []
     },
     {
@@ -6955,6 +6986,16 @@
       "issues": []
     },
     {
+      "name": "MMM-NewsAPI",
+      "category": "News / Information",
+      "url": "https://github.com/totoluto/MMM-NewsAPI",
+      "id": "totoluto/MMM-NewsAPI",
+      "maintainer": "totoluto",
+      "maintainerURL": "https://github.com/totoluto",
+      "description": "Get top headlines from <a target=\"_blank\" href=\"https://newsapi.org\">newsapi.org</a>.",
+      "issues": []
+    },
+    {
       "name": "MMM-NewsFeedTicker",
       "category": "Utility / IoT / 3rd Party / Integration",
       "url": "https://github.com/justjim1220/MMM-NewsFeedTicker",
@@ -9846,6 +9887,16 @@
       "issues": []
     },
     {
+      "name": "MMM-SocketClientController",
+      "category": "Development / Core MagicMirror²",
+      "url": "https://github.com/totoluto/MMM-SocketClientController",
+      "id": "totoluto/MMM-SocketClientController",
+      "maintainer": "totoluto",
+      "maintainerURL": "https://github.com/totoluto/",
+      "description": "This module allows you to control your MagicMirror² via an external API. It listens to the socket events which are deployed by your socket server.",
+      "issues": []
+    },
+    {
       "name": "MMM-Solar",
       "category": "Utility / IoT / 3rd Party / Integration",
       "url": "https://github.com/tkrywit/MMM-Solar",
@@ -11823,7 +11874,7 @@
       "id": "btoconnor/MMM-WMATA",
       "maintainer": "btoconnor",
       "maintainerURL": "https://github.com/btoconnor",
-      "description": "Display WMATA Bus and Train arrival times.  Rewritten version from MMM-DCMetroTimes and MMM-DCMetroTrainTimes",
+      "description": "Display WMATA Bus and Train arrival times. Rewritten version from MMM-DCMetroTimes and MMM-DCMetroTrainTimes.",
       "issues": []
     },
     {
