@@ -373,10 +373,10 @@ def check_modules():
                 module["issues"].append("Warning: No LICENSE file.")
 
             if "CHANGELOG" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Recommendation: There ist no CHANGELOG file. It is recommended to add one.")
+                module["issues"].append("Recommendation: There is no CHANGELOG file. It is recommended to add one.")
 
             if "CODE_OF_CONDUCT" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Recommendation: There ist no CODE_OF_CONDUCT file. It is recommended to add one.")
+                module["issues"].append("Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one.")
 
             if "eslintrc" in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append(
