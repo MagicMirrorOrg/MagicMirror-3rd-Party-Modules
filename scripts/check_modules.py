@@ -467,7 +467,7 @@ def check_modules():
     markdown_output += "|                      | number   |\n"
     markdown_output += "|:---------------------|:--------:|\n"
     markdown_output += f"| modules analyzed     | {           stats['moduleCounter']:>6}   |\n"
-    markdown_output += f"| maintainer           | {         len(stats['maintainer']):>6}   |\n"
+    markdown_output += f"| maintainers          | {         len(stats['maintainer']):>6}   |\n"
     markdown_output += f"| modules with issues  | {stats['modulesWithIssuesCounter']:>6}   |\n"
     markdown_output += f"| issues               | {            stats['issueCounter']:>6}   |\n"
 
