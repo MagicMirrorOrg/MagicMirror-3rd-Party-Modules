@@ -52,27 +52,27 @@ def check_modules():
             "category": "Typo"
         },
         'require("request")': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         "require('request')": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         'require("request-promise")': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         "require('request-promise')": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         'require("native-request")': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         "require('native-request')": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Deprecated",
         },
         'require("http")': {
@@ -92,31 +92,31 @@ def check_modules():
             "category": "Recommendation",
         },
         "'node-fetch'": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         '"node-fetch"': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         'require("fetch")': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         "require('fetch')": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         "axios": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         '"needle"': {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         "'needle'": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         "omxplayer": {
@@ -125,7 +125,7 @@ def check_modules():
             "source": "https://github.com/popcornmix/omxplayer",
         },
         "XMLHttpRequest": {
-            "name": "Replace it with built-in fetch.",
+            "name": "Replace it with built-in fetch (docs: <https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>; example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/node_helper.js>).",
             "category": "Recommendation",
         },
         "uses: actions/checkout@v2": {
@@ -370,20 +370,20 @@ def check_modules():
                                         f"Recommendation: `{file_path.name}`: Use official file extension `.yaml` instead of `.yml` (<https://yaml.org/faq.html>).")
 
             if "LICENSE" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Warning: No LICENSE file.")
+                module["issues"].append("Warning: No LICENSE file (example: <https://github.com/KristjanESPERANTO/MMM-WebSpeechTTS/blob/main/LICENSE.md>).")
 
             if "CHANGELOG" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Recommendation: There is no CHANGELOG file. It is recommended to add one.")
+                module["issues"].append("Recommendation: There is no CHANGELOG file. It is recommended to add one (example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CHANGELOG.md>).")
 
             if "CODE_OF_CONDUCT" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one.")
+                module["issues"].append("Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one (example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CODE_OF_CONDUCT.md>).")
 
             if "eslintrc" in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append(
                     "Recommendation: Replace eslintrc by new flat config.")
             elif "eslint.config" not in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append(
-                    "Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.")
+                    "Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects (basic instructions: <https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/issues/11>).")
             else:
                 # Check if ESLint is in the dependencies or devDependencies
                 package_json = Path(f"{module_directory_path}/package.json")
