@@ -370,7 +370,7 @@ def check_modules():
                                         f"Recommendation: `{file_path.name}`: Use official file extension `.yaml` instead of `.yml` (<https://yaml.org/faq.html>).")
 
             if "LICENSE" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Warning: No LICENSE file.")
+                module["issues"].append("Warning: No LICENSE file (example: <https://github.com/KristjanESPERANTO/MMM-WebSpeechTTS/blob/main/LICENSE.md>).")
 
             if "CHANGELOG" not in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append("Recommendation: There is no CHANGELOG file. It is recommended to add one (example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CHANGELOG.md>).")
