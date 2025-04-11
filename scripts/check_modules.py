@@ -383,7 +383,7 @@ def check_modules():
                     "Recommendation: Replace eslintrc by new flat config.")
             elif "eslint.config" not in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append(
-                    "Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects.")
+                    "Recommendation: No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects (basic instructions: <https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/issues/11>).")
             else:
                 # Check if ESLint is in the dependencies or devDependencies
                 package_json = Path(f"{module_directory_path}/package.json")
