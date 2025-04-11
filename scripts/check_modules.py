@@ -376,7 +376,7 @@ def check_modules():
                 module["issues"].append("Recommendation: There is no CHANGELOG file. It is recommended to add one (example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CHANGELOG.md>).")
 
             if "CODE_OF_CONDUCT" not in str(sorted(module_directory_path.rglob("*"))):
-                module["issues"].append("Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one.")
+                module["issues"].append("Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one (example: <https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CODE_OF_CONDUCT.md>).")
 
             if "eslintrc" in str(sorted(module_directory_path.rglob("*"))):
                 module["issues"].append(
