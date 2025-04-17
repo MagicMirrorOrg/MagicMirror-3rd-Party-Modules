@@ -342,12 +342,18 @@ def check_modules():
                                     )
 
                             if file_path.name.startswith("README") and file_path.parent == module_directory_path:
-                                # Search for "update" or "Update" in README
+                                # Search for "update", "Update", "updating", or "Updating" in README
                                 found_update_string = search_in_file(
                                     file_path, "Update")
                                 if not found_update_string:
                                     found_update_string = search_in_file(
                                         file_path, "update")
+                                if not found_update_string:
+                                    found_update_string = search_in_file(
+                                        file_path, "updating")
+                                if not found_update_string:
+                                    found_update_string = search_in_file(
+                                        file_path, "Updating")
                                 if not found_update_string:
                                     module["issues"].append(
                                         "Recommendation: The README seems not to have an update instruction (the word 'update' is missing). Please add one."
