@@ -23,7 +23,7 @@ Tips:
 
 
 
-# Config
+# Config Instructions
 
 Your README file should have a "Config" or "Configuration" section that includes an example config block that can be pasted into user's `config.js` files.  Here is a good example of a config code block:
 
