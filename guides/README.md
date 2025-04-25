@@ -10,4 +10,12 @@ Please help use to improve this guide. If you have any suggestions, please creat
 
 ## Hint "No ESLint configuration was found. ESLint is very helpful, it is worth using it even for small projects."
 
-To get started with ESLint checkout [ESLint](eslint.md).
+To get started with ESLint, check out [ESLint](eslint.md).
+
+## Hint "Recommendation: The README seems not to have an install section (like ## Installation). Please add one."
+
+For information on best practices for an installation section, check out [Installation Instructions](readme_bestpractices.md#Installation-Instructions).
+
+## Hint "Recommendation: The README seems not to have an update section (like ## Update). Please add one."
+
+For information on best practices for an update section, check out [Update Instructions](readme_bestpractices.md#Update-Instructions).
