@@ -12,7 +12,7 @@ Please help use to improve this guide. If you have any suggestions, please creat
 
 To get started with ESLint, check out [ESLint](eslint.md).
 
-## Hint "Recommendation: The README seems to have a config example without a trailing comma. Please add one."
+## Hint "Recommendation: The README seems not to have a config example. Please add one."
 
 For information on best practices for a README config section, check out [Config Instructions](readme_bestpractices.md#Config-Instructions).
 
@@ -23,3 +23,11 @@ For information on best practices for a README installation section, check out [
 ## Hint "Recommendation: The README seems not to have an update section (like ## Update). Please add one."
 
 For information on best practices for a README update section, check out [Update Instructions](readme_bestpractices.md#Update-Instructions).
+
+## Hint "Recommendation: The README seems to have a config example without a trailing comma. Please add one."
+
+For information on best practices for a README config section, check out [Config Instructions](readme_bestpractices.md#Config-Instructions).
+
+## Hint "Recommendation: The README seems to have a modules array (Found modules: [). This is usually not necessary. Please remove it if it is not needed."
+
+For information on best practices for a README config section, check out [Config Instructions](readme_bestpractices.md#Config-Instructions).
