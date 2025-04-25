@@ -1,10 +1,10 @@
 This file contains suggested best practices for creating a README file for your MagicMirror² module.  
 
-# Installation
+# Installation Instructions
 
 Your README file should have an "Install" or "Installation" section that includes a code block that can be pasted into a user's terminal to fully install your module.  Here is a good example of an install code block:
 
-````bash
+````
 ```bash
 cd ~/MagicMirror/modules # adapt to your modules folder location for non-standard MagicMirror² installs
 git clone https://github.com/MyUsername/MMM-MyModule
@@ -18,6 +18,10 @@ Tips:
 * The opening `` ``` `` of your code block should be followed by "`sh`" or "`bash`" so that the code block is styled as shell script.
 * If your module has required dependencies, `npm ci` is preferable to `npm install` in many circumstances because it will repeatably instruct users' machines not to recreate the `package-lock.json` file.
 * Adding `--omit=dev` to the `npm ci` or `npm install` command will instruct users' machines not to install developer dependencies that are unneeded by most users, which will save on install time and disk space.
+
+# Update Instructions
+
+
 
 # Config
 
