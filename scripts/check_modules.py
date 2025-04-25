@@ -359,7 +359,7 @@ def check_modules():
                                     file_path, "## Updat")
                                 if not found_update_section:
                                     module["issues"].append(
-                                        "Recommendation: The README seems not to have an update section (like `## Update`). Please add one."
+                                        "Recommendation: The README seems not to have an update section (like `## Update`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Update-Instructions))."
                                     )
 
                                 # Search for an install section in README
@@ -367,7 +367,7 @@ def check_modules():
                                     file_path, "## Install")
                                 if not found_install_section:
                                     module["issues"].append(
-                                        "Recommendation: The README seems not to have an install section (like `## Installation`). Please add one."
+                                        "Recommendation: The README seems not to have an install section (like `## Installation`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Installation-Instructions))."
                                     )
 
                                 # Search for "modules: [" in README
@@ -377,7 +377,7 @@ def check_modules():
 
                                 if found_modules_string and module["name"] not in false_positive_modules:
                                     module["issues"].append(
-                                        "Recommendation: The README seems to have a modules array (Found `modules: [`). This is usually not necessary. Please remove it if it is not needed."
+                                        "Recommendation: The README seems to have a modules array (Found `modules: [`). This is usually not necessary. Please remove it if it is not needed ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
                                     )
 
                                 # Search for config example with regex "\{\s*[^}]*?\s*config:\s*\{\s*[^}]*\}(?!\s*,\s*\})\s*\}"
@@ -389,7 +389,7 @@ def check_modules():
                                     false_positive_modules = ["MMM-CalendarExt2"]
                                     if not found_modules_string and module["name"] not in false_positive_modules:
                                         module["issues"].append(
-                                            "Recommendation: The README seems not to have a config example. Please add one."
+                                            "Recommendation: The README seems not to have a config example. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
                                         )
                                 else:
                                     # Check if the config example has an trailing comma
@@ -398,7 +398,7 @@ def check_modules():
                                     false_positive_modules = ["MMM-MealieMenu", "MMM-Remote-Control"]
                                     if not found_trailing_comma and module["name"] not in false_positive_modules:
                                         module["issues"].append(
-                                            "Recommendation: The README seems to have a config example without a trailing comma. Please add one."
+                                            "Recommendation: The README seems to have a config example without a trailing comma. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
                                         )
 
                             if len(module["issues"]) < 1:
