@@ -71,7 +71,7 @@
     "@eslint/markdown": "^6.4.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "cspell": "^8.19.2",
-    "eslint": "^9.25.0",
+    "eslint": "^9.26.0",
     "eslint-plugin-depend": "^1.0.0",
     "eslint-plugin-import-x": "^4.10.6",
     "eslint-plugin-package-json": "^0.29.1",
