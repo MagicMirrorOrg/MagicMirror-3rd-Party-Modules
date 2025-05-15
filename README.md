@@ -12,7 +12,7 @@ Based on the original list, we automatically create a website with filter functi
 
 ### How do I get my module presented in the new list?
 
-Add your module to [the original list in the wiki](https://github.com/MagicMirrorOrg/MagicMirror/wiki/3rd-party-modules). Twice a day the new list will be updated based on the original list.
+Add your module to [the original list in the wiki](https://github.com/MagicMirrorOrg/MagicMirror/wiki/3rd-party-modules). Once a day the new list will be updated based on the original list.
 
 ### How do I get my module presented perfectly in the new list?
 
