@@ -30,7 +30,8 @@
     "modules/",
     "modules_temp/",
     "docs/**",
-    "eslint-config-DEBUG.json"
+    "eslint-config-DEBUG.json",
+    "container/"
   ],
   "dictionaries": ["node"]
 }
