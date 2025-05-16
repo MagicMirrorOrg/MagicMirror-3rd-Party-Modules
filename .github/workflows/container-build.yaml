@@ -1,0 +1,33 @@
+name: "Container Build"
+
+on:
+  workflow_dispatch: # needed for manually running this workflow
+  schedule:
+    - cron: "30 5 * * *" # sadly there is not TZ support here
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: downcase REPO
+        run: |
+          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
+      - uses: int128/kaniko-action@v1
+        with:
+          file: container/Dockerfile
+          push: true
+          tags: ghcr.io/${{ env.REPO }}:${{ github.ref_name }}
+          labels: GITREF=${{ github.sha }}
+          build-args: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
