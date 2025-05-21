@@ -3,7 +3,7 @@ name: "Container Build"
 on:
   workflow_dispatch: # needed for manually running this workflow
   schedule:
-    - cron: "30 5 * * *" # sadly there is no TZ support here
+    - cron: "15 3 * * *" # sadly there is no TZ support here
 
 permissions:
   contents: read
