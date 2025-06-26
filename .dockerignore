@@ -1,0 +1,5 @@
+/.husky/*
+/.github/*
+/docs/data/*
+/docs/images/*
+/guides/*

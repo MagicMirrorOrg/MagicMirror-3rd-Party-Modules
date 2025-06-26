@@ -12,25 +12,26 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+    container:
+      image: moby/buildkit:latest
+      options: --privileged
     steps:
       # checkout code:
       - uses: actions/checkout@v4
-      # create json file with credentials for github container registry:
-      - uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      # ugly workaround for converting content of $GITHUB_REPOSITORY (= `MagicMirrorOrg/MagicMirror-3rd-Party-Modules`)
-      # to lowercase which is needed for using as image name
-      - name: downcase GITHUB_REPOSITORY
+        name: checkout code
+      # build image:
+      - name: build container
         run: |
-          echo "REPO=${GITHUB_REPOSITORY@L}" >> "${GITHUB_ENV}"
-      # build container image with kaniko:
-      - uses: int128/kaniko-action@v1
-        with:
-          file: container/Dockerfile
-          push: true
-          tags: ghcr.io/${{ env.REPO }}:${{ github.ref_name }}
-          labels: GITREF=${{ github.sha }}
-          build-args: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          # registry credentials
+          export DOCKER_CONFIG="$(pwd)/container"
+          echo "{\"auths\":{\"ghcr.io\":{\"auth\":\"$(echo -n ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }} | base64)\"}}}" > $DOCKER_CONFIG/config.json
+          # ugly workaround for converting content of $GITHUB_REPOSITORY (= `MagicMirrorOrg/MagicMirror-3rd-Party-Modules`)
+          REPO="$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')"
+          # build
+          buildctl-daemonless.sh build \
+            --progress plain \
+            --frontend=dockerfile.v0 \
+            --local context=. \
+            --local dockerfile=container \
+            --output type=image,"\"name=ghcr.io/${REPO}:${{ github.ref_name }}\",push=true"
