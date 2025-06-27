@@ -25,7 +25,7 @@ jobs:
         run: |
           # registry credentials
           export DOCKER_CONFIG="$(pwd)/container"
-          echo "{\"auths\":{\"ghcr.io\":{\"auth\":\"$(echo -n ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }} | base64)\"}}}" > $DOCKER_CONFIG/config.json
+          echo "{\"auths\":{\"ghcr.io\":{\"auth\":\"$(echo -n ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }} | base64 -w 0)\"}}}" > $DOCKER_CONFIG/config.json
           # ugly workaround for converting content of $GITHUB_REPOSITORY (= `MagicMirrorOrg/MagicMirror-3rd-Party-Modules`)
           REPO="$(echo $GITHUB_REPOSITORY | tr '[:upper:]' '[:lower:]')"
           # build
