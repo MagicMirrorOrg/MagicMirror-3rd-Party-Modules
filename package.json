@@ -49,7 +49,7 @@
     ]
   },
   "dependencies": {
-    "marked": "^16.0.0",
+    "marked": "^16.1.1",
     "normalize-package-data": "^7.0.0",
     "npm-check-updates": "^18.0.1",
     "npm-deprecated-check": "^1.5.1",
