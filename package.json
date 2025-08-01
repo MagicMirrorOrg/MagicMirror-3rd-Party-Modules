@@ -55,7 +55,7 @@
     "npm-deprecated-check": "^1.5.0",
     "ntl": "^5.1.0",
     "sanitize-html": "^2.17.0",
-    "sharp": "^0.34.2"
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@eslint/css": "^0.9.0",
