@@ -51,7 +51,7 @@
   "dependencies": {
     "marked": "^16.2.0",
     "normalize-package-data": "^8.0.0",
-    "npm-check-updates": "^18.0.2",
+    "npm-check-updates": "^18.0.3",
     "npm-deprecated-check": "^1.5.1",
     "ntl": "^5.1.0",
     "sanitize-html": "^2.17.0",
