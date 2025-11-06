@@ -1,8 +1,4 @@
-FROM node:24-slim AS builder
-
-RUN apt-get update \
-	&& apt-get install -y --no-install-recommends git ca-certificates \
-	&& rm -rf /var/lib/apt/lists/*
+FROM node:lts AS builder
 
 WORKDIR /workspace
 
@@ -27,3 +23,5 @@ COPY container/nginx.conf /etc/nginx/
 COPY --from=builder /workspace/website /usr/share/nginx/website/
 
 EXPOSE 8080
+
+HEALTHCHECK --timeout=10s --start-period=60s CMD wget -qO /dev/null http://0.0.0.0:8080
