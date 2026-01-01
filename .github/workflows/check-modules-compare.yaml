@@ -51,7 +51,7 @@ jobs:
 
       - name: Upload comparison artifacts
         if: always()
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: compare-harness-${{ steps.prepare.outputs.run-id }}
           path: .pipeline-runs/compare/${{ steps.prepare.outputs.run-id }}
