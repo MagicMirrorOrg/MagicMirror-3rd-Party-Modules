@@ -783,7 +783,7 @@ async function checkWorkflowOptimization({ moduleDir, issues, config }) {
         message += `${attentionCount} GitHub Actions job${plural} could potentially use \`ubuntu-slim\` but may require additional setup.`;
       }
 
-      message += " Run \`gh slimify --all\` in the repository for details.";
+      message += " Run \`gh slimify --all\` in the repository for details. ([gh-slimify extension](https://github.com/fchimpan/gh-slimify))";
       addIssue(issues, message);
     }
   } catch (error) {
