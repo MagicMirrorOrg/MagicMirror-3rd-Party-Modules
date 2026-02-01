@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@v6
       - name: Restore repository API cache
         id: repository-api-cache-restore
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v5
         with:
           path: website/data/cache
           key: repository-api-cache-${{ github.ref_name }}-${{ github.run_id }}
@@ -104,7 +104,7 @@ jobs:
           if-no-files-found: warn
       - name: Save repository API cache
         if: always()
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v5
         with:
           path: website/data/cache
           key: repository-api-cache-${{ github.ref_name }}-${{ github.run_id }}
