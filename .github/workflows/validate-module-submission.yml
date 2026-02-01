@@ -65,7 +65,7 @@ jobs:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
 
       - name: Generate validation report
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
@@ -185,7 +185,7 @@ jobs:
     steps:
       - name: Check if user is in trusted-contributors team
         id: check-trusted
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const author = context.payload.pull_request.user.login;
