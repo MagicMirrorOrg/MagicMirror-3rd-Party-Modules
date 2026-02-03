@@ -50,6 +50,7 @@
     "test": "node --run test:fixtures && node --run lint && node --run golden:check && node --run schemas:check && node --run test:unit && node --run test:spelling",
     "test:unit": "node --test scripts/**/__tests__/**/*.test.js",
     "test:spelling": "cspell .",
+    "test:types": "tsc --noEmit",
     "leaveMenu": "echo 'Leaving menu...'"
   },
   "simple-git-hooks": {
@@ -90,6 +91,7 @@
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "simple-git-hooks": "^2.13.1",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
   },
   "ntl": {
