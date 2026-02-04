@@ -46,7 +46,7 @@
     "lint:fix": "eslint --fix && prettier . --write",
     "prepare": "simple-git-hooks",
     "test": "node --run test:fixtures && node --run lint && node --run golden:check && node --run schemas:check && node --run test:unit && node --run test:spelling",
-    "test:unit": "node --test scripts/shared/__tests__/**/*.test.js && node --test scripts/check-modules/__tests__/**/*.test.js && node --test scripts/check-modules/compare/__tests__/**/*.test.js",
+    "test:unit": "node --test scripts/**/__tests__/**/*.test.js",
     "test:spelling": "cspell .",
     "leaveMenu": "echo 'Leaving menu...'"
   },
