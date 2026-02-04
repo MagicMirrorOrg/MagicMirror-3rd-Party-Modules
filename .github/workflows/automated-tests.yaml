@@ -31,3 +31,19 @@ jobs:
       - name: Check linting
         run: node --run lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+  unit-tests:
+    runs-on: ubuntu-slim
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run Unit Tests
+        run: npm run test:unit
