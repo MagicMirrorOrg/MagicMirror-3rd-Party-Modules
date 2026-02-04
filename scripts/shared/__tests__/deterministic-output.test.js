@@ -118,10 +118,10 @@ describe("deterministic-output", () => {
       assert.strictEqual(name, "MMM-Test---example.png");
     });
 
-    it("should use default jpg extension", () => {
+    it("should use default webp extension", () => {
       const name = createDeterministicImageName("MMM-Test", "example");
 
-      assert.strictEqual(name, "MMM-Test---example.jpg");
+      assert.strictEqual(name, "MMM-Test---example.webp");
     });
 
     it("should be human-readable", () => {
