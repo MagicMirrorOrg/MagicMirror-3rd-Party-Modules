@@ -32,4 +32,6 @@ jobs:
         run: node --run lint
       - name: Run Unit Tests
         run: npm run test:unit
+      - name: Check TypeScript types
+        run: node --run test:types
       - run: echo "🍏 This job's status is ${{ job.status }}."
