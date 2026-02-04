@@ -47,7 +47,7 @@
     "lint": "eslint && prettier --check .",
     "lint:fix": "eslint --fix && prettier . --write",
     "prepare": "simple-git-hooks",
-    "test": "node --run test:fixtures && node --run lint && node --run golden:check && node --run schemas:check && node --run test:unit && node --run test:spelling",
+    "test": "node --run test:fixtures && node --run lint && node --run golden:check && node --run schemas:check && node --run test:unit && node --run test:types && node --run test:spelling",
     "test:unit": "node --test scripts/**/__tests__/**/*.test.js",
     "test:spelling": "cspell .",
     "test:types": "tsc --noEmit",
