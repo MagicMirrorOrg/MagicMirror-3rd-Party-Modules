@@ -96,7 +96,7 @@ jobs:
           rm -rf build-output
       - name: Upload pipeline data for validation
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: website-data
           path: website/data/skipped_modules.json
@@ -135,7 +135,7 @@ jobs:
 
       - name: Upload skipped modules report (if validation failed)
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: skipped-modules-report
           path: website/data/skipped_modules.json
