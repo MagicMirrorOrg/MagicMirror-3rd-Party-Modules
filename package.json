@@ -80,7 +80,7 @@
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^25.7.0",
+    "@types/node": "^25.9.1",
     "@types/normalize-package-data": "^2.4.4",
     "cspell": "^10.0.0",
     "eslint": "^10.3.0",
