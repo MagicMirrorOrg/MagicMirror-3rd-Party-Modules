@@ -133,7 +133,7 @@ function removeSelectedMarkingFromTagsAndCards() {
 function displayStatistics(data) {
   const lastUpdateDate = new Date(data.lastUpdate).toLocaleString();
   const lastUpdateDiv = document.getElementById("last-update");
-  lastUpdateDiv.innerHTML = `Last Update: ${lastUpdateDate}`;
+  lastUpdateDiv.textContent = `Last Update: ${lastUpdateDate}`;
 }
 
 function filterBySearchText(searchText) {
