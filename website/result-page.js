@@ -1,5 +1,12 @@
+import createDOMPurify from "./vendor/dompurify.mjs";
 // eslint-disable-next-line import-x/no-unresolved
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
+const DOMPurify = createDOMPurify(window);
+
+function sanitizeMarkdownHtml(markdown) {
+  return DOMPurify.sanitize(marked.parse(markdown));
+}
 
 function normalizeModuleSlug(text) {
   return text
@@ -243,7 +250,7 @@ async function loadAndDisplayMarkdown() {
         moduleSlug
       );
       if (filtered) {
-        markdownContainer.innerHTML = marked.parse(filtered.markdown);
+        markdownContainer.innerHTML = sanitizeMarkdownHtml(filtered.markdown);
         setPageTitle(filtered.title);
         setFullHintsListLink(fullResultsLink);
       }
@@ -261,7 +268,7 @@ async function loadAndDisplayMarkdown() {
           outdatedModulesBySlug,
           outdatedFilter.checked
         );
-        markdownContainer.innerHTML = marked.parse(filteredMarkdown);
+        markdownContainer.innerHTML = sanitizeMarkdownHtml(filteredMarkdown);
         addHeadingAnchors();
       };
 

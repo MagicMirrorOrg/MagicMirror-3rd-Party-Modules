@@ -1,11 +1,15 @@
+import createDOMPurify from "./vendor/dompurify.mjs";
+
 const cardTemplate = document.getElementById("card-template");
+const DOMPurify = createDOMPurify(window);
 
 function renderDescription(description) {
   if (typeof window.marked?.parseInline !== "function") {
     return description || "";
   }
 
-  return window.marked.parseInline(description || "");
+  const rendered = window.marked.parseInline(description || "");
+  return DOMPurify.sanitize(rendered);
 }
 
 export function createCard(moduleData, { filterByMaintainer, filterByTag }) {
@@ -15,7 +19,8 @@ export function createCard(moduleData, { filterByMaintainer, filterByTag }) {
     card.querySelector(".card").classList.add("skipped");
     card.querySelector(".name").textContent = moduleData.name || "Unknown Module";
     card.querySelector(".name").href = moduleData.url || "#";
-    card.querySelector(".description").innerHTML = `<span style='color:red;font-weight:bold'>Error: Module could not be loaded.</span><br>${moduleData.error || "Unknown Error"}`;
+    card.querySelector(".description").textContent
+      = `Error: Module could not be loaded. ${moduleData.error || "Unknown Error"}`;
     card.querySelector(".maintainer").textContent = moduleData.maintainer || "?";
     [".stars", ".tags", ".img-container", ".info", ".outdated-note"].forEach((selector) => {
       const element = card.querySelector(selector);
@@ -122,7 +127,7 @@ export function createCard(moduleData, { filterByMaintainer, filterByTag }) {
 
   if (moduleData.outdated) {
     card.querySelector(".card").classList.add("outdated");
-    card.querySelector(".outdated-note").innerHTML = moduleData.outdated;
+    card.querySelector(".outdated-note").textContent = moduleData.outdated;
   }
   else {
     card.querySelector(".outdated-note").remove();

@@ -19,7 +19,8 @@ export default defineConfig([
       "website/fonts/*",
       "website/result.html",
       "website/result.md",
-      "website/test/3rd-Party-Modules.md"
+      "website/test/3rd-Party-Modules.md",
+      "website/vendor/dompurify.mjs"
     ]
   },
   {

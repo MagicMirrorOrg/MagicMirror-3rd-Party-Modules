@@ -7,6 +7,7 @@ dist/schemas/*.json
 fixtures/baseline/
 fixtures/data/
 website/fonts/
+website/vendor/
 modules/
 result.md
 modules_temp/
