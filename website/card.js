@@ -1,4 +1,4 @@
-import createDOMPurify from "./vendor/dompurify.mjs";
+import createDOMPurify from "./vendor/dompurify.js";
 
 const cardTemplate = document.getElementById("card-template");
 const DOMPurify = createDOMPurify(window);

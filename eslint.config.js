@@ -20,7 +20,7 @@ export default defineConfig([
       "website/result.html",
       "website/result.md",
       "website/test/3rd-Party-Modules.md",
-      "website/vendor/dompurify.mjs"
+      "website/vendor/*"
     ]
   },
   {

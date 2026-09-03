@@ -14,7 +14,7 @@ const destination = join(
   projectRoot,
   "website",
   "vendor",
-  "dompurify.mjs"
+  "dompurify.js"
 );
 
 await mkdir(dirname(destination), { recursive: true });
