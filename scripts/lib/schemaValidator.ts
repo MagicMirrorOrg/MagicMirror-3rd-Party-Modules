@@ -51,11 +51,44 @@ function getValidator(stageId: string): ValidateFunction {
   return validator;
 }
 
-function formatErrors(errors: ErrorObject[]): string {
+function getModuleContext(error: ErrorObject, data: unknown): string {
+  const match = /^\/modules\/(\d+)(?:\/([^/]+))?$/u.exec(error.instancePath);
+  if (!match || !data || typeof data !== "object" || !("modules" in data)) {
+    return "";
+  }
+
+  const modules = (data as { modules?: unknown }).modules;
+  const index = Number(match[1]);
+  if (!Array.isArray(modules)) {
+    return "";
+  }
+
+  const module = modules[index];
+  if (!module || typeof module !== "object") {
+    return "";
+  }
+
+  const record = module as Record<string, unknown>;
+  const details = [`module[${index}]`];
+  for (const key of ["name", "id"]) {
+    if (typeof record[key] === "string") {
+      details.push(`${key}=${JSON.stringify(record[key])}`);
+    }
+  }
+
+  const field = match[2]?.replace(/~1/gu, "/").replace(/~0/gu, "~");
+  if (field && Object.hasOwn(record, field)) {
+    details.push(`${field}=${JSON.stringify(record[field])}`);
+  }
+
+  return ` (${details.join(", ")})`;
+}
+
+function formatErrors(errors: ErrorObject[], data?: unknown): string {
   return errors
     .map((error) => {
       const dataPath = error.instancePath || error.schemaPath;
-      return `${dataPath}: ${error.message}`;
+      return `${dataPath}: ${error.message}${getModuleContext(error, data)}`;
     })
     .join("\n");
 }
@@ -65,7 +98,7 @@ export function validateStageData(stageId: string, data: unknown): true {
   const valid = validate(data);
 
   if (!valid) {
-    const message = formatErrors(validate.errors ?? []);
+    const message = formatErrors(validate.errors ?? [], data);
     const error = new SchemaValidationError(`Schema validation failed for ${stageId}:\n${message}`);
     error.errors = validate.errors ?? undefined;
     throw error;
@@ -92,11 +125,6 @@ export async function cliValidateStage(stageId: string, filePath: string): Promi
       `Schema validation failed for ${stageId} at ${filePath}.`,
       message
     ];
-
-    if (error instanceof SchemaValidationError && error.errors) {
-      lines.push("--- details ---");
-      lines.push(formatErrors(error.errors));
-    }
 
     console.error(lines.join("\n"));
     return 1;
