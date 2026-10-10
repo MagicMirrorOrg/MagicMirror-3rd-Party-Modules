@@ -19,6 +19,6 @@
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "include": ["scripts/**/*.ts", "pipeline/**/*.ts", "create_own_module_list.ts"],
+  "include": ["scripts/**/*.ts", "pipeline/**/*.ts"],
   "exclude": ["node_modules", "dist", "modules", "modules_temp", "fixtures"]
 }
