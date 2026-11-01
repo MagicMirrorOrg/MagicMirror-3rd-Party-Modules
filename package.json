@@ -59,7 +59,7 @@
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "dompurify": "^3.4.17",
-    "marked": "^18.1.1",
+    "marked": "^18.1.2",
     "normalize-package-data": "^9.0.0",
     "npm-check-updates": "^23.1.1",
     "npm-deprecated-check": "^2.1.1",
