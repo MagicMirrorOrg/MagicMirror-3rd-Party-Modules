@@ -185,7 +185,14 @@ export const MAGICMIRROR_PLUGIN = {
     "prefer-native-fetch": httpImportsRule,
     "no-xmlhttprequest": xmlHttpRequestRule,
     "no-deprecated-apis": deprecatedApisRule,
-    "prefer-node-protocol": httpNodeProtocolRule,
     "workflow-yaml": workflowYamlRule
+  }
+};
+
+export const ESLINT_NODE_PLUGIN = {
+  ...nodePlugin,
+  rules: {
+    ...nodePlugin.rules,
+    "prefer-node-protocol": httpNodeProtocolRule
   }
 };

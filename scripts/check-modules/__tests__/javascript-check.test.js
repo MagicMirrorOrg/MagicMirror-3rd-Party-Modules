@@ -18,7 +18,8 @@ function checkJavaScript(content, relativePath) {
       const rule = getRuleById("text-deprecated-node-api");
       return rule ? [`${rule.category}: In \`${relativePath}:${message.line}:${message.column}\`: ${message.message}`] : [];
     }
-    const rule = message.ruleId?.startsWith("magicmirror/") && message.messageId ? getRuleById(message.messageId) : null;
+    const isCuratedRule = message.ruleId?.startsWith("magicmirror/") || message.ruleId === "eslintN/prefer-node-protocol";
+    const rule = isCuratedRule && message.messageId ? getRuleById(message.messageId) : null;
     return rule ? [`${rule.category}: In \`${relativePath}:${message.line}:${message.column}\`: ${message.message}`] : [];
   });
 }
@@ -198,17 +199,22 @@ test("Node protocol checks preserve the plugin autofix without changing unrelate
   assert.deepEqual(checkJavaScript(result.output, "client.js"), []);
 });
 
-test("worker ESLint reports Node protocol recommendations once and ignores README examples", async (context) => {
+test("worker ESLint groups Node protocol findings with general issues", async (context) => {
   const root = await mkdtemp(join(tmpdir(), "node-protocol-test-"));
   context.after(() => rm(root, { recursive: true, force: true }));
   const codePath = join(root, "node_helper.js");
   const readmePath = join(root, "README.md");
   await writeFile(codePath, "require('http'); require('https');\n");
   await writeFile(readmePath, "require('http'); require('https');\n");
-  const issues = await runEslintCheck(root, false);
-  const protocolIssues = issues.filter(issue => issue.includes("scoped import"));
-  assert.equal(protocolIssues.length, 2);
-  assert.ok(protocolIssues.every(issue => /node_helper\.js:1:\d+/u.test(issue)));
+  const issues = await runEslintCheck(root);
+  assert.equal(issues.length, 1);
+  assert.match(issues[0], /^ESLint issues:/u);
+  assert.equal(issues[0].match(/scoped import/gu)?.length, 2);
+  assert.ok(issues[0].includes("node_helper.js: Line 1"));
+  assert.ok(issues[0].includes("rule: eslintN/prefer-node-protocol"));
+
+  const requiredOnly = await runEslintCheck(root, false);
+  assert.deepEqual(requiredOnly, []);
 });
 
 test("worker ESLint allows the Module shim assignment only in node_helper.js", async (context) => {
