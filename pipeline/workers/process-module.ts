@@ -270,13 +270,11 @@ export async function runEslintCheck(moduleDir: string, includeGeneralChecks = t
         }
       }
       else if (includeGeneralChecks || message.fatal) {
-        generalIssues.push(`${relativePath}: Line ${message.line}, Column ${message.column}: ${message.message} (rule: ${message.ruleId})`);
+        generalIssues.push(`ESLint: ${relativePath}: Line ${message.line}, Column ${message.column}: ${message.message} (rule: ${message.ruleId})`);
       }
     }
   }
-  if (generalIssues.length > 0) {
-    issues.push(`ESLint issues:\n${generalIssues.map(entry => `   - ${entry}`).join("\n")}`);
-  }
+  issues.push(...generalIssues);
   return issues;
 }
 

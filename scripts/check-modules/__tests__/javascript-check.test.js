@@ -207,11 +207,10 @@ test("worker ESLint groups Node protocol findings with general issues", async (c
   await writeFile(codePath, "require('http'); require('https');\n");
   await writeFile(readmePath, "require('http'); require('https');\n");
   const issues = await runEslintCheck(root);
-  assert.equal(issues.length, 1);
-  assert.match(issues[0], /^ESLint issues:/u);
-  assert.equal(issues[0].match(/scoped import/gu)?.length, 2);
-  assert.ok(issues[0].includes("node_helper.js: Line 1"));
-  assert.ok(issues[0].includes("rule: eslintN/prefer-node-protocol"));
+  assert.equal(issues.length, 2);
+  assert.ok(issues.every(issue => issue.startsWith("ESLint: node_helper.js: Line 1")));
+  assert.ok(issues.every(issue => issue.includes("scoped import")));
+  assert.ok(issues.every(issue => issue.includes("rule: eslintN/prefer-node-protocol")));
 
   const requiredOnly = await runEslintCheck(root, false);
   assert.deepEqual(requiredOnly, []);
@@ -347,11 +346,12 @@ test("worker ESLint uses one trusted config for JavaScript and package.json with
   assert.equal(vendorIssues.length, 2);
   assert.ok(vendorIssues.some(issue => issue.includes("In `vendor/checked.js:")));
   assert.ok(vendorIssues.some(issue => issue.includes("In `public/vendor/checked.js:")));
-  const generalIssues = issues.filter(issue => issue.startsWith("ESLint issues:"));
-  assert.equal(generalIssues.length, 1);
-  assert.ok(generalIssues[0].includes("no-unused-vars"));
-  assert.ok(generalIssues[0].includes("package-json/require-type"));
-  assert.equal(generalIssues[0].match(/vendorOnlyUnused/gu)?.length, 2);
+  const generalIssues = issues.filter(issue => issue.startsWith("ESLint:"));
+  assert.ok(generalIssues.length > 1);
+  assert.ok(generalIssues.some(issue => issue.includes("no-unused-vars")));
+  assert.ok(generalIssues.some(issue => issue.includes("package-json/require-type")));
+  assert.equal(generalIssues.filter(issue => issue.includes("vendorOnlyUnused")).length, 2);
+  assert.ok(generalIssues.every(issue => !issue.includes("\n")));
 
   const requiredOnly = await runEslintCheck(root, false);
   assert.equal(requiredOnly.length, 5);
@@ -492,5 +492,5 @@ test("worker ESLint reports parsing failures even when general checks are disabl
   await writeFile(join(root, "broken.js"), "const = ;\n");
   const issues = await runEslintCheck(root, false);
   assert.equal(issues.length, 1);
-  assert.match(issues[0], /ESLint issues:.*\n.*broken\.js.*Parsing error/u);
+  assert.match(issues[0], /^ESLint: .*broken\.js.*Parsing error/u);
 });
