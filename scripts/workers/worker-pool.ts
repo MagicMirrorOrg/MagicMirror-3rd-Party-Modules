@@ -1,428 +1,264 @@
-/**
- * Worker pool orchestrator
- *
- * Manages a pool of worker processes for parallel module processing.
- */
-
-import { dirname, join } from "node:path";
-import { cpus } from "node:os";
-import { createLogger } from "../shared/logger.ts";
-import { fileURLToPath } from "node:url";
 import { fork } from "node:child_process";
 import type { ChildProcess } from "node:child_process";
+import { cpus } from "node:os";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { createLogger } from "../shared/logger.ts";
 import type { ModuleInput, ModuleResult } from "./module-types.ts";
-import { isWorkerMessage, type BatchCompletePayload, type ProgressEvent, type WorkerBatch, type WorkerMessage, type WorkerProcessConfig } from "./worker-protocol.ts";
+import {
+  isWorkerMessage,
+  type ProgressEvent,
+  type WorkerMessage,
+  type WorkerProcessConfig
+} from "./worker-protocol.ts";
 
 interface WorkerPoolConfig {
-  batchSize?: number;
-  batchTimeoutMs?: number;
+  taskTimeoutMs?: number;
   workerCount?: number;
 }
 
-type PendingWorkerBatch = Pick<WorkerBatch, "batchId" | "modules">;
-
-interface WorkerInfo {
-  batchTimeout: NodeJS.Timeout | null;
-  currentBatchId: number | null;
+interface WorkerSlot {
   id: number;
-  lastHeartbeat: Date;
-  modulesProcessed: number;
   process: ChildProcess;
-  status: "busy" | "crashed" | "idle";
+  task: ModuleInput | null;
+  timer: NodeJS.Timeout | null;
 }
-
-interface BatchResult extends BatchCompletePayload {}
 
 const logger = createLogger({ name: "orchestrator" });
-const currentFile = fileURLToPath(import.meta.url);
-const currentDir = dirname(currentFile);
+const currentDir = dirname(fileURLToPath(import.meta.url));
 const WORKER_SCRIPT = join(currentDir, "worker.ts");
 
-/**
- * @typedef {Object} WorkerPoolConfig
- * @property {number} workerCount - Number of workers (default: CPU count - 1)
- * @property {number} batchSize - Modules per batch (default: 50)
- * @property {number} batchTimeoutMs - Timeout per batch (default: 1800000)
- */
-
-/**
- * @typedef {Object} WorkerInfo
- * @property {number} id
- * @property {ChildProcess} process
- * @property {string} status - 'idle' | 'busy' | 'crashed'
- * @property {number|null} currentBatchId
- * @property {number} modulesProcessed
- * @property {Date} lastHeartbeat
- */
-
-/**
- * Distribute modules into batches
- * @param {Array} modules
- * @param {number} batchSize
- * @returns {Array<{batchId: number, modules: Array}>}
- */
-function distributeBatches(modules: ModuleInput[], batchSize: number): PendingWorkerBatch[] {
-  const batches: PendingWorkerBatch[] = [];
-
-  for (let index = 0; index < modules.length; index += batchSize) {
-    batches.push({
-      batchId: batches.length,
-      modules: modules.slice(index, index + batchSize)
-    });
-  }
-
-  return batches;
+function failedResult(module: ModuleInput, error: string): ModuleResult {
+  return {
+    ...module,
+    status: "failed",
+    failurePhase: "processing",
+    error,
+    cloned: false,
+    processingTimeMs: 0,
+    fromCache: false,
+    issues: []
+  };
 }
 
-/**
- * Worker Pool Manager
- */
 export class WorkerPool {
-  private batchQueue: WorkerBatch[];
-  private completedBatches: number;
   private config: Required<WorkerPoolConfig>;
-  private completionReject: ((error: Error) => void) | null;
-  private completionResolve: (() => void) | null;
-  private progressCallback: ((event: ProgressEvent) => void) | null;
-  private results: BatchResult[];
-  private totalBatches: number;
-  private workers: Map<number, WorkerInfo>;
+  private completionReject: ((error: Error) => void) | null = null;
+  private completionResolve: (() => void) | null = null;
+  private pending = 0;
+  private progressCallback: ((event: ProgressEvent) => void) | null = null;
+  private queue: ModuleInput[] = [];
+  private results: ModuleResult[] = [];
+  private shuttingDown = false;
+  private taskConfig: WorkerProcessConfig | null = null;
+  private workers = new Map<number, WorkerSlot>();
 
-  /**
-   * @param {WorkerPoolConfig} config
-   */
   constructor(config: WorkerPoolConfig = {}) {
     this.config = {
       workerCount: config.workerCount || Math.max(1, cpus().length - 1),
-      batchSize: config.batchSize || 50,
-      batchTimeoutMs: config.batchTimeoutMs || 1800000
+      taskTimeoutMs: config.taskTimeoutMs || 60_000
     };
-
-    this.workers = new Map();
-    this.completionResolve = null;
-    this.completionReject = null;
-    this.batchQueue = [];
-    this.results = [];
-    this.totalBatches = 0;
-    this.completedBatches = 0;
-    this.progressCallback = null;
   }
 
-  /**
-   * Set progress callback for UI updates
-   * @param {Function} callback
-   */
   onProgress(callback: (event: ProgressEvent) => void): void {
     this.progressCallback = callback;
   }
 
-  /**
-   * Spawn a worker process
-   * @param {number} workerId
-   * @returns {Promise<WorkerInfo>}
-   */
-  spawnWorker(workerId: number): Promise<WorkerInfo> {
-    return new Promise((resolve, reject) => {
-      const workerProcess = fork(WORKER_SCRIPT, [], {
-        stdio: ["inherit", "inherit", "inherit", "ipc"]
-      });
-
-      const workerInfo: WorkerInfo = {
-        batchTimeout: null,
-        id: workerId,
-        process: workerProcess,
-        status: "idle",
-        currentBatchId: null,
-        modulesProcessed: 0,
-        lastHeartbeat: new Date()
-      };
-
-      // Handle worker messages
-      workerProcess.on("message", (message) => {
-        if (isWorkerMessage(message)) {
-          this.handleWorkerMessage(workerId, message);
-        }
-      });
-
-      // Handle worker errors
-      workerProcess.on("error", (error) => {
-        logger.error(`Worker ${workerId} error:`, error);
-        workerInfo.status = "crashed";
-      });
-
-      // Handle worker exit
-      workerProcess.on("exit", (code) => {
-        if (code !== 0) {
-          logger.error(`Worker ${workerId} exited with code ${code}`);
-          workerInfo.status = "crashed";
-
-          // Re-queue batch if worker crashed while processing
-          if (workerInfo.currentBatchId !== null) {
-            const batch = this.findBatch(workerInfo.currentBatchId);
-            if (batch) {
-              logger.warn(`Re-queuing batch ${batch.batchId} after worker crash`);
-              this.batchQueue.unshift(batch);
-            }
-          }
-        }
-        this.workers.delete(workerId);
-      });
-
-      // Wait for ready signal
-      const readyHandler = (value: unknown) => {
-        if (isWorkerMessage(value) && value.type === "ready") {
-          const message = value;
-          workerProcess.off("message", readyHandler);
-          this.workers.set(workerId, workerInfo);
-          logger.info(`Worker ${workerId} ready (PID: ${message.payload?.pid})`);
-          resolve(workerInfo);
-        }
-      };
-      workerProcess.on("message", readyHandler);
-
-      // Timeout for worker startup
-      setTimeout(() => {
-        if (workerInfo.status === "idle") {
-          reject(new Error(`Worker ${workerId} startup timeout`));
-        }
-      }, 10000);
-    });
-  }
-
-  /**
-   * Handle message from worker
-   * @param {number} workerId
-   * @param {Object} message
-   */
-  handleWorkerMessage(workerId: number, message: WorkerMessage): void {
-    const worker = this.workers.get(workerId);
-    if (!worker) {
+  private completeTask(worker: WorkerSlot, result: ModuleResult): void {
+    if (!worker.task) {
       return;
     }
-
-    worker.lastHeartbeat = new Date();
-
-    switch (message.type) {
-      case "progress":
-        if (this.progressCallback) {
-          this.progressCallback({
-            type: "module",
-            workerId,
-            ...(message.payload ?? {})
-          });
-        }
-        break;
-
-      case "complete":
-        this.handleBatchComplete(workerId, message.payload);
-        break;
-
-      case "error":
-        logger.error(`Worker ${workerId} reported error:`, message.payload);
-        break;
+    if (worker.timer) {
+      clearTimeout(worker.timer);
+      worker.timer = null;
     }
-  }
-
-  /**
-   * Handle batch completion
-   * @param {number} workerId
-   * @param {Object} result
-   */
-  handleBatchComplete(workerId: number, result: BatchResult): void {
-    const worker = this.workers.get(workerId);
-    if (!worker) {
-      return;
-    }
-
+    worker.task = null;
     this.results.push(result);
-    this.completedBatches += 1;
-    worker.status = "idle";
-    if (worker.batchTimeout) {
-      clearTimeout(worker.batchTimeout);
-      worker.batchTimeout = null;
-    }
-    worker.currentBatchId = null;
-    worker.modulesProcessed += result.results.length;
-
-    logger.info(
-      `Batch ${result.batchId} complete (${result.results.length} modules, ${result.durationMs}ms)`
-    );
-
-    if (this.progressCallback) {
-      this.progressCallback({
-        type: "batch-complete",
-        batchId: result.batchId,
-        completed: this.completedBatches,
-        total: this.totalBatches,
-        durationMs: result.durationMs
-      });
-    }
-
-    if (this.completedBatches >= this.totalBatches) {
-      const resolve = this.completionResolve;
-      this.completionResolve = null;
-      this.completionReject = null;
-      resolve?.();
-    }
-
-    // Assign next batch if available
-    this.assignBatch(worker);
-  }
-
-  /**
-   * Assign next batch to worker
-   * @param {WorkerInfo} worker
-   */
-  assignBatch(worker: WorkerInfo): void {
-    if (this.batchQueue.length === 0) {
-      return;
-    }
-
-    const batch = this.batchQueue.shift();
-    if (!batch) {
-      return;
-    }
-    worker.status = "busy";
-    worker.currentBatchId = batch.batchId;
-    worker.batchTimeout = setTimeout(() => {
-      if (worker.status !== "busy" || worker.currentBatchId !== batch.batchId) {
-        return;
-      }
-
-      const reject = this.completionReject;
-      this.completionResolve = null;
-      this.completionReject = null;
-      reject?.(new Error(`Worker ${worker.id} timed out processing batch ${batch.batchId}`));
-    }, this.config.batchTimeoutMs);
-
-    logger.info(`Assigning batch ${batch.batchId} to worker ${worker.id}`);
-
-    worker.process.send({
-      type: "batch",
-      payload: batch
+    this.pending -= 1;
+    this.progressCallback?.({
+      type: "module",
+      workerId: worker.id,
+      moduleId: `${result.name}-----${result.maintainer}`,
+      status: result.status,
+      fromCache: result.fromCache
     });
+    this.assignNext(worker);
+    this.finishIfComplete();
   }
 
-  /**
-   * Find batch by ID
-   * @param {number} batchId
-   * @returns {Object|null}
-   */
-  findBatch(batchId: number): WorkerBatch | null {
-    return this.batchQueue.find(b => b.batchId === batchId) || null;
-  }
-
-  /**
-   * Process modules using worker pool
-   * @param {Array} modules
-   * @param {Object} moduleConfig
-   * @returns {Promise<Array>}
-   */
-  async processModules(modules: ModuleInput[], moduleConfig: WorkerProcessConfig): Promise<ModuleResult[]> {
-    // Create batches
-    const batches = distributeBatches(modules, this.config.batchSize);
-    this.totalBatches = batches.length;
+  private finishIfComplete(): void {
+    if (this.pending !== 0) {
+      return;
+    }
+    const resolve = this.completionResolve;
     this.completionResolve = null;
     this.completionReject = null;
-    this.batchQueue = batches.map(batch => ({
-      ...batch,
-      config: moduleConfig
-    }));
-
-    logger.info(
-      `Starting worker pool: ${this.config.workerCount} workers, ${batches.length} batches`
-    );
-
-    // Spawn workers
-    const workerPromises = [];
-    for (let workerIndex = 0; workerIndex < this.config.workerCount; workerIndex += 1) {
-      workerPromises.push(this.spawnWorker(workerIndex));
-    }
-
-    const workers = await Promise.all(workerPromises);
-
-    // Assign initial batches
-    workers.forEach(worker => this.assignBatch(worker));
-
-    // Wait for all batches to complete
-    try {
-      await this.waitForCompletion();
-    }
-    finally {
-      // Always shut down workers, including after a batch timeout.
-      await this.shutdown();
-    }
-
-    // Aggregate and return results
-    return this.aggregateResults();
+    resolve?.();
   }
 
-  /**
-   * Wait for all batches to complete
-   * @returns {Promise<void>}
-   */
-  waitForCompletion(): Promise<void> {
-    if (this.completedBatches >= this.totalBatches) {
-      return Promise.resolve();
+  private assignNext(worker: WorkerSlot): void {
+    if (this.shuttingDown || !this.taskConfig || worker.task) {
+      return;
+    }
+    const module = this.queue.shift();
+    if (!module) {
+      return;
     }
 
-    return new Promise<void>((resolve, reject) => {
-      this.completionResolve = resolve;
-      this.completionReject = reject;
+    worker.task = module;
+    worker.timer = setTimeout(() => {
+      const currentTask = worker.task;
+      if (!currentTask) {
+        return;
+      }
+      worker.task = null;
+      worker.timer = null;
+      worker.process.kill();
+      this.results.push(failedResult(currentTask, `Worker ${worker.id} timed out processing ${currentTask.name}`));
+      this.pending -= 1;
+      this.finishIfComplete();
+      if (this.queue.length > 0 && !this.shuttingDown) {
+        void this.replaceWorker(worker.id);
+      }
+    }, this.config.taskTimeoutMs);
+    worker.process.send({
+      type: "task",
+      payload: { module, config: this.taskConfig }
     });
   }
 
-  /**
-   * Shutdown all workers
-   * @returns {Promise<void>}
-   */
-  async shutdown() {
-    logger.info("Shutting down workers...");
-
-    const shutdownPromises = [];
-    for (const worker of this.workers.values()) {
-      if (worker.batchTimeout) {
-        clearTimeout(worker.batchTimeout);
-        worker.batchTimeout = null;
-      }
-      const promise = new Promise<void>((resolve) => {
-        let settled = false;
-        const forceKillTimeout = setTimeout(() => {
-          worker.process.kill();
-          if (!settled) {
-            settled = true;
-            resolve();
-          }
-        }, 5000);
-        worker.process.once("exit", () => {
-          if (!settled) {
-            settled = true;
-            clearTimeout(forceKillTimeout);
-            resolve();
-          }
-        });
-        worker.process.send({ type: "shutdown" });
-      });
-      shutdownPromises.push(promise);
+  private async replaceWorker(workerId: number): Promise<void> {
+    this.workers.delete(workerId);
+    try {
+      const replacement = await this.spawnWorker(workerId);
+      this.assignNext(replacement);
     }
-
-    await Promise.all(shutdownPromises);
-    this.workers.clear();
+    catch (error) {
+      this.completionReject?.(error instanceof Error ? error : new Error(String(error)));
+      this.completionResolve = null;
+      this.completionReject = null;
+    }
   }
 
-  /**
-   * Aggregate results from all batches
-   * @returns {Array}
-   */
-  aggregateResults(): ModuleResult[] {
-    const allResults: ModuleResult[] = [];
+  private handleMessage(worker: WorkerSlot, message: WorkerMessage): void {
+    if (message.type === "result") {
+      this.completeTask(worker, message.payload.result);
+    }
+    else if (message.type === "progress") {
+      this.progressCallback?.({
+        type: "module",
+        workerId: worker.id,
+        ...message.payload
+      });
+    }
+  }
 
-    for (const batchResult of this.results) {
-      allResults.push(...batchResult.results);
+  private spawnWorker(workerId: number): Promise<WorkerSlot> {
+    return new Promise((resolve, reject) => {
+      const child = fork(WORKER_SCRIPT, [], { stdio: ["inherit", "inherit", "inherit", "ipc"] });
+      const worker: WorkerSlot = { id: workerId, process: child, task: null, timer: null };
+      let ready = false;
+      const startupTimer = setTimeout(() => {
+        if (!ready) {
+          child.kill();
+          reject(new Error(`Worker ${workerId} startup timeout`));
+        }
+      }, 10_000);
+
+      child.on("message", (value: unknown) => {
+        if (!isWorkerMessage(value)) {
+          return;
+        }
+        if (value.type === "ready") {
+          ready = true;
+          clearTimeout(startupTimer);
+          this.workers.set(workerId, worker);
+          logger.info(`Worker ${workerId} ready (PID: ${value.payload.pid})`);
+          resolve(worker);
+          return;
+        }
+        this.handleMessage(worker, value);
+      });
+      child.once("error", (error) => {
+        clearTimeout(startupTimer);
+        reject(error);
+      });
+      child.once("exit", (code) => {
+        clearTimeout(startupTimer);
+        this.workers.delete(workerId);
+        if (this.shuttingDown || !worker.task) {
+          return;
+        }
+        const failedTask = worker.task;
+        worker.task = null;
+        if (worker.timer) {
+          clearTimeout(worker.timer);
+          worker.timer = null;
+        }
+        this.results.push(failedResult(failedTask, `Worker ${workerId} exited with code ${code ?? "unknown"}`));
+        this.pending -= 1;
+        this.finishIfComplete();
+        if (this.queue.length > 0 && !this.shuttingDown) {
+          void this.replaceWorker(workerId);
+        }
+      });
+    });
+  }
+
+  async processModules(modules: ModuleInput[], moduleConfig: WorkerProcessConfig): Promise<ModuleResult[]> {
+    if (modules.length === 0) {
+      return [];
     }
 
-    logger.info(`Processed ${allResults.length} modules total`);
+    this.queue = [...modules];
+    this.results = [];
+    this.pending = modules.length;
+    this.taskConfig = moduleConfig;
+    this.shuttingDown = false;
+    const workerCount = Math.min(this.config.workerCount, modules.length);
+    logger.info(`Starting worker pool: ${workerCount} workers, ${modules.length} modules`);
 
-    return allResults;
+    try {
+      const workers = await Promise.all(Array.from({ length: workerCount }, (_, index) => this.spawnWorker(index)));
+      const completion = new Promise<void>((resolve, reject) => {
+        this.completionResolve = resolve;
+        this.completionReject = reject;
+      });
+      for (const worker of workers) {
+        this.assignNext(worker);
+      }
+      await completion;
+      return this.results;
+    }
+    finally {
+      await this.shutdown();
+    }
+  }
+
+  async shutdown(): Promise<void> {
+    this.shuttingDown = true;
+    const workers = [...this.workers.values()];
+    for (const worker of workers) {
+      if (worker.timer) {
+        clearTimeout(worker.timer);
+        worker.timer = null;
+      }
+      worker.process.send({ type: "shutdown" });
+    }
+    await Promise.all(workers.map(worker => new Promise<void>((resolve) => {
+      if (worker.process.exitCode !== null || worker.process.signalCode !== null) {
+        resolve();
+        return;
+      }
+      const forceKill = setTimeout(() => {
+        worker.process.kill();
+        resolve();
+      }, 5_000);
+      worker.process.once("exit", () => {
+        clearTimeout(forceKill);
+        resolve();
+      });
+    })));
+    this.workers.clear();
   }
 }

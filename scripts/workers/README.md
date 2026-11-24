@@ -1,98 +1,44 @@
-# Worker Pool Implementation
+# Worker Pool
 
-This directory contains the worker pool implementation for parallel module processing.
+The worker pool provides process isolation for parallel module analysis. The parent process dispatches one module at a time to each child process; `process-module.ts` remains unchanged inside the child.
 
-## Current Status: Worker Pool Orchestration ✅
+## Files
 
-The worker pool orchestration is complete and functional. Modules can now be processed in parallel using multiple worker processes.
+- **`worker.ts`**: Child-process entry point and single-task executor
+- **`worker-pool.ts`**: Worker lifecycle, task queue, timeout handling, and crash recovery
+- **`worker-protocol.ts`**: Typed IPC messages
+- **`process-module.ts`**: Clone, enrichment, and analysis phases
 
-### Files
+## Behavior
 
-- **`process-module.ts`**: Core module processing logic
-- **`worker.ts`**: Worker process entry point - runs in child processes
-- **`worker-pool.ts`**: Orchestrator that manages worker processes, batches, and queues
-
-### Features
-
-✅ **Parallel Processing**: Process modules across N worker processes
-✅ **Batch Distribution**: Modules are divided into batches and distributed to workers
-✅ **Work Queue**: Workers pull batches from queue (work-stealing algorithm)
-✅ **Progress Tracking**: Real-time progress updates via callbacks
-✅ **Error Handling**: Worker failures don't crash entire pipeline, batches are re-queued
-✅ **Resource Management**: Configurable worker count, batch size, and timeouts
-✅ **IPC Communication**: Robust message passing between orchestrator and workers
-
-### Usage
+- Each child receives one module task at a time.
+- A timeout or crash becomes a failed result for that module only.
+- A child with queued work is replaced after a crash.
+- Results are reported back to `parallel-processing.ts` and merged by module ID.
+- Worker count is configurable; the task timeout is 60 seconds by default.
 
 ```javascript
 import { WorkerPool } from "./worker-pool.ts";
 
 const pool = new WorkerPool({
-  workerCount: 4, // Number of parallel workers
-  batchSize: 50, // Modules per batch
-  batchTimeoutMs: 1800000
+  workerCount: 4,
+  taskTimeoutMs: 60_000
 });
 
-// Set up progress callback
 pool.onProgress((event) => {
-  if (event.type === "module") {
-    console.log(`Processed: ${event.moduleId} (${event.status})`);
-  }
+  console.log(`Processed: ${event.moduleId} (${event.status})`);
 });
 
-// Process modules
 const results = await pool.processModules(modules, moduleConfig);
 ```
 
-### Integration
-
-The worker pool is integrated into the pipeline via:
-
-- **Module**: `scripts/parallel-processing.ts`
-- **Pipeline entry point**: `scripts/orchestrator/index.ts`
-
-Run with:
+Run through the canonical entry point:
 
 ```bash
-node --run all -- --workers=4 --batch-size=50
+node --run all -- --workers=4
 ```
 
-### Test Results
-
-Successfully tested with multiple module sets:
-
-- ✅ 10 modules: ~15ms per module (parallel)
-- ✅ 100% success rate
-- ✅ Worker crash recovery working
-- ✅ Progress tracking functional
-- ✅ Graceful shutdown working
-
-### Performance
-
-**Worker Pool (2 workers, batch size 10):**
-
-- 10 modules: 155ms total (~16ms per module)
-- Parallel speedup: ~2x compared to sequential
-
-**Expected with full dataset (1300+ modules, 4 workers):**
-
-- Estimated time: ~3-5 minutes (vs 10-15 minutes sequential)
-- 3-4x speedup depending on I/O and CPU availability
-
-### Configuration Options
-
-**CLI Arguments:**
-
-```bash
---workers=N        # Number of worker processes (default: CPU count - 1)
---batch-size=N     # Modules per batch (default: 50)
-```
-
-**Environment Variables:**
-
-```bash
-PIPELINE_WORKER_COUNT=4  # Override default worker count
-```
+`PIPELINE_WORKER_COUNT` can set the default worker count.
 
 ### Architecture
 

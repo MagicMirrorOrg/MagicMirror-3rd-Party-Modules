@@ -35,7 +35,6 @@ The `parallel-processing` stage is the expensive part of the run: it clones repo
 The orchestrator is the only pipeline CLI. Use `node --run all` for the full refresh or `node scripts/orchestrator/index.ts` directly; stage modules are pure functions and are not standalone commands.
 
 - **Worker count**: pass `--workers=<number>`.
-- **Batch size**: pass `--batch-size=<number>`.
 - **Cache bypass**: pass `--no-cache` to the processing stage.
 - **Machine-readable logs**: set `LOG_FORMAT=json`.
 - **Debug a small source list**: set `WIKI_FILE=path/to/3rd-Party-Modules.md` before the full run.

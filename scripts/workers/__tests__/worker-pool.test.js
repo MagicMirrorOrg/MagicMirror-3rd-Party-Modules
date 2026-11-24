@@ -3,66 +3,90 @@ import { WorkerPool } from "../worker-pool.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 
-function createWorkerProcess() {
-  const process = new EventEmitter();
-  process.send = (message) => {
-    if (message.type === "shutdown") {
-      process.emit("exit", 0);
-    }
+const moduleInput = {
+  id: "owner/module",
+  issues: [],
+  maintainer: "owner",
+  name: "module",
+  url: "https://github.com/owner/module"
+};
+
+const moduleConfig = {
+  runId: "test-run",
+  projectRoot: "/tmp/project",
+  modulesDir: "/tmp/project/modules",
+  modulesTempDir: "/tmp/project/modules_temp",
+  imagesDir: "/tmp/project/website/images",
+  cacheEnabled: false
+};
+
+function installFakeWorker(pool, onTask) {
+  pool.spawnWorker = (id) => {
+    const process = new EventEmitter();
+    process.exitCode = null;
+    process.signalCode = null;
+    process.kill = () => null;
+    process.send = (message) => {
+      if (message.type === "shutdown") {
+        process.exitCode = 0;
+        queueMicrotask(() => process.emit("exit", 0));
+      }
+      else if (message.type === "task") {
+        onTask({ pool, process, worker, message });
+      }
+    };
+    const worker = { id, process, task: null, timer: null };
+    pool.workers.set(id, worker);
+    return Promise.resolve(worker);
   };
-  process.kill = () => null;
-  return process;
 }
 
-function createWorker(pool, batchId = 0) {
-  const worker = {
-    batchTimeout: null,
-    currentBatchId: batchId,
-    id: 0,
-    lastHeartbeat: new Date(),
-    modulesProcessed: 0,
-    process: createWorkerProcess(),
-    status: "busy"
-  };
-  pool.workers.set(worker.id, worker);
-  return worker;
-}
-
-test("WorkerPool resolves when the final batch completes", async () => {
-  const pool = new WorkerPool({ batchTimeoutMs: 50 });
-  pool.totalBatches = 1;
-  const worker = createWorker(pool);
-
-  const completion = pool.waitForCompletion();
-  pool.handleBatchComplete(worker.id, {
-    batchId: 0,
-    durationMs: 1,
-    results: [{ id: "module" }]
+test("WorkerPool returns one result per module task", async () => {
+  const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 100 });
+  installFakeWorker(pool, ({ pool: activePool, worker, message }) => {
+    queueMicrotask(() => activePool.handleMessage(worker, {
+      type: "result",
+      payload: {
+        result: {
+          ...message.payload.module,
+          cloned: true,
+          fromCache: false,
+          processingTimeMs: 1,
+          status: "success"
+        }
+      }
+    }));
   });
 
-  await completion;
-  assert.equal(pool.completedBatches, 1);
-  assert.equal(worker.status, "idle");
-  assert.equal(worker.batchTimeout, null);
+  const results = await pool.processModules([moduleInput], moduleConfig);
+
+  assert.equal(results.length, 1);
+  assert.equal(results[0].status, "success");
+  assert.equal(pool.pending, 0);
+  assert.equal(pool.workers.size, 0);
 });
 
-test("WorkerPool rejects when a batch exceeds its timeout", async () => {
-  const pool = new WorkerPool({ batchTimeoutMs: 10 });
-  pool.totalBatches = 1;
-  const worker = createWorker(pool);
-  pool.batchQueue = [{ batchId: 0, modules: [] }];
-  pool.assignBatch(worker);
+test("WorkerPool turns a task timeout into a module failure", async () => {
+  const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 10 });
+  installFakeWorker(pool, () => null);
 
-  await assert.rejects(pool.waitForCompletion(), /timed out processing batch 0/u);
+  const results = await pool.processModules([moduleInput], moduleConfig);
+
+  assert.equal(results.length, 1);
+  assert.equal(results[0].status, "failed");
+  assert.match(results[0].error, /timed out/u);
+  assert.equal(pool.pending, 0);
 });
 
-test("WorkerPool shutdown clears active batch timers", async () => {
-  const pool = new WorkerPool({ batchTimeoutMs: 10_000 });
-  const worker = createWorker(pool);
-  worker.batchTimeout = setTimeout(() => null, 10_000);
+test("WorkerPool shutdown clears task timers", async () => {
+  const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 10_000 });
+  installFakeWorker(pool, () => null);
+  const worker = await pool.spawnWorker(0);
+  worker.task = moduleInput;
+  worker.timer = setTimeout(() => null, 10_000);
 
   await pool.shutdown();
 
-  assert.equal(worker.batchTimeout, null);
+  assert.equal(worker.timer, null);
   assert.equal(pool.workers.size, 0);
 });

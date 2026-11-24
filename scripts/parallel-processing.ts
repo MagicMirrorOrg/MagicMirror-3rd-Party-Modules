@@ -44,7 +44,6 @@ interface WorkerPoolLike {
 
 interface RunParallelProcessingOptions {
   analysisConfig?: AnalysisConfig;
-  batchSize?: number;
   cacheDisabled?: boolean;
   catalogueRevision?: string | null;
   localOnly?: boolean;
@@ -211,12 +210,8 @@ export function writeSuccessfulResultsToCache(
   return writtenCount;
 }
 
-function createWorkerPool(workerCount: number, batchSize: number): WorkerPoolLike {
-  return new WorkerPool({
-    workerCount,
-    batchSize,
-    batchTimeoutMs: 1800000
-  });
+function createWorkerPool(workerCount: number): WorkerPoolLike {
+  return new WorkerPool({ workerCount, taskTimeoutMs: 60_000 });
 }
 
 function buildMergedModules(modules: ModuleInput[], results: ModuleResult[]): ModuleResult[] {
@@ -285,7 +280,6 @@ function logProcessingSummary(results: ModuleResult[], durationMs: number, runLo
  * @param {Array} options.modules Stage 2 modules to process
  * @param {string} [options.projectRoot] Project root for path resolution
  * @param {number} [options.workerCount] Worker count override
- * @param {number} [options.batchSize] Batch size override
  * @param {boolean} [options.cacheDisabled] Disable cache read/write behavior
  * @param {object} [options.analysisConfig] Check-group configuration
  * @param {string|null} [options.catalogueRevision] Catalogue revision override
@@ -297,7 +291,6 @@ export async function runParallelProcessing({
   modules,
   projectRoot = PROJECT_ROOT,
   workerCount = Math.max(1, cpus().length - 1),
-  batchSize = 50,
   cacheDisabled = false,
   localOnly = false,
   analysisConfig = DEFAULT_ANALYSIS_CONFIG,
@@ -314,14 +307,14 @@ export async function runParallelProcessing({
   const startTime = Date.now();
   const runId = new Date(startTime).toISOString().replace(/:/gu, "-").replace(/\..+/u, "");
   const prunedLogRuns = await pruneModuleLogs(projectRoot);
-  const pool = workerPool ?? createWorkerPool(workerCount, batchSize);
+  const pool = workerPool ?? createWorkerPool(workerCount);
   const normalizedAnalysisConfig = normalizeModuleAnalysisConfig(analysisConfig) as AnalysisConfig;
 
   if (prunedLogRuns > 0) {
     runLogger.info(`Logs: removed ${prunedLogRuns} expired run(s)`);
   }
   runLogger.info(`Loaded ${modules.length} modules`);
-  runLogger.info(`Starting parallel processing with ${workerCount} workers, batch size ${batchSize}`);
+  runLogger.info(`Starting parallel processing with ${workerCount} workers`);
 
   if (localOnly) {
     runLogger.info("Local-only mode: rechecking existing clones without cloning or updating repositories; missing clones will be skipped.");

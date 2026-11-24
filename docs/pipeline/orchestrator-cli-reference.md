@@ -57,7 +57,6 @@ Run `npm run all -- --local-only` to recheck existing clones and regenerate all 
 - `node --run all`: run all four stages.
 - `node --run all -- --local-only`: use existing clones and skip metadata refresh for discovery.
 - `--workers=<number>`: override the worker count.
-- `--batch-size=<number>`: override worker batch size.
 - `--no-cache`: force fresh module processing.
 - `PIPELINE_LOG_RETENTION=<number>`: keep the newest module-log runs; default is 20.
 - `LOG_FORMAT=json`: emit structured JSON logs.

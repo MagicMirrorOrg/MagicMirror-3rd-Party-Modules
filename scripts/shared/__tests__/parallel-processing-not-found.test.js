@@ -81,7 +81,6 @@ test("runParallelProcessing counts confirmed notFound modules as failures withou
     modules,
     projectRoot: "/virtual/project",
     workerCount: 1,
-    batchSize: 1,
     cacheDisabled: false,
     catalogueRevision: "catalogue-rev-runtime-test",
     workerPool,

@@ -233,7 +233,6 @@ test("runParallelProcessing processes local modules without enabling the analysi
     modules,
     projectRoot: "/virtual/project",
     workerCount: 1,
-    batchSize: modules.length,
     cacheDisabled: false,
     localOnly: true,
     catalogueRevision: "catalogue-rev-runtime-test",
@@ -317,7 +316,6 @@ test("local-only workers analyze existing files without Git and skip missing clo
     cacheDisabled: false,
     catalogueRevision: "local-test-revision",
     workerCount: 1,
-    batchSize: 2,
     runLogger: createSilentLogger()
   });
   equal(parallelResult.successCount, 1);

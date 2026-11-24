@@ -15,7 +15,6 @@ const PROJECT_ROOT = resolve(process.cwd());
 const TOTAL_STAGES = 4;
 
 interface PipelineOptions {
-  batchSize: number;
   cacheDisabled: boolean;
   localOnly: boolean;
   workerCount?: number;
@@ -48,7 +47,6 @@ export function parsePipelineOptions(args: string[] = process.argv.slice(2)): Pi
     args,
     allowPositionals: false,
     options: {
-      "batch-size": { type: "string" },
       "local-only": { type: "boolean" },
       "no-cache": { type: "boolean" },
       "workers": { type: "string" }
@@ -56,7 +54,6 @@ export function parsePipelineOptions(args: string[] = process.argv.slice(2)): Pi
   });
   const workerCount = values.workers ?? process.env.PIPELINE_WORKER_COUNT;
   return {
-    batchSize: parsePositiveInteger(values["batch-size"], 50, "batch-size"),
     cacheDisabled: values["no-cache"] === true || process.env.PIPELINE_CACHE_DISABLED === "1",
     localOnly: values["local-only"] === true,
     workerCount: workerCount === undefined ? undefined : parsePositiveInteger(workerCount, 0, "workers")
@@ -142,7 +139,6 @@ export async function runPipeline(options: PipelineOptions): Promise<void> {
         projectRoot: PROJECT_ROOT,
         runLogger: logger,
         workerCount: options.workerCount,
-        batchSize: options.batchSize,
         cacheDisabled: options.cacheDisabled,
         localOnly: options.localOnly
       });
