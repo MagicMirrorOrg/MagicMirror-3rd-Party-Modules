@@ -44,7 +44,7 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
       module,
       moduleRevision: module.lastCommit,
       catalogueRevision: config.catalogueRevision,
-      checkGroups: config.analysisConfig ?? config.checkGroups
+      analysisConfig: config.analysisConfig
     })
     : null;
   const cacheMetadata = cacheKey ? { cacheKey } : {};
@@ -158,8 +158,7 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
 
     if (config.moduleLogger) {
       await config.moduleLogger.info("analyze", "Analysis complete", {
-        issuesCount: analysisResult.analysisIssues?.length || 0,
-        recommendationsCount: analysisResult.recommendations?.length || 0
+        issuesCount: analysisResult.analysisIssues.length
       });
     }
   }
@@ -225,7 +224,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
     license: enrichResult.license,
     licenseStatus: enrichResult.licenseStatus,
     issues: allIssues,
-    recommendations: analysisResult.recommendations,
     stars: module.stars,
     lastCommit: module.lastCommit,
     isArchived: module.isArchived,

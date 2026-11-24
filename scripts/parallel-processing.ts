@@ -9,7 +9,7 @@
 
 import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
 import { pruneModuleLogs } from "./shared/log-retention.ts";
-import { MODULE_ANALYSIS_CACHE_SCHEMA_VERSION, buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisCheckGroups, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
+import { buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisConfig, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
 import { toProcessedModule } from "./shared/module-catalogue-output.ts";
 import { WorkerPool } from "./workers/worker-pool.ts";
 import { cpus } from "node:os";
@@ -23,7 +23,6 @@ import { resolve } from "node:path";
 interface AnalysisConfig {
   deep?: boolean;
   eslint?: boolean;
-  fast?: boolean;
   ncu?: boolean;
   npmDeprecatedCheck?: boolean;
 }
@@ -115,8 +114,7 @@ function getErrorMessage(error: unknown): string {
 
 const logger = createLogger({ name: "parallel-processing" });
 const PROJECT_ROOT = resolve(process.cwd());
-const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisCheckGroups({
-  fast: true,
+const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisConfig({
   deep: true,
   eslint: true,
   ncu: true,
@@ -189,7 +187,7 @@ export function pruneStaleCacheEntries(
       module,
       moduleRevision: module.lastCommit,
       catalogueRevision,
-      checkGroups: analysisConfig
+      analysisConfig
     });
 
     if (cacheKey) {
@@ -239,7 +237,7 @@ export function partitionModulesByCache(
         module,
         moduleRevision: module.lastCommit,
         catalogueRevision,
-        checkGroups: analysisConfig
+        analysisConfig
       })
       : null;
     const entry = cacheKey ? cache.get(cacheKey) : null;
@@ -303,7 +301,6 @@ function createWorkerPool(workerCount: number, batchSize: number): WorkerPoolLik
   return new WorkerPool({
     workerCount,
     batchSize,
-    moduleTimeoutMs: 60000,
     batchTimeoutMs: 1800000
   }) as unknown as WorkerPoolLike;
 }
@@ -401,7 +398,7 @@ export async function runParallelProcessing({
   const runId = new Date(startTime).toISOString().replace(/:/gu, "-").replace(/\..+/u, "");
   const prunedLogRuns = await pruneModuleLogs(projectRoot);
   const pool = workerPool ?? createWorkerPool(workerCount, batchSize);
-  const normalizedAnalysisConfig = normalizeModuleAnalysisCheckGroups(analysisConfig) as AnalysisConfig;
+  const normalizedAnalysisConfig = normalizeModuleAnalysisConfig(analysisConfig) as AnalysisConfig;
 
   if (prunedLogRuns > 0) {
     runLogger.info(`Logs: removed ${prunedLogRuns} expired run(s)`);
@@ -479,12 +476,8 @@ export async function runParallelProcessing({
     modulesTempDir: resolve(projectRoot, "modules_temp"),
     imagesDir: resolve(projectRoot, "website/images"),
     cacheEnabled: !cacheDisabled,
-    cachePath,
-    cacheSchemaVersion: MODULE_ANALYSIS_CACHE_SCHEMA_VERSION,
     catalogueRevision: resolvedCatalogueRevision,
-    analysisConfig: normalizedAnalysisConfig,
-    checkGroups: normalizedAnalysisConfig,
-    timeoutMs: 60000
+    analysisConfig: normalizedAnalysisConfig
   };
   const workerResults = uncachedModules.length > 0
     ? await pool.processModules(uncachedModules, moduleConfig)

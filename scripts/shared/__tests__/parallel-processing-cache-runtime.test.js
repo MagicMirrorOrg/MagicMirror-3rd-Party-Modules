@@ -1,7 +1,7 @@
 import {
   buildModuleAnalysisCacheKey,
   createModuleAnalysisCache,
-  normalizeModuleAnalysisCheckGroups
+  normalizeModuleAnalysisConfig
 } from "../../shared/module-analysis-cache.ts";
 import { deepEqual, equal, ok } from "node:assert/strict";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
@@ -17,8 +17,7 @@ import { processModule } from "../../workers/process-module.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 
-const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisCheckGroups({
-  fast: true,
+const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisConfig({
   deep: true,
   eslint: true,
   ncu: true,
@@ -62,7 +61,7 @@ test("partitionModulesByCache splits cache hits and misses with skipped semantic
   const cacheKey = buildModuleAnalysisCacheKey({
     module: modules[0],
     catalogueRevision,
-    checkGroups: DEFAULT_ANALYSIS_CONFIG
+    analysisConfig: DEFAULT_ANALYSIS_CONFIG
   });
   ok(cacheKey, "expected cache key for first module");
 
@@ -107,17 +106,17 @@ test("pruneStaleCacheEntries removes orphaned and invalidated keys", async () =>
   const staleRevisionKey = buildModuleAnalysisCacheKey({
     module: staleRevisionModule,
     catalogueRevision,
-    checkGroups: analysisConfig
+    analysisConfig
   });
   const keptKey = buildModuleAnalysisCacheKey({
     module: currentModules[1],
     catalogueRevision,
-    checkGroups: analysisConfig
+    analysisConfig
   });
   const removedModuleKey = buildModuleAnalysisCacheKey({
     module: removedModule,
     catalogueRevision,
-    checkGroups: analysisConfig
+    analysisConfig
   });
 
   ok(staleRevisionKey);
@@ -161,7 +160,7 @@ test("integration: second run has higher cache skip-rate", async () => {
     const cacheKey = buildModuleAnalysisCacheKey({
       module,
       catalogueRevision,
-      checkGroups: DEFAULT_ANALYSIS_CONFIG
+      analysisConfig: DEFAULT_ANALYSIS_CONFIG
     });
 
     return {

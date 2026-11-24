@@ -26,7 +26,7 @@ test("buildModuleAnalysisCacheKey returns a deterministic contract key", () => {
   const left = buildModuleAnalysisCacheKey({
     module,
     catalogueRevision: "abc123",
-    checkGroups: { deep: true, fast: true, ncu: false, eslint: true, npmDeprecatedCheck: true }
+    analysisConfig: { deep: true, ncu: false, eslint: true, npmDeprecatedCheck: true }
   });
   const right = buildModuleAnalysisCacheKey({
     module: {
@@ -36,7 +36,7 @@ test("buildModuleAnalysisCacheKey returns a deterministic contract key", () => {
       branch: "main"
     },
     catalogueRevision: "abc123",
-    checkGroups: { eslint: true, fast: true, deep: true, ncu: false, npmDeprecatedCheck: true }
+    analysisConfig: { eslint: true, deep: true, ncu: false, npmDeprecatedCheck: true }
   });
 
   equal(left, right);
@@ -50,7 +50,7 @@ test("buildModuleAnalysisCacheContract returns null without complete freshness s
       id: "owner/repo",
       url: "https://github.com/owner/repo"
     },
-    checkGroups: { fast: true }
+    analysisConfig: { deep: true }
   });
 
   equal(contract, null);

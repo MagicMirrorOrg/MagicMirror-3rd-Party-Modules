@@ -4,19 +4,11 @@ _Last updated: April 16, 2026_
 
 This page consolidates the material that previously lived in early planning documents. It should stay up to date as we evolve the check-modules pipeline and the curated fixture set.
 
-## Check group configuration
+## Check configuration
 
-The Stage 5 runner reads `scripts/check-modules/check-groups.config.json` to decide which groups execute. All toggles ship enabled; set individual entries to `false` to skip that category. Personal overrides belong in `check-groups.config.local.json` (same directory) so local tweaks stay out of version control.
+The pipeline enables the module analyzer, curated ESLint rules, general ESLint checks, `npm-check-updates`, and `npm-deprecated-check` by default. These are passed internally as one `analysisConfig` object.
 
-| Toggle                            | Default | Controls                                                                                                                                          |
-| --------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `groups.fast`                     | `true`  | Registry-backed text and `package-lock.json` pattern scanning.                                                                                    |
-| `groups.deep`                     | `true`  | Repository heuristics (README/license/dependabot checks) plus dependency helpers. Disabling this also suppresses the optional integrations below. |
-| `integrations.npmCheckUpdates`    | `true`  | Runs `npm-check-updates` when the helper budget allows.                                                                                           |
-| `integrations.npmDeprecatedCheck` | `true`  | Executes `npm-deprecated-check` to surface deprecated dependencies.                                                                               |
-| `integrations.eslint`             | `true`  | Includes general ESLint findings. The built-in MagicMirror rules always run, independently of this toggle and the dependency-helper budget.       |
-
-> The runner logs whenever overrides are applied so CI output records which groups were disabled.
+The worker does not read a local config file. Programmatic callers can disable deep dependency integrations, general ESLint findings, or either dependency helper through `analysisConfig`; curated MagicMirror ESLint rules still run.
 
 ## Rule inventory
 

@@ -1,4 +1,4 @@
-import { createModuleAnalysisCache, normalizeModuleAnalysisCheckGroups } from "../../shared/module-analysis-cache.ts";
+import { createModuleAnalysisCache, normalizeModuleAnalysisConfig } from "../../shared/module-analysis-cache.ts";
 import { deepEqual, equal } from "node:assert/strict";
 import {
   partitionModulesByCache,
@@ -9,8 +9,7 @@ import { mkdtemp } from "node:fs/promises";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 
-const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisCheckGroups({
-  fast: true,
+const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisConfig({
   deep: true,
   eslint: true,
   ncu: true,

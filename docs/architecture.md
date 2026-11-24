@@ -63,7 +63,7 @@ The pipeline implements intelligent caching and skip logic to avoid redundant wo
 | Scope             | Optimization     | Current Behavior                                                                           | Why It Helps                                                         |
 | ----------------- | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
 | Metadata          | API cache TTL    | Reuses recent host API responses during `collect-metadata`                                 | Reduces external API traffic                                         |
-| Module processing | Clone reuse      | Recycles `modules_temp/` when repositories can be refreshed in place                       | Avoids unnecessary full re-clones                                    |
+| Module processing | Clone reuse      | Reuses fresh repositories in `modules/`; `modules_temp/` is temporary staging only         | Avoids unnecessary full re-clones                                    |
 | Module processing | Worker batching  | Processes modules in bounded child-process batches                                         | Keeps memory bounded and throughput predictable                      |
 | Analysis cache    | Cache read/write | Worker-compatible `moduleCache.json` drives skip/read/write/prune in `parallel-processing` | Restores second-run skip behavior while preserving worker throughput |
 

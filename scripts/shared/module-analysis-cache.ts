@@ -3,21 +3,19 @@ import { getCurrentCommit } from "./git.ts";
 import { resolve } from "node:path";
 import { stringifyDeterministic } from "./deterministic-output.ts";
 
-export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 9;
+export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 10;
 export const MODULE_ANALYSIS_CACHE_RELATIVE_PATH = "website/data/moduleCache.json";
 
-interface ModuleAnalysisCheckGroupsInput {
+interface ModuleAnalysisConfigInput {
   deep?: unknown;
   eslint?: unknown;
-  fast?: unknown;
   ncu?: unknown;
   npmDeprecatedCheck?: unknown;
 }
 
-export interface NormalizedModuleAnalysisCheckGroups {
+export interface NormalizedModuleAnalysisConfig {
   deep: boolean;
   eslint: boolean;
-  fast: boolean;
   ncu: boolean;
   npmDeprecatedCheck: boolean;
 }
@@ -30,14 +28,14 @@ interface ModuleAnalysisModuleInput {
 }
 
 interface BuildModuleAnalysisCacheContractInput {
+  analysisConfig?: ModuleAnalysisConfigInput;
   catalogueRevision?: unknown;
-  checkGroups?: ModuleAnalysisCheckGroupsInput;
   module?: ModuleAnalysisModuleInput;
   moduleRevision?: unknown;
 }
 
 interface ModuleAnalysisCacheContract {
-  analysisConfig: NormalizedModuleAnalysisCheckGroups;
+  analysisConfig: NormalizedModuleAnalysisConfig;
   module: {
     branch: string | null;
     id: string;
@@ -65,15 +63,14 @@ function normalizeOptionalString(value: unknown): string | null {
   return normalized.length > 0 ? normalized : null;
 }
 
-export function normalizeModuleAnalysisCheckGroups(
-  checkGroups: ModuleAnalysisCheckGroupsInput = {}
-): NormalizedModuleAnalysisCheckGroups {
+export function normalizeModuleAnalysisConfig(
+  analysisConfig: ModuleAnalysisConfigInput = {}
+): NormalizedModuleAnalysisConfig {
   return {
-    fast: Boolean(checkGroups.fast),
-    deep: Boolean(checkGroups.deep),
-    eslint: Boolean(checkGroups.eslint),
-    ncu: Boolean(checkGroups.ncu),
-    npmDeprecatedCheck: Boolean(checkGroups.npmDeprecatedCheck)
+    deep: Boolean(analysisConfig.deep),
+    eslint: Boolean(analysisConfig.eslint),
+    ncu: Boolean(analysisConfig.ncu),
+    npmDeprecatedCheck: Boolean(analysisConfig.npmDeprecatedCheck)
   };
 }
 
@@ -98,7 +95,7 @@ export function buildModuleAnalysisCacheContract({
   module,
   moduleRevision,
   catalogueRevision,
-  checkGroups
+  analysisConfig
 }: BuildModuleAnalysisCacheContractInput = {}): ModuleAnalysisCacheContract | null {
   const moduleId = normalizeOptionalString(module?.id);
   const moduleUrl = normalizeOptionalString(module?.url);
@@ -121,7 +118,7 @@ export function buildModuleAnalysisCacheContract({
       moduleRevision: normalizedModuleRevision,
       catalogueRevision: normalizedCatalogueRevision
     },
-    analysisConfig: normalizeModuleAnalysisCheckGroups(checkGroups)
+    analysisConfig: normalizeModuleAnalysisConfig(analysisConfig)
   };
 }
 

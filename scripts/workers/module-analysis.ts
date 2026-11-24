@@ -47,17 +47,15 @@ async function runModuleAnalyzer(module: ModuleInput, config: ProcessModuleConfi
     const files = getModuleFiles(cloneDir);
     if (files.length === 0) {
       return {
-        analysisIssues: [createIssue("Error", "Unable to read module files for analysis")],
-        recommendations: []
+        analysisIssues: [createIssue("Error", "Unable to read module files for analysis")]
       };
     }
     const result = await performModuleAnalysis(cloneDir, module.name, module.url, files);
-    return { analysisIssues: result.issues, recommendations: result.recommendations };
+    return { analysisIssues: result.issues };
   }
   catch (error) {
     return {
-      analysisIssues: [createIssue(undefined, `Analysis error: ${error instanceof Error ? error.message : String(error)}`, { severity: "error" })],
-      recommendations: []
+      analysisIssues: [createIssue(undefined, `Analysis error: ${error instanceof Error ? error.message : String(error)}`, { severity: "error" })]
     };
   }
 }
@@ -65,14 +63,13 @@ async function runModuleAnalyzer(module: ModuleInput, config: ProcessModuleConfi
 export async function analyzeModule(module: ModuleInput, config: ProcessModuleConfig, allIssues: Issue[]): Promise<AnalysisResult> {
   const cloneDir = path.join(config.modulesDir, `${module.name}-----${module.maintainer}`);
   const result = module.outdated && !config.localOnly
-    ? { analysisIssues: [], recommendations: [] }
+    ? { analysisIssues: [] }
     : await runModuleAnalyzer(module, config);
 
   mergeUniqueIssues(allIssues, result.analysisIssues);
-  mergeUniqueIssues(allIssues, result.recommendations);
 
   if (!module.outdated || config.localOnly) {
-    const analysisConfig = config.analysisConfig ?? config.checkGroups ?? {};
+    const analysisConfig = config.analysisConfig ?? {};
     mergeUniqueIssues(allIssues, await runEslintCheck(cloneDir, analysisConfig.eslint !== false && analysisConfig.deep !== false));
     mergeUniqueIssues(allIssues, await checkConfigSchema(cloneDir, allIssues.length));
   }

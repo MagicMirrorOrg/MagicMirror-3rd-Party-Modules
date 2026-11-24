@@ -15,7 +15,6 @@ interface DependencyAnalysisConfig {
 
 interface DependencyIntegrationConfig {
   analysisConfig?: DependencyAnalysisConfig;
-  checkGroups?: DependencyAnalysisConfig;
 }
 
 const execFileAsync = promisify(execFile);
@@ -78,7 +77,7 @@ async function runDeprecatedCheck(moduleDir: string): Promise<string | null> {
 }
 
 export async function applyDependencyIntegrations(moduleDir: string, issues: Issue[], config: DependencyIntegrationConfig): Promise<void> {
-  const analysisConfig = config.analysisConfig ?? config.checkGroups ?? {};
+  const analysisConfig = config.analysisConfig ?? {};
   if (analysisConfig.deep === false || !fileExists(path.join(moduleDir, "package.json")) || issues.length >= 4) {
     return;
   }

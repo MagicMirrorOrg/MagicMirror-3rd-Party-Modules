@@ -14,7 +14,6 @@ import type { ChildProcess } from "node:child_process";
 interface WorkerPoolConfig {
   batchSize?: number;
   batchTimeoutMs?: number;
-  moduleTimeoutMs?: number;
   workerCount?: number;
 }
 
@@ -64,7 +63,6 @@ const WORKER_SCRIPT = join(currentDir, "worker.ts");
  * @typedef {Object} WorkerPoolConfig
  * @property {number} workerCount - Number of workers (default: CPU count - 1)
  * @property {number} batchSize - Modules per batch (default: 50)
- * @property {number} moduleTimeoutMs - Timeout per module (default: 60000)
  * @property {number} batchTimeoutMs - Timeout per batch (default: 1800000)
  */
 
@@ -118,7 +116,6 @@ export class WorkerPool {
     this.config = {
       workerCount: config.workerCount || Math.max(1, cpus().length - 1),
       batchSize: config.batchSize || 50,
-      moduleTimeoutMs: config.moduleTimeoutMs || 60000,
       batchTimeoutMs: config.batchTimeoutMs || 1800000
     };
 

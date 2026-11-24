@@ -30,7 +30,6 @@ import { WorkerPool } from "./worker-pool.ts";
 const pool = new WorkerPool({
   workerCount: 4, // Number of parallel workers
   batchSize: 50, // Modules per batch
-  moduleTimeoutMs: 60000,
   batchTimeoutMs: 1800000
 });
 

@@ -21,26 +21,20 @@ export interface ModuleInput {
 export interface AnalysisConfig {
   deep?: boolean;
   eslint?: boolean;
-  fast?: boolean;
   ncu?: boolean;
   npmDeprecatedCheck?: boolean;
-  [key: string]: unknown;
 }
 
 export interface ProcessModuleConfig {
   analysisConfig?: AnalysisConfig;
   cacheEnabled: boolean;
-  cachePath?: string;
-  cacheSchemaVersion?: number;
   catalogueRevision?: string | null;
-  checkGroups?: AnalysisConfig;
   imagesDir: string;
   localOnly?: boolean;
   moduleLogger?: ModuleLogger | null;
   modulesDir: string;
   modulesTempDir: string;
   projectRoot: string;
-  timeoutMs?: number;
 }
 
 export interface PackageSummary {
@@ -87,7 +81,6 @@ export interface ModuleResult {
   name: string;
   packageJson?: PackageJsonInfo;
   processingTimeMs: number;
-  recommendations?: Issue[];
   skippedReason?: string;
   stars?: number;
   status: "failed" | "skipped" | "success";
@@ -116,5 +109,4 @@ export interface EnrichResult {
 
 export interface AnalysisResult {
   analysisIssues: Issue[];
-  recommendations: Issue[];
 }

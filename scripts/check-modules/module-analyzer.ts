@@ -15,7 +15,6 @@ const PACKAGE_DEPENDENCY_SECTIONS = ["dependencies", "devDependencies", "peerDep
 
 interface AnalysisResult {
   issues: Issue[];
-  recommendations: Issue[];
 }
 
 interface ModuleCheckExceptions {
@@ -207,7 +206,7 @@ function findReadmeConfigObjects(content: string): Array<{ hasTrailingComma: boo
 }
 
 /**
- * Analyze a module for issues and recommendations.
+ * Analyze a module for issues.
  * This is the core analysis function for the parallel-processing stage.
  */
 export async function analyzeModule(
@@ -560,8 +559,5 @@ export async function analyzeModule(
     ));
   }
 
-  return {
-    issues,
-    recommendations: []
-  };
+  return { issues };
 }
