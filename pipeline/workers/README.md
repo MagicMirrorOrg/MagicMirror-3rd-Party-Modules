@@ -50,12 +50,12 @@ const results = await pool.processModules(modules, moduleConfig);
 The worker pool is integrated into the pipeline via:
 
 - **Script**: `scripts/parallel-processing.ts`
-- **Pipeline**: `full-refresh-parallel` (in `stage-graph.json`)
+- **Pipeline**: `full-refresh-parallel` (defined in `scripts/orchestrator/pipeline.ts`)
 
 Run with:
 
 ```bash
-node --run pipeline -- run full-refresh-parallel --workers=4 --batch-size=50
+node --run all -- --workers=4 --batch-size=50
 ```
 
 ### Test Results

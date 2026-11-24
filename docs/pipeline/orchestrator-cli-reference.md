@@ -1,60 +1,35 @@
-# Pipeline Orchestrator CLI — Reference
+# Pipeline Orchestrator Reference
 
-_Last updated: 2026-04-16_
+_Last updated: 2026-11-23_
 
-A lightweight Node.js command-line interface reads the declarative stage graph, executes the pipeline end-to-end, and provides structured feedback to contributors. This document now serves as the reference for the shipped implementation.
+The orchestrator executes the single supported `full-refresh-parallel` pipeline through four in-process stages. Its typed definition lives in `scripts/orchestrator/pipeline.ts`; no JSON graph is loaded at runtime.
 
-## Key capabilities
+## Supported entry points
 
-- Provide a single entry point (e.g. `node --run pipeline -- run full-refresh-parallel`) that replaces the existing ad-hoc shell scripts.
-- Interpret `pipeline/stage-graph.json` at runtime to determine stage ordering, inputs/outputs, and side-effects.
-- Emit structured logs and progress indicators so maintainers can trace stage execution locally and in CI.
-- Persist run metadata (planned, skipped, succeeded, failed) to `.pipeline-runs/` so partial runs stay auditable.
-- Offer composable filters (`--only`, `--skip`, future `--from`/`--to`) that unlock partial runs without duplicating scripts.
-- Surface consistent pre/post hooks (e.g. schema validation, cleanup) and failure handling across all stages.
-- Run the supported pipeline through the Node.js toolchain, with `parallel-processing` handling clone/enrich/analyze work and `aggregate-catalogue` handling publication outputs.
+```bash
+node --run all
+node scripts/orchestrator/index.ts
+```
 
-## Stakeholders
+`npm run all` is the canonical full refresh. The standalone stage scripts remain available when only one step is needed, for example `node --run collectMetadata` or `node scripts/parallel-processing.ts`.
 
-- **Maintainers**: use the CLI locally to validate changes and regenerate artifacts.
-- **CI/CD**: run the CLI in GitHub Actions to enforce pipeline health.
-- **Contributors**: receive consistent feedback when running partial checks.
+## Pipeline
 
-## Context & Inputs
+1. `collect-metadata`: collect and enrich module metadata.
+2. `parallel-processing`: clone, enrich, and analyze modules with the worker pool.
+3. `aggregate-catalogue`: write catalogue, issue, and statistics outputs.
+4. `generate-result-markdown`: render the human-readable result.
 
-- Stage metadata lives in [`pipeline/stage-graph.json`](../../pipeline/stage-graph.json).
-- Schemas for stage artifacts live in `dist/schemas/*.schema.json` and are enforced after each stage.
-- The CLI lives under `scripts/orchestrator/` (primary entrypoint `index.ts`, helper modules `cli-helpers.ts` and `cli-commands.ts`) with shared utilities documented in [`docs/architecture.md`](../architecture.md).
+Stage state is handed off in memory. Schemas from `dist/schemas/` are validated immediately after catalogue outputs are written.
 
-## Architecture Overview
+## Execution behavior
 
-1. **Command Surface** — Implemented with `commander`, exposing the `pipeline` root command and subcommands:
-   - `pipeline list` — enumerate available pipelines/stages from the graph.
-   - `pipeline describe <stage|pipeline>` — print detailed metadata for inspection.
-   - `pipeline run <pipelineId>` — execute stages sequentially (default: `full-refresh-parallel`).
-   - `pipeline logs [runId|--latest]` — inspect structured run metadata saved to `.pipeline-runs/`.
-   - `pipeline doctor` — check external prerequisites (Node.js version, Git availability, required env vars).
-   - `pipeline benchmark` — summarize persisted run durations for performance baselining.
-   - `pipeline progress` — summarize run outcomes, stage reliability trends, baseline median deltas, and telemetry coverage consistency.
-   - `pipeline dashboard` — render a compact release-check dashboard combining duration, reliability, and resource trends.
+- Stages run sequentially and stop on the first failure.
+- Stage start, duration, and failure are logged through the shared logger.
+- `aggregate-catalogue` validates `modules.json`, `modules.min.json`, and `stats.json` with AJV.
+- Module-level parallelism remains inside `parallel-processing`.
 
-2. **Execution Engine** — Core runtime that:
-   - Loads the stage graph via `loadStageGraph` and resolves an execution plan with `buildExecutionPlan`.
-   - Applies stage filters derived from `--only`/`--skip` and validates referenced stage IDs.
-   - Runs stages strictly sequentially (no parallel execution), prepares the environment, logs start/end, and invokes the configured command.
-   - Captures exit codes, stdout/stderr, and wraps failures with actionable messages before persisting result metadata.
-
-3. **Stage Runner Abstraction** — Normalizes execution for the Node runtime:
-   - All supported stages run via `node <script>`. The current stage graph executes `collect-metadata`, `parallel-processing`, and `aggregate-catalogue`, with publication output generation separated from worker analysis.
-
-4. **State & Artifacts** — Maintains an execution ledger (`.pipeline-runs/<timestamp>_<pipeline>.json`) with start/end timestamps, per-stage status (`succeeded`, `skipped`, `failed`, `pending`), durations, filters, and failure metadata, enabling future resume functionality and local auditing even when stages are filtered out.
-   - Run records also capture resource usage snapshots (CPU usage and RSS/heap memory peak+average) for each orchestrator execution.
-
-5. **Hooks & Validation** — After each stage, hooks:
-   - Validate declared artifacts against schemas using `validateStageFile` (Ajv-based).
-   - Leave room for future cleanup/cache hooks (e.g. restoring `modules_temp`) without additional artifact drift checks beyond schema validation.
-
-## CLI Options & Flags
+## Options & flags
 
 ### Recheck existing clones
 
@@ -78,46 +53,17 @@ still use the network.
 `node scripts/parallel-processing.ts --local-only` runs only the processing
 stage; use the full command above to regenerate the published reports as well.
 
-### Currently available
+### Full and local runs
 
-- `pipeline run --only <stageIds>` — run only the specified stages (comma-separated) after dependency resolution.
-- `pipeline run --skip <stageIds>` — omit the given stage IDs while keeping the rest of the plan.
-- `pipeline list --pipelines` — limit listings to pipeline summaries.
-- `pipeline list --stages` — limit listings to stage summaries.
-- `pipeline logs --latest` — inspect the most recent persisted run record.
-- `pipeline benchmark --pipeline <id> --limit <n>` — summarize recent matching run records.
-- `pipeline benchmark --include-filtered --include-failed --json` — include non-canonical runs and print machine-readable output.
-- `pipeline progress --pipeline <id> --limit <n>` — summarize recent run outcomes, stage-level success rates, and latest-vs-baseline duration/resource deltas.
-- `pipeline progress --include-filtered --json` — include filtered runs and print machine-readable output.
-- `pipeline dashboard --pipeline <id> --limit <n>` — show a compact dashboard for run health, duration hotspots, and resource trend signals.
-- `pipeline dashboard --include-filtered --json` — include filtered runs and print machine-readable dashboard output.
+- `node --run all`: run all four stages.
+- `node --run all -- --local-only`: use existing clones and skip metadata refresh for discovery.
+- `--workers=<number>`: override the worker count.
+- `--batch-size=<number>`: override worker batch size.
+- `--no-cache`: force fresh module processing.
+- `LOG_FORMAT=json`: emit structured JSON logs.
 
-Commander validates the mutually exclusive options (`--only`/`--skip`) so that unknown stage IDs or conflicting filters surface errors before execution. Skipped stages are still recorded in the run ledger so you can see exactly what was omitted.
+There is no partial-stage CLI yet. Run the relevant standalone stage script for isolated work.
 
-### Future enhancements
+## Failure handling
 
-The original exploration surfaced a few ideas that remain on the backlog:
-
-- `--log-level <level>` — switch between verbose and quiet output.
-- `--dry-run` — show the planned execution without invoking any stages.
-- `--force` — ignore any future caching optimizations and run every stage.
-
-## Structured Logging
-
-- Emit human-readable console output with stage numbering and duration markers, e.g. `▶︎ [1/2] collect-metadata … done in 12.4s`.
-- Persist a structured JSON summary to `.pipeline-runs/<timestamp>_<pipeline>.json` capturing stage outcomes (including explicitly skipped stages), durations, applied filters, and failure metadata.
-- Provide `pipeline logs [runId|--latest]` to inspect a stored run summary without digging into the filesystem.
-- `pipeline logs` also prints captured resource usage when present in the selected run record.
-
-## Error Handling & Retry
-
-- On failure, stop further stages by default and surface:
-  - Exit code.
-  - Path to the stage log file.
-  - Suggested remediation (e.g. rerun with `--only stageId`).
-- Future enhancement: consider a `--continue-on-error` flag for exploratory batches (would run remaining stages but mark the run as degraded).
-- Non-zero exit codes propagate to shell/CI.
-
-## Integration with Existing Scripts
-
-- All supported stages run in-process via the stage runner abstraction (`in-process-stage-runner.ts`). The stage graph declares script paths which the runner resolves and executes within the same Node process.
+The orchestrator stops at the first failed stage, records the failing stage on the thrown error, and exits non-zero. API and HTTP retry behavior remains local to the underlying clients rather than being configured as a pipeline-wide retry.

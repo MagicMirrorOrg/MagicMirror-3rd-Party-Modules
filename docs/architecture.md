@@ -4,7 +4,7 @@ Visibility into the automation that builds and publishes the third-party module 
 
 ## Current State (April 2026)
 
-The supported production pipeline is orchestrated via `node scripts/orchestrator/index.ts run full-refresh-parallel` (also exposed as `node --run all`). The orchestrator now drives four registered stages across three operational phases: metadata collection, parallel module processing, and publication.
+The supported production pipeline is orchestrated via `node scripts/orchestrator/index.ts` (also exposed as `node --run all`). The orchestrator drives one typed linear pipeline with four stages across three operational phases: metadata collection, parallel module processing, and publication.
 
 ### Stage Overview
 
@@ -49,7 +49,7 @@ flowchart TB
 
 ### Key Features
 
-- **Orchestrator CLI**: Declarative stage graph with `--only/--skip` support, retries, and structured logging
+- **Orchestrator**: A typed stage list in `scripts/orchestrator/pipeline.ts` defines order and schema-validated outputs for the single supported pipeline
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
 - **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; `issues.json` preserves that structure while Markdown renders it as text
