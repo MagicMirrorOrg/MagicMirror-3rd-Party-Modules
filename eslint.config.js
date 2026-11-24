@@ -46,13 +46,10 @@ export default defineConfig([
     plugins: { js, stylistic },
     extends: [importX.recommended, "js/all", stylistic.configs.customize({ indent: "tab", quotes: "double", semi: true, commaDangle: "never" })],
     rules: {
-      "@stylistic/array-element-newline": ["error", "consistent"],
       "@stylistic/dot-location": ["error", "property"],
-      "@stylistic/function-call-argument-newline": ["error", "consistent"],
       "@stylistic/implicit-arrow-linebreak": "off",
       "@stylistic/indent": ["error", 2],
       "@stylistic/multiline-ternary": "off",
-      "@stylistic/object-property-newline": ["error", { allowAllPropertiesOnSameLine: true }],
       "@stylistic/padded-blocks": ["error", "never"],
       "@stylistic/quote-props": ["error", "as-needed"],
       camelcase: "off",
