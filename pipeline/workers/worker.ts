@@ -6,6 +6,7 @@
  * Communicates with parent orchestrator via IPC messages.
  */
 
+import type { Issue } from "../../scripts/check-modules/issue.ts";
 import { createLogger } from "../../scripts/shared/logger.ts";
 import { createModuleLogger } from "./module-logger.ts";
 import process from "node:process";
@@ -42,7 +43,7 @@ interface BatchResultItem extends WorkerModule {
   cloned: boolean;
   error?: string;
   fromCache: boolean;
-  issues: string[];
+  issues: Issue[];
   processingTimeMs: number;
   status: string;
 }

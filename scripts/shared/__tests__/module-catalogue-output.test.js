@@ -25,9 +25,16 @@ function createProcessedModule(overrides = {}) {
 
 test("writePublishedCatalogueOutputs writes outputs on first publish and reports additions", async () => {
   const projectRoot = await createProjectRoot();
-  const processedModules = [createProcessedModule()];
+  const issue = {
+    category: "Recommendation",
+    message: "Add a changelog.",
+    ruleId: "module-changelog",
+    severity: "warning"
+  };
+  const processedModules = [createProcessedModule({ issues: [issue] })];
 
   const result = await writePublishedCatalogueOutputs(processedModules, projectRoot);
+  const issues = JSON.parse(await readFile(result.issuesJsonPath, "utf-8"));
 
   equal(result.wroteOutputs, true);
   ok(result.changeSummary);
@@ -36,6 +43,7 @@ test("writePublishedCatalogueOutputs writes outputs on first publish and reports
   equal(result.changeSummary.changedCount, 0);
   equal(result.changeSummary.removedCount, 0);
   equal(result.changeSummary.unchangedCount, 0);
+  deepEqual(issues["owner/module-a"], [issue]);
 });
 
 test("writePublishedCatalogueOutputs skips writes when modules are unchanged", async () => {
@@ -57,6 +65,23 @@ test("writePublishedCatalogueOutputs skips writes when modules are unchanged", a
   equal(secondResult.changeSummary.removedCount, 0);
   equal(secondResult.changeSummary.unchangedCount, 1);
   equal(secondStats, firstStats);
+});
+
+test("writePublishedCatalogueOutputs writes issue-only changes", async () => {
+  const projectRoot = await createProjectRoot();
+  const initialModules = [createProcessedModule({
+    issues: [{ message: "First issue", severity: "warning" }]
+  })];
+  const updatedModules = [createProcessedModule({
+    issues: [{ message: "Updated issue", severity: "warning" }]
+  })];
+
+  await writePublishedCatalogueOutputs(initialModules, projectRoot);
+  const result = await writePublishedCatalogueOutputs(updatedModules, projectRoot);
+  const issues = JSON.parse(await readFile(result.issuesJsonPath, "utf-8"));
+
+  equal(result.wroteOutputs, true);
+  deepEqual(issues["owner/module-a"], updatedModules[0].issues);
 });
 
 test("writePublishedCatalogueOutputs writes outputs and reports changed modules", async () => {

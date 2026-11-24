@@ -4,6 +4,7 @@ import { WORKFLOW_VERSION_POLICY } from "../workflow-version-policy.ts";
 import { analyzeModule } from "../module-analyzer.ts";
 import assert from "node:assert/strict";
 import eslintConfig from "../../../eslint.testconfig.js";
+import { formatIssues } from "../issue.ts";
 import { getRuleById } from "../rule-registry.ts";
 import { join } from "node:path";
 import { runEslintCheck } from "../../../pipeline/workers/process-module.ts";
@@ -111,7 +112,9 @@ test("worker lints workflow YAML and does not report action text in Markdown", a
   const oldCheckoutMajor = WORKFLOW_VERSION_POLICY.actions["actions/checkout"].currentMajor - 1;
   await writeFile(join(root, "README.md"), `uses: actions/checkout@v${oldCheckoutMajor}\nnode-version: 14\n`);
   await writeFile(join(root, ".github", "workflows", "ci.yml"), `jobs:\n  test:\n    steps:\n      - uses: actions/checkout@v${oldCheckoutMajor}\n`);
-  const issues = await runEslintCheck(root, false);
+  const structuredIssues = await runEslintCheck(root, false);
+  assert.equal(structuredIssues[0].category, "Recommendation");
+  const issues = formatIssues(structuredIssues);
   assert.equal(issues.length, 1);
   assert.match(issues[0], /\.github\/workflows\/ci\.yml:4:\d+/u);
   assert.ok(issues[0].startsWith("Recommendation:"));
@@ -123,8 +126,8 @@ test("worker XMLHttpRequest rule ignores README examples", async (context) => {
   await writeFile(join(root, "README.md"), "Use `new XMLHttpRequest()` in this example.\n");
   await writeFile(join(root, "client.js"), "new XMLHttpRequest();\n");
   const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [join(root, "README.md"), join(root, "client.js")]);
-  assert.equal(analysis.issues.some(issue => issue.includes("Replace it with built-in fetch")), false);
-  const issues = await runEslintCheck(root, false);
+  assert.equal(formatIssues(analysis.issues).some(issue => issue.includes("Replace it with built-in fetch")), false);
+  const issues = formatIssues(await runEslintCheck(root, false));
   assert.equal(issues.length, 1);
   assert.match(issues[0], /client\.js:1:\d+/u);
   assert.ok(issues[0].includes("Replace it with built-in fetch"));
@@ -206,13 +209,13 @@ test("worker ESLint groups Node protocol findings with general issues", async (c
   const readmePath = join(root, "README.md");
   await writeFile(codePath, "require('http'); require('https');\n");
   await writeFile(readmePath, "require('http'); require('https');\n");
-  const issues = await runEslintCheck(root);
+  const issues = formatIssues(await runEslintCheck(root));
   assert.equal(issues.length, 2);
   assert.ok(issues.every(issue => issue.startsWith("ESLint: node_helper.js: Line 1")));
   assert.ok(issues.every(issue => issue.includes("scoped import")));
   assert.ok(issues.every(issue => issue.includes("rule: eslintN/prefer-node-protocol")));
 
-  const requiredOnly = await runEslintCheck(root, false);
+  const requiredOnly = formatIssues(await runEslintCheck(root, false));
   assert.deepEqual(requiredOnly, []);
 });
 
@@ -227,8 +230,8 @@ test("worker ESLint allows the Module shim assignment only in node_helper.js", a
   await writeFile(join(remoteControlDir, "client.js"), "Module = {}\n");
   await writeFile(join(otherModuleDir, "node_helper.js"), "Module = {}\n");
 
-  const remoteControlIssues = await runEslintCheck(remoteControlDir);
-  const otherModuleIssues = await runEslintCheck(otherModuleDir);
+  const remoteControlIssues = formatIssues(await runEslintCheck(remoteControlDir));
+  const otherModuleIssues = formatIssues(await runEslintCheck(otherModuleDir));
 
   assert.equal(remoteControlIssues.length, 1);
   assert.match(remoteControlIssues[0], /client\.js: Line 1, Column 1: Read-only global 'Module' should not be modified\. \(rule: no-global-assign\)/u);
@@ -315,8 +318,8 @@ test("worker ESLint reports migrated APIs once and runs HTTP checks in the same 
   await writeFile(codePath, "const fs = require('fs'); fs.F_OK; new Buffer('value'); new Date().getYear(); require('axios');\n");
   await writeFile(readmePath, "new Buffer('value'); fs.F_OK; date.getYear();\n");
   const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [codePath, readmePath]);
-  assert.equal(analysis.issues.some(issue => issue.includes("node_helper.js:")), false);
-  const issues = await runEslintCheck(root, false);
+  assert.equal(formatIssues(analysis.issues).some(issue => issue.includes("node_helper.js:")), false);
+  const issues = formatIssues(await runEslintCheck(root, false));
   const deprecatedIssues = issues.filter(issue => issue.startsWith("Deprecated:"));
   assert.equal(deprecatedIssues.length, 3);
   assert.ok(deprecatedIssues.every(issue => /node_helper\.js:1:\d+/u.test(issue)));
@@ -340,7 +343,7 @@ test("worker ESLint uses one trusted config for JavaScript and package.json with
     await writeFile(join(root, directory, "checked.js"), "require('request'); const vendorOnlyUnused = 1;\n");
   }
 
-  const issues = await runEslintCheck(root);
+  const issues = formatIssues(await runEslintCheck(root));
   assert.equal(issues.filter(issue => issue.includes("axios:")).length, 3);
   const vendorIssues = issues.filter(issue => issue.includes("request:"));
   assert.equal(vendorIssues.length, 2);
@@ -353,7 +356,7 @@ test("worker ESLint uses one trusted config for JavaScript and package.json with
   assert.equal(generalIssues.filter(issue => issue.includes("vendorOnlyUnused")).length, 2);
   assert.ok(generalIssues.every(issue => !issue.includes("\n")));
 
-  const requiredOnly = await runEslintCheck(root, false);
+  const requiredOnly = formatIssues(await runEslintCheck(root, false));
   assert.equal(requiredOnly.length, 5);
   for (const filename of ["module.js", "helper.cjs", "library.mjs"]) {
     assert.equal(await readFile(join(root, filename), "utf8"), source);
@@ -380,9 +383,9 @@ test("package checks ignore dependency names and commands in unrelated metadata"
     "pkg-deprecated-rollup-banner",
     "pkg-deprecated-stylelint-config-prettier"
   ]) {
-    assert.equal(analysis.issues.some(issue => issue.includes(getRuleById(ruleId).description)), false, ruleId);
+    assert.equal(formatIssues(analysis.issues).some(issue => issue.includes(getRuleById(ruleId).description)), false, ruleId);
   }
-  assert.deepEqual(await runEslintCheck(root, false), []);
+  assert.deepEqual(formatIssues(await runEslintCheck(root, false)), []);
 });
 
 test("structured package checks cover dependency declarations without duplicate generic recommendations", async (context) => {
@@ -412,7 +415,7 @@ test("structured package checks cover dependency declarations without duplicate 
       [section]: Object.fromEntries(Array.from(expectedRules.keys(), name => [name, "^1.0.0"]))
     }, null, 2));
     const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [packagePath]);
-    const packageIssues = analysis.issues.filter(issue => issue.includes("In `package.json`:"));
+    const packageIssues = formatIssues(analysis.issues).filter(issue => issue.includes("In `package.json`:"));
     assert.equal(packageIssues.length, expectedRules.size, section);
     for (const [name, ruleId] of expectedRules) {
       const matching = packageIssues.filter(issue => issue.includes(`\`${name}\`:`));
@@ -420,10 +423,10 @@ test("structured package checks cover dependency declarations without duplicate 
       assert.ok(matching[0].startsWith(`${getRuleById(ruleId).category}: In \`package.json\`:`));
       assert.ok(matching[0].includes(getRuleById(ruleId).description));
     }
-    assert.deepEqual(await runEslintCheck(root, false), []);
+    assert.deepEqual(formatIssues(await runEslintCheck(root, false)), []);
   }
   await writeFile(packagePath, JSON.stringify({ name: "mmm-test", version: "1.0.0", dependencies: { axios: "^1.0.0", needle: "^3.0.0" } }));
-  const generalIssues = await runEslintCheck(root);
+  const generalIssues = formatIssues(await runEslintCheck(root));
   assert.ok(generalIssues.some(issue => issue.includes("depend/ban-dependencies") && issue.includes("axios")));
   assert.equal(generalIssues.some(issue => issue.includes("depend/ban-dependencies") && issue.includes("needle")), false);
 });
@@ -435,15 +438,15 @@ test("structured package checks inspect script values rather than script names o
   for (const command of ["husky install", "npx husky install", "husky   install .husky", "test && husky install"]) {
     await writeFile(packagePath, JSON.stringify({ scripts: { prepare: command } }));
     const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [packagePath]);
-    assert.equal(analysis.issues.filter(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)).length, 1, command);
+    assert.equal(formatIssues(analysis.issues).filter(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)).length, 1, command);
   }
   await writeFile(packagePath, JSON.stringify({
     scripts: { "husky install": "husky", test: "husky installer", build: ["my", "husky install"].join("") },
     customConfig: { dependencies: { grunt: "^1.0.0" }, scripts: { prepare: "husky install" } }
   }));
   const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [packagePath]);
-  assert.equal(analysis.issues.some(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)), false);
-  assert.equal(analysis.issues.some(issue => issue.includes(getRuleById("pkg-deprecated-grunt").description)), false);
+  assert.equal(formatIssues(analysis.issues).some(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)), false);
+  assert.equal(formatIssues(analysis.issues).some(issue => issue.includes(getRuleById("pkg-deprecated-grunt").description)), false);
 });
 
 test("worker separates structured package recommendations from general ESLint findings", async (context) => {
@@ -453,11 +456,11 @@ test("worker separates structured package recommendations from general ESLint fi
   const source = JSON.stringify({ name: "mmm-test", version: "1.0.0", dependencies: { needle: "^3.0.0" }, scripts: { prepare: "husky install" } });
   await writeFile(packagePath, source);
   const analysis = await analyzeModule(root, "MMM-Test", "https://github.com/example/MMM-Test", [packagePath]);
-  assert.equal(analysis.issues.filter(issue => issue.includes(getRuleById("pkg-recommend-needle").description)).length, 1);
-  assert.equal(analysis.issues.filter(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)).length, 1);
-  const eslintIssues = await runEslintCheck(root, false);
+  assert.equal(formatIssues(analysis.issues).filter(issue => issue.includes(getRuleById("pkg-recommend-needle").description)).length, 1);
+  assert.equal(formatIssues(analysis.issues).filter(issue => issue.includes(getRuleById("pkg-outdated-husky-install").description)).length, 1);
+  const eslintIssues = formatIssues(await runEslintCheck(root, false));
   assert.deepEqual(eslintIssues, []);
-  const generalIssues = await runEslintCheck(root);
+  const generalIssues = formatIssues(await runEslintCheck(root));
   assert.equal(generalIssues.some(issue => issue.includes("depend/ban-dependencies")), false);
   assert.equal(await readFile(packagePath, "utf8"), source);
 });
@@ -475,7 +478,7 @@ test("worker ESLint reports invalid package JSON without aborting JavaScript che
   ]) {
     await writeFile(join(root, "package.json"), packageSource);
     for (const includeGeneralChecks of [true, false]) {
-      const issues = await runEslintCheck(root, includeGeneralChecks);
+      const issues = formatIssues(await runEslintCheck(root, includeGeneralChecks));
       assert.equal(issues.length, 2);
       assert.equal(issues.filter(issue => issue.includes("axios:")).length, 1);
       assert.ok(issues.some(issue => /package\.json.*Parsing error/u.test(issue)));
@@ -488,9 +491,9 @@ test("worker ESLint reports invalid package JSON without aborting JavaScript che
 test("worker ESLint reports parsing failures even when general checks are disabled", async (context) => {
   const root = await mkdtemp(join(tmpdir(), "eslint-parse-test-"));
   context.after(() => rm(root, { recursive: true, force: true }));
-  assert.deepEqual(await runEslintCheck(root), []);
+  assert.deepEqual(formatIssues(await runEslintCheck(root)), []);
   await writeFile(join(root, "broken.js"), "const = ;\n");
-  const issues = await runEslintCheck(root, false);
+  const issues = formatIssues(await runEslintCheck(root, false));
   assert.equal(issues.length, 1);
   assert.match(issues[0], /^ESLint: .*broken\.js.*Parsing error/u);
 });

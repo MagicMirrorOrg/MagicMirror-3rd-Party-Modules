@@ -33,14 +33,17 @@ test("reports invalid config schemas even when the module already has many issue
 
   const issues = await checkConfigSchema(moduleDir, 10);
   assert.equal(issues.length, 1);
-  assert.ok(issues[0].startsWith("Warning: Invalid config.schema.json:"));
+  assert.equal(issues[0].category, "Warning");
+  assert.ok(issues[0].message.startsWith("Invalid config.schema.json:"));
 });
 
 test("recommends a missing config schema only below the issue budget", async (context) => {
   const moduleDir = await createModule(context);
 
-  assert.deepEqual(await checkConfigSchema(moduleDir, 3), [
-    "Recommendation: Add a `config.schema.json` to provide configuration validation and editor support."
-  ]);
+  assert.deepEqual(await checkConfigSchema(moduleDir, 3), [{
+    category: "Recommendation",
+    message: "Add a `config.schema.json` to provide configuration validation and editor support.",
+    severity: "warning"
+  }]);
   assert.deepEqual(await checkConfigSchema(moduleDir, 4), []);
 });

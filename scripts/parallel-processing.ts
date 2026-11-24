@@ -7,6 +7,7 @@
  * analysis payload for downstream pipeline stages.
  */
 
+import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
 import { MODULE_ANALYSIS_CACHE_SCHEMA_VERSION, buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisCheckGroups, resolveModuleAnalysisCachePath } from "../scripts/shared/module-analysis-cache.ts";
 import { toProcessedModule } from "../scripts/shared/module-catalogue-output.ts";
 import { WorkerPool } from "../pipeline/workers/worker-pool.ts";
@@ -28,7 +29,7 @@ interface AnalysisConfig {
 
 interface Stage2Module {
   id: string;
-  issues: string[];
+  issues: unknown[];
   lastCommit?: string | null;
   maintainer: string;
   name: string;
@@ -38,7 +39,8 @@ interface Stage2Module {
   [key: string]: unknown;
 }
 
-interface ModuleResult extends Stage2Module {
+interface ModuleResult extends Omit<Stage2Module, "issues"> {
+  issues: Issue[];
   cacheKey?: string | null;
   cloneDir?: string;
   error?: string;
@@ -244,6 +246,7 @@ export function partitionModulesByCache(
     if (entry) {
       cachedResults.push({
         ...entry.value,
+        issues: normalizeIssues(entry.value.issues),
         cacheKey,
         fromCache: true,
         status: "skipped",
@@ -312,7 +315,7 @@ function buildMergedModules(modules: Stage2Module[], results: ModuleResult[]): M
     if (!result) {
       return {
         ...module,
-        issues: [...module.issues || []],
+        issues: normalizeIssues(module.issues),
         status: "failed",
         failurePhase: "pipeline",
         error: "No worker result available for module"
@@ -322,7 +325,7 @@ function buildMergedModules(modules: Stage2Module[], results: ModuleResult[]): M
     return {
       ...module,
       ...result,
-      issues: [...result.issues || module.issues || []]
+      issues: normalizeIssues(result.issues || module.issues)
     };
   });
 }

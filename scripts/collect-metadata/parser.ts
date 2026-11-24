@@ -1,10 +1,11 @@
+import type { Issue } from "../check-modules/issue.ts";
 import { getRepositoryId, getRepositoryType } from "../updateRepositoryApiData/helpers.ts";
 
 export interface ParsedModuleEntry {
   category: string;
   description: string;
   id: string;
-  issues: string[];
+  issues: Issue[];
   maintainer: string;
   maintainerURL: string;
   name: string;

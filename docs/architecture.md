@@ -36,7 +36,7 @@ flowchart TB
 
   subgraph Phase 3: Catalogue Aggregation
     analysisPayload --> aggregate{{Aggregate catalogue}}
-    aggregate --> outputs[("modules.json<br>modules.min.json<br>stats.json")]
+    aggregate --> outputs[("modules.json<br>modules.min.json<br>stats.json<br>issues.json")]
     analysisPayload --> result{{Generate result markdown}}
     outputs --> result
     result --> resultMd[("result.md")]
@@ -52,6 +52,7 @@ flowchart TB
 - **Orchestrator CLI**: Declarative stage graph with `--only/--skip` support, retries, and structured logging
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
+- **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; `issues.json` preserves that structure while Markdown renders it as text
 - **Schema Validation**: JSON schemas enforce contracts at the published boundaries (`modules.json`, `modules.min.json`, `stats.json`)
 - **Shared Utilities**: HTTP, Git, filesystem, and rate limiting in `scripts/shared/`
 

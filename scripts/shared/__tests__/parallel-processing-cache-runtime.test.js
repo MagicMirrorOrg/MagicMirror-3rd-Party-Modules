@@ -11,6 +11,7 @@ import {
   runParallelProcessing,
   writeSuccessfulResultsToCache
 } from "../../parallel-processing.ts";
+import { formatIssues } from "../../check-modules/issue.ts";
 import { join } from "node:path";
 import { processModule } from "../../../pipeline/workers/process-module.ts";
 import { test } from "node:test";
@@ -294,7 +295,8 @@ test("local-only workers analyze existing files without Git and skip missing clo
   equal(result.status, "success");
   equal(result.fromCache, false);
   equal("cacheKey" in result, false);
-  ok(result.issues.some(issue => issue.includes("axios:") && issue.includes("node_helper.js:1:")));
+  ok(result.issues.every(issue => typeof issue === "object"));
+  ok(formatIssues(result.issues).some(issue => issue.includes("axios:") && issue.includes("node_helper.js:1:")));
   equal(await readFile(sourcePath, "utf8"), source);
 
   const requiredOnly = await processModule({
@@ -305,8 +307,8 @@ test("local-only workers analyze existing files without Git and skip missing clo
     analysisConfig: { deep: false, eslint: false, ncu: false, npmDeprecatedCheck: false }
   });
   equal(requiredOnly.status, "success");
-  equal(requiredOnly.issues.filter(issue => issue.includes("axios:")).length, 1);
-  equal(requiredOnly.issues.some(issue => issue.startsWith("ESLint issues:")), false);
+  equal(formatIssues(requiredOnly.issues).filter(issue => issue.includes("axios:")).length, 1);
+  equal(formatIssues(requiredOnly.issues).some(issue => issue.startsWith("ESLint issues:")), false);
 
   const parallelResult = await runParallelProcessing({
     modules: [module, { ...module, id: "example/MMM-Missing", name: "MMM-Missing" }],
@@ -322,6 +324,6 @@ test("local-only workers analyze existing files without Git and skip missing clo
   equal(parallelResult.skippedCount, 1);
   equal(parallelResult.failedCount, 0);
   equal(parallelResult.cachedCount, 0);
-  ok(parallelResult.results.find(entry => entry.id === module.id).issues.some(issue => issue.includes("axios:")));
+  ok(formatIssues(parallelResult.results.find(entry => entry.id === module.id).issues).some(issue => issue.includes("axios:")));
   equal(await readFile(sourcePath, "utf8"), source);
 });

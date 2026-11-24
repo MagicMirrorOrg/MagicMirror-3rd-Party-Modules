@@ -3,6 +3,7 @@
  * Performs text, package, dependency, and README checks for a module.
  */
 
+import { createIssue, type Issue } from "./issue.ts";
 import { readFile, stat } from "node:fs/promises";
 import {
   PACKAGE_DEPENDENCY_RULES,
@@ -13,8 +14,8 @@ import {
 const PACKAGE_DEPENDENCY_SECTIONS = ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"];
 
 interface AnalysisResult {
-  issues: string[];
-  recommendations: string[];
+  issues: Issue[];
+  recommendations: Issue[];
 }
 
 interface ModuleCheckExceptions {
@@ -215,7 +216,7 @@ export async function analyzeModule(
   moduleUrl: string,
   files: string[]
 ): Promise<AnalysisResult> {
-  const issues: string[] = [];
+  const issues: Issue[] = [];
   const moduleRepoId = getRepositoryId(moduleUrl);
   const moduleExceptions = moduleRepoId ? MODULE_CHECK_EXCEPTIONS[moduleRepoId] ?? {} : {};
   let hasMomentUsage = false;
@@ -251,20 +252,23 @@ export async function analyzeModule(
   }
 
   for (const largeFile of largeFiles) {
-    issues.push(
-      `Recommendation: The file \`${largeFile.path.split("/").pop()}\` is unusually large (${formatMiB(largeFile.size)}). Consider optimizing it or keeping generated files out of the repository.`
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      `The file \`${largeFile.path.split("/").pop()}\` is unusually large (${formatMiB(largeFile.size)}). Consider optimizing it or keeping generated files out of the repository.`
+    ));
   }
 
   if (moduleSize >= VERY_LARGE_MODULE_BYTES) {
-    issues.push(
-      `Warning: The repository contains ${formatMiB(moduleSize)} of non-media files. Consider optimizing large files or excluding generated files from the repository.`
-    );
+    issues.push(createIssue(
+      "Warning",
+      `The repository contains ${formatMiB(moduleSize)} of non-media files. Consider optimizing large files or excluding generated files from the repository.`
+    ));
   }
   else if (moduleSize >= LARGE_MODULE_BYTES) {
-    issues.push(
-      `Recommendation: The repository contains ${formatMiB(moduleSize)} of non-media files. Consider optimizing large files or excluding generated files from the repository.`
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      `The repository contains ${formatMiB(moduleSize)} of non-media files. Consider optimizing large files or excluding generated files from the repository.`
+    ));
   }
 
   // Check for each file
@@ -304,17 +308,20 @@ export async function analyzeModule(
 
       for (const pattern of rule.patterns) {
         if (content.includes(pattern)) {
-          issues.push(
-            `${rule.category}: Found \`${pattern}\` in file \`${filePath.split("/").pop()}\`: ${rule.description}`
-          );
+          issues.push(createIssue(
+            rule.category,
+            `Found \`${pattern}\` in file \`${filePath.split("/").pop()}\`: ${rule.description}`,
+            { ruleId: rule.id, severity: rule.severity }
+          ));
         }
       }
     }
 
     if (filePath.toLowerCase().includes("stylelint") && content.includes("prettier/prettier")) {
-      issues.push(
-        `Recommendation: Found \`prettier/prettier\` in file \`${filePath.split("/").pop()}\`: Config would be cleaner using 'stylelint-prettier/recommended'. [See here](https://github.com/prettier/stylelint-prettier).`
-      );
+      issues.push(createIssue(
+        "Recommendation",
+        `Found \`prettier/prettier\` in file \`${filePath.split("/").pop()}\`: Config would be cleaner using 'stylelint-prettier/recommended'. [See here](https://github.com/prettier/stylelint-prettier).`
+      ));
     }
 
     // Package.json specific rules
@@ -330,7 +337,11 @@ export async function analyzeModule(
             const ruleId = PACKAGE_DEPENDENCY_RULES.get(packageName);
             const rule = ruleId ? getRuleById(ruleId) : null;
             if (rule) {
-              issues.push(`${rule.category}: In \`${relativePath}\`: \`${packageName}\`: ${rule.description}`);
+              issues.push(createIssue(
+                rule.category,
+                `In \`${relativePath}\`: \`${packageName}\`: ${rule.description}`,
+                { ruleId: rule.id, severity: rule.severity }
+              ));
             }
           }
         }
@@ -339,7 +350,11 @@ export async function analyzeModule(
         if (scripts && typeof scripts === "object" && Object.values(scripts).some(command => typeof command === "string" && /\bhusky\s+install\b/u.test(command))) {
           const rule = getRuleById("pkg-outdated-husky-install");
           if (rule) {
-            issues.push(`${rule.category}: In \`${relativePath}\`: ${rule.description}`);
+            issues.push(createIssue(
+              rule.category,
+              `In \`${relativePath}\`: ${rule.description}`,
+              { ruleId: rule.id, severity: rule.severity }
+            ));
           }
         }
 
@@ -362,9 +377,11 @@ export async function analyzeModule(
       for (const rule of PACKAGE_LOCK_RULES) {
         for (const pattern of rule.patterns) {
           if (content.includes(pattern)) {
-            issues.push(
-              `${rule.category}: Found \`${pattern}\` in file \`package-lock.json\`: ${rule.description}`
-            );
+            issues.push(createIssue(
+              rule.category,
+              `Found \`${pattern}\` in file \`package-lock.json\`: ${rule.description}`,
+              { ruleId: rule.id, severity: rule.severity }
+            ));
           }
         }
       }
@@ -374,24 +391,27 @@ export async function analyzeModule(
     if (relativePath === "README.md" && !moduleExceptions.skipReadmeChecks) {
       // Check for update section
       if (!content.includes("## Updat")) {
-        issues.push(
-          "Recommendation: The README seems not to have an update section (like `## Update`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Update-Instructions))."
-        );
+        issues.push(createIssue(
+          "Recommendation",
+          "The README seems not to have an update section (like `## Update`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Update-Instructions))."
+        ));
       }
 
       // Check for install section
       if (!content.includes("## Install")) {
-        issues.push(
-          "Recommendation: The README seems not to have an install section (like `## Installation`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Installation-Instructions))."
-        );
+        issues.push(createIssue(
+          "Recommendation",
+          "The README seems not to have an install section (like `## Installation`). Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Installation-Instructions))."
+        ));
       }
 
       // Check for modules array
       const falsePositivesModulesArray = ["MMM-pages", "MMM-WebSpeechTTS"];
       if (content.includes("modules: [") && !falsePositivesModulesArray.includes(moduleName)) {
-        issues.push(
-          "Recommendation: The README seems to have a modules array (Found `modules: [`). This is usually not necessary. Please remove it if it is not needed ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
-        );
+        issues.push(createIssue(
+          "Recommendation",
+          "The README seems to have a modules array (Found `modules: [`). This is usually not necessary. Please remove it if it is not needed ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
+        ));
       }
 
       // Check for config example
@@ -401,26 +421,28 @@ export async function analyzeModule(
       if (!hasConfigExample) {
         const falsePositivesConfig = ["MMM-CalendarExt2"];
         if (!content.includes("modules: [") && !falsePositivesConfig.includes(moduleName)) {
-          issues.push(
-            "Recommendation: The README seems not to have a config example. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
-          );
+          issues.push(createIssue(
+            "Recommendation",
+            "The README seems not to have a config example. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
+          ));
         }
       } else {
         // Check for trailing comma
         const hasTrailingComma = configObjects.some((object) => object.hasTrailingComma);
         const falsePositivesTrailing = ["MMM-MealieMenu", "MMM-Remote-Control"];
         if (!hasTrailingComma && !falsePositivesTrailing.includes(moduleName)) {
-          issues.push(
-            "Recommendation: The README seems to have a config example without a trailing comma. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
-          );
+          issues.push(createIssue(
+            "Recommendation",
+            "The README seems to have a config example without a trailing comma. Please add one ([basic instructions](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/readme_bestpractices.md#Config-Instructions))."
+          ));
         }
       }
 
       // Check clone instructions
       if (!content.includes("git clone")) {
-        issues.push("Recommendation: The README seems not to have clone instructions.");
+        issues.push(createIssue("Recommendation", "The README seems not to have clone instructions."));
       } else if (!hasValidGitCloneInstruction(content, moduleUrl)) {
-        issues.push("Recommendation: The README seems to have incorrect clone instructions. Please check the URL.");
+        issues.push(createIssue("Recommendation", "The README seems to have incorrect clone instructions. Please check the URL."));
       }
     }
   }
@@ -429,27 +451,31 @@ export async function analyzeModule(
   const filenames = new Set(relevantFiles.map((f) => f.split("/").pop()?.toUpperCase() ?? ""));
 
   if (!filenames.has("LICENSE") && !filenames.has("LICENSE.MD")) {
-    issues.push(
-      "Warning: No LICENSE file ([example LICENSE file](https://github.com/KristjanESPERANTO/MMM-WebSpeechTTS/blob/main/LICENSE.md))."
-    );
+    issues.push(createIssue(
+      "Warning",
+      "No LICENSE file ([example LICENSE file](https://github.com/KristjanESPERANTO/MMM-WebSpeechTTS/blob/main/LICENSE.md))."
+    ));
   }
 
   if (!filenames.has("CHANGELOG") && !filenames.has("CHANGELOG.MD")) {
-    issues.push(
-      "Recommendation: There is no CHANGELOG file. It is recommended to add one ([example CHANGELOG file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CHANGELOG.md))."
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      "There is no CHANGELOG file. It is recommended to add one ([example CHANGELOG file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CHANGELOG.md))."
+    ));
   }
 
   if (!moduleExceptions.skipCodeOfConductCheck && !filenames.has("CODE_OF_CONDUCT") && !filenames.has("CODE_OF_CONDUCT.MD")) {
-    issues.push(
-      "Recommendation: There is no CODE_OF_CONDUCT file. It is recommended to add one ([example CODE_OF_CONDUCT file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CODE_OF_CONDUCT.md))."
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      "There is no CODE_OF_CONDUCT file. It is recommended to add one ([example CODE_OF_CONDUCT file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/CODE_OF_CONDUCT.md))."
+    ));
   }
 
   if (!moduleExceptions.skipDependabotCheck && !filenames.has("DEPENDABOT.YAML") && !filenames.has("DEPENDABOT.YML")) {
-    issues.push(
-      "Recommendation: There is no dependabot configuration file. It is recommended to add one ([example dependabot file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/.github/dependabot.yaml))."
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      "There is no dependabot configuration file. It is recommended to add one ([example dependabot file](https://github.com/KristjanESPERANTO/MMM-ApothekenNotdienst/blob/main/.github/dependabot.yaml))."
+    ));
   }
 
   // Linting setup checks (ESLint or Biome)
@@ -459,11 +485,12 @@ export async function analyzeModule(
     const hasBiome = filenames.has("BIOME.JSON") || filenames.has("BIOME.JSONC");
 
     if (hasOldEslintrc) {
-      issues.push("Recommendation: Replace eslintrc by new flat config.");
+      issues.push(createIssue("Recommendation", "Replace eslintrc by new flat config."));
     } else if (!hasNewEslint && !hasBiome) {
-      issues.push(
-        "Recommendation: No linter configuration was found. A linter is very helpful, it is worth using one even for small projects. You can use ESLint or Biome ([ESLint guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/eslint.md), [Biome guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/biome.md))."
-      );
+      issues.push(createIssue(
+        "Recommendation",
+        "No linter configuration was found. A linter is very helpful, it is worth using one even for small projects. You can use ESLint or Biome ([ESLint guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/eslint.md), [Biome guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/biome.md))."
+      ));
     } else if (hasNewEslint) {
       // Check if ESLint is in package.json dependencies
       const packageJsonFiles = relevantFiles.filter((f) => f.endsWith("package.json"));
@@ -475,19 +502,21 @@ export async function analyzeModule(
             !pkg.dependencies?.eslint &&
             !pkg.devDependencies?.eslint
           ) {
-            issues.push(
-              "Recommendation: ESLint is not in the dependencies or devDependencies. It is recommended to add it to one of them."
-            );
+            issues.push(createIssue(
+              "Recommendation",
+              "ESLint is not in the dependencies or devDependencies. It is recommended to add it to one of them."
+            ));
           }
 
           // Check lint script
           if (pkg.scripts) {
             if (!pkg.scripts.lint) {
-              issues.push("Recommendation: No lint script found in package.json. It is recommended to add one.");
+              issues.push(createIssue("Recommendation", "No lint script found in package.json. It is recommended to add one."));
             } else if (!pkg.scripts.lint.includes("eslint")) {
-              issues.push(
-                "Recommendation: The lint script in package.json does not contain `eslint`. It is recommended to add it."
-              );
+              issues.push(createIssue(
+                "Recommendation",
+                "The lint script in package.json does not contain `eslint`. It is recommended to add it."
+              ));
             }
           }
         } catch {
@@ -502,9 +531,10 @@ export async function analyzeModule(
       for (const configFile of eslintConfigFiles) {
         const configContent = await readFile(configFile, "utf-8").catch(() => "");
         if (!configContent.includes("defineConfig")) {
-          issues.push(
-            `Recommendation: The ESLint configuration file \`${configFile.split("/").pop()}\` does not contain \`defineConfig\`. It is recommended to use it.`
-          );
+          issues.push(createIssue(
+            "Recommendation",
+            `The ESLint configuration file \`${configFile.split("/").pop()}\` does not contain \`defineConfig\`. It is recommended to use it.`
+          ));
         }
       }
     }
@@ -512,9 +542,10 @@ export async function analyzeModule(
 
   // Check for node_modules in directory list (not files)
   if (relevantFiles.some((f) => f.endsWith("/node_modules"))) {
-    issues.push(
+    issues.push(createIssue(
+      undefined,
       "Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`."
-    );
+    ));
   }
 
   if (hasMomentUsage && !hasMomentImportOrRequire && !hasOwnMomentDependency) {
@@ -523,13 +554,14 @@ export async function analyzeModule(
       ? ` Detected in: ${usageLocations.map(location => `\`${location}\``).join(", ")}.`
       : "";
 
-    issues.push(
-      `Recommendation: Moment usage was detected, but no module-owned \`moment\`/\`moment-timezone\` dependency or import was found. This likely relies on core-provided Moment.${usageLocationsText} Please declare and import your own dependency.`
-    );
+    issues.push(createIssue(
+      "Recommendation",
+      `Moment usage was detected, but no module-owned \`moment\`/\`moment-timezone\` dependency or import was found. This likely relies on core-provided Moment.${usageLocationsText} Please declare and import your own dependency.`
+    ));
   }
 
   return {
     issues,
-    recommendations: [], // Recommendations are mixed into issues for compatibility
+    recommendations: []
   };
 }

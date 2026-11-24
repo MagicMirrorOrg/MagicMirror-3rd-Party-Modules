@@ -1,3 +1,5 @@
+import { createIssue, formatIssue, normalizeIssues, type Issue } from "./issue.ts";
+
 export interface ResultMarkdownStats {
   issueCounter: number;
   lastUpdate: string;
@@ -8,14 +10,14 @@ export interface ResultMarkdownStats {
 }
 
 export interface IssueSummary {
-  issues: string[];
+  issues: Issue[];
   maintainer: string;
   name: string;
   url?: string;
 }
 
 interface ProcessedModuleLike {
-  issues?: boolean | string[] | string | null;
+  issues?: unknown;
   maintainer?: string;
   name?: string;
   outdated?: string;
@@ -37,16 +39,8 @@ function isGitHubUrl(url: unknown): boolean {
   }
 }
 
-export function normalizeIssuesInput(issues: string[] | string | boolean | null | undefined): string[] {
-  if (Array.isArray(issues)) {
-    return issues.slice();
-  }
-
-  if (typeof issues === "string" && issues.length > 0) {
-    return [issues];
-  }
-
-  return [];
+export function normalizeIssuesInput(issues: unknown): Issue[] {
+  return normalizeIssues(issues);
 }
 
 export function collectIssueSummaries(modules: unknown[]): IssueSummary[] {
@@ -62,7 +56,7 @@ export function collectIssueSummaries(modules: unknown[]): IssueSummary[] {
 
     const issues = normalizeIssuesInput(stageModule.issues);
     const watcherIssue = isGitHubUrl(stageModule.url) && stageModule.watchersCount === 0
-      ? "GitHub reports 0 subscribers (Watch); maintainer notifications may be missed."
+      ? createIssue(undefined, "GitHub reports 0 subscribers (Watch); maintainer notifications may be missed.")
       : null;
 
     const combinedIssues = watcherIssue ? [...issues, watcherIssue] : issues;
@@ -123,8 +117,8 @@ export function buildResultMarkdown(stats: ResultMarkdownStats, summaries: Issue
       `### [${summary.name} by ${summary.maintainer}](${summary.url})`,
       ""
     );
-    summary.issues.forEach((issue, index) => {
-      lines.push(`${index + 1}. ${issue}`);
+    normalizeIssues(summary.issues).forEach((issue, index) => {
+      lines.push(`${index + 1}. ${formatIssue(issue)}`);
     });
   }
 

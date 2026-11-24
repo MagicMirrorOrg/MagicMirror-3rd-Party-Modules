@@ -1,3 +1,4 @@
+import { normalizeIssues, type Issue } from "../check-modules/issue.ts";
 import { access, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { stringifyDeterministic } from "./deterministic-output.ts";
@@ -10,7 +11,7 @@ export interface ProcessedModule extends ModuleRecord {
   id?: string;
   image?: string;
   isArchived?: boolean;
-  issues?: unknown[];
+  issues?: Issue[];
   keywords?: string[];
   lastCommit?: string | null;
   license?: string;
@@ -153,9 +154,7 @@ export function toProcessedModule(module: ProcessedModule): ProcessedModule {
     }
   }
 
-  if (!Array.isArray(entry.issues)) {
-    entry.issues = [];
-  }
+  entry.issues = normalizeIssues(entry.issues);
 
   return entry;
 }
@@ -286,6 +285,16 @@ function isValidIsoDateTime(value: unknown): value is string {
   return typeof value === "string" && value.length > 0 && !Number.isNaN(Date.parse(value));
 }
 
+function buildIssuesMap(processedModules: ProcessedModule[]): Record<string, Issue[]> {
+  const issuesMap: Record<string, Issue[]> = {};
+  for (const module of processedModules) {
+    if (typeof module.id === "string" && Array.isArray(module.issues) && module.issues.length > 0) {
+      issuesMap[module.id] = module.issues;
+    }
+  }
+  return issuesMap;
+}
+
 function areModulesEqual(left: FinalModule, right: FinalModule): boolean {
   return stringifyDeterministic(left, 0) === stringifyDeterministic(right, 0);
 }
@@ -380,7 +389,7 @@ export async function writePublishedCatalogueOutputs(
   processedModules: unknown[],
   projectRoot: string
 ): Promise<PublishedOutputResult> {
-  const normalizedProcessedModules = processedModules as ProcessedModule[];
+  const normalizedProcessedModules = (processedModules as ProcessedModule[]).map(toProcessedModule);
   const issuesJsonPath = resolve(projectRoot, "website/data/issues.json");
   const modulesJsonPath = resolve(projectRoot, "website/data/modules.json");
   const modulesMinPath = resolve(projectRoot, "website/data/modules.min.json");
@@ -388,6 +397,7 @@ export async function writePublishedCatalogueOutputs(
 
   const previousModulesPayload = await readJsonIfExists(modulesJsonPath);
   const previousModules = normalizeModuleCollection(previousModulesPayload);
+  const previousIssues = await readJsonIfExists(issuesJsonPath);
   const previousStats = await readJsonIfExists(statsPath) as PreviousStatsPayload | null;
   const previousLastUpdate = isValidIsoDateTime(previousStats?.lastUpdate)
     ? previousStats.lastUpdate
@@ -395,7 +405,13 @@ export async function writePublishedCatalogueOutputs(
   const nowTimestamp = new Date().toISOString();
   const comparisonTimestamp = previousLastUpdate ?? nowTimestamp;
   const comparableFinalModules = normalizedProcessedModules.map(module => toFinalModule(module, comparisonTimestamp));
-  const changeSummary = buildModuleDiffSummary(previousModules, comparableFinalModules);
+  const issuesMap = buildIssuesMap(normalizedProcessedModules);
+  const issueMapChanged = stringifyDeterministic(previousIssues ?? {}, 0) !== stringifyDeterministic(issuesMap, 0);
+  const moduleChangeSummary = buildModuleDiffSummary(previousModules, comparableFinalModules);
+  const changeSummary = {
+    ...moduleChangeSummary,
+    hasChanges: moduleChangeSummary.hasChanges || issueMapChanged
+  };
 
   const outputsAlreadyPresent = await allFilesExist([issuesJsonPath, modulesJsonPath, modulesMinPath, statsPath]);
   const shouldSkipWrites = !changeSummary.hasChanges && outputsAlreadyPresent;
@@ -423,13 +439,6 @@ export async function writePublishedCatalogueOutputs(
     ? normalizedProcessedModules.map(module => toFinalModule(module, lastUpdate))
     : comparableFinalModules;
   const stats = buildStats(normalizedProcessedModules, finalModules, lastUpdate);
-
-  const issuesMap: Record<string, string[]> = {};
-  for (const module of normalizedProcessedModules) {
-    if (typeof module.id === "string" && Array.isArray(module.issues) && module.issues.length > 0) {
-      issuesMap[module.id] = module.issues as string[];
-    }
-  }
 
   await writeFile(issuesJsonPath, stringifyDeterministic(issuesMap, 0), "utf-8");
   await writeFile(modulesJsonPath, stringifyDeterministic({ modules: finalModules }), "utf-8");

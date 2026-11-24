@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import { getRuleById } from "../../scripts/check-modules/rule-registry.ts";
 import { buildModuleAnalysisCacheKey } from "../../scripts/shared/module-analysis-cache.ts";
 import { checkConfigSchema } from "../../scripts/check-modules/config-schema-check.ts";
+import { createIssue, formatIssue, normalizeIssues, type Issue } from "../../scripts/check-modules/issue.ts";
 import { createDeterministicImageName } from "../../scripts/shared/deterministic-output.ts";
 import { createLogger } from "../../scripts/shared/logger.ts";
 import { analyzeModule as performModuleAnalysis } from "../../scripts/check-modules/module-analyzer.ts";
@@ -28,7 +29,7 @@ interface ModuleInput {
   hasGithubIssues?: boolean;
   id: string;
   isArchived?: boolean;
-  issues?: string[];
+  issues?: unknown[];
   lastCommit?: string;
   license?: string;
   maintainer: string;
@@ -100,7 +101,7 @@ interface ModuleResult {
   id: string;
   image?: string;
   isArchived?: boolean;
-  issues: string[];
+  issues: Issue[];
   lastCommit?: string;
   license?: string;
   licenseStatus?: "mismatch";
@@ -108,7 +109,7 @@ interface ModuleResult {
   name: string;
   packageJson?: PackageJsonInfo;
   processingTimeMs: number;
-  recommendations?: string[];
+  recommendations?: Issue[];
   skippedReason?: string;
   stars?: number;
   status: "failed" | "skipped" | "success";
@@ -122,12 +123,12 @@ interface CloneResult {
 }
 
 interface FindImageResult {
-  issues: string[];
+  issues: Issue[];
   targetImageName: string | null;
 }
 
 interface EnrichResult {
-  enrichIssues: string[];
+  enrichIssues: Issue[];
   image?: string;
   license?: string;
   licenseStatus?: "mismatch";
@@ -136,49 +137,42 @@ interface EnrichResult {
 }
 
 interface AnalysisResult {
-  analysisIssues: string[];
-  recommendations: string[];
+  analysisIssues: Issue[];
+  recommendations: Issue[];
 }
 
 function getErrorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
 
-function normalizeIssueList(issues: unknown): string[] {
-  if (Array.isArray(issues)) {
-    return issues.filter((issue): issue is string => typeof issue === "string" && issue.length > 0);
-  }
-
-  if (typeof issues === "string" && issues.length > 0) {
-    return [issues];
-  }
-
-  return [];
+function normalizeIssueList(issues: unknown): Issue[] {
+  return normalizeIssues(issues);
 }
 
-export function getRepositoryStatusIssues(module: Pick<ModuleInput, "url" | "hasGithubIssues" | "isArchived">): string[] {
+export function getRepositoryStatusIssues(module: Pick<ModuleInput, "url" | "hasGithubIssues" | "isArchived">): Issue[] {
   if (!isRepositoryType(module.url, "github")) {
     return [];
   }
 
-  const issues: string[] = [];
+  const issues: Issue[] = [];
   if (module.hasGithubIssues === false) {
-    issues.push("Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo.");
+    issues.push(createIssue(undefined, "Issues are not enabled in the GitHub repository. So users cannot report bugs. Please enable issues in your repo."));
   }
 
   if (module.isArchived === true) {
-    issues.push("This GitHub repository is archived and read-only. It may no longer receive fixes or updates.");
+    issues.push(createIssue(undefined, "This GitHub repository is archived and read-only. It may no longer receive fixes or updates."));
   }
 
   return issues;
 }
 
-function mergeUniqueIssues(target: string[], issues: unknown): void {
-  const existing = new Set(target);
+function mergeUniqueIssues(target: Issue[], issues: unknown): void {
+  const existing = new Set(target.map(formatIssue));
   for (const issue of normalizeIssueList(issues)) {
-    if (!existing.has(issue)) {
+    const renderedIssue = formatIssue(issue);
+    if (!existing.has(renderedIssue)) {
       target.push(issue);
-      existing.add(issue);
+      existing.add(renderedIssue);
     }
   }
 }
@@ -233,7 +227,7 @@ async function runDeprecatedCheck(moduleDir: string): Promise<string | null> {
   }
 }
 
-export async function runEslintCheck(moduleDir: string, includeGeneralChecks = true): Promise<string[]> {
+export async function runEslintCheck(moduleDir: string, includeGeneralChecks = true): Promise<Issue[]> {
   const moduleOverrides = path.basename(path.resolve(moduleDir)).startsWith("MMM-Remote-Control")
     ? [{
         files: ["**/node_helper.js"],
@@ -253,25 +247,36 @@ export async function runEslintCheck(moduleDir: string, includeGeneralChecks = t
     fix: false
   });
   const results = await eslint.lintFiles(["**/*.{js,mjs,cjs,yaml,yml}", "**/package.json"]);
-  const issues: string[] = [];
-  const generalIssues: string[] = [];
+  const issues: Issue[] = [];
+  const generalIssues: Issue[] = [];
   for (const result of results) {
     const relativePath = path.relative(moduleDir, result.filePath);
     for (const message of result.messages) {
+      const location = `In \`${relativePath}:${message.line}:${message.column}\`:`;
       if (message.ruleId === "eslintN/no-deprecated-api") {
-        const rule = getRuleById("text-deprecated-node-api");
+        const ruleId = "text-deprecated-node-api";
+        const rule = getRuleById(ruleId);
         if (rule) {
-          issues.push(`${rule.category}: In \`${relativePath}:${message.line}:${message.column}\`: ${message.message}`);
+          issues.push(createIssue(rule.category, `${location} ${message.message}`, {
+            ruleId,
+            severity: rule.severity
+          }));
         }
       }
       else if (message.ruleId?.startsWith("magicmirror/")) {
         const rule = message.messageId ? getRuleById(message.messageId) : null;
         if (rule) {
-          issues.push(`${rule.category}: In \`${relativePath}:${message.line}:${message.column}\`: ${message.message}`);
+          issues.push(createIssue(rule.category, `${location} ${message.message}`, {
+            ruleId: rule.id,
+            severity: rule.severity
+          }));
         }
       }
       else if (includeGeneralChecks || message.fatal) {
-        generalIssues.push(`ESLint: ${relativePath}: Line ${message.line}, Column ${message.column}: ${message.message} (rule: ${message.ruleId})`);
+        generalIssues.push(createIssue("ESLint", `${relativePath}: Line ${message.line}, Column ${message.column}: ${message.message} (rule: ${message.ruleId})`, {
+          ruleId: message.ruleId ?? undefined,
+          severity: message.fatal || message.severity === 2 ? "error" : "warning"
+        }));
       }
     }
   }
@@ -279,7 +284,7 @@ export async function runEslintCheck(moduleDir: string, includeGeneralChecks = t
   return issues;
 }
 
-async function applyDependencyIntegrations(moduleDir: string, issues: string[], config: ProcessModuleConfig): Promise<void> {
+async function applyDependencyIntegrations(moduleDir: string, issues: Issue[], config: ProcessModuleConfig): Promise<void> {
   const analysisConfig = config.analysisConfig ?? config.checkGroups ?? {};
 
   if (analysisConfig.deep === false) {
@@ -298,9 +303,8 @@ async function applyDependencyIntegrations(moduleDir: string, issues: string[], 
   if (analysisConfig.ncu !== false) {
     const upgrades = await runNpmCheckUpdates(moduleDir);
     if (upgrades.length > 0) {
-      const header = `Information: There are updates for ${upgrades.length} dependencie(s):`;
       const details = upgrades.map(entry => `   - ${entry}`).join("\n");
-      mergeUniqueIssues(issues, [`${header}\n${details}`]);
+      mergeUniqueIssues(issues, [createIssue("Information", `There are updates for ${upgrades.length} dependencie(s):\n${details}`)]);
     }
   }
 
@@ -311,7 +315,7 @@ async function applyDependencyIntegrations(moduleDir: string, issues: string[], 
   if (analysisConfig.npmDeprecatedCheck !== false) {
     const deprecated = await runDeprecatedCheck(moduleDir);
     if (deprecated) {
-      mergeUniqueIssues(issues, [deprecated]);
+      mergeUniqueIssues(issues, [createIssue(undefined, deprecated)]);
     }
   }
 
@@ -514,7 +518,7 @@ function isImageFile(filename: string): boolean {
  * @param {string} moduleName
  * @param {string} moduleMaintainer
  * @param {ProcessModuleConfig} config
- * @returns {Promise<{targetImageName: string | null, issues: string[]}>}
+ * @returns {Promise<{targetImageName: string | null, issues: Issue[]}>}
  */
 async function findAndResizeImage(moduleName: string, moduleMaintainer: string, config: ProcessModuleConfig): Promise<FindImageResult> {
   const sourceFolder = path.join(
@@ -526,7 +530,7 @@ async function findAndResizeImage(moduleName: string, moduleMaintainer: string, 
     const files = await fs.promises.readdir(sourceFolder, { recursive: true });
     files.sort();
 
-    const issues: string[] = [];
+    const issues: Issue[] = [];
     let firstScreenshotImage = null;
     let firstImage = null;
 
@@ -572,12 +576,12 @@ async function findAndResizeImage(moduleName: string, moduleMaintainer: string, 
       }
       catch (error) {
         const message = error instanceof Error ? error.message : String(error);
-        issues.push(`Error processing image "${imageToProcess}": ${message}`);
+        issues.push(createIssue(undefined, `Error processing image "${imageToProcess}": ${message}`, { severity: "error" }));
         return { targetImageName: null, issues };
       }
     }
     else {
-      issues.push("No image found.");
+      issues.push(createIssue(undefined, "No image found."));
       return { targetImageName: null, issues };
     }
   }
@@ -585,7 +589,7 @@ async function findAndResizeImage(moduleName: string, moduleMaintainer: string, 
     const message = error instanceof Error ? error.message : String(error);
     return {
       targetImageName: null,
-      issues: [`Error reading module directory for images: ${message}`]
+      issues: [createIssue(undefined, `Error reading module directory for images: ${message}`, { severity: "error" })]
     };
   }
 }
@@ -773,7 +777,7 @@ async function loadPackageManifest(module: ModuleInput, config: ProcessModuleCon
  * @param {string[]} issues
  * @returns {string[] | null}
  */
-function deriveTagsFromKeywords(keywords: string[], issues: string[]): string[] | null {
+function deriveTagsFromKeywords(keywords: string[], issues: Issue[]): string[] | null {
   const tagsToRemove = [
     "2",
     "mm",
@@ -797,14 +801,14 @@ function deriveTagsFromKeywords(keywords: string[], issues: string[]): string[] 
 
   const duplicates = keywords.filter((tag, index) => keywords.indexOf(tag) !== index);
   if (duplicates.length > 0) {
-    issues.push(`There are duplicates in the keywords in your package.json: ${duplicates.join(", ")}`);
+    issues.push(createIssue(undefined, `There are duplicates in the keywords in your package.json: ${duplicates.join(", ")}`));
   }
 
   let processed = keywords
     .map((tag) => {
       const lowered = tag.toLowerCase();
       if (lowered === "smarthome") {
-        issues.push("Please use 'smart home' instead of 'smarthome' as a keyword in your package.json.");
+        issues.push(createIssue(undefined, "Please use 'smart home' instead of 'smarthome' as a keyword in your package.json."));
         return "smart home";
       }
       if (lowered === "sport") {
@@ -824,7 +828,7 @@ function deriveTagsFromKeywords(keywords: string[], issues: string[]): string[] 
   processed = [...new Set(processed)];
 
   if (processed.length === 0) {
-    issues.push("There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just \"magicmirror\" or \"module\".");
+    issues.push(createIssue(undefined, "There are no specific keywords in 'package.json'. We would use them as tags on the module list page. Add a few meaningful terms to the keywords in the package.json. Not just \"magicmirror\" or \"module\"."));
     return null;
   }
 
@@ -834,10 +838,10 @@ function deriveTagsFromKeywords(keywords: string[], issues: string[]): string[] 
 /**
  * @param {ModuleInput} module
  * @param {ProcessModuleConfig} config
- * @returns {Promise<{packageJson: PackageJsonInfo, tags?: string[], image?: string, license?: string, enrichIssues: string[]}>}
+ * @returns {Promise<{packageJson: PackageJsonInfo, tags?: string[], image?: string, license?: string, enrichIssues: Issue[]}>}
  */
 async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): Promise<EnrichResult> {
-  const enrichIssues: string[] = [];
+  const enrichIssues: Issue[] = [];
 
   if (config.moduleLogger) {
     await config.moduleLogger.info("enrich", "Starting enrichment stage");
@@ -862,7 +866,7 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
   if (packageJson.status === "parsed") {
     // Add warnings as issues
     for (const warning of packageJson.warnings || []) {
-      enrichIssues.push(`\`package.json\` issue: ${warning}`);
+      enrichIssues.push(createIssue(undefined, `\`package.json\` issue: ${warning}`));
     }
 
     // Derive tags from keywords
@@ -879,7 +883,7 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
       }
     }
     else {
-      enrichIssues.push("There are no keywords in 'package.json'. We would use them as tags on the module list page.");
+      enrichIssues.push(createIssue(undefined, "There are no keywords in 'package.json'. We would use them as tags on the module list page."));
     }
 
     // Check license consistency
@@ -889,7 +893,7 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
         effectiveLicense = packageLicense;
       }
       else if (!packageLicense.includes(module.license)) {
-        enrichIssues.push(`Issue: The license in the package.json (${packageLicense}) doesn't match the license file (${module.license}).`);
+        enrichIssues.push(createIssue(undefined, `Issue: The license in the package.json (${packageLicense}) doesn't match the license file (${module.license}).`));
         effectiveLicense = undefined;
         licenseStatus = "mismatch";
       }
@@ -902,11 +906,11 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
       tags = ["package manager", "module installer"];
     }
     else {
-      enrichIssues.push("There is no `package.json`. We need this file to gather information about the module for the module list page.");
+      enrichIssues.push(createIssue(undefined, "There is no `package.json`. We need this file to gather information about the module for the module list page."));
     }
   }
   else if (packageJson.status === "error") {
-    enrichIssues.push(`An error occurred while getting information from 'package.json': ${packageJson.error}`);
+    enrichIssues.push(createIssue(undefined, `An error occurred while getting information from 'package.json': ${packageJson.error}`, { severity: "error" }));
   }
 
   enrichIssues.push(...getRepositoryStatusIssues(module));
@@ -954,7 +958,7 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
     enrichIssues.push(...imageIssues);
   }
   else if (effectiveLicense) {
-    enrichIssues.push("No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image.");
+    enrichIssues.push(createIssue(undefined, "No compatible or wrong license field in 'package.json' or LICENSE file. Without that, we can't use an image."));
     if (config.moduleLogger) {
       await config.moduleLogger.warn("enrich", "Incompatible license - skipping image", {
         license: effectiveLicense
@@ -984,7 +988,7 @@ async function enrichModule(module: ModuleInput, config: ProcessModuleConfig): P
  * Stage 5: Analyze module for code quality issues, deprecated patterns, and best practices.
  * Runs comprehensive checks including deprecated APIs, typos, package validation, and README structure.
  *
- * @returns {{analysisIssues: string[], recommendations: string[]}}
+ * @returns {{analysisIssues: Issue[], recommendations: Issue[]}}
  */
 async function analyzeModule(module: ModuleInput, config: ProcessModuleConfig): Promise<AnalysisResult> {
   const cloneDir = path.join(
@@ -1022,7 +1026,7 @@ async function analyzeModule(module: ModuleInput, config: ProcessModuleConfig): 
     const files = getAllFiles(cloneDir);
     if (files.length === 0) {
       return {
-        analysisIssues: ["Error: Unable to read module files for analysis"],
+        analysisIssues: [createIssue("Error", "Unable to read module files for analysis")],
         recommendations: []
       };
     }
@@ -1041,7 +1045,7 @@ async function analyzeModule(module: ModuleInput, config: ProcessModuleConfig): 
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     return {
-      analysisIssues: [`Analysis error: ${message}`],
+      analysisIssues: [createIssue(undefined, `Analysis error: ${message}`, { severity: "error" })],
       recommendations: []
     };
   }

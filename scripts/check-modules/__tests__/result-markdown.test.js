@@ -46,13 +46,19 @@ describe("result-markdown", () => {
         name: "MMM-Example",
         maintainer: "Alice",
         url: "https://github.com/example/MMM-Example",
-        issues: ["Issue one", "Issue two"]
+        issues: [
+          { message: "Issue one", severity: "warning" },
+          { message: "Issue two", severity: "warning" }
+        ]
       },
       {
         name: "MMM-Quiet",
         maintainer: "Dana",
         url: "https://github.com/example/MMM-Quiet",
-        issues: ["GitHub reports 0 subscribers (Watch); maintainer notifications may be missed."]
+        issues: [{
+          message: "GitHub reports 0 subscribers (Watch); maintainer notifications may be missed.",
+          severity: "warning"
+        }]
       }
     ]);
   });

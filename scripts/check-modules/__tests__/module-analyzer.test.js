@@ -1,6 +1,7 @@
 import * as fsPromises from "node:fs/promises";
 import { analyzeModule } from "../../check-modules/module-analyzer.ts";
 import { strict as assert } from "node:assert";
+import { formatIssues } from "../issue.ts";
 import { join } from "node:path";
 import { runEslintCheck } from "../../../pipeline/workers/process-module.ts";
 import { test } from "node:test";
@@ -14,7 +15,7 @@ test("worker ESLint reports HTTP imports once and ignores README mentions", asyn
   await fsPromises.writeFile(codePath, "const client = require('axios');\n");
   await fsPromises.appendFile(readmePath, "\nUse axios or 'node-fetch' or require('request').\n");
 
-  const issues = await runEslintCheck(moduleRoot, false);
+  const issues = formatIssues(await runEslintCheck(moduleRoot, false));
   const httpIssues = issues.filter(issue => issue.includes("built-in fetch"));
   assert.equal(httpIssues.length, 1);
   assert.match(httpIssues[0], /node_helper\.js:1:\d+/u);
@@ -107,22 +108,23 @@ test("analyzer keeps .github files and applies only lockfile-specific package-lo
     files
   );
 
+  const issues = formatIssues(result.issues);
   assert.equal(
-    result.issues.some(issue => issue.includes("There is no dependabot configuration file")),
+    issues.some(issue => issue.includes("There is no dependabot configuration file")),
     false
   );
   assert.equal(
-    result.issues.some(issue => issue.includes("in file `CHANGELOG.md`")),
+    issues.some(issue => issue.includes("in file `CHANGELOG.md`")),
     false
   );
   assert.equal(
-    result.issues.some(
+    issues.some(
       issue => issue.includes("Found `jshint`") && issue.includes("in file `package-lock.json`")
     ),
     false
   );
   assert.equal(
-    result.issues.some(
+    issues.some(
       issue => issue.includes("Found `\"lockfileVersion\": 2`") && issue.includes("in file `package-lock.json`")
     ),
     true
@@ -181,7 +183,7 @@ test("analyzer accepts valid git clone commands with flags", async () => {
     files
   );
 
-  assert.equal(result.issues.some(issue => issue.includes("incorrect clone instructions")), false);
+  assert.equal(formatIssues(result.issues).some(issue => issue.includes("incorrect clone instructions")), false);
 });
 
 test("analyzer applies classic-module exceptions for mmpm", async () => {
@@ -210,10 +212,11 @@ test("analyzer applies classic-module exceptions for mmpm", async () => {
     files
   );
 
-  assert.equal(result.issues.some(issue => issue.includes("README seems not to have an update section")), false);
-  assert.equal(result.issues.some(issue => issue.includes("There is no CODE_OF_CONDUCT file")), true);
-  assert.equal(result.issues.some(issue => issue.includes("There is no dependabot configuration file")), false);
-  assert.equal(result.issues.some(issue => issue.includes("No linter configuration was found")), false);
+  const issues = formatIssues(result.issues);
+  assert.equal(issues.some(issue => issue.includes("README seems not to have an update section")), false);
+  assert.equal(issues.some(issue => issue.includes("There is no CODE_OF_CONDUCT file")), true);
+  assert.equal(issues.some(issue => issue.includes("There is no dependabot configuration file")), false);
+  assert.equal(issues.some(issue => issue.includes("No linter configuration was found")), false);
 });
 
 test("analyzer accepts biome config as linting setup", async () => {
@@ -248,9 +251,10 @@ test("analyzer accepts biome config as linting setup", async () => {
     files
   );
 
-  assert.equal(result.issues.some(issue => issue.includes("No linter configuration was found")), false);
-  assert.equal(result.issues.some(issue => issue.includes("ESLint is not in the dependencies or devDependencies")), false);
-  assert.equal(result.issues.some(issue => issue.includes("lint script in package.json does not contain `eslint`")), false);
+  const issues = formatIssues(result.issues);
+  assert.equal(issues.some(issue => issue.includes("No linter configuration was found")), false);
+  assert.equal(issues.some(issue => issue.includes("ESLint is not in the dependencies or devDependencies")), false);
+  assert.equal(issues.some(issue => issue.includes("lint script in package.json does not contain `eslint`")), false);
 });
 
 test("analyzer flags likely core-provided moment usage per module", async () => {
@@ -269,7 +273,7 @@ test("analyzer flags likely core-provided moment usage per module", async () => 
     [frontendPath]
   );
 
-  const momentIssue = result.issues.find(issue => issue.includes("likely relies on core-provided Moment"));
+  const momentIssue = formatIssues(result.issues).find(issue => issue.includes("likely relies on core-provided Moment"));
 
   assert.equal(
     Boolean(momentIssue),
@@ -295,7 +299,7 @@ test("analyzer does not flag moment core reliance when module imports moment", a
   );
 
   assert.equal(
-    result.issues.some(issue => issue.includes("likely relies on core-provided Moment")),
+    formatIssues(result.issues).some(issue => issue.includes("likely relies on core-provided Moment")),
     false
   );
 });
@@ -317,7 +321,7 @@ test("analyzer ignores plain-text moment mentions in comments", async () => {
   );
 
   assert.equal(
-    result.issues.some(issue => issue.includes("likely relies on core-provided Moment")),
+    formatIssues(result.issues).some(issue => issue.includes("likely relies on core-provided Moment")),
     false
   );
 });
@@ -340,19 +344,19 @@ test("analyzer reports large non-media repositories but excludes images", async 
   );
 
   assert.equal(
-    result.issues.some(issue => issue.includes("large-source.js") && issue.includes("unusually large")),
+    formatIssues(result.issues).some(issue => issue.includes("large-source.js") && issue.includes("unusually large")),
     true
   );
   assert.equal(
-    result.issues.some(issue => issue.includes("large-image.png")),
+    formatIssues(result.issues).some(issue => issue.includes("large-image.png")),
     false
   );
   assert.equal(
-    result.issues.some(issue => issue.includes("large-video.mp4")),
+    formatIssues(result.issues).some(issue => issue.includes("large-video.mp4")),
     false
   );
   assert.equal(
-    result.issues.some(issue => issue.includes("repository contains") && issue.includes("Warning")),
+    formatIssues(result.issues).some(issue => issue.includes("repository contains") && issue.includes("Warning")),
     false
   );
 });

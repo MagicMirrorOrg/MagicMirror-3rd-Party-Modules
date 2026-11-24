@@ -1,3 +1,4 @@
+import { createIssue, type Issue } from "./issue.ts";
 import { createRequire } from "node:module";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -13,7 +14,7 @@ function getErrorMessage(error: unknown): string {
   return error instanceof Error ? error.message.replace(/\s+/gu, " ").trim() : String(error);
 }
 
-export async function checkConfigSchema(moduleDir: string, previousIssueCount: number): Promise<string[]> {
+export async function checkConfigSchema(moduleDir: string, previousIssueCount: number): Promise<Issue[]> {
   const schemaPath = path.join(moduleDir, "config.schema.json");
   let contents: string;
 
@@ -23,10 +24,10 @@ export async function checkConfigSchema(moduleDir: string, previousIssueCount: n
   catch (error) {
     if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") {
       return previousIssueCount < 4
-        ? ["Recommendation: Add a `config.schema.json` to provide configuration validation and editor support."]
+        ? [createIssue("Recommendation", "Add a `config.schema.json` to provide configuration validation and editor support.")]
         : [];
     }
-    return [`Warning: Could not read config.schema.json: ${getErrorMessage(error)}`];
+    return [createIssue("Warning", `Could not read config.schema.json: ${getErrorMessage(error)}`)];
   }
 
   try {
@@ -46,6 +47,6 @@ export async function checkConfigSchema(moduleDir: string, previousIssueCount: n
     const details = error && typeof error === "object" && "errors" in error && Array.isArray(error.errors)
       ? (error.errors as ErrorObject[]).map(entry => entry.message).filter(Boolean).join("; ")
       : getErrorMessage(error);
-    return [`Warning: Invalid config.schema.json: ${details}`];
+    return [createIssue("Warning", `Invalid config.schema.json: ${details}`)];
   }
 }

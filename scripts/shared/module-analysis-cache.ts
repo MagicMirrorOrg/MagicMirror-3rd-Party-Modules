@@ -3,7 +3,7 @@ import { getCurrentCommit } from "./git.ts";
 import { resolve } from "node:path";
 import { stringifyDeterministic } from "./deterministic-output.ts";
 
-export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 8;
+export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 9;
 export const MODULE_ANALYSIS_CACHE_RELATIVE_PATH = "website/data/moduleCache.json";
 
 interface ModuleAnalysisCheckGroupsInput {

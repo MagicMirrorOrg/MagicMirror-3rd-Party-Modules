@@ -10,9 +10,10 @@ describe("repository status issues", () => {
       url: "https://github.com/SVendittelli/MMM-fitbit"
     });
 
-    assert.deepStrictEqual(issues, [
-      "This GitHub repository is archived and read-only. It may no longer receive fixes or updates."
-    ]);
+    assert.deepStrictEqual(issues, [{
+      message: "This GitHub repository is archived and read-only. It may no longer receive fixes or updates.",
+      severity: "warning"
+    }]);
   });
 
   it("does not report archive status for active repositories", () => {
