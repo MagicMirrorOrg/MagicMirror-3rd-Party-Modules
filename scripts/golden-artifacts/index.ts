@@ -5,6 +5,7 @@ import {
   sanitizeStats,
   stableStringify
 } from "./sanitizers.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { fileURLToPath } from "node:url";
 
 import fs from "node:fs";
@@ -42,10 +43,6 @@ function sanitizeUnknownGitHubData(input: unknown): { lastUpdate: string; reposi
   return input !== null && typeof input === "object"
     ? sanitizeGitHubData(input as never)
     : sanitizeGitHubData(undefined);
-}
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
 }
 
 const currentFilePath = fileURLToPath(import.meta.url);

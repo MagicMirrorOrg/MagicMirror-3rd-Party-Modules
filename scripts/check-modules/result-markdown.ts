@@ -1,4 +1,5 @@
 import { createIssue, formatIssue, normalizeIssues, type Issue } from "./issue.ts";
+import type { ProcessedModule } from "../shared/module.ts";
 
 export interface ResultMarkdownStats {
   issueCounter: number;
@@ -16,14 +17,7 @@ export interface IssueSummary {
   url?: string;
 }
 
-interface ProcessedModuleLike {
-  issues?: unknown;
-  maintainer?: string;
-  name?: string;
-  outdated?: string;
-  watchersCount?: number;
-  url?: string;
-}
+type ProcessedModuleLike = Partial<Omit<ProcessedModule, "issues">> & { issues?: unknown };
 
 function isGitHubUrl(url: unknown): boolean {
   if (typeof url !== "string" || url.length === 0) {

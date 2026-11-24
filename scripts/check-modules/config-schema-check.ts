@@ -1,4 +1,5 @@
-import { createIssue, type Issue } from "./issue.ts";
+import { createIssue, shouldRecommendMissingConfigSchema, type Issue } from "./issue.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { createRequire } from "node:module";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -10,8 +11,8 @@ const Ajv2019 = require("ajv/dist/2019").default as typeof import("ajv").default
 const Ajv2020 = require("ajv/dist/2020").default as typeof import("ajv").default;
 const addFormats = require("ajv-formats") as typeof import("ajv-formats").default;
 
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message.replace(/\s+/gu, " ").trim() : String(error);
+function getCompactErrorMessage(error: unknown): string {
+  return getErrorMessage(error).replace(/\s+/gu, " ").trim();
 }
 
 export async function checkConfigSchema(moduleDir: string, previousIssueCount: number): Promise<Issue[]> {
@@ -23,11 +24,11 @@ export async function checkConfigSchema(moduleDir: string, previousIssueCount: n
   }
   catch (error) {
     if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") {
-      return previousIssueCount < 4
+      return shouldRecommendMissingConfigSchema(previousIssueCount)
         ? [createIssue("Recommendation", "Add a `config.schema.json` to provide configuration validation and editor support.")]
         : [];
     }
-    return [createIssue("Warning", `Could not read config.schema.json: ${getErrorMessage(error)}`)];
+    return [createIssue("Warning", `Could not read config.schema.json: ${getCompactErrorMessage(error)}`)];
   }
 
   try {
@@ -46,7 +47,7 @@ export async function checkConfigSchema(moduleDir: string, previousIssueCount: n
   catch (error) {
     const details = error && typeof error === "object" && "errors" in error && Array.isArray(error.errors)
       ? (error.errors as ErrorObject[]).map(entry => entry.message).filter(Boolean).join("; ")
-      : getErrorMessage(error);
+      : getCompactErrorMessage(error);
     return [createIssue("Warning", `Invalid config.schema.json: ${details}`)];
   }
 }

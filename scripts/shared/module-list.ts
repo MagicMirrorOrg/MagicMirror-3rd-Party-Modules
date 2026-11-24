@@ -5,13 +5,11 @@ import path from "node:path";
 const logger = createLogger({ name: "shared/module-list" });
 
 interface ModuleEntry {
-  url?: string;
-  [key: string]: unknown;
+  url?: unknown;
 }
 
 interface ModuleCollectionPayload {
-  modules?: ModuleEntry[];
-  [key: string]: unknown;
+  modules?: unknown;
 }
 
 /**
@@ -24,9 +22,13 @@ export function loadPreviousModules<TModule extends ModuleEntry = ModuleEntry>(f
   if (fs.existsSync(previousPath)) {
     try {
       const content = fs.readFileSync(previousPath, "utf8");
-      const data = JSON.parse(content) as ModuleEntry[] | ModuleCollectionPayload;
-      // Handle both array and object wrapper formats
-      const modules: TModule[] = (Array.isArray(data) ? data : data.modules || []) as TModule[];
+      const data = JSON.parse(content) as unknown;
+      const rawModules = Array.isArray(data)
+        ? data
+        : data && typeof data === "object" && Array.isArray((data as ModuleCollectionPayload).modules)
+          ? (data as ModuleCollectionPayload).modules as unknown[]
+          : [];
+      const modules = rawModules as TModule[];
       logger.info(`Loaded ${modules.length} modules from previous run for fallback.`);
       const entries = modules
         .filter((module): module is TModule & { url: string } => typeof module.url === "string" && module.url.length > 0)

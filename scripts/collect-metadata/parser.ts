@@ -1,16 +1,12 @@
 import type { Issue } from "../check-modules/issue.ts";
+import type { CatalogueModule } from "../shared/module.ts";
 import { getRepositoryId, getRepositoryType } from "../repository-api/helpers.ts";
 
-export interface ParsedModuleEntry {
+export interface ParsedModuleEntry extends CatalogueModule {
   category: string;
   description: string;
-  id: string;
   issues: Issue[];
-  maintainer: string;
   maintainerURL: string;
-  name: string;
-  outdated?: string;
-  url: string;
 }
 
 export interface ParseModuleListResult {

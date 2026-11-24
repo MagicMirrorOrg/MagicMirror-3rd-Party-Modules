@@ -1,9 +1,10 @@
 import { execFile } from "node:child_process";
 import path from "node:path";
 import { promisify } from "node:util";
+import { getErrorMessage } from "../shared/errors.ts";
 import { fileExists } from "../shared/fs-utils.ts";
 import { createLogger } from "../shared/logger.ts";
-import { createIssue, formatIssue, normalizeIssues, type Issue } from "./issue.ts";
+import { createIssue, ISSUE_POLICY, mergeUniqueIssues, type Issue } from "./issue.ts";
 
 export const NCU_COOLDOWN = "7d";
 
@@ -19,21 +20,6 @@ interface DependencyIntegrationConfig {
 
 const execFileAsync = promisify(execFile);
 const logger = createLogger({ name: "dependency-integrations" });
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
-}
-
-function mergeUniqueIssues(target: Issue[], issues: unknown): void {
-  const existing = new Set(target.map(formatIssue));
-  for (const issue of normalizeIssues(issues)) {
-    const renderedIssue = formatIssue(issue);
-    if (!existing.has(renderedIssue)) {
-      target.push(issue);
-      existing.add(renderedIssue);
-    }
-  }
-}
 
 async function runNpmCheckUpdates(moduleDir: string): Promise<string[]> {
   try {
@@ -78,7 +64,7 @@ async function runDeprecatedCheck(moduleDir: string): Promise<string | null> {
 
 export async function applyDependencyIntegrations(moduleDir: string, issues: Issue[], config: DependencyIntegrationConfig): Promise<void> {
   const analysisConfig = config.analysisConfig ?? {};
-  if (analysisConfig.deep === false || !fileExists(path.join(moduleDir, "package.json")) || issues.length >= 4) {
+  if (analysisConfig.deep === false || !fileExists(path.join(moduleDir, "package.json")) || issues.length >= ISSUE_POLICY.maxBeforeDependencyChecks) {
     return;
   }
 
@@ -90,7 +76,7 @@ export async function applyDependencyIntegrations(moduleDir: string, issues: Iss
     }
   }
 
-  if (issues.length < 3 && analysisConfig.npmDeprecatedCheck !== false) {
+  if (issues.length < ISSUE_POLICY.maxBeforeDeprecatedCheck && analysisConfig.npmDeprecatedCheck !== false) {
     const deprecated = await runDeprecatedCheck(moduleDir);
     if (deprecated) {
       mergeUniqueIssues(issues, [createIssue(undefined, deprecated)]);

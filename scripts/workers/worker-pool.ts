@@ -10,6 +10,8 @@ import { createLogger } from "../shared/logger.ts";
 import { fileURLToPath } from "node:url";
 import { fork } from "node:child_process";
 import type { ChildProcess } from "node:child_process";
+import type { ModuleInput, ModuleResult } from "./module-types.ts";
+import { isWorkerMessage, type BatchCompletePayload, type ProgressEvent, type WorkerBatch, type WorkerMessage, type WorkerProcessConfig } from "./worker-protocol.ts";
 
 interface WorkerPoolConfig {
   batchSize?: number;
@@ -17,20 +19,7 @@ interface WorkerPoolConfig {
   workerCount?: number;
 }
 
-interface WorkerModule {
-  [key: string]: unknown;
-}
-
-interface WorkerBatch {
-  batchId: number;
-  config?: Record<string, unknown>;
-  modules: WorkerModule[];
-}
-
-interface WorkerMessage {
-  payload?: Record<string, unknown>;
-  type: string;
-}
+type PendingWorkerBatch = Pick<WorkerBatch, "batchId" | "modules">;
 
 interface WorkerInfo {
   batchTimeout: NodeJS.Timeout | null;
@@ -42,17 +31,7 @@ interface WorkerInfo {
   status: "busy" | "crashed" | "idle";
 }
 
-interface BatchResult {
-  batchId: number;
-  durationMs: number;
-  results: WorkerModule[];
-}
-
-interface ProgressEvent {
-  [key: string]: unknown;
-  type: string;
-  workerId?: number;
-}
+interface BatchResult extends BatchCompletePayload {}
 
 const logger = createLogger({ name: "orchestrator" });
 const currentFile = fileURLToPath(import.meta.url);
@@ -82,8 +61,8 @@ const WORKER_SCRIPT = join(currentDir, "worker.ts");
  * @param {number} batchSize
  * @returns {Array<{batchId: number, modules: Array}>}
  */
-function distributeBatches(modules: WorkerModule[], batchSize: number): WorkerBatch[] {
-  const batches: WorkerBatch[] = [];
+function distributeBatches(modules: ModuleInput[], batchSize: number): PendingWorkerBatch[] {
+  const batches: PendingWorkerBatch[] = [];
 
   for (let index = 0; index < modules.length; index += batchSize) {
     batches.push({
@@ -160,7 +139,9 @@ export class WorkerPool {
 
       // Handle worker messages
       workerProcess.on("message", (message) => {
-        this.handleWorkerMessage(workerId, message as WorkerMessage);
+        if (isWorkerMessage(message)) {
+          this.handleWorkerMessage(workerId, message);
+        }
       });
 
       // Handle worker errors
@@ -188,8 +169,9 @@ export class WorkerPool {
       });
 
       // Wait for ready signal
-      const readyHandler = (message: WorkerMessage) => {
-        if (message.type === "ready") {
+      const readyHandler = (value: unknown) => {
+        if (isWorkerMessage(value) && value.type === "ready") {
+          const message = value;
           workerProcess.off("message", readyHandler);
           this.workers.set(workerId, workerInfo);
           logger.info(`Worker ${workerId} ready (PID: ${message.payload?.pid})`);
@@ -232,7 +214,7 @@ export class WorkerPool {
         break;
 
       case "complete":
-        this.handleBatchComplete(workerId, message.payload as unknown as BatchResult);
+        this.handleBatchComplete(workerId, message.payload);
         break;
 
       case "error":
@@ -336,7 +318,7 @@ export class WorkerPool {
    * @param {Object} moduleConfig
    * @returns {Promise<Array>}
    */
-  async processModules(modules: WorkerModule[], moduleConfig: Record<string, unknown>): Promise<WorkerModule[]> {
+  async processModules(modules: ModuleInput[], moduleConfig: WorkerProcessConfig): Promise<ModuleResult[]> {
     // Create batches
     const batches = distributeBatches(modules, this.config.batchSize);
     this.totalBatches = batches.length;
@@ -432,8 +414,8 @@ export class WorkerPool {
    * Aggregate results from all batches
    * @returns {Array}
    */
-  aggregateResults(): WorkerModule[] {
-    const allResults: WorkerModule[] = [];
+  aggregateResults(): ModuleResult[] {
+    const allResults: ModuleResult[] = [];
 
     for (const batchResult of this.results) {
       allResults.push(...batchResult.results);

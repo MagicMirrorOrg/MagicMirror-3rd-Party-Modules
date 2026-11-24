@@ -84,3 +84,23 @@ export function formatIssue(issue: Issue): string {
 export function formatIssues(issues: readonly Issue[]): string[] {
   return issues.map(formatIssue);
 }
+
+export function mergeUniqueIssues(target: Issue[], values: unknown): void {
+  const existing = new Set(target.map(formatIssue));
+  for (const issue of normalizeIssues(values)) {
+    const renderedIssue = formatIssue(issue);
+    if (!existing.has(renderedIssue)) {
+      target.push(issue);
+      existing.add(renderedIssue);
+    }
+  }
+}
+
+export const ISSUE_POLICY = Object.freeze({
+  maxBeforeDependencyChecks: 4,
+  maxBeforeDeprecatedCheck: 3
+});
+
+export function shouldRecommendMissingConfigSchema(issueCount: number): boolean {
+  return issueCount < ISSUE_POLICY.maxBeforeDependencyChecks;
+}

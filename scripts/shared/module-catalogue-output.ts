@@ -1,29 +1,12 @@
 import { normalizeIssues, type Issue } from "../check-modules/issue.ts";
+import type { ProcessedModule } from "./module.ts";
 import { access, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { stringifyDeterministic } from "./deterministic-output.ts";
 
 type ModuleRecord = Record<string, unknown>;
 
-export interface ProcessedModule extends ModuleRecord {
-  category?: string;
-  description?: string;
-  id?: string;
-  image?: string;
-  isArchived?: boolean;
-  issues?: Issue[];
-  keywords?: string[];
-  lastCommit?: string | null;
-  license?: string;
-  licenseStatus?: "mismatch";
-  maintainer?: string;
-  name?: string;
-  outdated?: string;
-  watchersCount?: number;
-  stars?: number;
-  tags?: string[];
-  url?: string;
-}
+export type { ProcessedModule } from "./module.ts";
 
 interface FinalModule extends ModuleRecord {
   defaultSortWeight: number;
@@ -99,7 +82,7 @@ export interface PublishedOutputResult {
   wroteOutputs: boolean;
 }
 
-const PROCESSED_MODULE_ALLOWED_KEYS: string[] = [
+const PROCESSED_MODULE_ALLOWED_KEYS = [
   "name",
   "category",
   "url",
@@ -120,7 +103,7 @@ const PROCESSED_MODULE_ALLOWED_KEYS: string[] = [
   "tags",
   "image",
   "packageJson"
-];
+] as const satisfies readonly (keyof ProcessedModule)[];
 
 const FINAL_ALLOWED_KEYS: string[] = [
   "name",
@@ -145,16 +128,19 @@ const FINAL_ALLOWED_KEYS: string[] = [
 ];
 
 export function toProcessedModule(module: ProcessedModule): ProcessedModule {
-  const sourceModule = module as ProcessedModule;
-  const entry: ProcessedModule = {};
+  const entry: ProcessedModule = {
+    id: module.id,
+    issues: normalizeIssues(module.issues),
+    maintainer: module.maintainer,
+    name: module.name,
+    url: module.url
+  };
 
   for (const key of PROCESSED_MODULE_ALLOWED_KEYS) {
-    if (Object.hasOwn(sourceModule, key) && typeof sourceModule[key] !== "undefined") {
-      entry[key] = sourceModule[key];
+    if (Object.hasOwn(module, key) && typeof module[key] !== "undefined") {
+      Object.assign(entry, { [key]: module[key] });
     }
   }
-
-  entry.issues = normalizeIssues(entry.issues);
 
   return entry;
 }

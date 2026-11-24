@@ -2,8 +2,8 @@ import { isRepositoryType } from "../repository-api/helpers.ts";
 import { createIssue, type Issue } from "./issue.ts";
 
 interface RepositoryStatusInput {
-  hasGithubIssues?: boolean;
-  isArchived?: boolean;
+  hasGithubIssues?: boolean | null;
+  isArchived?: boolean | null;
   url: string;
 }
 

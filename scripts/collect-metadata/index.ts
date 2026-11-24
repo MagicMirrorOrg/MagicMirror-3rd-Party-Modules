@@ -11,6 +11,7 @@ import { getRepositoryId, getRepositoryType } from "../repository-api/helpers.ts
 import { createHttpClient } from "../shared/http-client.ts";
 import type { HttpClient } from "../shared/http-client.ts";
 import { createLogger } from "../shared/logger.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { createPersistentCache } from "../shared/persistent-cache.ts";
 import { createRateLimiter } from "../shared/rate-limiter.ts";
 import fs from "node:fs";
@@ -20,15 +21,7 @@ import type { ParsedModuleEntry } from "./parser.ts";
 import path from "node:path";
 import process from "node:process";
 
-interface EnrichedModule extends ParsedModuleEntry {
-  hasGithubIssues?: boolean | null;
-  isArchived?: boolean | null;
-  lastCommit?: string | null;
-  license?: string | null;
-  notFound?: boolean;
-  stars?: number;
-  [key: string]: unknown;
-}
+type EnrichedModule = ParsedModuleEntry;
 
 type CachedRepositoryValue = Partial<NormalizedRepositoryMetadata> & {
   error?: string;
@@ -125,10 +118,6 @@ interface RunCollectMetadataOptions {
 
 interface RunCollectMetadataResult {
   modules: EnrichedModule[];
-}
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
 }
 
 /**

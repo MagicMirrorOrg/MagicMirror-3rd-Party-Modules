@@ -1,7 +1,7 @@
 import { checkConfigSchema } from "../check-modules/config-schema-check.ts";
 import { applyDependencyIntegrations } from "../check-modules/dependency-integrations.ts";
 import { runEslintCheck } from "../check-modules/eslint-check.ts";
-import { createIssue, formatIssue, normalizeIssues, type Issue } from "../check-modules/issue.ts";
+import { createIssue, mergeUniqueIssues, type Issue } from "../check-modules/issue.ts";
 import { analyzeModule as performModuleAnalysis } from "../check-modules/module-analyzer.ts";
 import fs from "node:fs";
 import path from "node:path";
@@ -28,17 +28,6 @@ function getModuleFiles(directory: string, baseDirectory = directory, files: str
     return files;
   }
   return files;
-}
-
-function mergeUniqueIssues(target: Issue[], values: unknown): void {
-  const existing = new Set(target.map(formatIssue));
-  for (const issue of normalizeIssues(values)) {
-    const rendered = formatIssue(issue);
-    if (!existing.has(rendered)) {
-      target.push(issue);
-      existing.add(rendered);
-    }
-  }
 }
 
 async function runModuleAnalyzer(module: ModuleInput, config: ProcessModuleConfig): Promise<AnalysisResult> {

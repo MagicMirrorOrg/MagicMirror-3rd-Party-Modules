@@ -1,5 +1,6 @@
 import { buildModuleAnalysisCacheKey } from "../shared/module-analysis-cache.ts";
-import { formatIssue, normalizeIssues, type Issue } from "../check-modules/issue.ts";
+import { mergeUniqueIssues, normalizeIssues } from "../check-modules/issue.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { createLogger } from "../shared/logger.ts";
 import fs from "node:fs";
 import path from "node:path";
@@ -10,25 +11,6 @@ import type { ModuleInput, ModuleResult, ProcessModuleConfig } from "./module-ty
 
 const logger = createLogger({ name: "worker" });
 
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
-}
-
-function normalizeIssueList(issues: unknown): Issue[] {
-  return normalizeIssues(issues);
-}
-
-function mergeUniqueIssues(target: Issue[], issues: unknown): void {
-  const existing = new Set(target.map(formatIssue));
-  for (const issue of normalizeIssueList(issues)) {
-    const renderedIssue = formatIssue(issue);
-    if (!existing.has(renderedIssue)) {
-      target.push(issue);
-      existing.add(renderedIssue);
-    }
-  }
-}
-
 /**
  * Process a single module through the clone, enrichment, and analysis phases.
  *
@@ -38,7 +20,7 @@ function mergeUniqueIssues(target: Issue[], issues: unknown): void {
  */
 export async function processModule(module: ModuleInput, config: ProcessModuleConfig): Promise<ModuleResult> {
   const startTime = Date.now();
-  const allIssues = normalizeIssueList(module.issues);
+  const allIssues = normalizeIssues(module.issues);
   const cacheKey = config.cacheEnabled && !config.localOnly
     ? buildModuleAnalysisCacheKey({
       module,

@@ -1,15 +1,12 @@
 import { ensureDirectory, fileExists } from "../shared/fs-utils.ts";
 import { ensureRepository, getCommitDate } from "../shared/git.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { createLogger } from "../shared/logger.ts";
 import { rename, rm } from "node:fs/promises";
 import path from "node:path";
 import type { CloneResult, ModuleInput, ProcessModuleConfig } from "./module-types.ts";
 
 const logger = createLogger({ name: "module-clone" });
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
-}
 
 export async function cloneModule(module: ModuleInput, config: ProcessModuleConfig): Promise<CloneResult> {
   const identifier = `${module.name}-----${module.maintainer}`;

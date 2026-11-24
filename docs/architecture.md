@@ -52,7 +52,8 @@ flowchart TB
 - **Orchestrator**: `scripts/orchestrator/index.ts` parses CLI options once and calls the four typed stages in order
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
-- **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; `issues.json` preserves that structure while Markdown renders it as text
+- **Typed Module Contract**: Metadata, workers, IPC, aggregation, and Markdown share the module shape from `scripts/shared/module.ts`
+- **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; deduplication and issue budgets are centralized in `scripts/check-modules/issue.ts`
 - **Schema Validation**: JSON schemas enforce contracts at the published boundaries (`modules.json`, `modules.min.json`, `stats.json`)
 - **Shared Utilities**: HTTP, Git, filesystem, and rate limiting in `scripts/shared/`
 

@@ -6,47 +6,17 @@
  * analysis payload for downstream pipeline stages.
  */
 
-import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
+import { normalizeIssues } from "./check-modules/issue.ts";
 import { pruneModuleLogs } from "./shared/log-retention.ts";
 import { buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisConfig, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
 import { toProcessedModule, type ProcessedModule } from "./shared/module-catalogue-output.ts";
+import type { AnalysisConfig, ModuleInput, ModuleResult } from "./workers/module-types.ts";
+import type { ProgressEvent, WorkerProcessConfig } from "./workers/worker-protocol.ts";
 import { WorkerPool } from "./workers/worker-pool.ts";
 import { cpus } from "node:os";
 import { createLogger } from "./shared/logger.ts";
 import { writeJson } from "./shared/fs-utils.ts";
 import { resolve } from "node:path";
-
-interface AnalysisConfig {
-  deep?: boolean;
-  eslint?: boolean;
-  ncu?: boolean;
-  npmDeprecatedCheck?: boolean;
-}
-
-interface Stage2Module {
-  id: string;
-  issues: unknown[];
-  lastCommit?: string | null;
-  maintainer: string;
-  name: string;
-  notFound?: boolean;
-  outdated?: string;
-  url: string;
-  [key: string]: unknown;
-}
-
-interface ModuleResult extends Omit<Stage2Module, "issues"> {
-  issues: Issue[];
-  cacheKey?: string | null;
-  cloneDir?: string;
-  error?: string;
-  failurePhase?: string;
-  fromCache?: boolean;
-  moduleLogger?: unknown;
-  processingTimeMs?: number;
-  skippedReason?: string;
-  status: "failed" | "skipped" | "success";
-}
 
 interface CacheEntry {
   value: Record<string, unknown>;
@@ -67,16 +37,9 @@ interface ParallelLogger {
   warn: (message: string, data?: unknown) => void;
 }
 
-interface ProgressEvent {
-  fromCache?: boolean;
-  moduleId?: string;
-  status?: string;
-  type: string;
-}
-
 interface WorkerPoolLike {
   onProgress?: (handler: (event: ProgressEvent) => void) => void;
-  processModules: (modules: Stage2Module[], moduleConfig: Record<string, unknown>) => Promise<ModuleResult[]> | ModuleResult[];
+  processModules: (modules: ModuleInput[], moduleConfig: WorkerProcessConfig) => Promise<ModuleResult[]> | ModuleResult[];
 }
 
 interface RunParallelProcessingOptions {
@@ -85,7 +48,7 @@ interface RunParallelProcessingOptions {
   cacheDisabled?: boolean;
   catalogueRevision?: string | null;
   localOnly?: boolean;
-  modules: Stage2Module[];
+  modules: ModuleInput[];
   projectRoot?: string;
   runLogger?: ParallelLogger;
   workerCount?: number;
@@ -125,7 +88,7 @@ const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisConfig({
  */
 export function pruneStaleCacheEntries(
   cache: ModuleAnalysisCache,
-  modules: Stage2Module[],
+  modules: ModuleInput[],
   { catalogueRevision, analysisConfig }: { analysisConfig: AnalysisConfig; catalogueRevision: string | null }
 ): number {
   if (!catalogueRevision) {
@@ -166,11 +129,11 @@ export function pruneStaleCacheEntries(
  * @returns {{ cachedResults: Array, uncachedModules: Array }}
  */
 export function partitionModulesByCache(
-  modules: Stage2Module[],
+  modules: ModuleInput[],
   { cache, catalogueRevision, analysisConfig }: { analysisConfig: AnalysisConfig; cache: ModuleAnalysisCache; catalogueRevision: string | null }
-): { cachedResults: ModuleResult[]; uncachedModules: Stage2Module[] } {
+): { cachedResults: ModuleResult[]; uncachedModules: ModuleInput[] } {
   const cachedResults: ModuleResult[] = [];
-  const uncachedModules: Stage2Module[] = [];
+  const uncachedModules: ModuleInput[] = [];
 
   for (const module of modules) {
     if (module.notFound) {
@@ -253,10 +216,10 @@ function createWorkerPool(workerCount: number, batchSize: number): WorkerPoolLik
     workerCount,
     batchSize,
     batchTimeoutMs: 1800000
-  }) as unknown as WorkerPoolLike;
+  });
 }
 
-function buildMergedModules(modules: Stage2Module[], results: ModuleResult[]): ModuleResult[] {
+function buildMergedModules(modules: ModuleInput[], results: ModuleResult[]): ModuleResult[] {
   const resultsById = new Map(results.map(result => [result.id, result]));
 
   return modules.map((module) => {
@@ -267,7 +230,10 @@ function buildMergedModules(modules: Stage2Module[], results: ModuleResult[]): M
         issues: normalizeIssues(module.issues),
         status: "failed",
         failurePhase: "pipeline",
-        error: "No worker result available for module"
+        error: "No worker result available for module",
+        cloned: false,
+        fromCache: false,
+        processingTimeMs: 0
       };
     }
 

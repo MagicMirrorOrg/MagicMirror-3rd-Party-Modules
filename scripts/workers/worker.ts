@@ -6,74 +6,13 @@
  * Communicates with parent orchestrator via IPC messages.
  */
 
-import type { Issue } from "../check-modules/issue.ts";
+import { getErrorMessage } from "../shared/errors.ts";
 import { createLogger } from "../shared/logger.ts";
 import { createModuleLogger } from "./module-logger.ts";
 import process from "node:process";
 import { processModule } from "./process-module.ts";
-
-interface WorkerModule {
-  id: string;
-  maintainer: string;
-  name: string;
-  url: string;
-  [key: string]: unknown;
-}
-
-interface WorkerConfig {
-  projectRoot: string;
-  runId?: string;
-  [key: string]: unknown;
-}
-
-interface ModuleBatch {
-  batchId: number;
-  config: WorkerConfig;
-  modules: WorkerModule[];
-}
-
-interface WorkerProgressPayload {
-  batchId: number;
-  fromCache?: boolean;
-  moduleId: string;
-  status: string;
-}
-
-interface BatchResultItem extends WorkerModule {
-  cloned: boolean;
-  error?: string;
-  fromCache: boolean;
-  issues: Issue[];
-  processingTimeMs: number;
-  status: string;
-}
-
-interface BatchErrorInfo {
-  error: string;
-  moduleId: string;
-  phase: string;
-  stack?: string;
-}
-
-interface BatchCompletePayload {
-  batchId: number;
-  durationMs: number;
-  errors: BatchErrorInfo[];
-  processedAt: string;
-  results: BatchResultItem[];
-}
-
-type WorkerMessage =
-  | { payload: ModuleBatch; type: "batch" }
-  | { payload: { pid: number }; type: "ready" }
-  | { payload: WorkerProgressPayload; type: "progress" }
-  | { payload: BatchCompletePayload; type: "complete" }
-  | { payload: { error: string; stack?: string }; type: "error" }
-  | { payload?: undefined; type: "shutdown" };
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
-}
+import type { ModuleResult } from "./module-types.ts";
+import type { BatchCompletePayload, BatchErrorInfo, WorkerBatch, WorkerMessage } from "./worker-protocol.ts";
 
 const logger = createLogger({ name: "worker" });
 
@@ -108,16 +47,15 @@ function sendMessage(message: WorkerMessage): void {
  * @param {ModuleBatch} batch
  * @returns {Promise<Object>}
  */
-async function processBatch(batch: ModuleBatch): Promise<BatchCompletePayload> {
+async function processBatch(batch: WorkerBatch): Promise<BatchCompletePayload> {
   const { batchId, modules, config } = batch;
   const startTime = Date.now();
-  const results: BatchResultItem[] = [];
+  const results: ModuleResult[] = [];
   const errors: BatchErrorInfo[] = [];
 
   logger.info(`Worker processing batch ${batchId} with ${modules.length} modules`);
 
-  // Get runId from config or generate one
-  const runId = config.runId || new Date().toISOString().replace(/:/gu, "-").replace(/\..+/u, "");
+  const { runId } = config;
 
   for (const module of modules) {
     let moduleLogger: Awaited<ReturnType<typeof createModuleLogger>> | null = null;
@@ -149,12 +87,12 @@ async function processBatch(batch: ModuleBatch): Promise<BatchCompletePayload> {
       });
 
       // Process the module with logger
-      let result: BatchResultItem;
+      let result: ModuleResult;
       try {
         result = await processModule(module, {
           ...config,
           moduleLogger
-        } as Parameters<typeof processModule>[1]) as BatchResultItem;
+        });
       }
       catch (processError) {
         logger.error(`processModule failed for ${module.name}:`, processError);

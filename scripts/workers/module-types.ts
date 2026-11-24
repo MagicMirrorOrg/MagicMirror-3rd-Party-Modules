@@ -1,21 +1,9 @@
 import type { Issue } from "../check-modules/issue.ts";
+import type { CatalogueModule } from "../shared/module.ts";
 import type { ModuleLogger } from "./module-logger.ts";
 
-export interface ModuleInput {
-  branch?: string;
-  description?: string;
-  hasGithubIssues?: boolean;
-  id: string;
-  isArchived?: boolean;
-  issues?: unknown[];
-  lastCommit?: string;
-  license?: string;
-  maintainer: string;
-  name: string;
-  outdated?: string;
-  stars?: number;
-  url: string;
-  [key: string]: unknown;
+export interface ModuleInput extends CatalogueModule {
+  issues: Issue[];
 }
 
 export interface AnalysisConfig {
@@ -60,32 +48,18 @@ export interface PackageJsonInfo {
   warnings?: string[];
 }
 
-export interface ModuleResult {
-  branch?: string;
+export interface ModuleResult extends ModuleInput {
   cacheKey?: string;
   cloneDir?: string;
   cloned: boolean;
-  description?: string;
   error?: string;
   failurePhase?: string;
   fromCache: boolean;
-  hasGithubIssues?: boolean;
-  id: string;
-  image?: string;
-  isArchived?: boolean;
-  issues: Issue[];
-  lastCommit?: string;
-  license?: string;
   licenseStatus?: "mismatch";
-  maintainer: string;
-  name: string;
   packageJson?: PackageJsonInfo;
   processingTimeMs: number;
   skippedReason?: string;
-  stars?: number;
   status: "failed" | "skipped" | "success";
-  tags?: string[];
-  url: string;
 }
 
 export interface CloneResult {
@@ -101,7 +75,7 @@ export interface FindImageResult {
 export interface EnrichResult {
   enrichIssues: Issue[];
   image?: string;
-  license?: string;
+  license?: string | null;
   licenseStatus?: "mismatch";
   packageJson: PackageJsonInfo;
   tags?: string[];
