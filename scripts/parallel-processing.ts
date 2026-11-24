@@ -8,6 +8,7 @@
  */
 
 import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
+import { pruneModuleLogs } from "./shared/log-retention.ts";
 import { MODULE_ANALYSIS_CACHE_SCHEMA_VERSION, buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisCheckGroups, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
 import { toProcessedModule } from "./shared/module-catalogue-output.ts";
 import { WorkerPool } from "./workers/worker-pool.ts";
@@ -397,9 +398,14 @@ export async function runParallelProcessing({
   cacheDisabled ||= localOnly;
 
   const startTime = Date.now();
+  const runId = new Date(startTime).toISOString().replace(/:/gu, "-").replace(/\..+/u, "");
+  const prunedLogRuns = await pruneModuleLogs(projectRoot);
   const pool = workerPool ?? createWorkerPool(workerCount, batchSize);
   const normalizedAnalysisConfig = normalizeModuleAnalysisCheckGroups(analysisConfig) as AnalysisConfig;
 
+  if (prunedLogRuns > 0) {
+    runLogger.info(`Logs: removed ${prunedLogRuns} expired run(s)`);
+  }
   runLogger.info(`Loaded ${modules.length} modules`);
   runLogger.info(`Starting parallel processing with ${workerCount} workers, batch size ${batchSize}`);
 
@@ -467,6 +473,7 @@ export async function runParallelProcessing({
 
   const moduleConfig = {
     projectRoot,
+    runId,
     localOnly,
     modulesDir: resolve(projectRoot, "modules"),
     modulesTempDir: resolve(projectRoot, "modules_temp"),

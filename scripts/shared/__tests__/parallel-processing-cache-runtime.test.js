@@ -244,6 +244,7 @@ test("runParallelProcessing processes local modules without enabling the analysi
 
   deepEqual(capturedModules, modules);
   equal(capturedModuleConfig.projectRoot, "/virtual/project");
+  ok(capturedModuleConfig.runId.length > 0);
   equal(capturedModuleConfig.cacheEnabled, false);
   equal(capturedModuleConfig.localOnly, true);
   equal(capturedModuleConfig.catalogueRevision, "catalogue-rev-runtime-test");

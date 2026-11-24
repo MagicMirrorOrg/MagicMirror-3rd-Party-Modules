@@ -60,6 +60,7 @@ stage; use the full command above to regenerate the published reports as well.
 - `--workers=<number>`: override the worker count.
 - `--batch-size=<number>`: override worker batch size.
 - `--no-cache`: force fresh module processing.
+- `PIPELINE_LOG_RETENTION=<number>`: keep the newest module-log runs; default is 20.
 - `LOG_FORMAT=json`: emit structured JSON logs.
 
 There is no partial-stage CLI yet. Run the relevant standalone stage script for isolated work.
