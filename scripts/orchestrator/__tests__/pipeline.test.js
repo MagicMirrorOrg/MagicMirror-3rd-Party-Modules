@@ -16,9 +16,9 @@ test("defines the supported linear pipeline once", () => {
 test("declares schema-validated publication artifacts on their producing stage", () => {
   const aggregate = PIPELINE_STAGES.find(stage => stage.id === "aggregate-catalogue");
   assert.ok(aggregate);
-  assert.deepEqual(aggregate.outputs.map(output => [output.id, output.schemaId]), [
-    ["modules-json", "modules.final"],
-    ["modules-json-min", "modules.min"],
-    ["stats-json", "stats"]
+  assert.deepEqual(aggregate.outputs.map(output => [output.path, output.schemaId]), [
+    ["website/data/modules.json", "modules.final"],
+    ["website/data/modules.min.json", "modules.min"],
+    ["website/data/stats.json", "stats"]
   ]);
 });

@@ -38,7 +38,7 @@ export const PIPELINE_STAGES: readonly PipelineStage[] = [
       },
       {
         id: "modules-json-min",
-        path: "website/data/modules.min.schema.json",
+        path: "website/data/modules.min.json",
         schemaId: "modules.min"
       },
       {
