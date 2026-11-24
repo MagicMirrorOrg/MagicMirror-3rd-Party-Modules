@@ -118,20 +118,18 @@ and include the relative package path, but not line and column.
 
 The package names handled by the analyzer are allowed in ESLint's general
 `depend/ban-dependencies` rule to avoid duplicate reports. Other dependency
-recommendations remain enabled. The separate missing-dependency usage scan is
-unchanged.
+recommendations remain enabled.
 
-| Rule ID                                  | Dependency or script                             | Category       | Notes                                                                                                                                                                         |
-| ---------------------------------------- | ------------------------------------------------ | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pkg-deprecated-electron-rebuild          | `electron-rebuild`                               | Deprecated     | Use `@electron/rebuild`.                                                                                                                                                      |
-| pkg-deprecated-eslint-config-airbnb      | Airbnb ESLint presets                            | Deprecated     | Covers `eslint-config-airbnb`, `-base`, `-typescript`, and `-typescript-base`. Seek modern configuration.                                                                     |
-| pkg-recommend-eslint-plugin-json         | `eslint-plugin-json` / `eslint-plugin-jsonc`     | Recommendation | Suggest `@eslint/json`.                                                                                                                                                       |
-| pkg-deprecated-grunt                     | `grunt`                                          | Deprecated     | Tool largely unmaintained.                                                                                                                                                    |
-| pkg-outdated-husky-install               | `husky install`                                  | Outdated       | Husky v9 no longer needs it.                                                                                                                                                  |
-| pkg-recommend-needle                     | `needle`                                         | Recommendation | Suggest fetch.                                                                                                                                                                |
-| pkg-missing-dependency                   | _n/a (detected via usage scan)_                  | Recommendation | Flags modules that import third-party packages without declaring them in `package.json` (built-ins and the default allowlist `express`, `node_helper`, `logger` are ignored). |
-| pkg-deprecated-rollup-banner             | `rollup-plugin-banner` / `rollup-plugin-banner2` | Deprecated     | Replace with built-in banner.                                                                                                                                                 |
-| pkg-deprecated-stylelint-config-prettier | `stylelint-config-prettier` / `-scss`            | Deprecated     | Remove in newer Stylelint setups.                                                                                                                                             |
+| Rule ID                                  | Dependency or script                             | Category       | Notes                                                                                                     |
+| ---------------------------------------- | ------------------------------------------------ | -------------- | --------------------------------------------------------------------------------------------------------- |
+| pkg-deprecated-electron-rebuild          | `electron-rebuild`                               | Deprecated     | Use `@electron/rebuild`.                                                                                  |
+| pkg-deprecated-eslint-config-airbnb      | Airbnb ESLint presets                            | Deprecated     | Covers `eslint-config-airbnb`, `-base`, `-typescript`, and `-typescript-base`. Seek modern configuration. |
+| pkg-recommend-eslint-plugin-json         | `eslint-plugin-json` / `eslint-plugin-jsonc`     | Recommendation | Suggest `@eslint/json`.                                                                                   |
+| pkg-deprecated-grunt                     | `grunt`                                          | Deprecated     | Tool largely unmaintained.                                                                                |
+| pkg-outdated-husky-install               | `husky install`                                  | Outdated       | Husky v9 no longer needs it.                                                                              |
+| pkg-recommend-needle                     | `needle`                                         | Recommendation | Suggest fetch.                                                                                            |
+| pkg-deprecated-rollup-banner             | `rollup-plugin-banner` / `rollup-plugin-banner2` | Deprecated     | Replace with built-in banner.                                                                             |
+| pkg-deprecated-stylelint-config-prettier | `stylelint-config-prettier` / `-scss`            | Deprecated     | Remove in newer Stylelint setups.                                                                         |
 
 ### `package-lock.json` rules
 

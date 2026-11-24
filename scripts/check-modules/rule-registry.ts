@@ -1,4 +1,3 @@
-import { MISSING_DEPENDENCY_RULE_DEFINITION } from "./missing-dependency-rule.ts";
 import { WORKFLOW_VERSION_POLICY } from "./workflow-version-policy.ts";
 
 type RuleSeverity = "info" | "warning" | "error";
@@ -465,7 +464,6 @@ const RULE_DEFINITIONS: RuleDefinition[] = [
   },
 ];
 
-RULE_DEFINITIONS.push(MISSING_DEPENDENCY_RULE_DEFINITION as RuleDefinition);
 
 const RULE_REGISTRY = Object.freeze(RULE_DEFINITIONS.map(createRule)) as readonly Readonly<RuleRecord>[];
 
