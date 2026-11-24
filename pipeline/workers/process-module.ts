@@ -7,6 +7,7 @@ import { ESLint } from "eslint";
 import { fileURLToPath } from "node:url";
 import { getRuleById } from "../../scripts/check-modules/rule-registry.ts";
 import { buildModuleAnalysisCacheKey } from "../../scripts/shared/module-analysis-cache.ts";
+import { checkConfigSchema } from "../../scripts/check-modules/config-schema-check.ts";
 import { createDeterministicImageName } from "../../scripts/shared/deterministic-output.ts";
 import { createLogger } from "../../scripts/shared/logger.ts";
 import { analyzeModule as performModuleAnalysis } from "../../scripts/check-modules/module-analyzer.ts";
@@ -1187,6 +1188,7 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
       const analysisConfig = config.analysisConfig ?? config.checkGroups ?? {};
       const eslintIssues = await runEslintCheck(cloneDir, analysisConfig.eslint !== false && analysisConfig.deep !== false);
       mergeUniqueIssues(allIssues, eslintIssues);
+      mergeUniqueIssues(allIssues, await checkConfigSchema(cloneDir, allIssues.length));
     }
 
     if (!module.outdated) {
