@@ -19,7 +19,7 @@ find website -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" \) \
 	-exec sed -i "s/__ASSET_VERSION__/${ASSET_VERSION}/g" {} +
 EOF
 
-FROM nginxinc/nginx-unprivileged:alpine-slim
+FROM nginx/nginx-unprivileged:alpine-slim
 LABEL maintainer="MagicMirrorOrg"
 
 COPY container/default.conf /etc/nginx/conf.d/
