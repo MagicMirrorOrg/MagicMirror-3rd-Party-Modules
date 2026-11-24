@@ -8,15 +8,15 @@
  */
 
 import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
-import { MODULE_ANALYSIS_CACHE_SCHEMA_VERSION, buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisCheckGroups, resolveModuleAnalysisCachePath } from "../scripts/shared/module-analysis-cache.ts";
-import { toProcessedModule } from "../scripts/shared/module-catalogue-output.ts";
-import { WorkerPool } from "../pipeline/workers/worker-pool.ts";
+import { MODULE_ANALYSIS_CACHE_SCHEMA_VERSION, buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisCheckGroups, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
+import { toProcessedModule } from "./shared/module-catalogue-output.ts";
+import { WorkerPool } from "./workers/worker-pool.ts";
 import { cpus } from "node:os";
-import { createLogger } from "../scripts/shared/logger.ts";
+import { createLogger } from "./shared/logger.ts";
 import { fileURLToPath } from "node:url";
-import { writeJson } from "../scripts/shared/fs-utils.ts";
+import { writeJson } from "./shared/fs-utils.ts";
 import process from "node:process";
-import { runCollectMetadata } from "../scripts/collect-metadata/index.ts";
+import { runCollectMetadata } from "./collect-metadata/index.ts";
 import { resolve } from "node:path";
 
 interface AnalysisConfig {

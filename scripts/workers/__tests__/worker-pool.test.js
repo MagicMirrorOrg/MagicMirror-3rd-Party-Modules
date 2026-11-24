@@ -1,5 +1,5 @@
 import { EventEmitter } from "node:events";
-import { WorkerPool } from "../../../pipeline/workers/worker-pool.ts";
+import { WorkerPool } from "../worker-pool.ts";
 import assert from "node:assert/strict";
 import test from "node:test";
 

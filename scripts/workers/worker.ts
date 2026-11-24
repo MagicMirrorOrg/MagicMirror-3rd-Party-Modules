@@ -6,8 +6,8 @@
  * Communicates with parent orchestrator via IPC messages.
  */
 
-import type { Issue } from "../../scripts/check-modules/issue.ts";
-import { createLogger } from "../../scripts/shared/logger.ts";
+import type { Issue } from "../check-modules/issue.ts";
+import { createLogger } from "../shared/logger.ts";
 import { createModuleLogger } from "./module-logger.ts";
 import process from "node:process";
 import { processModule } from "./process-module.ts";

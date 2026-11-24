@@ -1,4 +1,4 @@
-import type { Issue } from "../../scripts/check-modules/issue.ts";
+import type { Issue } from "../check-modules/issue.ts";
 import type { ModuleLogger } from "./module-logger.ts";
 
 export interface ModuleInput {

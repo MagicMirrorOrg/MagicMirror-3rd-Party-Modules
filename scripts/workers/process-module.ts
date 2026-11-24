@@ -1,6 +1,6 @@
-import { buildModuleAnalysisCacheKey } from "../../scripts/shared/module-analysis-cache.ts";
-import { formatIssue, normalizeIssues, type Issue } from "../../scripts/check-modules/issue.ts";
-import { createLogger } from "../../scripts/shared/logger.ts";
+import { buildModuleAnalysisCacheKey } from "../shared/module-analysis-cache.ts";
+import { formatIssue, normalizeIssues, type Issue } from "../check-modules/issue.ts";
+import { createLogger } from "../shared/logger.ts";
 import fs from "node:fs";
 import path from "node:path";
 import { analyzeModule } from "./module-analysis.ts";

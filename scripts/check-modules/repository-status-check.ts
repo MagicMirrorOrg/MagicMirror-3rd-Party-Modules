@@ -1,4 +1,4 @@
-import { isRepositoryType } from "../updateRepositoryApiData/helpers.ts";
+import { isRepositoryType } from "../repository-api/helpers.ts";
 import { createIssue, type Issue } from "./issue.ts";
 
 interface RepositoryStatusInput {

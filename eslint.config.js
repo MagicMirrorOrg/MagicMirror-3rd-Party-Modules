@@ -104,14 +104,6 @@ export default defineConfig([
     }
   },
   {
-    files: ["pipeline/workers/**/*.js"],
-    rules: {
-      "max-lines": ["warn", 900],
-      "max-lines-per-function": ["warn", 200],
-      "max-depth": ["warn", 6]
-    }
-  },
-  {
     files: ["website/*.js"],
     languageOptions: {
       sourceType: "module"

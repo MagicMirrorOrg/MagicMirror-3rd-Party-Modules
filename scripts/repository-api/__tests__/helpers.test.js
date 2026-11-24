@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import { getRepositoryId, getRepositoryType, isRepositoryType } from "../helpers.ts";
 import assert from "node:assert";
 
-describe("updateRepositoryApiData/helpers", () => {
+describe("repository-api/helpers", () => {
   it("detects supported repository hosts by exact hostname", () => {
     assert.strictEqual(getRepositoryType("https://github.com/user/MMM-Test"), "github");
     assert.strictEqual(getRepositoryType("https://gitlab.com/group/MMM-Test"), "gitlab");

@@ -1,6 +1,6 @@
-import { ensureDirectory, fileExists } from "../../scripts/shared/fs-utils.ts";
-import { ensureRepository, getCommitDate } from "../../scripts/shared/git.ts";
-import { createLogger } from "../../scripts/shared/logger.ts";
+import { ensureDirectory, fileExists } from "../shared/fs-utils.ts";
+import { ensureRepository, getCommitDate } from "../shared/git.ts";
+import { createLogger } from "../shared/logger.ts";
 import { rename, rm } from "node:fs/promises";
 import path from "node:path";
 import type { CloneResult, ModuleInput, ProcessModuleConfig } from "./module-types.ts";

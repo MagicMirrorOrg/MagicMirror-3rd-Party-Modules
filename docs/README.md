@@ -17,4 +17,4 @@ Use this index to find the right document quickly.
 
 - [../guides/README.md](../guides/README.md) - guidance aimed at module authors (linting, README quality).
 - [../fixtures/README.md](../fixtures/README.md) - curated fixture dataset and regeneration workflow.
-- [../pipeline/workers/README.md](../pipeline/workers/README.md) - worker pool internals and runtime behavior.
+- [../scripts/workers/README.md](../scripts/workers/README.md) - worker pool internals and runtime behavior.

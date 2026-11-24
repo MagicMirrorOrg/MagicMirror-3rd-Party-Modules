@@ -13,7 +13,7 @@ import {
 } from "../../parallel-processing.ts";
 import { formatIssues } from "../../check-modules/issue.ts";
 import { join } from "node:path";
-import { processModule } from "../../../pipeline/workers/process-module.ts";
+import { processModule } from "../../workers/process-module.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 

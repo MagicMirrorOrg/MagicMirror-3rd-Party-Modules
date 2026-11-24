@@ -1,6 +1,6 @@
-import { createIssue, type Issue } from "../../scripts/check-modules/issue.ts";
-import { getRepositoryStatusIssues } from "../../scripts/check-modules/repository-status-check.ts";
-import { createDeterministicImageName } from "../../scripts/shared/deterministic-output.ts";
+import { createIssue, type Issue } from "../check-modules/issue.ts";
+import { getRepositoryStatusIssues } from "../check-modules/repository-status-check.ts";
+import { createDeterministicImageName } from "../shared/deterministic-output.ts";
 import fs from "node:fs";
 import normalizeData from "normalize-package-data";
 import path from "node:path";

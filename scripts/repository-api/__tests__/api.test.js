@@ -2,7 +2,7 @@ import { describe, it } from "node:test";
 import { fetchRepositoryData, normalizeRepositoryData } from "../api.ts";
 import assert from "node:assert";
 
-describe("updateRepositoryApiData/api", () => {
+describe("repository-api/api", () => {
   it("fetches the latest Codeberg commit through the commits list endpoint", async () => {
     const repositoryUrl = "https://codeberg.org/drdisgust/MMM-NCTtimes";
     const commitDate = "2022-08-07T11:24:59Z";

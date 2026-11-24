@@ -5,9 +5,9 @@ import {
   getRepositoryApiMetrics,
   normalizeRepositoryData,
   resetRepositoryApiMetrics
-} from "../updateRepositoryApiData/api.ts";
-import type { NormalizedRepositoryMetadata } from "../updateRepositoryApiData/api.ts";
-import { getRepositoryId, getRepositoryType } from "../updateRepositoryApiData/helpers.ts";
+} from "../repository-api/api.ts";
+import type { NormalizedRepositoryMetadata } from "../repository-api/api.ts";
+import { getRepositoryId, getRepositoryType } from "../repository-api/helpers.ts";
 import { createHttpClient } from "../shared/http-client.ts";
 import type { HttpClient } from "../shared/http-client.ts";
 import { createLogger } from "../shared/logger.ts";

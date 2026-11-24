@@ -19,6 +19,6 @@
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo"
   },
-  "include": ["scripts/**/*.ts", "pipeline/**/*.ts"],
+  "include": ["scripts/**/*.ts"],
   "exclude": ["node_modules", "dist", "modules", "modules_temp", "fixtures"]
 }

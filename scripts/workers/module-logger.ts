@@ -5,7 +5,7 @@
  * Logs are written to files organized by run timestamp and module ID.
  */
 
-import { ensureDirectory } from "../../scripts/shared/fs-utils.ts";
+import { ensureDirectory } from "../shared/fs-utils.ts";
 import fs from "node:fs/promises";
 import path from "node:path";
 

@@ -1,5 +1,5 @@
 import type { Issue } from "../check-modules/issue.ts";
-import { getRepositoryId, getRepositoryType } from "../updateRepositoryApiData/helpers.ts";
+import { getRepositoryId, getRepositoryType } from "../repository-api/helpers.ts";
 
 export interface ParsedModuleEntry {
   category: string;

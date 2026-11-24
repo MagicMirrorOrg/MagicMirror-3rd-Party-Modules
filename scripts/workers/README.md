@@ -25,7 +25,7 @@ The worker pool orchestration is complete and functional. Modules can now be pro
 ### Usage
 
 ```javascript
-import { WorkerPool } from "./worker-pool.js";
+import { WorkerPool } from "./worker-pool.ts";
 
 const pool = new WorkerPool({
   workerCount: 4, // Number of parallel workers

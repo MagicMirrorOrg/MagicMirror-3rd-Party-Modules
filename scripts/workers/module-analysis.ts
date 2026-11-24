@@ -1,8 +1,8 @@
-import { checkConfigSchema } from "../../scripts/check-modules/config-schema-check.ts";
-import { applyDependencyIntegrations } from "../../scripts/check-modules/dependency-integrations.ts";
-import { runEslintCheck } from "../../scripts/check-modules/eslint-check.ts";
-import { createIssue, formatIssue, normalizeIssues, type Issue } from "../../scripts/check-modules/issue.ts";
-import { analyzeModule as performModuleAnalysis } from "../../scripts/check-modules/module-analyzer.ts";
+import { checkConfigSchema } from "../check-modules/config-schema-check.ts";
+import { applyDependencyIntegrations } from "../check-modules/dependency-integrations.ts";
+import { runEslintCheck } from "../check-modules/eslint-check.ts";
+import { createIssue, formatIssue, normalizeIssues, type Issue } from "../check-modules/issue.ts";
+import { analyzeModule as performModuleAnalysis } from "../check-modules/module-analyzer.ts";
 import fs from "node:fs";
 import path from "node:path";
 import type { AnalysisResult, ModuleInput, ProcessModuleConfig } from "./module-types.ts";
