@@ -12,7 +12,7 @@ The supported production pipeline is orchestrated via `node scripts/orchestrator
 | ----- | -------------------------- | -------------------------------------------------------------------------------------------------- |
 | 1     | `collect-metadata`         | in-memory metadata payload, `gitHubData.json`                                                      |
 | 2     | `parallel-processing`      | in-memory analysis payload, `modules/`, `modules_temp/`, `website/images/`, `skipped_modules.json` |
-| 3     | `aggregate-catalogue`      | `modules.json`, `modules.min.json`, `stats.json`                                                   |
+| 3     | `aggregate-catalogue`      | `issues.json`, `modules.json`, `modules.min.json`, `stats.json`                                    |
 | 4     | `generate-result-markdown` | `result.md`                                                                                        |
 
 ### Current Workflow Diagram
@@ -54,8 +54,8 @@ flowchart TB
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
 - **Typed Module Contract**: Metadata, workers, IPC, aggregation, and Markdown share the module shape from `scripts/shared/module.ts`
-- **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; deduplication and issue budgets are centralized in `scripts/check-modules/issue.ts`
-- **Schema Validation**: JSON schemas enforce contracts at the published boundaries (`modules.json`, `modules.min.json`, `stats.json`)
+- **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; `issues.json` preserves the full machine-readable findings while Markdown renders them as text
+- **Schema Validation**: JSON schemas enforce contracts at the published boundaries (`issues.json`, `modules.json`, `modules.min.json`, `stats.json`)
 - **Shared Utilities**: HTTP, Git, filesystem, and rate limiting in `scripts/shared/`
 
 ### Incremental Pipeline Behavior

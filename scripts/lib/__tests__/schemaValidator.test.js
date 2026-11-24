@@ -25,3 +25,26 @@ test("schema validation identifies modules with invalid URL fields", () => {
     return true;
   });
 });
+
+test("schema validation accepts structured module issues", () => {
+  validateStageData("issues", {
+    "owner/module": [
+      {
+        category: "Recommendation",
+        message: "Add a changelog.",
+        ruleId: "module-changelog",
+        severity: "warning"
+      }
+    ]
+  });
+});
+
+test("schema validation rejects malformed structured module issues", () => {
+  assert.throws(() => validateStageData("issues", {
+    "owner/module": [{
+      message: "Invalid severity.",
+      severity: "notice",
+      unexpected: true
+    }]
+  }), /issues/iu);
+});

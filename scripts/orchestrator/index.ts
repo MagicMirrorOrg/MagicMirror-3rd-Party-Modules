@@ -160,6 +160,7 @@ export async function runPipeline(options: PipelineOptions): Promise<void> {
         projectRoot: PROJECT_ROOT,
         runLogger: logger
       });
+      await validatePublishedOutput("issues-json", "website/data/issues.json", "issues", logger);
       await validatePublishedOutput("modules-json", "website/data/modules.json", "modules.final", logger);
       await validatePublishedOutput("modules-json-min", "website/data/modules.min.json", "modules.min", logger);
       await validatePublishedOutput("stats-json", "website/data/stats.json", "stats", logger);
