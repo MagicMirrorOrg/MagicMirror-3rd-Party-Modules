@@ -23,17 +23,16 @@ npm install
 
 Use the canonical helper scripts from `package.json` or call the orchestrator directly:
 
-| Scope              | Command                          | Purpose                                                                                               |
-| ------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Metadata only      | `node --run collectMetadata`     | Fetch the upstream wiki list and refresh repository metadata cache plus in-memory enrichment payload. |
-| Full canonical run | `node --run all`                 | Execute `full-refresh-parallel` end-to-end.                                                           |
-| Local recheck      | `node --run all -- --local-only` | Recheck existing module clones and regenerate published reports.                                      |
+| Scope              | Command                          | Purpose                                                   |
+| ------------------ | -------------------------------- | --------------------------------------------------------- |
+| Full canonical run | `node --run all`                 | Execute `full-refresh-parallel` end-to-end.               |
+| Local recheck      | `node --run all -- --local-only` | Recheck existing clones and regenerate published reports. |
 
 The `parallel-processing` stage is the expensive part of the run: it clones repositories, extracts metadata and screenshots, and performs the deeper checks that produce the analysis payload in memory. The follow-up `aggregate-catalogue` stage turns that payload into `modules.json`, `modules.min.json`, and `stats.json`.
 
 ### Orchestrator execution
 
-The orchestrator runs one typed, linear pipeline defined in `scripts/orchestrator/pipeline.ts`. Use `node --run all` for the full refresh or `node scripts/orchestrator/index.ts` directly. The standalone scripts remain available for isolated work, such as `node --run collectMetadata` or `node scripts/parallel-processing.ts`.
+The orchestrator is the only pipeline CLI. Use `node --run all` for the full refresh or `node scripts/orchestrator/index.ts` directly; stage modules are pure functions and are not standalone commands.
 
 - **Worker count**: pass `--workers=<number>`.
 - **Batch size**: pass `--batch-size=<number>`.

@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * Parallel module analysis stage.
  *
@@ -10,14 +9,11 @@
 import { normalizeIssues, type Issue } from "./check-modules/issue.ts";
 import { pruneModuleLogs } from "./shared/log-retention.ts";
 import { buildModuleAnalysisCacheKey, createModuleAnalysisCache, getProjectRevision, normalizeModuleAnalysisConfig, resolveModuleAnalysisCachePath } from "./shared/module-analysis-cache.ts";
-import { toProcessedModule } from "./shared/module-catalogue-output.ts";
+import { toProcessedModule, type ProcessedModule } from "./shared/module-catalogue-output.ts";
 import { WorkerPool } from "./workers/worker-pool.ts";
 import { cpus } from "node:os";
 import { createLogger } from "./shared/logger.ts";
-import { fileURLToPath } from "node:url";
 import { writeJson } from "./shared/fs-utils.ts";
-import process from "node:process";
-import { runCollectMetadata } from "./collect-metadata/index.ts";
 import { resolve } from "node:path";
 
 interface AnalysisConfig {
@@ -104,12 +100,8 @@ export interface ParallelProcessingResult {
   failedCount: number;
   results: ModuleResult[];
   skippedCount: number;
-  processedModules: unknown[];
+  processedModules: ProcessedModule[];
   successCount: number;
-}
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
 }
 
 const logger = createLogger({ name: "parallel-processing" });
@@ -120,47 +112,6 @@ const DEFAULT_ANALYSIS_CONFIG = normalizeModuleAnalysisConfig({
   ncu: true,
   npmDeprecatedCheck: true
 });
-
-/**
- * Get worker count from environment or CLI
- */
-function getWorkerCount(): number {
-  const envWorkers = process.env.PIPELINE_WORKER_COUNT;
-  if (envWorkers) {
-    return parseInt(envWorkers, 10);
-  }
-
-  // Check CLI args for --workers=N
-  const workerArg = process.argv.find(arg => arg.startsWith("--workers="));
-  if (workerArg) {
-    return parseInt(workerArg.split("=")[1], 10);
-  }
-
-  // Default: CPU count - 1
-  return Math.max(1, cpus().length - 1);
-}
-
-/**
- * Get batch size from CLI
- */
-function getBatchSize(): number {
-  const batchArg = process.argv.find(arg => arg.startsWith("--batch-size="));
-  if (batchArg) {
-    return parseInt(batchArg.split("=")[1], 10);
-  }
-  return 50; // Default batch size
-}
-
-/**
- * Check whether the module analysis cache is disabled for this run.
- * Disable via --no-cache CLI flag or PIPELINE_CACHE_DISABLED=1 env var.
- */
-function isCacheDisabled(): boolean {
-  if (process.env.PIPELINE_CACHE_DISABLED === "1") {
-    return true;
-  }
-  return process.argv.includes("--no-cache");
-}
 
 /**
  * Prune cache entries that are stale for the current run.
@@ -379,10 +330,10 @@ function logProcessingSummary(results: ModuleResult[], durationMs: number, runLo
 export async function runParallelProcessing({
   modules,
   projectRoot = PROJECT_ROOT,
-  workerCount = getWorkerCount(),
-  batchSize = getBatchSize(),
-  cacheDisabled = isCacheDisabled(),
-  localOnly = process.argv.includes("--local-only"),
+  workerCount = Math.max(1, cpus().length - 1),
+  batchSize = 50,
+  cacheDisabled = false,
+  localOnly = false,
   analysisConfig = DEFAULT_ANALYSIS_CONFIG,
   catalogueRevision,
   workerPool = null,
@@ -536,23 +487,4 @@ export async function writeSkippedModulesFile(results: ModuleResult[], projectRo
 
   const outputPath = resolve(projectRoot, "website/data/skipped_modules.json");
   await writeJson(outputPath, skippedEntries);
-}
-
-async function main(): Promise<void> {
-  try {
-    const { modules } = await runCollectMetadata();
-    const result = await runParallelProcessing({ modules, projectRoot: PROJECT_ROOT });
-    await writeSkippedModulesFile(result.results, PROJECT_ROOT);
-  }
-  catch (error) {
-    logger.error("Fatal error:", getErrorMessage(error));
-    process.exit(1);
-  }
-}
-
-const currentFile = fileURLToPath(import.meta.url);
-const isMainEntry = Boolean(process.argv[1]) && resolve(process.argv[1]) === currentFile;
-
-if (isMainEntry) {
-  main();
 }

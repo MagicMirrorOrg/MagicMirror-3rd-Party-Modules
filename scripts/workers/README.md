@@ -48,8 +48,8 @@ const results = await pool.processModules(modules, moduleConfig);
 
 The worker pool is integrated into the pipeline via:
 
-- **Script**: `scripts/parallel-processing.ts`
-- **Pipeline**: `full-refresh-parallel` (defined in `scripts/orchestrator/pipeline.ts`)
+- **Module**: `scripts/parallel-processing.ts`
+- **Pipeline entry point**: `scripts/orchestrator/index.ts`
 
 Run with:
 

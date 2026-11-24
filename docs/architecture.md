@@ -49,7 +49,7 @@ flowchart TB
 
 ### Key Features
 
-- **Orchestrator**: A typed stage list in `scripts/orchestrator/pipeline.ts` defines order and schema-validated outputs for the single supported pipeline
+- **Orchestrator**: `scripts/orchestrator/index.ts` parses CLI options once and calls the four typed stages in order
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
 - **Structured Issues**: Workers carry findings as objects with message, severity, optional category, and rule ID; `issues.json` preserves that structure while Markdown renders it as text

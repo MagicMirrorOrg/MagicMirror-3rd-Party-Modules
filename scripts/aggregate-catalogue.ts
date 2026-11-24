@@ -1,15 +1,6 @@
-#!/usr/bin/env node
-
 import { createLogger } from "./shared/logger.ts";
-import { fileURLToPath } from "node:url";
-import process from "node:process";
 import { resolve } from "node:path";
-import { writePublishedCatalogueOutputs } from "./shared/module-catalogue-output.ts";
-
-interface ProcessedModule {
-  id: string;
-  [key: string]: unknown;
-}
+import { writePublishedCatalogueOutputs, type CatalogueStats, type ProcessedModule } from "./shared/module-catalogue-output.ts";
 
 interface OutputPaths {
   modulesJsonPath: string;
@@ -30,7 +21,7 @@ interface OutputResult {
   modulesJsonPath?: string;
   modulesMinPath?: string;
   outputPaths?: OutputPaths | null;
-  stats?: unknown;
+  stats?: CatalogueStats;
   statsPath?: string;
   wroteOutputs?: boolean;
 }
@@ -38,7 +29,7 @@ interface OutputResult {
 interface NormalizedOutputDetails {
   changeSummary: ChangeSummary | null;
   outputPaths: OutputPaths | null;
-  stats?: unknown;
+  stats?: CatalogueStats;
   wroteOutputs: boolean;
 }
 
@@ -61,12 +52,8 @@ export interface AggregateCatalogueResult {
   changeSummary: ChangeSummary | null;
   outputPaths: OutputPaths | null;
   processedModulesCount: number;
-  stats?: unknown;
+  stats?: CatalogueStats;
   wroteOutputs: boolean;
-}
-
-function getErrorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
 }
 
 const logger = createLogger({ name: "aggregate-catalogue" });
@@ -141,21 +128,4 @@ export async function runAggregateCatalogue({
     stats: outputDetails.stats,
     wroteOutputs: outputDetails.wroteOutputs
   };
-}
-
-async function main(): Promise<void> {
-  try {
-    throw new Error("aggregate-catalogue must be executed via the orchestrator; direct per-module file input is no longer supported");
-  }
-  catch (error) {
-    logger.error("Fatal error:", getErrorMessage(error));
-    process.exit(1);
-  }
-}
-
-const currentFile = fileURLToPath(import.meta.url);
-const isMainEntry = Boolean(process.argv[1]) && resolve(process.argv[1]) === currentFile;
-
-if (isMainEntry) {
-  main();
 }

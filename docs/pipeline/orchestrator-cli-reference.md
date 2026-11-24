@@ -2,7 +2,7 @@
 
 _Last updated: 2026-11-23_
 
-The orchestrator executes the single supported `full-refresh-parallel` pipeline through four in-process stages. Its typed definition lives in `scripts/orchestrator/pipeline.ts`; no JSON graph is loaded at runtime.
+The orchestrator executes the single supported `full-refresh-parallel` pipeline through four in-process stage functions. CLI options are parsed once at this entry point; stage modules do not read process arguments.
 
 ## Supported entry points
 
@@ -11,7 +11,7 @@ node --run all
 node scripts/orchestrator/index.ts
 ```
 
-`npm run all` is the canonical full refresh. The standalone stage scripts remain available when only one step is needed, for example `node --run collectMetadata` or `node scripts/parallel-processing.ts`.
+`npm run all` is the canonical full refresh and the only supported pipeline entry point.
 
 ## Pipeline
 
@@ -50,8 +50,7 @@ The usual catalogue, images, statistics, and `website/result.md` outputs are
 regenerated. This is not a strictly offline mode: checks that query npm may
 still use the network.
 
-`node scripts/parallel-processing.ts --local-only` runs only the processing
-stage; use the full command above to regenerate the published reports as well.
+Run `npm run all -- --local-only` to recheck existing clones and regenerate all published reports.
 
 ### Full and local runs
 
@@ -63,7 +62,7 @@ stage; use the full command above to regenerate the published reports as well.
 - `PIPELINE_LOG_RETENTION=<number>`: keep the newest module-log runs; default is 20.
 - `LOG_FORMAT=json`: emit structured JSON logs.
 
-There is no partial-stage CLI yet. Run the relevant standalone stage script for isolated work.
+There is no partial-stage CLI. The four stage functions are invoked by the orchestrator.
 
 ## Failure handling
 

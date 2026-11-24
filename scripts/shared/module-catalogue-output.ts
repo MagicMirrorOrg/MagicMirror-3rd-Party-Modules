@@ -46,7 +46,7 @@ export interface ChangeSummary {
   unchangedCount: number;
 }
 
-interface CatalogueStats {
+export interface CatalogueStats {
   issueCounter: number;
   lastUpdate: string;
   maintainer: Record<string, number>;

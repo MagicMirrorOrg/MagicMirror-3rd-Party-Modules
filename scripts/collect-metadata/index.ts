@@ -13,7 +13,6 @@ import type { HttpClient } from "../shared/http-client.ts";
 import { createLogger } from "../shared/logger.ts";
 import { createPersistentCache } from "../shared/persistent-cache.ts";
 import { createRateLimiter } from "../shared/rate-limiter.ts";
-import { fileURLToPath } from "node:url";
 import fs from "node:fs";
 import { loadPreviousModules } from "../shared/module-list.ts";
 import { parseModuleList } from "./parser.ts";
@@ -699,18 +698,8 @@ async function enrichModules(modules: ParsedModuleEntry[], previousModulesMap: M
   return enrichedModules;
 }
 
-async function main(): Promise<void> {
-  try {
-    await runCollectMetadata();
-  }
-  catch (error) {
-    logger.error("Metadata collection failed", { error: getErrorMessage(error) });
-    process.exit(1);
-  }
-}
-
 export async function runCollectMetadata({
-  localOnly = process.argv.includes("--local-only"),
+  localOnly = false,
   markdown,
   previousModulesMap = loadPreviousModules<EnrichedModule>()
 }: RunCollectMetadataOptions = {}): Promise<RunCollectMetadataResult> {
@@ -766,11 +755,4 @@ export async function runCollectMetadata({
   return {
     modules: enrichedModules
   };
-}
-
-const currentFile = fileURLToPath(import.meta.url);
-const isMainEntry = Boolean(process.argv[1]) && path.resolve(process.argv[1]) === currentFile;
-
-if (isMainEntry) {
-  main();
 }

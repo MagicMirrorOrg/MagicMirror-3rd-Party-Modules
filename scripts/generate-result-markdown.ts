@@ -1,21 +1,9 @@
-#!/usr/bin/env node
-
 import { buildResultMarkdown, collectIssueSummaries } from "./check-modules/result-markdown.ts";
 import { createLogger } from "./shared/logger.ts";
 import { ensureDirectory, readJson } from "./shared/fs-utils.ts";
-import { fileURLToPath } from "node:url";
+import type { ProcessedModule, CatalogueStats } from "./shared/module-catalogue-output.ts";
 import { dirname, resolve } from "node:path";
 import { writeFile } from "node:fs/promises";
-import process from "node:process";
-
-interface ResultMarkdownStats {
-  issueCounter: number;
-  lastUpdate: string;
-  maintainer: Record<string, number>;
-  moduleCounter: number;
-  modulesWithIssuesCounter: number;
-  repositoryHoster: Record<string, number>;
-}
 
 interface ResultMarkdownLogger {
   info: (message: string, data?: unknown) => void;
@@ -25,8 +13,8 @@ interface GenerateResultMarkdownOptions {
   projectRoot?: string;
   resultPath?: string;
   runLogger?: ResultMarkdownLogger;
-  processedModules?: unknown[];
-  stats?: ResultMarkdownStats;
+  processedModules?: ProcessedModule[];
+  stats?: CatalogueStats;
 }
 
 const logger = createLogger({ name: "generate-result-markdown" });
@@ -45,7 +33,7 @@ export async function runGenerateResultMarkdown({
 
   const outputPath = resultPath ?? resolve(projectRoot, "website", "result.md");
   const resolvedStats = stats
-    ?? await readJson<ResultMarkdownStats>(resolve(projectRoot, "website", "data", "stats.json"));
+    ?? await readJson<CatalogueStats>(resolve(projectRoot, "website", "data", "stats.json"));
   const summaries = collectIssueSummaries(processedModules);
   const markdown = buildResultMarkdown(resolvedStats, summaries);
 
@@ -57,19 +45,4 @@ export async function runGenerateResultMarkdown({
     issueCount: summaries.length,
     outputPath
   };
-}
-
-async function main(): Promise<void> {
-  throw new Error("generate-result-markdown must be executed via the orchestrator; direct per-module file input is no longer supported");
-}
-
-const currentFile = fileURLToPath(import.meta.url);
-const isMainEntry = Boolean(process.argv[1]) && resolve(process.argv[1]) === currentFile;
-
-if (isMainEntry) {
-  main().catch((error: unknown) => {
-    const message = error instanceof Error ? error.message : String(error);
-    logger.error(message);
-    process.exit(1);
-  });
 }
