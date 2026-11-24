@@ -28,7 +28,7 @@ Use the canonical helper scripts from `package.json` or call the orchestrator di
 | Full canonical run | `node --run all`                 | Execute `full-refresh-parallel` end-to-end.               |
 | Local recheck      | `node --run all -- --local-only` | Recheck existing clones and regenerate published reports. |
 
-The `parallel-processing` stage is the expensive part of the run: it clones repositories, extracts metadata and screenshots, and performs the deeper checks that produce the analysis payload in memory. The follow-up `aggregate-catalogue` stage turns that payload into `modules.json`, `modules.min.json`, and `stats.json`.
+The `parallel-processing` stage is the expensive part of the run: it clones repositories, extracts metadata and screenshots, and performs the deeper checks that produce the analysis payload in memory. The follow-up `aggregate-catalogue` stage turns that payload into `issues.json`, `modules.json`, `modules.min.json`, and `stats.json`.
 
 ### Orchestrator execution
 
@@ -45,7 +45,7 @@ For canonical stage definitions, responsibilities, and data flow, use [docs/arch
 
 #### `validate_release_artifacts.ts`
 
-Validates the published catalogue (`modules.json`, `modules.min.json`, `stats.json`) against the JSON Schemas. The command is wired into release packaging and must pass before publishing.
+Validates the published artifacts (`issues.json`, `modules.json`, `modules.min.json`, `stats.json`) against the JSON Schemas. The command is wired into release packaging and must pass before publishing.
 
 ### Testing specific modules
 
@@ -65,13 +65,13 @@ Schema validation is part of the release gate. After you regenerate the website 
 node --run release:validate
 ```
 
-The command checks the published artifacts (`modules.json`, `modules.min.json`, `stats.json`).
+The command checks the published artifacts (`issues.json`, `modules.json`, `modules.min.json`, `stats.json`).
 
 > ℹ️ **CI gate:** The same validation now runs automatically in GitHub Actions (`release-validation.yml`) on every push and pull request targeting `main`. Keep the command in your local workflow to catch schema regressions before CI fails.
 
 ### validate_release_artifacts.ts
 
-This script powers the validation command above. Keep it in your release checklist—CI will block merges once the GitHub Action lands, and the CLI already fails the automated packaging run if validation breaks.
+This script powers the validation command above and fails when the artifacts do not match their schemas.
 
 ### When validation fails
 
@@ -80,10 +80,10 @@ This script powers the validation command above. Keep it in your release checkli
    node --run fixtures -- generate
    node --run fixtures -- validate
    ```
-2. Re-run the affected pipeline stages (or `node --run all`) to rebuild the real datasets.
+2. Re-run the pipeline with `node --run all` to rebuild the real datasets.
 3. Execute `node --run release:validate` again. Keep iterating until the exit code is zero.
 
-Document regressions or schema updates in [`docs/architecture.md`](architecture.md) and [`docs/pipeline/orchestrator-cli-reference.md`](pipeline/orchestrator-cli-reference.md). For tricky cases, open an Issue so downstream consumers are aware of the contract change.
+Document regressions or schema updates in [`docs/architecture.md`](architecture.md). For tricky cases, open an Issue so downstream consumers are aware of the contract change.
 
 ## Maintaining schemas
 
@@ -186,7 +186,6 @@ The check intentionally compares sanitized, deterministic output only. Volatile 
 ## Helpful references
 
 - [`docs/architecture.md`](architecture.md) – current pipeline topology.
-- [`docs/pipeline/orchestrator-cli-reference.md`](pipeline/orchestrator-cli-reference.md) – command reference for partial runs, diagnostics, and logs.
 - [`fixtures/README.md`](../fixtures/README.md) – curated dataset and validation troubleshooting.
 
 ### Troubleshooting

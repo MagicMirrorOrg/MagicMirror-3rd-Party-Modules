@@ -2,7 +2,7 @@
 
 Visibility into the automation that builds and publishes the third-party module catalogue helps contributors reason about changes and spot failure points early. This document summarizes the current canonical pipeline and the parts of the broader architecture that are still future-facing.
 
-## Current State (April 2026)
+## Pipeline
 
 The supported production pipeline is orchestrated via `node scripts/orchestrator/index.ts` (also exposed as `node --run all`). The orchestrator drives one typed linear pipeline with four stages across three operational phases: metadata collection, parallel module processing, and publication.
 
@@ -10,7 +10,7 @@ The supported production pipeline is orchestrated via `node scripts/orchestrator
 
 | Order | Stage ID                   | Key Outputs                                                                                        |
 | ----- | -------------------------- | -------------------------------------------------------------------------------------------------- |
-| 1     | `collect-metadata`         | in-memory metadata payload, `gitHubData.json`                                                      |
+| 1     | `collect-metadata`         | in-memory metadata payload, `website/data/cache/repository-api-cache.json`                         |
 | 2     | `parallel-processing`      | in-memory analysis payload, `modules/`, `modules_temp/`, `website/images/`, `skipped_modules.json` |
 | 3     | `aggregate-catalogue`      | `issues.json`, `modules.json`, `modules.min.json`, `stats.json`                                    |
 | 4     | `generate-result-markdown` | `result.md`                                                                                        |
@@ -23,7 +23,7 @@ flowchart TB
 
   subgraph Phase 1: Metadata Collection
     seed[("Module seed list")] --> collect{{Collect metadata}}
-    collect --> cache[("gitHubData.json cache")]
+    collect --> cache[("repository-api-cache.json")]
     collect --> metadata["metadata payload (in-memory)"]
   end
 
@@ -74,6 +74,25 @@ The pipeline implements intelligent caching and skip logic to avoid redundant wo
 No persisted intermediate stage boundary remains. Stage handoffs are fully in-memory.
 
 ---
+
+## Execution
+
+Run the complete pipeline with `node --run all` or `node scripts/orchestrator/index.ts`. The stages run sequentially and stop on the first failure; there is no partial-stage CLI. After aggregation, AJV validates `issues.json`, `modules.json`, `modules.min.json`, and `stats.json` against the schemas in `dist/schemas/`.
+
+- `--workers=<number>` sets the worker count, overriding `PIPELINE_WORKER_COUNT`.
+- `--no-cache` disables the module analysis cache; `PIPELINE_CACHE_DISABLED=1` has the same effect.
+- `LOG_FORMAT=json` selects structured logging.
+- `PIPELINE_LOG_RETENTION=<number>` controls the number of module-log runs retained in `logs/` (default: 20).
+
+### Local rechecks
+
+`node --run all -- --local-only` rechecks existing directories in `modules/` without fetching the wiki, repository metadata, or repositories. It requires a non-empty `website/data/modules.json` from an earlier run; missing clones are skipped and modules absent from the catalogue are not discovered. The analysis cache is disabled, including for outdated modules. Previous findings are discarded, while repository metadata is retained. Published reports and images are regenerated. Checks that query npm may still access the network.
+
+### Worker pool
+
+The `parallel-processing` stage assigns individual modules to a bounded pool of child processes. Each worker clones or reuses the repository, enriches its metadata and image, and runs analysis. Existing clones in `modules/` are reused when their commit date is within one minute of, or newer than, the metadata date; `modules_temp/` is staging, not a reusable clone cache.
+
+A task timeout (60 seconds) or worker crash produces a failed result for the affected module. A replacement worker is started when work remains. Per-module logs are stored under `logs/<run-id>/modules/`.
 
 ## Distribution Touchpoints
 

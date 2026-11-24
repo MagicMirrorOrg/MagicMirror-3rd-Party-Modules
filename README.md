@@ -25,10 +25,10 @@ This is a list of information that we can display on the web page and where the 
   - There are two requirements for an image of your module to be displayed:
     1. There must be a LICENSE file with a free license or in the `package.json` must be a free license in the license field. Take a look at [this package.json](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas/blob/main/package.json) as an example.
     2. There must be an image file in your repository.
-  - If there are several images in your repository, one image is selected according to the following logic: First search for an image that contains 'screenshot' or 'example' in it's name and if none is found, take the first image that is found.
+  - If there are several images, the first image whose path contains `screenshot`, `example`, `sample`, or `preview` is preferred. Otherwise, the first image is used.
 - Description: Is taken from the [official list of modules](https://github.com/MagicMirrorOrg/MagicMirror/wiki/3rd-party-modules).
 - Tags: Are taken from the keywords in the `package.json`. Take a look at [this package.json](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas/blob/main/package.json) as an example.
-- License: Is taken from the keywords in the `package.json`. Take a look at [this package.json](https://github.com/KristjanESPERANTO/MMM-PublicTransportHafas/blob/main/package.json) as an example.
+- License: Is taken from repository-host metadata or the license field in `package.json`. Conflicting values are reported.
 
 Also check the [result file](./website/result.md) to see if there are any notes on your module.
 
@@ -40,24 +40,11 @@ If you have ideas for further tests, you are welcome to create an issue or pull 
 
 The results of the tests you can see in the [`result.html`](https://modules.magicmirror.builders/result.html).
 
-Here are some test results:
-
-- _No image found._ - That means we will not have an image on the web page for this module.
-- _package.json issue: No license field._ - No license field means no image on the web page (we can not use images without proper license).
-- _package.json issue: license should be a valid SPDX license expression_ - Incorrectly spelled license name means no image on the web page.
-- _There is no `package.json`. We need this file to gather information about the module._ - We need information like the license and keywords.
-- _Found directory `node_modules`. This shouldn't be uploaded. Add `node_modules/`to `.gitignore`._
-- _Deprecated: Found 'omxplayer' in file `node_helper.js`: Try to replace it with `vlc`._
-- _Recommendation: Found 'node-fetch' in file `node_helper.js`: Replace it with built-in fetch._
-- _Recommendation: Module name doesn't follow the recommended pattern (it doesn't start with `MMM-`). Consider renaming your module._
-- _Typo: Found 'MagicMirror2' in file `README.md`: Replace it with `MagicMirror²`._
-- _Recommendation: Found 'uses: actions/checkout@v3' in file `nodejs.yml`: Replace it with v4._
-- _Deprecated: Found 'node-version: [16' in file `nodejs.yml`: Update to current version._
-- _Issue: The license in the package.json (ISC) doesn't match the license file (MIT)._
+Checks cover metadata, licensing, README guidance, dependencies, and deprecated APIs. See the [check reference](docs/pipeline/check-modules-reference.md) for details.
 
 ## Contributor Guide
 
-Contributor setup instructions—including required runtimes and installation steps—now live in the [Contributing Guide](docs/CONTRIBUTING.md). Casual readers can skip straight to the module catalogue.
+See the [Contributing Guide](docs/CONTRIBUTING.md) for setup, pipeline commands, and tests.
 
 ## Ideas / To do
 

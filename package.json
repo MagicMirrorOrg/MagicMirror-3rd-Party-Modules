@@ -33,6 +33,7 @@
     "start": "node scripts/menu.ts",
     "all": "node scripts/orchestrator/index.ts",
     "all:local": "node scripts/orchestrator/index.ts --local-only",
+    "docs:rules": "node scripts/check-modules/generate-rule-docs.js",
     "fixtures": "node scripts/fixtures.ts",
     "release:validate": "node scripts/validate_release_artifacts.ts",
     "lint": "eslint && prettier --check .",

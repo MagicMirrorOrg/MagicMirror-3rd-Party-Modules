@@ -9,9 +9,24 @@ import {
 } from "../rule-registry.ts";
 
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { updateRuleInventory } from "../generate-rule-docs.js";
 
 const DEFAULT_STAGE = PIPELINE_CHECK_STAGE_IDS.MODERN;
+
+test("documented rule inventory matches the registry", async () => {
+  const markdown = await readFile(new URL("../../../docs/pipeline/check-modules-reference.md", import.meta.url), "utf8");
+  assert.equal(markdown, await updateRuleInventory(markdown), "Run node --run docs:rules to update the rule inventory");
+});
+
+test("rule inventory regeneration repairs drift and requires unique markers", async () => {
+  const markdown = await readFile(new URL("../../../docs/pipeline/check-modules-reference.md", import.meta.url), "utf8");
+  const stale = markdown.replace(RULE_REGISTRY[0].id, "stale-rule");
+  assert.notEqual(stale, markdown);
+  assert.equal(await updateRuleInventory(stale), markdown);
+  await assert.rejects(updateRuleInventory(`${markdown}\n<!-- rule-inventory:start -->`), /exactly one/u);
+});
 
 test("every rule declares at least one stage", () => {
   for (const rule of RULE_REGISTRY) {
