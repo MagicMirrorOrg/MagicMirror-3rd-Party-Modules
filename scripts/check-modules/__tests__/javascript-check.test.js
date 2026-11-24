@@ -7,7 +7,7 @@ import eslintConfig from "../../../eslint.testconfig.js";
 import { formatIssues } from "../issue.ts";
 import { getRuleById } from "../rule-registry.ts";
 import { join } from "node:path";
-import { runEslintCheck } from "../../../pipeline/workers/process-module.ts";
+import { runEslintCheck } from "../eslint-check.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 

@@ -3,7 +3,7 @@ import { analyzeModule } from "../../check-modules/module-analyzer.ts";
 import { strict as assert } from "node:assert";
 import { formatIssues } from "../issue.ts";
 import { join } from "node:path";
-import { runEslintCheck } from "../../../pipeline/workers/process-module.ts";
+import { runEslintCheck } from "../eslint-check.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 

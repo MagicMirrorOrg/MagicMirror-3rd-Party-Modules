@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { getRepositoryStatusIssues } from "../../../pipeline/workers/process-module.ts";
+import { getRepositoryStatusIssues } from "../../check-modules/repository-status-check.ts";
 
 describe("repository status issues", () => {
   it("reports archived GitHub repositories", () => {
