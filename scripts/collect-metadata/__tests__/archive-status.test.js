@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { detectArchivedRepositoryPage } from "../index.ts";
+import { detectArchivedRepositoryPage } from "../../repository-api/enrich.ts";
 
 describe("GitHub archive status", () => {
   it("detects GitHub's archived repository banner", () => {

@@ -50,6 +50,7 @@ flowchart TB
 ### Key Features
 
 - **Orchestrator**: `scripts/orchestrator/index.ts` parses CLI options once and calls the four typed stages in order
+- **Metadata Collection**: `collect-metadata/index.ts` coordinates source parsing and cache lifecycle; host batching, fallbacks, and recovery live in `scripts/repository-api/enrich.ts`
 - **Worker Pool Stage**: `parallel-processing` encapsulates clone, enrich, image, and analysis work behind a single supported stage
 - **Aggregation Stage**: `aggregate-catalogue` builds published JSON artifacts from the in-memory analysis payload
 - **Typed Module Contract**: Metadata, workers, IPC, aggregation, and Markdown share the module shape from `scripts/shared/module.ts`
