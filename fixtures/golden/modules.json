@@ -112,7 +112,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display Dutch bus and some other public transports for a targeted set of bus stops.",
-      "hasGithubIssues": true,
       "id": "73cirdan/MMM-bustimes",
       "image": "MMM-bustimes---cirdan.webp",
       "isArchived": false,
@@ -197,11 +196,8 @@
     {
       "category": "Transport / Travel",
       "description": "Displays the arrival time of trains to any station in the Washington DC subway metro system (WMATA) as well as incidents reported for any of the line colors.",
-      "hasGithubIssues": true,
       "id": "AdamMoses-GitHub/MMM-DCMetroTrainTimes",
-      "image": "MMM-DCMetroTrainTimes---AdamMoses-GitHub.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "AdamMoses-GitHub",
       "maintainerURL": "https://github.com/AdamMoses-GitHub",
       "name": "MMM-DCMetroTrainTimes",
@@ -484,6 +480,7 @@
       "description": "Displays a simple timetable. Configuration exclusively via config.js. Supports iCal holiday calendars, multiple children, colors, times, and rooms.",
       "id": "AJOCHAM/MMM-Stundenplan",
       "isArchived": false,
+      "license": "ISC",
       "maintainer": "AJocham",
       "maintainerURL": "https://github.com/AJOCHAM",
       "name": "MMM-Stundenplan",
@@ -1487,7 +1484,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays the number of available bikes on the selected stations of the Budapest public bike system (aka MOL Bubi).",
-      "hasGithubIssues": true,
       "id": "balassy/MMM-Bubi",
       "image": "MMM-Bubi---balassy.webp",
       "isArchived": false,
@@ -1615,22 +1611,6 @@
         "dexcom"
       ],
       "url": "https://github.com/balharrie/MMM-SugarValue"
-    },
-    {
-      "category": "Entertainment / Misc",
-      "description": "Syncs private iCloud calendars via CalDAV to local .ics files.",
-      "id": "bananaoverflow/MMM-iCloudCalendar",
-      "isArchived": false,
-      "license": "MIT",
-      "maintainer": "BananaOverflow",
-      "maintainerURL": "https://github.com/bananaoverflow",
-      "name": "MMM-iCloudCalendar",
-      "tags": [
-        "icloud",
-        "caldav",
-        "calendar"
-      ],
-      "url": "https://github.com/bananaoverflow/MMM-iCloudCalendar"
     },
     {
       "category": "Weather",
@@ -1928,11 +1908,8 @@
     {
       "category": "Transport / Travel",
       "description": "Real time bus information from Rosario, Santa Fe, Argentina.",
-      "hasGithubIssues": true,
       "id": "bibaldo/MMM-CuandoLlega",
-      "image": "MMM-CuandoLlega---bibaldo.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "bibaldo",
       "maintainerURL": "https://github.com/bibaldo",
       "name": "MMM-CuandoLlega",
@@ -2028,6 +2005,7 @@
     {
       "category": "Calendar",
       "description": "Display multiple mini-calendars at the same time.",
+      "hasGithubIssues": true,
       "id": "BKeyport/MMM-Multimonth",
       "image": "MMM-Multimonth---BKeyport.webp",
       "isArchived": false,
@@ -2195,11 +2173,10 @@
     {
       "category": "Transport / Travel",
       "description": "Display COUP e-scooters around you and sort them by distance. It works for Berlin and other cities.",
-      "hasGithubIssues": true,
       "id": "bogomips/MMM-CoupEscooters",
+      "image": "MMM-CoupEscooters---Bogomips.webp",
       "isArchived": false,
-      "license": "GPL-3.0",
-      "licenseStatus": "mismatch",
+      "license": "ISC",
       "maintainer": "Bogomips",
       "maintainerURL": "https://github.com/bogomips",
       "name": "MMM-CoupEscooters",
@@ -2936,7 +2913,7 @@
       "description": "Display the air quality index for a certain location.",
       "id": "CFenner/MMM-AirQuality",
       "image": "MMM-AirQuality---CFenner.webp",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -2952,7 +2929,7 @@
       "description": "Display the next public transport connections for a certain route.",
       "id": "CFenner/MMM-LocalTransport",
       "image": "MMM-LocalTransport---CFenner.webp",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -2967,7 +2944,7 @@
       "description": "Display your Netatmo in/outdoor weather station data.",
       "id": "CFenner/MMM-Netatmo",
       "image": "MMM-Netatmo---CFenner.webp",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -2982,7 +2959,7 @@
       "category": "Development / Core MagicMirror²",
       "description": "Module to version your personal config in a separate repository.",
       "id": "CFenner/MMM-PersonalConfig-Template",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -2993,7 +2970,7 @@
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Display the mirrors connection status.",
       "id": "CFenner/MMM-Ping",
-      "isArchived": false,
+      "isArchived": true,
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
       "name": "MMM-Ping",
@@ -3004,7 +2981,7 @@
       "description": "Integrate [Smappee](https://www.smappee.com)s smart home energy consumption monitor.",
       "id": "CFenner/MMM-Smappee",
       "image": "MMM-Smappee---CFenner.webp",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -3016,7 +2993,7 @@
       "description": "Display the currently playing track of your Sonos system.",
       "id": "CFenner/MMM-Sonos",
       "image": "MMM-Sonos---CFenner.webp",
-      "isArchived": false,
+      "isArchived": true,
       "license": "MIT",
       "maintainer": "CFenner",
       "maintainerURL": "https://github.com/CFenner",
@@ -3074,6 +3051,18 @@
       "maintainer": "Bernie",
       "maintainerURL": "https://github.com/ch1ledbe",
       "name": "MMM-myStrom",
+      "tags": [
+        "mystrom",
+        "smart home",
+        "switch",
+        "bulb",
+        "pir",
+        "motion",
+        "power",
+        "energy",
+        "alert",
+        "email"
+      ],
       "url": "https://github.com/ch1ledbe/MMM-myStrom"
     },
     {
@@ -3741,6 +3730,25 @@
     },
     {
       "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Displays PV forecasts, actual production, battery state and forecast comparison using Solcast, Forecast.Solar and Fronius GEN24 data.",
+      "id": "ChrisF1976/MMM-PVForecast",
+      "image": "MMM-PVForecast---ChrisF1976.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "ChrisF1976",
+      "maintainerURL": "https://github.com/ChrisF1976",
+      "name": "MMM-PVForecast",
+      "tags": [
+        "photovoltaics",
+        "fronius",
+        "forecast-solar",
+        "solcast",
+        "pv"
+      ],
+      "url": "https://github.com/ChrisF1976/MMM-PVForecast"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Monitor and display the status and energy consumption of Shelly devices, specifically focusing on devices related to solar power (PV systems) and energy usage.",
       "id": "ChrisF1976/MMM-ShellyPV",
       "image": "MMM-ShellyPV---ChrisF1976.webp",
@@ -4091,6 +4099,41 @@
       "url": "https://github.com/cowboysdude/MMM-Astrology"
     },
     {
+      "category": "Calendar",
+      "description": "US holidays and birthdays with day countdowns. No API key, no npm install.",
+      "hasGithubIssues": true,
+      "id": "cowboysdude/MMM-Cal",
+      "image": "MMM-Cal---Cowboysdude.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "Cowboysdude",
+      "maintainerURL": "https://github.com/cowboysdude",
+      "name": "MMM-Cal",
+      "tags": [
+        "holiday",
+        "countdown",
+        "calendar"
+      ],
+      "url": "https://github.com/cowboysdude/MMM-Cal"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Calvin and Hobbes and Frazz comic strip.",
+      "id": "cowboysdude/MMM-Comic",
+      "image": "MMM-Comic---Cowboysdude.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "Cowboysdude",
+      "maintainerURL": "https://github.com/cowboysdude",
+      "name": "MMM-Comic",
+      "tags": [
+        "comic",
+        "calvin and hobbes",
+        "frazz"
+      ],
+      "url": "https://github.com/cowboysdude/MMM-Comic"
+    },
+    {
       "category": "Transport / Travel",
       "description": "Display gas station prices in the USA.",
       "id": "cowboysdude/MMM-Gas",
@@ -4103,15 +4146,43 @@
       "url": "https://github.com/cowboysdude/MMM-Gas"
     },
     {
-      "category": "Entertainment / Misc",
+      "category": "Education",
       "description": "Displays History that happened on today's date.",
       "id": "cowboysdude/MMM-History",
+      "image": "MMM-History---Cowboysdude.webp",
       "isArchived": false,
       "license": "MIT",
       "maintainer": "Cowboysdude",
       "maintainerURL": "https://github.com/cowboysdude",
       "name": "MMM-History",
+      "tags": [
+        "history",
+        "on this day",
+        "wikipedia"
+      ],
       "url": "https://github.com/cowboysdude/MMM-History"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Near Earth Objects passing by this week. Be afraid. Be VERY afraid!",
+      "id": "cowboysdude/MMM-NEO",
+      "isArchived": false,
+      "maintainer": "cowboysdude",
+      "maintainerURL": "https://github.com/cowboysdude",
+      "name": "MMM-NEO",
+      "url": "https://github.com/cowboysdude/MMM-NEO"
+    },
+    {
+      "category": "Weather",
+      "description": "Dusted off and redone... this is V4 of one of the 1st weather modules on MagicMirror. Weather, UV, air quality, moon phase and NWS alerts. v4 of MMM-NOAA3, rebuilt for MagicMirror 2.3x / Node 22+.",
+      "id": "cowboysdude/MMM-NOAAV4",
+      "image": "MMM-NOAAV4---Cowboysdude.webp",
+      "isArchived": false,
+      "license": "ISC",
+      "maintainer": "Cowboysdude",
+      "maintainerURL": "https://github.com/cowboysdude",
+      "name": "MMM-NOAAV4",
+      "url": "https://github.com/cowboysdude/MMM-NOAAV4"
     },
     {
       "category": "Entertainment / Misc",
@@ -4124,6 +4195,23 @@
       "maintainerURL": "https://github.com/cowboysdude",
       "name": "MMM-Recipe",
       "url": "https://github.com/cowboysdude/MMM-Recipe"
+    },
+    {
+      "category": "News / Information",
+      "description": "A news ticker. It shows one headline at a time from any news feeds you like, with how long ago it was posted and where it came from. On a touch mirror, tap a headline to read its summary.",
+      "id": "cowboysdude/MMM-Ticknews",
+      "image": "MMM-Ticknews---Cowboysdude.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "Cowboysdude",
+      "maintainerURL": "https://github.com/cowboysdude",
+      "name": "MMM-Ticknews",
+      "tags": [
+        "news",
+        "ticker",
+        "rss"
+      ],
+      "url": "https://github.com/cowboysdude/MMM-Ticknews"
     },
     {
       "category": "Entertainment / Misc",
@@ -4676,11 +4764,9 @@
     {
       "category": "Transport / Travel",
       "description": "Display Realtime Irish Rail data for a targeted station.",
-      "hasGithubIssues": false,
       "id": "DavidLSmyth/DWD-RealtimeIrishRail",
       "isArchived": false,
-      "license": "MIT",
-      "licenseStatus": "mismatch",
+      "license": "ISC",
       "maintainer": "DavidLSmyth",
       "maintainerURL": "https://github.com/DavidLSmyth",
       "name": "DWD-RealtimeIrishRail",
@@ -4727,8 +4813,10 @@
     {
       "category": "Calendar",
       "description": "Same functionality as the default Calendar app but different display formatting.",
+      "hasGithubIssues": false,
       "id": "dbeltjr/MMM-MyCalendar",
       "isArchived": false,
+      "license": "MIT",
       "maintainer": "dbeltjr",
       "maintainerURL": "https://github.com/dbeltjr",
       "name": "MMM-MyCalendar",
@@ -5337,10 +5425,10 @@
     {
       "category": "Transport / Travel",
       "description": "Displays bus information for the Nottingham bus company, NCT.",
-      "hasGithubIssues": null,
+      "hasGithubIssues": true,
       "id": "drdisgust/MMM-NCTtimes",
       "image": "MMM-NCTtimes---dnmmrdr.webp",
-      "isArchived": null,
+      "isArchived": false,
       "license": "MIT",
       "maintainer": "dnmmrdr",
       "maintainerURL": "https://codeberg.org/drdisgust",
@@ -5404,6 +5492,18 @@
       "url": "https://github.com/Dresch360/MMM-DriveVideos"
     },
     {
+      "category": "Transport / Travel",
+      "description": "Live aircraft and helicopter radar with portrait and landscape layouts, hover details and flight trails. No receiver or API key required.",
+      "id": "Dresch360/MMM-LiveRadar",
+      "image": "MMM-LiveRadar---Dresch360.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "Dresch360",
+      "maintainerURL": "https://github.com/Dresch360",
+      "name": "MMM-LiveRadar",
+      "url": "https://github.com/Dresch360/MMM-LiveRadar"
+    },
+    {
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "FRITZ!Box Callmonitor. Display an alert when someone is calling and offers a call history.",
       "id": "drtorchwood/MMM-FRITZ-Box-Callmonitor-py3",
@@ -5421,11 +5521,10 @@
     {
       "category": "Transport / Travel",
       "description": "Display status of mountain bike trails via the trailforks.com website.",
-      "hasGithubIssues": true,
       "id": "drventure/MMM-Dorba-Trails",
+      "image": "MMM-Dorba-Trails---drventure.webp",
       "isArchived": false,
-      "license": "MIT",
-      "licenseStatus": "mismatch",
+      "license": "ISC",
       "maintainer": "drventure",
       "maintainerURL": "https://github.com/drventure",
       "name": "MMM-Dorba-Trails",
@@ -5442,6 +5541,22 @@
       "maintainerURL": "https://github.com/drventure",
       "name": "MMM-WordGenius",
       "url": "https://github.com/drventure/MMM-WordGenius"
+    },
+    {
+      "category": "Health",
+      "description": "Displays glucose readings and history through an unofficial LibreLinkUp cloud connection.",
+      "id": "DrWatson/MMM-Libre2",
+      "image": "MMM-Libre2---DrWatson.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "DrWatson",
+      "maintainerURL": "https://github.com/DrWatson",
+      "name": "MMM-Libre2",
+      "tags": [
+        "librelinkup",
+        "glucose"
+      ],
+      "url": "https://github.com/DrWatson/MMM-Libre2"
     },
     {
       "category": "Transport / Travel",
@@ -5755,11 +5870,8 @@
     {
       "category": "Transport / Travel",
       "description": "Caltrain (San Francisco Bay Area) status monitoring.",
-      "hasGithubIssues": true,
       "id": "efritz09/MMM-Caltrain",
-      "image": "MMM-Caltrain---efritz09.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "efritz09",
       "maintainerURL": "https://github.com/efritz09",
       "name": "MMM-Caltrain",
@@ -6174,6 +6286,81 @@
         "supabase"
       ],
       "url": "https://github.com/FabienBounoir/MMM-GENTLEMATE-ESPORT"
+    },
+    {
+      "category": "Calendar",
+      "description": "Today's and tomorrow's events from every Home Assistant calendar (iCloud, Google, CalDAV…) plus a to-do list, pushed by Home Assistant: no token on the mirror. One line per event with its calendar color and a countdown.",
+      "hasGithubIssues": true,
+      "id": "FabienBounoir/MMM-HAAgenda",
+      "image": "MMM-HAAgenda---FabienBounoir.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FabienBounoir",
+      "maintainerURL": "https://github.com/FabienBounoir",
+      "name": "MMM-HAAgenda",
+      "tags": [
+        "home assistant",
+        "calendar",
+        "agenda",
+        "icloud",
+        "reminders"
+      ],
+      "url": "https://github.com/FabienBounoir/MMM-HAAgenda"
+    },
+    {
+      "category": "Weather",
+      "description": "Current weather and the next days as temperature range bars, colored by the weather. Data from [Open-Meteo](https://open-meteo.com): free, no API key. French labels, no dependencies.",
+      "id": "FabienBounoir/MMM-Meteo",
+      "image": "MMM-Meteo---FabienBounoir.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FabienBounoir",
+      "maintainerURL": "https://github.com/FabienBounoir",
+      "name": "MMM-Meteo",
+      "tags": [
+        "weather",
+        "météo",
+        "open-meteo",
+        "forecast"
+      ],
+      "url": "https://github.com/FabienBounoir/MMM-Meteo"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Display rotating quotes in 14 languages from 250+ categories, with a layout that adapts to any region. Works offline from cache, no dependencies. [Online config generator](https://quote-ouns.vercel.app/magicmirror).",
+      "id": "FabienBounoir/MMM-QuoteOuns",
+      "image": "MMM-QuoteOuns---FabienBounoir.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FabienBounoir",
+      "maintainerURL": "https://github.com/FabienBounoir",
+      "name": "MMM-QuoteOuns",
+      "tags": [
+        "quotes",
+        "citations",
+        "motivation",
+        "multilingual"
+      ],
+      "url": "https://github.com/FabienBounoir/MMM-QuoteOuns"
+    },
+    {
+      "category": "Transport / Travel",
+      "description": "Montpellier (France) trams and buses (TaM): real-time departures with a picture of the vehicle coming, line disruptions, and saved journeys with the time to leave home. No API key, no dependencies.",
+      "id": "FabienBounoir/MMM-TamTramBus",
+      "image": "MMM-TamTramBus---FabienBounoir.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FabienBounoir",
+      "maintainerURL": "https://github.com/FabienBounoir",
+      "name": "MMM-TamTramBus",
+      "tags": [
+        "montpellier",
+        "tam",
+        "tram",
+        "bus",
+        "transport"
+      ],
+      "url": "https://github.com/FabienBounoir/MMM-TamTramBus"
     },
     {
       "category": "Sports",
@@ -6680,6 +6867,204 @@
       "url": "https://github.com/Fneves7/MMM-GasPricesPT"
     },
     {
+      "category": "Weather",
+      "description": "Regional US AirNow observations and active National Weather Service alerts. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Air",
+      "image": "MMM-MCHF-Air---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Air",
+      "tags": [
+        "mischief",
+        "weather",
+        "air-quality",
+        "alerts"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Air"
+    },
+    {
+      "category": "Education",
+      "description": "Offline star canopy with local astronomy and optional constellation lines. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Astra",
+      "image": "MMM-MCHF-Astra---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Astra",
+      "tags": [
+        "mischief",
+        "stars",
+        "astronomy",
+        "background"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Astra"
+    },
+    {
+      "category": "Weather",
+      "description": "Current-weather snow, frost, rain and heat effects; native weather or Open-Meteo. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Atmos",
+      "image": "MMM-MCHF-Atmos---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Atmos",
+      "tags": [
+        "mischief",
+        "weather",
+        "snow",
+        "rain",
+        "animation"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Atmos"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Responsive Spotify display with intact artwork, ambient glow and stale-data fades; existing OnSpotify or independent setup. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Echo",
+      "image": "MMM-MCHF-Echo---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Echo",
+      "tags": [
+        "mischief",
+        "spotify",
+        "music"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Echo"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "HTTPS response history with optional private network snapshots. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Haven",
+      "image": "MMM-MCHF-Haven---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Haven",
+      "tags": [
+        "mischief",
+        "network",
+        "internet",
+        "monitoring"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Haven"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Offline observatory clock with adaptive dial faces, Gothic Flip digits and optional locally calculated daylight. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Hora",
+      "image": "MMM-MCHF-Hora---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Hora",
+      "tags": [
+        "mischief",
+        "clock",
+        "daylight",
+        "analog"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Hora"
+    },
+    {
+      "category": "Weather",
+      "description": "Offline NASA-textured Moon with continuously calculated phase lighting. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Luna",
+      "image": "MMM-MCHF-Luna---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Luna",
+      "tags": [
+        "mischief",
+        "moon",
+        "astronomy",
+        "offline"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Luna"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Customizable holiday scenes, fitted frost, a scene builder and personal occasions. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Rite",
+      "image": "MMM-MCHF-Rite---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Rite",
+      "tags": [
+        "mischief",
+        "holiday",
+        "decorations",
+        "animation"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Rite"
+    },
+    {
+      "category": "Finance",
+      "description": "US economic releases via FRED with clear reporting periods; requires Python 3. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Tide",
+      "image": "MMM-MCHF-Tide---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Tide",
+      "tags": [
+        "mischief",
+        "economy",
+        "finance",
+        "ticker"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Tide"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Local mirror health with optional external system checks. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Vigil",
+      "image": "MMM-MCHF-Vigil---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Vigil",
+      "tags": [
+        "mischief",
+        "system",
+        "health",
+        "monitoring"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Vigil"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Original offline humor, custom phrases and gentle text fades. Public preview.",
+      "id": "FoggEyez/MMM-MCHF-Wit",
+      "image": "MMM-MCHF-Wit---FoggEyez.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "FoggEyez",
+      "maintainerURL": "https://github.com/FoggEyez",
+      "name": "MMM-MCHF-Wit",
+      "tags": [
+        "mischief",
+        "quotes",
+        "humor",
+        "compliments"
+      ],
+      "url": "https://github.com/FoggEyez/MMM-MCHF-Wit"
+    },
+    {
       "category": "Development / Core MagicMirror²",
       "description": "Displays GitHub repository information.",
       "id": "fpfuetsch/MMM-GitHub-Monitor",
@@ -6915,7 +7300,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays ride wait times at the Disney World Parks.",
-      "hasGithubIssues": true,
       "id": "gberg927/MMM-DisneyWaitTimes",
       "image": "MMM-DisneyWaitTimes---gberg927.webp",
       "isArchived": false,
@@ -7572,7 +7956,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display data and map with position and most recent route for your BMW or MINI.",
-      "hasGithubIssues": true,
       "id": "hamsil/MMM-BMWCarData",
       "image": "MMM-BMWCarData---hamsil.webp",
       "isArchived": false,
@@ -7586,6 +7969,16 @@
         "cardata"
       ],
       "url": "https://github.com/hamsil/MMM-BMWCarData"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Displays your Danfoss Ally thermostat data.",
+      "id": "hannic/MMM-DanfossAlly",
+      "isArchived": false,
+      "maintainer": "hannic",
+      "maintainerURL": "https://github.com/hannic",
+      "name": "MMM-DanfossAlly",
+      "url": "https://github.com/hannic/MMM-DanfossAlly"
     },
     {
       "category": "Cryptocurrency",
@@ -7799,6 +8192,7 @@
     {
       "category": "Calendar",
       "description": "Displays a multi-day agenda list with a liquid-glass theme, color-coded calendars, and contextual icons. It can pull events either from the core calendar module's CALENDAR_EVENTS broadcast, or fetch .ics feeds directly via its own node_helper (using [node-ical](https://www.npmjs.com/package/node-ical)).",
+      "hasGithubIssues": true,
       "id": "hearter20176/MMM-MyAgenda",
       "image": "MMM-MyAgenda---hearter20176.webp",
       "isArchived": false,
@@ -7911,7 +8305,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display train arrivals/departures (unofficial frontend for db navigator) with details for Germany.",
-      "hasGithubIssues": true,
       "id": "Helpi90/MMM-DBF",
       "image": "MMM-DBF---Helpi90.webp",
       "isArchived": false,
@@ -8338,11 +8731,10 @@
     {
       "category": "Transport / Travel",
       "description": "Displays some of your Hyundai's data on your mirror.",
-      "hasGithubIssues": true,
       "id": "ilenhart/MMM-Bluelinky2",
+      "image": "MMM-Bluelinky2---ilenhart.webp",
       "isArchived": false,
-      "license": "MIT",
-      "licenseStatus": "mismatch",
+      "license": "ISC",
       "maintainer": "ilenhart",
       "maintainerURL": "https://github.com/ilenhart",
       "name": "MMM-Bluelinky2",
@@ -8380,11 +8772,8 @@
     {
       "category": "Transport / Travel",
       "description": "Arrival times for Andalusian Transport Consortium.",
-      "hasGithubIssues": true,
       "id": "Infinitte/MMM-Ctan",
-      "image": "MMM-Ctan---Infinitte.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "Infinitte",
       "maintainerURL": "https://github.com/Infinitte",
       "name": "MMM-Ctan",
@@ -8484,7 +8873,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display current fuel prices at your nearest gas station in Norway.",
-      "hasGithubIssues": true,
       "id": "ItsMeBrille/MMM-Bensinpriser",
       "image": "MMM-Bensinpriser---ItsMeBrille.webp",
       "isArchived": false,
@@ -9232,7 +9620,6 @@
     {
       "category": "Transport / Travel",
       "description": "Arrival times for Chicago Transit Authority buses and trains. Supports multiple bus and/or train stops.",
-      "hasGithubIssues": true,
       "id": "JHWelch/MMM-CTA",
       "image": "MMM-CTA---JHWelch.webp",
       "isArchived": false,
@@ -9492,6 +9879,7 @@
     {
       "category": "Calendar",
       "description": "A polished month-view calendar module that connects directly to Google Calendar via iCal URL.",
+      "hasGithubIssues": true,
       "id": "johnster000/MMM-MyGCalendar",
       "image": "MMM-MyGCalendar---johnster000.webp",
       "isArchived": false,
@@ -9604,11 +9992,8 @@
     {
       "category": "Transport / Travel",
       "description": "Display the availability of the city bikes around in Norway from A to B.",
-      "hasGithubIssues": true,
       "id": "JonasTriki/MMM-Bysykkel",
-      "image": "MMM-Bysykkel---JonasTriki.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "JonasTriki",
       "maintainerURL": "https://github.com/JonasTriki",
       "name": "MMM-Bysykkel",
@@ -9766,7 +10151,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays the number of available bikes at selected stations of the Boston public bike system (Bluebikes).",
-      "hasGithubIssues": true,
       "id": "jschless/MMM-Bluebikes",
       "image": "MMM-Bluebikes---jschless.webp",
       "isArchived": false,
@@ -10790,10 +11174,8 @@
     {
       "category": "Transport / Travel",
       "description": "Hour bus station of Bordeaux.",
-      "hasGithubIssues": true,
       "id": "kuitin/MMM-BdxBus",
       "isArchived": false,
-      "license": "NOASSERTION",
       "maintainer": "kuitin",
       "maintainerURL": "https://github.com/kuitin",
       "name": "MMM-BdxBus",
@@ -10846,11 +11228,8 @@
     {
       "category": "Transport / Travel",
       "description": "A fork of [MMM-DCMetroTrainTimes](https://github.com/AdamMoses-GitHub/MMM-DCMetroTrainTimes) (above) that also displays arrival times for buses.",
-      "hasGithubIssues": false,
       "id": "kyle-kelly/MMM-DCMetroTimes",
-      "image": "MMM-DCMetroTimes---Kyle Kelly.webp",
       "isArchived": false,
-      "license": "MIT",
       "maintainer": "Kyle Kelly",
       "maintainerURL": "https://github.com/kyle-kelly",
       "name": "MMM-DCMetroTimes",
@@ -10916,56 +11295,6 @@
         "spotify"
       ],
       "url": "https://github.com/l3d00m/MMM-LibrespotJava"
-    },
-    {
-      "category": "Finance",
-      "description": "Display EU electricity prices from Nord Pool.",
-      "id": "late4marshmellow/MMM-EUElectricityPrice",
-      "image": "MMM-EUElectricityPrice---late4marshmellow.webp",
-      "isArchived": false,
-      "license": "MIT",
-      "maintainer": "late4marshmellow",
-      "maintainerURL": "https://github.com/late4marshmellow",
-      "name": "MMM-EUElectricityPrice",
-      "tags": [
-        "magicmirror module",
-        "electricity price",
-        "nord pool",
-        "eu electricity",
-        "energy prices",
-        "spot prices",
-        "electricity chart",
-        "energy",
-        "smart home",
-        "dashboard",
-        "home automation",
-        "nok",
-        "sek",
-        "eur",
-        "dkk",
-        "pln",
-        "ro",
-        "bgn",
-        "no1",
-        "no2",
-        "no3",
-        "no4",
-        "no5",
-        "se1",
-        "se2",
-        "se3",
-        "fi",
-        "de",
-        "at",
-        "dk1",
-        "dk2",
-        "pl",
-        "bg",
-        "electricity consumption",
-        "electricity price visualization",
-        "energy monitoring"
-      ],
-      "url": "https://github.com/late4marshmellow/MMM-EUElectricityPrice"
     },
     {
       "category": "Finance",
@@ -11144,6 +11473,27 @@
       "url": "https://github.com/linuxtuxie/MMM-SunnyPortal"
     },
     {
+      "category": "Sports",
+      "description": "Shows live tennis scores from the ATP, WTA, Challenger and ITF tours, using the [Live Tennis API](https://livetennisapi.com).",
+      "id": "livetennisapi/MMM-LiveTennis",
+      "image": "MMM-LiveTennis---livetennisapi.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "livetennisapi",
+      "maintainerURL": "https://github.com/livetennisapi",
+      "name": "MMM-LiveTennis",
+      "tags": [
+        "tennis",
+        "live scores",
+        "atp",
+        "wta",
+        "challenger",
+        "itf",
+        "sports"
+      ],
+      "url": "https://github.com/livetennisapi/MMM-LiveTennis"
+    },
+    {
       "category": "Transport / Travel",
       "description": "time to the next buses lines for Toulouse (Tisseo).",
       "id": "LoneWanderer-GH/MMM-Toulouse-Transports",
@@ -11161,7 +11511,7 @@
     },
     {
       "category": "Transport / Travel",
-      "description": "Display real-time departures for public transport in Prague region - Czech Republic. Fetching data from [PID](https://pid.cz/).",
+      "description": "Displays real-time public transport departure boards from stops integrated into the PID (Prague Integrated Transport) system, using the free Golemio API.",
       "id": "lucasbotka/MMM-PID",
       "image": "MMM-PID---lucasbotka.webp",
       "isArchived": false,
@@ -11250,6 +11600,18 @@
       "url": "https://github.com/LukeSkywalker92/MMM-DWD-WarnWeather"
     },
     {
+      "category": "Transport / Travel",
+      "description": "Displays departure times from given stops for public transport service in Switzerland, this uses the unoffical [search.ch API](https://search.ch/timetable/api/help).",
+      "id": "luschmar/mmm-abfahrten",
+      "image": "mmm-abfahrten---luschmar.webp",
+      "isArchived": false,
+      "license": "ISC",
+      "maintainer": "luschmar",
+      "maintainerURL": "https://github.com/luschmar",
+      "name": "mmm-abfahrten",
+      "url": "https://github.com/luschmar/mmm-abfahrten"
+    },
+    {
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Display upcoming pickup dates for garbage in the Norwegian municipalities of Harstad, Narvik, Evenes, Gratangen, Ibestad, Kvæfjord, Lavangen and Tjeldsund.",
       "id": "maan75/MMM-HRS-PickupPlan",
@@ -11285,6 +11647,28 @@
       "maintainerURL": "https://github.com/macd2point0",
       "name": "MMM-CloneWarsQuotes",
       "url": "https://github.com/macd2point0/MMM-CloneWarsQuotes"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Displays live solar, grid, home, battery and electric vehicle energy flows from [evcc](https://evcc.io/) with source-colored arrows, battery/vehicle SoC and English/German translations.",
+      "id": "MagGyver-Ulm/MMM-EvccFlow",
+      "image": "MMM-EvccFlow---MagGyver-Ulm.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "MagGyver-Ulm",
+      "maintainerURL": "https://github.com/MagGyver-Ulm",
+      "name": "MMM-EvccFlow",
+      "tags": [
+        "evcc",
+        "energy",
+        "solar",
+        "pv",
+        "battery",
+        "wallbox",
+        "ev",
+        "smart-home"
+      ],
+      "url": "https://github.com/MagGyver-Ulm/MMM-EvccFlow"
     },
     {
       "category": "Outdated Modules",
@@ -11610,6 +11994,44 @@
       "maintainerURL": "https://github.com/mariosgouros",
       "name": "MMM-eshopspecials",
       "url": "https://github.com/mariosgouros/MMM-eshopspecials"
+    },
+    {
+      "category": "Sports",
+      "description": "Display the current world championship standings for MotoGP, Moto2, Moto3 or MotoE.",
+      "id": "mariosgouros/MMM-MotoGPStandings",
+      "image": "MMM-MotoGPStandings---MSg.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "MSg",
+      "maintainerURL": "https://github.com/mariosgouros",
+      "name": "MMM-MotoGPStandings",
+      "tags": [
+        "sports",
+        "motogp",
+        "moto2",
+        "moto3",
+        "motoe"
+      ],
+      "url": "https://github.com/mariosgouros/MMM-MotoGPStandings"
+    },
+    {
+      "category": "Transport / Travel",
+      "description": "Shows live bus and trolleybus arrival times for Athens public transport, powered by the [OASA Telematics API](https://oasa-telematics-api.readthedocs.io/en/latest/).",
+      "id": "mariosgouros/MMM-OASABus",
+      "image": "MMM-OASABus---MSg.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "MSg",
+      "maintainerURL": "https://github.com/mariosgouros",
+      "name": "MMM-OASABus",
+      "tags": [
+        "oasa",
+        "athens",
+        "bus",
+        "trolleybus",
+        "public transport"
+      ],
+      "url": "https://github.com/mariosgouros/MMM-OASABus"
     },
     {
       "category": "Weather",
@@ -11956,6 +12378,24 @@
       "url": "https://github.com/maxenxe/MMM-RSS-FEED"
     },
     {
+      "category": "Weather",
+      "description": "Module shows official weather warnings from the German weather service (Deutscher Wetterdienst, DWD) for your region.",
+      "id": "mazim-co/MMM-DWDWarnings",
+      "image": "MMM-DWDWarnings---mazim.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "mazim",
+      "maintainerURL": "https://github.com/mazim-co",
+      "name": "MMM-DWDWarnings",
+      "tags": [
+        "dwd",
+        "weather",
+        "warnings",
+        "germany"
+      ],
+      "url": "https://github.com/mazim-co/MMM-DWDWarnings"
+    },
+    {
       "category": "Transport / Travel",
       "description": "Displays information about your Volvo from the Volvo Connect API.",
       "id": "mazim-co/MMM-MyVolvo",
@@ -12034,6 +12474,103 @@
       "maintainerURL": "https://github.com/Medve01",
       "name": "Shelly-HT",
       "url": "https://github.com/Medve01/Shelly-HT"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "CrowdSec dashboard with attacker map, timeline, top countries and attack types.",
+      "id": "meni555/MMM-Crowdsec",
+      "image": "MMM-Crowdsec---meni555.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "meni555",
+      "maintainerURL": "https://github.com/meni555",
+      "name": "MMM-Crowdsec",
+      "tags": [
+        "crowdsec",
+        "security",
+        "firewall",
+        "dashboard",
+        "map"
+      ],
+      "url": "https://github.com/meni555/MMM-Crowdsec"
+    },
+    {
+      "category": "Sports",
+      "description": "German ice hockey league (DEL): schedule, live scores and playoff series. Based on MMM-NHL.",
+      "id": "meni555/MMM-DEL",
+      "image": "MMM-DEL---meni555.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "meni555",
+      "maintainerURL": "https://github.com/meni555",
+      "name": "MMM-DEL",
+      "tags": [
+        "del",
+        "deutsche eishockey liga",
+        "ice hockey",
+        "eishockey",
+        "openligadb"
+      ],
+      "url": "https://github.com/meni555/MMM-DEL"
+    },
+    {
+      "category": "Transport / Travel",
+      "description": "Live public transport departures for Bavaria (AVV, MVV, VGN, ...) via the Bahnland Bayern EFA API.",
+      "id": "meni555/MMM-EFA-Bayern",
+      "image": "MMM-EFA-Bayern---meni555.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "meni555",
+      "maintainerURL": "https://github.com/meni555",
+      "name": "MMM-EFA-Bayern",
+      "tags": [
+        "public transport",
+        "departures",
+        "efa",
+        "bayern",
+        "bavaria",
+        "avv",
+        "mvv",
+        "vgn"
+      ],
+      "url": "https://github.com/meni555/MMM-EFA-Bayern"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Shows the latest movies and series of a Jellyfin server.",
+      "id": "meni555/MMM-Jellyfin",
+      "image": "MMM-Jellyfin---meni555.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "meni555",
+      "maintainerURL": "https://github.com/meni555",
+      "name": "MMM-Jellyfin",
+      "tags": [
+        "jellyfin",
+        "media server",
+        "movies",
+        "series"
+      ],
+      "url": "https://github.com/meni555/MMM-Jellyfin"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Radio with Spotify Connect and YouTube Music as entries in the station carousel. Fork of MMM-MplayerRadio.",
+      "id": "meni555/MMM-MplayerRadio-Advanced",
+      "image": "MMM-MplayerRadio-Advanced---meni555.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "meni555",
+      "maintainerURL": "https://github.com/meni555",
+      "name": "MMM-MplayerRadio-Advanced",
+      "tags": [
+        "sound",
+        "radio",
+        "stream",
+        "audio",
+        "mp3"
+      ],
+      "url": "https://github.com/meni555/MMM-MplayerRadio-Advanced"
     },
     {
       "category": "Entertainment / Misc",
@@ -12501,6 +13038,7 @@
       "description": "Extended calendar and event view. Show calendar timeline.",
       "hasGithubIssues": true,
       "id": "MMRIZE/MMM-CalendarExt3Timeline",
+      "image": "MMM-CalendarExt3Timeline---MMRIZE.webp",
       "isArchived": false,
       "license": "MIT",
       "maintainer": "MMRIZE",
@@ -13158,6 +13696,22 @@
     },
     {
       "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Display status data from Dyness Batteries.",
+      "id": "mumblebaj/MMM-Dyness",
+      "image": "MMM-Dyness---mumblebaj.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "mumblebaj",
+      "maintainerURL": "https://github.com/mumblebaj",
+      "name": "MMM-Dyness",
+      "tags": [
+        "dyness",
+        "smart home"
+      ],
+      "url": "https://github.com/mumblebaj/MMM-Dyness"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Display loadshedding schedule data for the South African users.",
       "id": "mumblebaj/MMM-EskomSePush",
       "image": "MMM-EskomSePush---mumblebaj.webp",
@@ -13282,21 +13836,6 @@
       "url": "https://github.com/mumblebaj/MMM-PhilipsHue"
     },
     {
-      "category": "Entertainment / Misc",
-      "description": "Displays top level content from Reddit in either headlines or image based display types.",
-      "id": "mumblebaj/MMM-Reddit",
-      "isArchived": false,
-      "license": "MIT",
-      "maintainer": "mumblebaj",
-      "maintainerURL": "https://github.com/mumblebaj",
-      "name": "MMM-Reddit",
-      "tags": [
-        "reddit",
-        "news"
-      ],
-      "url": "https://github.com/mumblebaj/MMM-Reddit"
-    },
-    {
       "category": "Sports",
       "description": "Display Rugby World Rankings and Upcoming Matches and results.",
       "id": "mumblebaj/MMM-Rugby",
@@ -13345,16 +13884,6 @@
         "wotd"
       ],
       "url": "https://github.com/mumblebaj/MMM-WOTD"
-    },
-    {
-      "category": "Entertainment / Misc",
-      "description": "Re-themes MagicMirror² to look like a beautiful digital photo wall display. It adds a new font, styles, redesigned clock and weather displays, and rotating background image pulled from unsplash.com.",
-      "id": "mvlbarcelos/WallberryTheme",
-      "isArchived": false,
-      "maintainer": "mvlbarcelos",
-      "maintainerURL": "https://github.com/mvlbarcelos",
-      "name": "WallberryTheme",
-      "url": "https://github.com/mvlbarcelos/WallberryTheme"
     },
     {
       "category": "Utility / IoT / 3rd Party / Integration",
@@ -13739,17 +14268,6 @@
       "url": "https://github.com/mykle1/MMM-NatureCalendar"
     },
     {
-      "category": "Outdated Modules",
-      "description": "Near Earth Objects passing by our planet this week. Be afraid. Be VERY afraid!",
-      "id": "mykle1/MMM-NEO",
-      "isArchived": false,
-      "maintainer": "Mykle1",
-      "maintainerURL": "https://github.com/mykle1",
-      "name": "MMM-NEO",
-      "outdated": "Abandoned. No reactions to issues since years. Missing instructions to install dependency 'request'.",
-      "url": "https://github.com/mykle1/MMM-NEO"
-    },
-    {
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Get system stats from a PC board. Supports multiple core CPU's.",
       "id": "mykle1/MMM-PC-Stats",
@@ -13891,7 +14409,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays arrival times for the Chicago Transit Authority 'L' system buses and trains.",
-      "hasGithubIssues": true,
       "id": "NateDee/MMM-CTA",
       "isArchived": false,
       "maintainer": "NateDee",
@@ -13902,6 +14419,7 @@
     {
       "category": "Calendar",
       "description": "A module to display, manage and edit Nextcloud calendar events.",
+      "hasGithubIssues": true,
       "id": "ndp15/MMM-Nextcloud-Calendar",
       "image": "MMM-Nextcloud-Calendar---ndp15.webp",
       "isArchived": false,
@@ -14062,7 +14580,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays the number of available bikes and electric bikes on any Bixi stations in Montreal.",
-      "hasGithubIssues": true,
       "id": "nictruong/MMM-Bixi",
       "image": "MMM-Bixi---Nicolas Truong.webp",
       "isArchived": false,
@@ -14670,6 +15187,21 @@
       "url": "https://github.com/ottopaulsen/MMM-MQTT"
     },
     {
+      "category": "Entertainment / Misc",
+      "description": "Show status of your Toyota.",
+      "id": "ottopaulsen/MMM-MyToyota",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "ottopaulsen",
+      "maintainerURL": "https://github.com/ottopaulsen",
+      "name": "MMM-MyToyota",
+      "tags": [
+        "toyota",
+        "mytoyota"
+      ],
+      "url": "https://github.com/ottopaulsen/MMM-MyToyota"
+    },
+    {
       "category": "Transport / Travel",
       "description": "Show how many minutes until the next bus(es) goes from given bus stops.",
       "id": "ottopaulsen/MMM-NesteBuss",
@@ -14906,7 +15438,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display real time Deutsche Bahn train departures, including delays, from one or more selected stations.",
-      "hasGithubIssues": true,
       "id": "Pascal-nie/MMM-DBF-Navigator",
       "image": "MMM-DBF-Navigator---Paschke.webp",
       "isArchived": false,
@@ -14999,6 +15530,40 @@
         "jokes"
       ],
       "url": "https://github.com/pcurt/MMM-BlaguesAPI"
+    },
+    {
+      "category": "Productivity",
+      "description": "Displays a Home Assistant to-do list on your mirror and cycles through pages when the list is long.",
+      "id": "PeanutToes6/MMM-HATodo",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "PeanutToes6 (https://github.com/PeanutToes6)",
+      "maintainerURL": "https://github.com/PeanutToes6",
+      "name": "MMM-HATodo",
+      "tags": [
+        "home assistant",
+        "todo",
+        "to-do"
+      ],
+      "url": "https://github.com/PeanutToes6/MMM-HATodo"
+    },
+    {
+      "category": "Weather",
+      "description": "Displays decoded METAR observations and optional TAF forecasts for any airport with an ICAO code, with wind direction arrows and runway diagrams. No API key required. AI-assisted (written with Claude).",
+      "id": "PeanutToes6/MMM-MetarTaf",
+      "image": "MMM-MetarTaf---PeanutToes6.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "PeanutToes6",
+      "maintainerURL": "https://github.com/PeanutToes6",
+      "name": "MMM-MetarTaf",
+      "tags": [
+        "metar",
+        "taf",
+        "aviation",
+        "weather"
+      ],
+      "url": "https://github.com/PeanutToes6/MMM-MetarTaf"
     },
     {
       "category": "News / Information",
@@ -15739,6 +16304,23 @@
     },
     {
       "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Module without display: holds one WebSocket connection to Home Assistant and publishes configured entity states as notifications, so display modules like [MMM-RingGauge](https://github.com/raywo/MMM-RingGauge) can show them without knowing Home Assistant or the token.",
+      "id": "raywo/MMM-HomeAssistantDataProvider",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "raywo",
+      "maintainerURL": "https://github.com/raywo",
+      "name": "MMM-HomeAssistantDataProvider",
+      "tags": [
+        "home assistant",
+        "sensor",
+        "data provider",
+        "notifications"
+      ],
+      "url": "https://github.com/raywo/MMM-HomeAssistantDataProvider"
+    },
+    {
+      "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Display the song you are currently listening to on Spotify.",
       "id": "raywo/MMM-NowPlayingOnSpotify",
       "image": "MMM-NowPlayingOnSpotify---raywo.webp",
@@ -15753,12 +16335,50 @@
       "url": "https://github.com/raywo/MMM-NowPlayingOnSpotify"
     },
     {
-      "category": "Transport / Travel",
-      "description": "Displays the closest aircraft's callsign and altitude using ADS-B data.",
-      "hasGithubIssues": true,
-      "id": "rc7/MMM-ClosestFlight",
+      "category": "Utility / IoT / 3rd Party / Integration",
+      "description": "Show sensor readings from any module's notifications as three-quarter rings with colored bands, a marker and a status word – one ring or a group in one row.",
+      "id": "raywo/MMM-RingGauge",
+      "image": "MMM-RingGauge---raywo.webp",
       "isArchived": false,
       "license": "MIT",
+      "maintainer": "raywo",
+      "maintainerURL": "https://github.com/raywo",
+      "name": "MMM-RingGauge",
+      "tags": [
+        "gauge",
+        "sensor",
+        "air quality",
+        "co2",
+        "humidity"
+      ],
+      "url": "https://github.com/raywo/MMM-RingGauge"
+    },
+    {
+      "category": "Entertainment / Misc",
+      "description": "Re-themes MagicMirror² to look like a beautiful digital photo wall display. It adds a new font, styles, redesigned clock and weather displays, and rotating background image pulled from unsplash.com.",
+      "id": "raywo/WallberryTheme",
+      "image": "WallberryTheme---raywo.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "raywo",
+      "maintainerURL": "https://github.com/raywo",
+      "name": "WallberryTheme",
+      "tags": [
+        "theme",
+        "background",
+        "unsplash",
+        "photos",
+        "clock",
+        "weather",
+        "media"
+      ],
+      "url": "https://github.com/raywo/WallberryTheme"
+    },
+    {
+      "category": "Transport / Travel",
+      "description": "Displays the closest aircraft's callsign and altitude using ADS-B data.",
+      "id": "rc7/MMM-ClosestFlight",
+      "isArchived": false,
       "maintainer": "RC7",
       "maintainerURL": "https://github.com/rc7",
       "name": "MMM-ClosestFlight",
@@ -15794,6 +16414,25 @@
       "maintainerURL": "https://github.com/rcollie",
       "name": "MMM-MarsWeather",
       "url": "https://github.com/rcollie/MMM-MarsWeather"
+    },
+    {
+      "category": "Weather",
+      "description": "The live globe from [livex.earth](https://livex.earth/), lit by the real Sun: day and night, city lights, hourly clouds, radar, the aurora, satellites, launches and hazards. No API key required.",
+      "id": "rdmiller/MMM-LiveX",
+      "image": "MMM-LiveX---rdmiller.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "rdmiller",
+      "maintainerURL": "https://github.com/rdmiller",
+      "name": "MMM-LiveX",
+      "tags": [
+        "earth",
+        "globe",
+        "weather",
+        "aurora",
+        "satellites"
+      ],
+      "url": "https://github.com/rdmiller/MMM-LiveX"
     },
     {
       "category": "Weather",
@@ -16271,7 +16910,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays live Washington DC Metro train arrivals (and MetroBus too!) and active service alerts using the WMATA API.",
-      "hasGithubIssues": true,
       "id": "rroach3753/MMM-DCMetroTrains",
       "image": "MMM-DCMetroTrains---Rickey Roach.webp",
       "isArchived": false,
@@ -17393,7 +18031,6 @@
     {
       "category": "Transport / Travel",
       "description": "Station monitor for the Dresden/Germany local transport (DVB) bus, tram and train system.",
-      "hasGithubIssues": true,
       "id": "skastenholz/MMM-DVB",
       "image": "MMM-DVB---skastenholz.webp",
       "isArchived": false,
@@ -18122,7 +18759,6 @@
     {
       "category": "Transport / Travel",
       "description": "Displays the current info for scheduled sailings of specified BC Ferries route.",
-      "hasGithubIssues": true,
       "id": "stonecrown/MMM-BCFerries",
       "isArchived": false,
       "license": "MIT",
@@ -18257,10 +18893,16 @@
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Integrate Apple AirTunes/Airplay metadata coming via shairport-sync into the MagicMirror². Does not work with video or mirroring.",
       "id": "surekap/MMM-ShairportMetadata",
+      "image": "MMM-ShairportMetadata---surekap.webp",
       "isArchived": false,
+      "license": "MIT",
       "maintainer": "surekap",
       "maintainerURL": "https://github.com/surekap",
       "name": "MMM-ShairportMetadata",
+      "tags": [
+        "shairport-sync",
+        "airplay"
+      ],
       "url": "https://github.com/surekap/MMM-ShairportMetadata"
     },
     {
@@ -18349,7 +18991,6 @@
     {
       "category": "Transport / Travel",
       "description": "Danish public transport departures (Rejseplanen API).",
-      "hasGithubIssues": true,
       "id": "SyS64760/MMM-DSBDepartures",
       "image": "MMM-DSBDepartures---sys64760.webp",
       "isArchived": false,
@@ -18421,10 +19062,17 @@
       "category": "Utility / IoT / 3rd Party / Integration",
       "description": "Display Synology Download Station tasks. Auto-hide when no tasks.",
       "id": "TAGinside/MMM-Synology-Download_Station",
+      "image": "MMM-Synology-Download_Station---TAGinside.webp",
       "isArchived": false,
+      "license": "MIT",
       "maintainer": "TAGinside",
       "maintainerURL": "https://github.com/TAGinside",
       "name": "MMM-Synology-Download_Station",
+      "tags": [
+        "synology",
+        "download station",
+        "torrent"
+      ],
       "url": "https://github.com/TAGinside/MMM-Synology-Download_Station"
     },
     {
@@ -18937,6 +19585,27 @@
       "maintainerURL": "https://github.com/thobach",
       "name": "MMM-OpenWeather24Hours",
       "url": "https://github.com/thobach/MMM-OpenWeather24Hours"
+    },
+    {
+      "category": "Finance",
+      "description": "Animates custom images flying across your screen.",
+      "id": "Thomas-Mildner/MMM-FlyBy",
+      "image": "MMM-FlyBy---Thomas-Mildner.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "Thomas-Mildner",
+      "maintainerURL": "https://github.com/Thomas-Mildner",
+      "name": "MMM-FlyBy",
+      "tags": [
+        "smart-mirror",
+        "animation",
+        "flying-animation",
+        "image-animation",
+        "screen-overlay",
+        "custom-images",
+        "random-images"
+      ],
+      "url": "https://github.com/Thomas-Mildner/MMM-FlyBy"
     },
     {
       "category": "Education",
@@ -20268,6 +20937,26 @@
       "url": "https://github.com/wctimmer/MMM-DagelijksWoord"
     },
     {
+      "category": "News / Information",
+      "description": "Shows WebKnox answer cards: the week's weather, sunrise and the moon, on this day in history, a joke, or the answer to an everyday question, in English, German, French, Spanish, Portuguese and Italian. Needs a free WebKnox API key (50 answers a day).",
+      "id": "webknox/MMM-WebKnox",
+      "image": "MMM-WebKnox---webknox.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "webknox",
+      "maintainerURL": "https://github.com/webknox",
+      "name": "MMM-WebKnox",
+      "tags": [
+        "weather",
+        "sunrise",
+        "moon phase",
+        "on this day",
+        "jokes",
+        "webknox"
+      ],
+      "url": "https://github.com/webknox/MMM-WebKnox"
+    },
+    {
       "category": "Development / Core MagicMirror²",
       "description": "Flicker the whole screen to prevent a burn-in effect on your display.",
       "id": "werthdavid/MMM-BurnIn",
@@ -20461,7 +21150,6 @@
     {
       "category": "Transport / Travel",
       "description": "Real time tram departure from selected stop in Cracow (Poland).",
-      "hasGithubIssues": true,
       "id": "wkra/MMM-CracowMPK",
       "isArchived": false,
       "maintainer": "wkra",
@@ -20503,7 +21191,6 @@
     {
       "category": "Transport / Travel",
       "description": "Retrieves live timings of busses for a specific bus stop.",
-      "hasGithubIssues": true,
       "id": "wouter-heerwegh/MMM-DeLijn",
       "isArchived": false,
       "maintainer": "wouter-heerwegh",
@@ -20873,6 +21560,24 @@
       "url": "https://github.com/XppaiCyberr/MMM-NounsTreasury"
     },
     {
+      "category": "Calendar",
+      "description": "Shows your calendar events in week columns (the current week and the following ones, side by side). Works with the default `calendar` module.",
+      "hasGithubIssues": true,
+      "id": "xtnh/MMM-CalendarExtWeekly",
+      "image": "MMM-CalendarExtWeekly---xtnh.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "xtnh",
+      "maintainerURL": "https://github.com/xtnh",
+      "name": "MMM-CalendarExtWeekly",
+      "tags": [
+        "calendar",
+        "weekly",
+        "agenda"
+      ],
+      "url": "https://github.com/xtnh/MMM-CalendarExtWeekly"
+    },
+    {
       "category": "Productivity",
       "description": "Display tables from Airtable.",
       "id": "yashatgit/MMM-Airtable",
@@ -21118,6 +21823,24 @@
     },
     {
       "category": "Entertainment / Misc",
+      "description": "Shows what is currently playing on your [Jellyfin](https://jellyfin.org) server.",
+      "id": "zanix/MMM-JellyfinNowPlaying",
+      "image": "MMM-JellyfinNowPlaying---zanix.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "zanix",
+      "maintainerURL": "https://github.com/zanix",
+      "name": "MMM-JellyfinNowPlaying",
+      "tags": [
+        "jellyfin",
+        "media",
+        "video",
+        "now playing"
+      ],
+      "url": "https://github.com/zanix/MMM-JellyfinNowPlaying"
+    },
+    {
+      "category": "Entertainment / Misc",
       "description": "Displays a weekly meal menu from the [Mealie](https://mealie.io) recipe management app.",
       "id": "zanix/MMM-MealieMenu",
       "image": "MMM-MealieMenu---zanix.webp",
@@ -21128,7 +21851,8 @@
       "name": "MMM-MealieMenu",
       "tags": [
         "mealie",
-        "recipie"
+        "recipe",
+        "meal plan"
       ],
       "url": "https://github.com/zanix/MMM-MealieMenu"
     },
@@ -21151,6 +21875,30 @@
         "digital frame"
       ],
       "url": "https://github.com/zarif98/MMM-SynologyPhotos"
+    },
+    {
+      "category": "Weather",
+      "description": "Lightweight tide-charts based on NOAA data. Shows recent observations, astronomical forecasts, and potential surge-based predictions.",
+      "id": "zchadick/MMM-TideChartSVG",
+      "image": "MMM-TideChartSVG---zchadick.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "zchadick",
+      "maintainerURL": "https://github.com/zchadick",
+      "name": "MMM-TideChartSVG",
+      "url": "https://github.com/zchadick/MMM-TideChartSVG"
+    },
+    {
+      "category": "Transport / Travel",
+      "description": "Departures, estimated delays and remaining vehicle space for Washington State Ferries (WSF) sailings.",
+      "id": "zchadick/MMM-WaStateFerry",
+      "image": "MMM-WaStateFerry---zchadick.webp",
+      "isArchived": false,
+      "license": "MIT",
+      "maintainer": "zchadick",
+      "maintainerURL": "https://github.com/zchadick",
+      "name": "MMM-WaStateFerry",
+      "url": "https://github.com/zchadick/MMM-WaStateFerry"
     },
     {
       "category": "Entertainment / Misc",
@@ -21201,7 +21949,6 @@
     {
       "category": "Transport / Travel",
       "description": "Display departure times or estimated time to departure for the selected Caltrain station.",
-      "hasGithubIssues": true,
       "id": "zzflops/MMM-Caltrain",
       "isArchived": false,
       "maintainer": "zzflops",
