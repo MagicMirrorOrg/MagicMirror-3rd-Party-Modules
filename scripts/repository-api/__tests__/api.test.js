@@ -1,6 +1,8 @@
-import { describe, it } from "node:test";
+import { describe, it, mock } from "node:test";
 import { fetchRepositoryData, normalizeRepositoryData } from "../api.ts";
 import assert from "node:assert";
+import { enrichModules } from "../enrich.ts";
+import process from "node:process";
 
 describe("repository-api/api", () => {
   it("fetches the latest Codeberg commit through the commits list endpoint", async () => {
@@ -80,5 +82,51 @@ describe("repository-api/api", () => {
     }, null, "github");
 
     assert.strictEqual(normalized.watchersCount, 4);
+  });
+
+  it("preserves previous metadata after a rate limit and on a partial cache hit", async () => {
+    const previousToken = process.env.GITHUB_TOKEN;
+    delete process.env.GITHUB_TOKEN;
+    try {
+      const module = { name: "MMM-Test", url: "https://github.com/example/MMM-Test" };
+      const previous = { ...module, stars: 42, license: "MIT", hasGithubIssues: true, isArchived: true, lastCommit: "2025-01-01" };
+      const previousModules = new Map([[module.url, previous]]);
+      const cache = new Map();
+      const options = {
+        client: {
+          getJson: () => ({ ok: false, status: 403, data: {} }),
+          getText: url => url.endsWith("commits.atom")
+            ? { ok: true, data: "<updated>2026-01-01</updated>" }
+            : { ok: false, data: "" }
+        },
+        forceRefresh: false,
+        logger: { debug: mock.fn(), error: mock.fn(), info: mock.fn(), warn: mock.fn() },
+        repositoryCache: {
+          get: key => cache.has(key) ? { value: cache.get(key) } : null,
+          set: (key, value) => cache.set(key, value)
+        }
+      };
+
+      for (let run = 0; run < 2; run += 1) {
+        const [result] = await enrichModules([module], previousModules, options);
+        assert.strictEqual(result.stars, 42);
+        assert.strictEqual(result.license, "MIT");
+        assert.strictEqual(result.hasGithubIssues, true);
+        assert.strictEqual(result.isArchived, true);
+        assert.strictEqual(result.lastCommit, "2026-01-01");
+      }
+
+      cache.set("example/MMM-Test", { stars: 0 });
+      const [result] = await enrichModules([module], previousModules, options);
+      assert.strictEqual(result.stars, 0);
+    }
+    finally {
+      if (typeof previousToken === "string") {
+        process.env.GITHUB_TOKEN = previousToken;
+      }
+      else {
+        delete process.env.GITHUB_TOKEN;
+      }
+    }
   });
 });

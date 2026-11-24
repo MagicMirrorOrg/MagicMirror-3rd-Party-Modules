@@ -364,7 +364,7 @@ async function processModule(module: EnrichedModule, context: ProcessModuleConte
   const cachedValue = cachedEntry?.value;
   if (!options.forceRefresh && cachedValue && !cachedValue.isFailed) {
     stats.hits += 1;
-    return { ...module, ...cachedValue };
+    return { ...getFallbackOrOriginal(module, previousModulesMap), ...cachedValue };
   }
   stats.misses += 1;
   if (circuitBreaker.stopFetching) {
@@ -394,13 +394,12 @@ async function processModule(module: EnrichedModule, context: ProcessModuleConte
     ]);
     if (lastCommitFromAtom || typeof archivedFromPage === "boolean") {
       const atomRecovery: CachedRepositoryValue = {
-        lastCommit: lastCommitFromAtom,
-        isArchived: archivedFromPage ?? (typeof module.isArchived === "boolean" ? module.isArchived : undefined),
-        hasGithubIssues: typeof module.hasGithubIssues === "boolean" ? module.hasGithubIssues : undefined
+        ...(lastCommitFromAtom ? { lastCommit: lastCommitFromAtom } : {}),
+        ...(typeof archivedFromPage === "boolean" ? { isArchived: archivedFromPage } : {})
       };
       options.repositoryCache.set(repoId, atomRecovery);
       options.logger.info(`Recovered ${module.name} lastCommit via GitHub Atom fallback`);
-      return { ...module, ...atomRecovery };
+      return { ...getFallbackOrOriginal(module, previousModulesMap), ...atomRecovery };
     }
   }
 
