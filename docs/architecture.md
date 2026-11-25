@@ -92,7 +92,7 @@ Run the complete pipeline with `node --run all` or `node scripts/orchestrator/in
 
 The `parallel-processing` stage assigns individual modules to a bounded pool of child processes. Each worker clones or reuses the repository, enriches its metadata and image, and runs analysis. Existing clones in `modules/` are reused when their commit date is within one minute of, or newer than, the metadata date; `modules_temp/` is staging, not a reusable clone cache.
 
-A task timeout (60 seconds) or worker crash produces a failed result for the affected module. A replacement worker is started when work remains. Per-module logs are stored under `logs/<run-id>/modules/`.
+A task timeout (six minutes) or worker crash produces a failed result for the affected module. A replacement worker is started when work remains. Per-module logs are stored under `logs/<run-id>/modules/`.
 
 ## Distribution Touchpoints
 

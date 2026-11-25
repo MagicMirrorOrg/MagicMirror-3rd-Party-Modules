@@ -326,6 +326,25 @@ test("analyzer ignores plain-text moment mentions in comments", async () => {
   );
 });
 
+test("analyzer skips binary files in text checks while retaining SVG and size checks", async (context) => {
+  const moduleRoot = await createTempModule();
+  context.after(() => fsPromises.rm(moduleRoot, { recursive: true, force: true }));
+  const imagePath = join(moduleRoot, "image.JPG");
+  const videoPath = join(moduleRoot, "video.mp4");
+  const archivePath = join(moduleRoot, "archive.zip");
+  const svgPath = join(moduleRoot, "image.svg");
+
+  await Promise.all([imagePath, videoPath, archivePath, svgPath].map(file => fsPromises.writeFile(file, "Magic Mirror")));
+  await fsPromises.truncate(archivePath, 11 * 1024 * 1024);
+  const result = await analyzeModule(moduleRoot, "MMM-Test", "https://github.com/example/MMM-Test", [imagePath, videoPath, archivePath, svgPath]);
+  const issues = formatIssues(result.issues);
+  assert.equal(issues.some(issue => issue.includes("in file `image.svg`") && issue.includes("Magic Mirror")), true);
+  for (const filename of ["image.JPG", "video.mp4", "archive.zip"]) {
+    assert.equal(issues.some(issue => issue.includes(`in file \`${filename}\``) && issue.includes("Magic Mirror")), false);
+  }
+  assert.equal(issues.some(issue => issue.includes("archive.zip") && issue.includes("unusually large")), true);
+});
+
 test("analyzer reports large non-media repositories but excludes images", async () => {
   const moduleRoot = await fsPromises.mkdtemp(join(tmpdir(), "module-analyzer-size-test-"));
   const sourcePath = join(moduleRoot, "large-source.js");

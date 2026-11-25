@@ -78,6 +78,11 @@ test("WorkerPool turns a task timeout into a module failure", async () => {
   assert.equal(pool.pending, 0);
 });
 
+test("WorkerPool defaults to a six-minute task timeout", () => {
+  const pool = new WorkerPool({ workerCount: 1 });
+  assert.equal(pool.config.taskTimeoutMs, 360_000);
+});
+
 test("WorkerPool shutdown clears task timers", async () => {
   const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 10_000 });
   installFakeWorker(pool, () => null);

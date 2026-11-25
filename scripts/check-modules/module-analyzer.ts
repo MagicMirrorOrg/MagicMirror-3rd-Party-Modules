@@ -87,6 +87,10 @@ const SIZE_EXCLUDED_EXTENSIONS = new Set([
   ".woff2",
   ".wmv"
 ]);
+const BINARY_EXTENSIONS = new Set([
+  ...[...SIZE_EXCLUDED_EXTENSIONS].filter(extension => extension !== ".svg"),
+  ".pdf", ".tar", ".zip"
+]);
 
 function escapeRegex(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
@@ -272,9 +276,13 @@ export async function analyzeModule(
 
   // Check for each file
   for (const filePath of relevantFiles) {
-    const content = await readFile(filePath, "utf-8").catch(() => "");
     const filename = filePath.split("/").pop() ?? "";
     const filenameLower = filename.toLowerCase();
+    const extension = filenameLower.includes(".") ? filenameLower.slice(filenameLower.lastIndexOf(".")) : "";
+    if (BINARY_EXTENSIONS.has(extension)) {
+      continue;
+    }
+    const content = await readFile(filePath, "utf-8").catch(() => "");
     const isChangelogFile = filenameLower === "changelog" || filenameLower.startsWith("changelog.");
     const isPackageLockFile = filenameLower === "package-lock.json";
     const relativePath = filePath.startsWith(modulePath)

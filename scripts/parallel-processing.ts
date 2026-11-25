@@ -211,7 +211,7 @@ export function writeSuccessfulResultsToCache(
 }
 
 function createWorkerPool(workerCount: number): WorkerPoolLike {
-  return new WorkerPool({ workerCount, taskTimeoutMs: 60_000 });
+  return new WorkerPool({ workerCount });
 }
 
 function buildMergedModules(modules: ModuleInput[], results: ModuleResult[]): ModuleResult[] {

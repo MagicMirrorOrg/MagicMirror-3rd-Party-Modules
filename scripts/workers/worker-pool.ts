@@ -56,7 +56,7 @@ export class WorkerPool {
   constructor(config: WorkerPoolConfig = {}) {
     this.config = {
       workerCount: config.workerCount || Math.max(1, cpus().length - 1),
-      taskTimeoutMs: config.taskTimeoutMs || 60_000
+      taskTimeoutMs: config.taskTimeoutMs || 360_000
     };
   }
 
