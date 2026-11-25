@@ -21,6 +21,7 @@ export type WorkerMessage =
   | { payload?: undefined; type: "shutdown" };
 
 export interface ProgressEvent {
+  error?: string;
   fromCache?: boolean;
   moduleId: string;
   status: string;

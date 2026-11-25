@@ -1,7 +1,10 @@
+import { mkdtemp, rm } from "node:fs/promises";
 import { EventEmitter } from "node:events";
 import { WorkerPool } from "../worker-pool.ts";
 import assert from "node:assert/strict";
+import { join } from "node:path";
 import test from "node:test";
+import { tmpdir } from "node:os";
 
 const moduleInput = {
   id: "owner/module",
@@ -68,6 +71,8 @@ test("WorkerPool returns one result per module task", async () => {
 
 test("WorkerPool turns a task timeout into a module failure", async () => {
   const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 10 });
+  const events = [];
+  pool.onProgress(event => events.push(event));
   installFakeWorker(pool, () => null);
 
   const results = await pool.processModules([moduleInput], moduleConfig);
@@ -75,6 +80,52 @@ test("WorkerPool turns a task timeout into a module failure", async () => {
   assert.equal(results.length, 1);
   assert.equal(results[0].status, "failed");
   assert.match(results[0].error, /timed out/u);
+  assert.equal(events.length, 1);
+  assert.equal(events[0].status, "failed");
+  assert.equal(events[0].moduleId, "module-----owner");
+  assert.match(events[0].error, /timed out/u);
+  assert.equal(pool.pending, 0);
+});
+
+test("WorkerPool continues queued work after a timeout", async () => {
+  const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 20 });
+  const events = [];
+  pool.onProgress(event => events.push(event));
+  let taskCount = 0;
+  installFakeWorker(pool, ({ pool: activePool, worker, message }) => {
+    taskCount += 1;
+    if (taskCount === 2) {
+      queueMicrotask(() => activePool.handleMessage(worker, {
+        type: "result",
+        payload: { result: { ...message.payload.module, status: "success", fromCache: false } }
+      }));
+    }
+  });
+
+  const results = await pool.processModules([moduleInput, { ...moduleInput, name: "next" }], moduleConfig);
+  assert.deepEqual(results.map(result => result.status), ["failed", "success"]);
+  assert.deepEqual(events.map(event => event.status), ["failed", "success"]);
+  assert.match(events[0].error, /timed out/u);
+  assert.equal(pool.pending, 0);
+});
+
+test("WorkerPool reports unexpected worker exits", { timeout: 5000 }, async (context) => {
+  const projectRoot = await mkdtemp(join(tmpdir(), "worker-exit-test-"));
+  context.after(() => rm(projectRoot, { recursive: true, force: true }));
+  const pool = new WorkerPool({ workerCount: 1, taskTimeoutMs: 2000 });
+  const events = [];
+  pool.onProgress((event) => {
+    events.push(event);
+    if (event.status === "started") {
+      pool.workers.get(event.workerId).process.kill("SIGKILL");
+    }
+  });
+
+  const results = await pool.processModules([moduleInput], { ...moduleConfig, projectRoot });
+  assert.equal(results[0].status, "failed");
+  const failure = events.find(event => event.status === "failed");
+  assert.equal(failure.moduleId, "module-----owner");
+  assert.match(failure.error, /exited with signal SIGKILL/u);
   assert.equal(pool.pending, 0);
 });
 

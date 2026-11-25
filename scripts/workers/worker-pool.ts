@@ -73,6 +73,12 @@ export class WorkerPool {
       worker.timer = null;
     }
     worker.task = null;
+    this.recordResult(worker, result);
+    this.assignNext(worker);
+    this.finishIfComplete();
+  }
+
+  private recordResult(worker: WorkerSlot, result: ModuleResult): void {
     this.results.push(result);
     this.pending -= 1;
     this.progressCallback?.({
@@ -80,10 +86,9 @@ export class WorkerPool {
       workerId: worker.id,
       moduleId: `${result.name}-----${result.maintainer}`,
       status: result.status,
-      fromCache: result.fromCache
+      fromCache: result.fromCache,
+      ...(result.error ? { error: result.error } : {})
     });
-    this.assignNext(worker);
-    this.finishIfComplete();
   }
 
   private finishIfComplete(): void {
@@ -114,8 +119,7 @@ export class WorkerPool {
       worker.task = null;
       worker.timer = null;
       worker.process.kill();
-      this.results.push(failedResult(currentTask, `Worker ${worker.id} timed out processing ${currentTask.name}`));
-      this.pending -= 1;
+      this.recordResult(worker, failedResult(currentTask, `Worker ${worker.id} timed out processing ${currentTask.name}`));
       this.finishIfComplete();
       if (this.queue.length > 0 && !this.shuttingDown) {
         void this.replaceWorker(worker.id);
@@ -183,7 +187,7 @@ export class WorkerPool {
         clearTimeout(startupTimer);
         reject(error);
       });
-      child.once("exit", (code) => {
+      child.once("exit", (code, signal) => {
         clearTimeout(startupTimer);
         this.workers.delete(workerId);
         if (this.shuttingDown || !worker.task) {
@@ -195,8 +199,8 @@ export class WorkerPool {
           clearTimeout(worker.timer);
           worker.timer = null;
         }
-        this.results.push(failedResult(failedTask, `Worker ${workerId} exited with code ${code ?? "unknown"}`));
-        this.pending -= 1;
+        const exitReason = code === null ? `signal ${signal ?? "unknown"}` : `code ${code}`;
+        this.recordResult(worker, failedResult(failedTask, `Worker ${workerId} exited with ${exitReason}`));
         this.finishIfComplete();
         if (this.queue.length > 0 && !this.shuttingDown) {
           void this.replaceWorker(workerId);

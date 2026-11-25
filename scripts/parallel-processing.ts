@@ -338,7 +338,8 @@ export async function runParallelProcessing({
       if (event.type === "module" && event.status !== "started") {
         processedCount += 1;
         if (event.status !== "success") {
-          runLogger.warn(`[${processedCount}/${modules.length}] ${event.status}: ${event.moduleId}`);
+          const error = event.error ? `: ${event.error}` : "";
+          runLogger.warn(`[${processedCount}/${modules.length}] ${event.status}: ${event.moduleId}${error}`);
         }
         if (processedCount % 50 === 0 || processedCount === modules.length) {
           runLogger.info(`Processed ${processedCount}/${modules.length} modules`);

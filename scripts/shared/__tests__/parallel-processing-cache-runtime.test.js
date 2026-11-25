@@ -273,7 +273,7 @@ test("pipeline reports periodic progress and individual failures", async (contex
       return entries.map((module, index) => {
         const status = { 10: "failed", 20: "skipped" }[index] ?? "success";
         onProgress({ type: "module", status: "started", moduleId: module.id });
-        onProgress({ type: "module", status, moduleId: module.id });
+        onProgress({ type: "module", status, moduleId: module.id, ...(status === "failed" ? { error: "Worker 2 timed out" } : {}) });
         return { ...module, status };
       });
     }
@@ -289,7 +289,7 @@ test("pipeline reports periodic progress and individual failures", async (contex
   deepEqual(messages.info.filter(message => message.startsWith("Processed ")), ["Processed 50/53 modules", "Processed 53/53 modules"]);
   ok(messages.info.includes("Cache: 0 hit(s), 52 to process"));
   ok(messages.warn.some(message => message.includes("failed: owner/module-0: Repository not found")));
-  ok(messages.warn.some(message => message.includes("failed: owner/module-11")));
+  ok(messages.warn.some(message => message.includes("failed: owner/module-11: Worker 2 timed out")));
   ok(messages.warn.some(message => message.includes("skipped: owner/module-21")));
 });
 
