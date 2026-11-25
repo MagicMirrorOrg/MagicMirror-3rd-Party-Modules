@@ -45,7 +45,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
   if (config.localOnly && !await fs.promises.stat(path.join(config.modulesDir, `${module.name}-----${module.maintainer}`)).then(info => info.isDirectory()).catch(() => false)) {
     if (config.moduleLogger) {
       await config.moduleLogger.info("end", "Skipped - no local clone available");
-      await config.moduleLogger.close();
     }
     return {
       ...module,
@@ -67,7 +66,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
         processingTimeMs: processingTime,
         error: cloneResult.error
       });
-      await config.moduleLogger.close();
     }
 
     return {
@@ -108,7 +106,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
         error: message,
         stack: error instanceof Error ? error.stack : null
       });
-      await config.moduleLogger.close();
     }
 
     return {
@@ -153,7 +150,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
         error: message,
         stack: error instanceof Error ? error.stack : null
       });
-      await config.moduleLogger.close();
     }
 
     return {
@@ -187,7 +183,6 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
       totalIssues: allIssues.length,
       status: "success"
     });
-    await config.moduleLogger.close();
   }
 
   return {

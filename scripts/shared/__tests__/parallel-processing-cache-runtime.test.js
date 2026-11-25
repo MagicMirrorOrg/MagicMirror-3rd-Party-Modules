@@ -4,7 +4,7 @@ import {
   normalizeModuleAnalysisConfig
 } from "../../shared/module-analysis-cache.ts";
 import { deepEqual, equal, ok } from "node:assert/strict";
-import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import {
   partitionModulesByCache,
   pruneStaleCacheEntries,
@@ -257,6 +257,13 @@ test("runParallelProcessing processes local modules without enabling the analysi
 test("local-only workers analyze existing files without Git and skip missing clones", async (context) => {
   const projectRoot = await mkdtemp(join(tmpdir(), "local-only-worker-test-"));
   context.after(() => rm(projectRoot, { recursive: true, force: true }));
+  let closeCount = 0;
+  const moduleLogger = {
+    info: () => null,
+    error: () => null,
+    debug: () => null,
+    close: () => { closeCount += 1; }
+  };
   const module = {
     id: "example/MMM-Local",
     name: "MMM-Local",
@@ -272,7 +279,8 @@ test("local-only workers analyze existing files without Git and skip missing clo
     modulesTempDir: join(projectRoot, "modules_temp"),
     imagesDir: join(projectRoot, "website", "images"),
     cacheEnabled: true,
-    localOnly: true
+    localOnly: true,
+    moduleLogger
   };
 
   const missing = await processModule(module, config);
@@ -280,6 +288,7 @@ test("local-only workers analyze existing files without Git and skip missing clo
   equal(missing.skippedReason, "No local clone available");
   equal(missing.cloned, false);
   equal("cacheKey" in missing, false);
+  equal(closeCount, 0);
 
   const cloneDir = join(config.modulesDir, "MMM-Local-----example");
   await mkdir(config.modulesDir, { recursive: true });
@@ -294,6 +303,7 @@ test("local-only workers analyze existing files without Git and skip missing clo
   equal(result.status, "success");
   equal(result.fromCache, false);
   equal("cacheKey" in result, false);
+  equal(closeCount, 0);
   ok(result.issues.every(issue => typeof issue === "object"));
   ok(formatIssues(result.issues).some(issue => issue.includes("axios:") && issue.includes("node_helper.js:1:")));
   equal(await readFile(sourcePath, "utf8"), source);
@@ -324,4 +334,11 @@ test("local-only workers analyze existing files without Git and skip missing clo
   equal(parallelResult.cachedCount, 0);
   ok(formatIssues(parallelResult.results.find(entry => entry.id === module.id).issues).some(issue => issue.includes("axios:")));
   equal(await readFile(sourcePath, "utf8"), source);
+  const logsRoot = join(projectRoot, "logs");
+  const [runId] = await readdir(logsRoot);
+  const logsDir = join(logsRoot, runId, "modules");
+  const logFiles = await readdir(logsDir);
+  const logs = await Promise.all(logFiles.map(file => readFile(join(logsDir, file), "utf8")));
+  ok(logs.some(log => log.includes("Module processing completed successfully")));
+  ok(logs.some(log => log.includes("Skipped - no local clone available")));
 });
