@@ -27,4 +27,6 @@ guides/
 website/data/*
 !website/data/cache/
 !website/data/cache/**
+!website/data/moduleCache.json
 website/images/*
+!website/images/*.webp

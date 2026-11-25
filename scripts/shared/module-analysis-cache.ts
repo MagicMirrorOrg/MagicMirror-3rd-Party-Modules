@@ -1,10 +1,12 @@
 import { createPersistentCache } from "./persistent-cache.ts";
 import { getCurrentCommit } from "./git.ts";
+import process from "node:process";
 import { resolve } from "node:path";
 import { stringifyDeterministic } from "./deterministic-output.ts";
 
-export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 10;
+export const MODULE_ANALYSIS_CACHE_SCHEMA_VERSION = 11;
 export const MODULE_ANALYSIS_CACHE_RELATIVE_PATH = "website/data/moduleCache.json";
+const MODULE_ANALYSIS_CACHE_TTL_MS = 1000 * 60 * 60 * 24 * 3;
 
 interface ModuleAnalysisConfigInput {
   deep?: unknown;
@@ -22,8 +24,15 @@ export interface NormalizedModuleAnalysisConfig {
 
 interface ModuleAnalysisModuleInput {
   branch?: unknown;
+  hasGithubIssues?: unknown;
   id?: unknown;
+  isArchived?: unknown;
+  issues?: unknown;
   lastCommit?: unknown;
+  license?: unknown;
+  maintainer?: unknown;
+  name?: unknown;
+  outdated?: unknown;
   url?: unknown;
 }
 
@@ -38,7 +47,14 @@ interface ModuleAnalysisCacheContract {
   analysisConfig: NormalizedModuleAnalysisConfig;
   module: {
     branch: string | null;
+    hasGithubIssues: unknown;
     id: string;
+    isArchived: unknown;
+    issues: unknown;
+    license: unknown;
+    maintainer: unknown;
+    name: unknown;
+    outdated: unknown;
     url: string;
   };
   repoFreshness: {
@@ -87,7 +103,8 @@ export async function getProjectRevision(projectRoot: string): Promise<string | 
     return await getCurrentCommit({ cwd: projectRoot });
   }
   catch {
-    return null;
+    const revision = process.env.PIPELINE_CATALOGUE_REVISION?.trim();
+    return revision && /^(?:[\da-f]{40}|[\da-f]{64})$/iu.test(revision) ? revision : null;
   }
 }
 
@@ -112,7 +129,14 @@ export function buildModuleAnalysisCacheContract({
     module: {
       id: moduleId,
       url: moduleUrl,
-      branch: moduleBranch
+      branch: moduleBranch,
+      name: module?.name ?? null,
+      maintainer: module?.maintainer ?? null,
+      license: module?.license ?? null,
+      outdated: module?.outdated ?? null,
+      isArchived: module?.isArchived ?? null,
+      hasGithubIssues: module?.hasGithubIssues ?? null,
+      issues: module?.issues ?? []
     },
     repoFreshness: {
       moduleRevision: normalizedModuleRevision,
@@ -133,7 +157,7 @@ export function buildModuleAnalysisCacheKey(options: BuildModuleAnalysisCacheCon
 
 export function createModuleAnalysisCache({
   filePath,
-  defaultTtlMs = 0,
+  defaultTtlMs = MODULE_ANALYSIS_CACHE_TTL_MS,
   now
 }: CreateModuleAnalysisCacheOptions = {}) {
   return createPersistentCache({

@@ -13,6 +13,7 @@ import {
 } from "../../parallel-processing.ts";
 import { formatIssues } from "../../check-modules/issue.ts";
 import { join } from "node:path";
+import process from "node:process";
 import { processModule } from "../../workers/process-module.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
@@ -70,8 +71,10 @@ test("partitionModulesByCache splits cache hits and misses with skipped semantic
     name: modules[0].name,
     maintainer: modules[0].maintainer,
     url: modules[0].url,
+    stars: 1,
     issues: []
   });
+  modules[0].stars = 2;
 
   const { cachedResults, uncachedModules } = partitionModulesByCache(modules, {
     cache,
@@ -85,6 +88,7 @@ test("partitionModulesByCache splits cache hits and misses with skipped semantic
   equal(cachedResults[0].status, "skipped");
   equal(cachedResults[0].skippedReason, "cached");
   equal(cachedResults[0].fromCache, true);
+  equal(cachedResults[0].stars, 2);
   equal(uncachedModules[0].id, modules[1].id);
 });
 
@@ -134,6 +138,22 @@ test("pruneStaleCacheEntries removes orphaned and invalidated keys", async () =>
 
   equal(prunedCount, 2);
   deepEqual(cache.getAllKeys(), [keptKey]);
+});
+
+test("partitionModulesByCache reprocesses modules with missing cached images", async (context) => {
+  const projectRoot = await mkdtemp(join(tmpdir(), "parallel-cache-images-"));
+  context.after(() => rm(projectRoot, { recursive: true, force: true }));
+  const module = createModule({ id: "owner/module-a", url: "https://github.com/owner/module-a", lastCommit: "sha-a" });
+  const catalogueRevision = "catalogue-revision";
+  const cache = createModuleAnalysisCache({ filePath: join(projectRoot, "cache.json") });
+  await cache.load();
+  const cacheKey = buildModuleAnalysisCacheKey({ module, catalogueRevision, analysisConfig: DEFAULT_ANALYSIS_CONFIG });
+  cache.set(cacheKey, { ...module, image: "module.webp" });
+  const options = { cache, catalogueRevision, analysisConfig: DEFAULT_ANALYSIS_CONFIG, imagesDir: projectRoot };
+
+  equal(partitionModulesByCache([module], options).uncachedModules.length, 1);
+  await writeFile(join(projectRoot, "module.webp"), "image");
+  equal(partitionModulesByCache([module], options).cachedResults.length, 1);
 });
 
 test("integration: second run has higher cache skip-rate", async () => {
@@ -191,6 +211,49 @@ test("integration: second run has higher cache skip-rate", async () => {
   equal(secondRun.uncachedModules.length, 0);
   equal(secondRunSkipRate, 1);
   ok(secondRunSkipRate > firstRunSkipRate);
+});
+
+test("pipeline reuses persisted results with current metadata and available images", async (context) => {
+  const projectRoot = await mkdtemp(join(tmpdir(), "parallel-cache-persisted-"));
+  const previousRevision = process.env.PIPELINE_CATALOGUE_REVISION;
+  process.env.PIPELINE_CATALOGUE_REVISION = "b".repeat(40);
+  context.after(async () => {
+    if (typeof previousRevision === "string") {
+      process.env.PIPELINE_CATALOGUE_REVISION = previousRevision;
+    }
+    else {
+      delete process.env.PIPELINE_CATALOGUE_REVISION;
+    }
+    await rm(projectRoot, { recursive: true, force: true });
+  });
+  const imagePath = join(projectRoot, "website", "images", "module.webp");
+  await mkdir(join(projectRoot, "website", "images"), { recursive: true });
+  await writeFile(imagePath, "image");
+  const module = { ...createModule({ id: "owner/module-a", url: "https://github.com/owner/module-a", lastCommit: "sha-a" }), stars: 1 };
+  let processedCount = 0;
+  const workerPool = {
+    processModules(modules, config) {
+      processedCount += modules.length;
+      return modules.map(entry => ({
+        ...entry,
+        status: "success",
+        image: "module.webp",
+        cacheKey: buildModuleAnalysisCacheKey({ module: entry, catalogueRevision: config.catalogueRevision, analysisConfig: config.analysisConfig })
+      }));
+    }
+  };
+  const options = { projectRoot, workerPool, runLogger: createSilentLogger() };
+
+  const first = await runParallelProcessing({ ...options, modules: [module] });
+  equal(first.cachedCount, 0);
+  const second = await runParallelProcessing({ ...options, modules: [{ ...module, stars: 5 }] });
+  equal(second.cachedCount, 1);
+  equal(second.processedModules[0].stars, 5);
+  equal(processedCount, 1);
+  await rm(imagePath);
+  const third = await runParallelProcessing({ ...options, modules: [module] });
+  equal(third.cachedCount, 0);
+  equal(processedCount, 2);
 });
 
 test("runParallelProcessing processes local modules without enabling the analysis cache", async () => {

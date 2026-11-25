@@ -48,7 +48,10 @@ jobs:
         id: repository-api-cache-restore
         uses: actions/cache/restore@v6
         with:
-          path: website/data/cache
+          path: |
+            website/data/cache
+            website/data/moduleCache.json
+            website/images
           key: repository-api-v2-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-${{ github.run_id }}
           restore-keys: |
             repository-api-v2-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-
@@ -82,6 +85,7 @@ jobs:
             --local dockerfile=container \
             --opt build-arg:GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} \
             --opt build-arg:ASSET_VERSION="$VERSION" \
+            --opt build-arg:CATALOGUE_REVISION="$GITHUB_SHA" \
             $PARAMS \
             --output type=local,dest=build-output
           # The local exporter writes the final image filesystem; our website
@@ -92,6 +96,13 @@ jobs:
           rm -rf website/data/cache
           mkdir -p website/data/cache
           cp -a "$WEBSITE_DATA/cache/." website/data/cache/
+          if [ -f "$WEBSITE_DATA/moduleCache.json" ]; then
+            cp "$WEBSITE_DATA/moduleCache.json" website/data/moduleCache.json
+          fi
+          if [ -d "build-output/usr/share/nginx/website/images" ]; then
+            mkdir -p website/images
+            cp -a build-output/usr/share/nginx/website/images/. website/images/
+          fi
           cp "$WEBSITE_DATA/skipped_modules.json" website/data/skipped_modules.json
           rm -rf build-output
       - name: Upload pipeline data for validation
@@ -106,7 +117,10 @@ jobs:
         if: always()
         uses: actions/cache/save@v6
         with:
-          path: website/data/cache
+          path: |
+            website/data/cache
+            website/data/moduleCache.json
+            website/images
           key: repository-api-v2-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-${{ github.run_id }}
 
   validate-skipped-modules:

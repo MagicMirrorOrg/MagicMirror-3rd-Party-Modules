@@ -15,8 +15,9 @@ import type { ProgressEvent, WorkerProcessConfig } from "./workers/worker-protoc
 import { WorkerPool } from "./workers/worker-pool.ts";
 import { cpus } from "node:os";
 import { createLogger } from "./shared/logger.ts";
+import { existsSync } from "node:fs";
 import { writeJson } from "./shared/fs-utils.ts";
-import { resolve } from "node:path";
+import { basename, resolve } from "node:path";
 
 interface CacheEntry {
   value: Record<string, unknown>;
@@ -129,7 +130,7 @@ export function pruneStaleCacheEntries(
  */
 export function partitionModulesByCache(
   modules: ModuleInput[],
-  { cache, catalogueRevision, analysisConfig }: { analysisConfig: AnalysisConfig; cache: ModuleAnalysisCache; catalogueRevision: string | null }
+  { cache, catalogueRevision, analysisConfig, imagesDir }: { analysisConfig: AnalysisConfig; cache: ModuleAnalysisCache; catalogueRevision: string | null; imagesDir?: string }
 ): { cachedResults: ModuleResult[]; uncachedModules: ModuleInput[] } {
   const cachedResults: ModuleResult[] = [];
   const uncachedModules: ModuleInput[] = [];
@@ -154,10 +155,17 @@ export function partitionModulesByCache(
       })
       : null;
     const entry = cacheKey ? cache.get(cacheKey) : null;
+    const image = entry?.value.image;
+    const missingImage = imagesDir && typeof image === "string" && image.length > 0
+      && (basename(image) !== image || !existsSync(resolve(imagesDir, image)));
 
-    if (entry) {
+    if (entry && !missingImage) {
       cachedResults.push({
         ...entry.value,
+        description: module.description,
+        stars: module.stars,
+        isArchived: module.isArchived,
+        hasGithubIssues: module.hasGithubIssues,
         issues: normalizeIssues(entry.value.issues),
         cacheKey,
         fromCache: true,
@@ -366,7 +374,8 @@ export async function runParallelProcessing({
     ({ cachedResults, uncachedModules } = partitionModulesByCache(modules, {
       cache,
       catalogueRevision: resolvedCatalogueRevision,
-      analysisConfig: normalizedAnalysisConfig
+      analysisConfig: normalizedAnalysisConfig,
+      imagesDir: resolve(projectRoot, "website/images")
     }));
 
     if (cachedResults.length > 0) {
