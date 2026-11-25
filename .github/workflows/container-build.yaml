@@ -56,6 +56,18 @@ jobs:
           restore-keys: |
             repository-api-v2-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-
             repository-api-v2-${{ env.CACHE_SCOPE }}-
+      - name: Restore previous catalogue
+        uses: actions/cache/restore@v6
+        with:
+          path: |
+            website/data/modules.json
+            website/data/modules.min.json
+            website/data/issues.json
+            website/data/stats.json
+          key: catalogue-v1-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            catalogue-v1-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-
+            catalogue-v1-${{ env.CACHE_SCOPE }}-
       - name: Ensure cache directory exists
         run: mkdir -p website/data/cache
       - name: Build container
@@ -103,8 +115,20 @@ jobs:
             mkdir -p website/images
             cp -a build-output/usr/share/nginx/website/images/. website/images/
           fi
+          for file in modules.json modules.min.json issues.json stats.json; do
+            cp "$WEBSITE_DATA/$file" "website/data/$file"
+          done
           cp "$WEBSITE_DATA/skipped_modules.json" website/data/skipped_modules.json
           rm -rf build-output
+      - name: Save catalogue
+        uses: actions/cache/save@v6
+        with:
+          path: |
+            website/data/modules.json
+            website/data/modules.min.json
+            website/data/issues.json
+            website/data/stats.json
+          key: catalogue-v1-${{ env.CACHE_SCOPE }}-${{ github.ref_name }}-${{ github.run_id }}
       - name: Upload pipeline data for validation
         if: always()
         uses: actions/upload-artifact@v7

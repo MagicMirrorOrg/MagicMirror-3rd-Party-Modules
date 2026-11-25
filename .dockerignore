@@ -28,5 +28,9 @@ website/data/*
 !website/data/cache/
 !website/data/cache/**
 !website/data/moduleCache.json
+!website/data/modules.json
+!website/data/modules.min.json
+!website/data/issues.json
+!website/data/stats.json
 website/images/*
 !website/images/*.webp

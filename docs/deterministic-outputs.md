@@ -8,6 +8,8 @@ Stable output formatting makes generated data easier to compare and review. It d
 
 The helper returns JSON without a trailing newline. `writeJson()` in `scripts/shared/fs-utils.ts` adds one, but not every output uses that writer. Do not assume all generated JSON files have the same whitespace or newline conventions.
 
+The container workflow restores the previous four published JSON files from a separate GitHub Actions cache before building, and saves the new files after a successful build. Full and test runs use separate cache scopes. The previous catalogue supports change detection and metadata fallback; if the cache is unavailable, the run starts without a previous catalogue. Unchanged outputs retain their previous update timestamp.
+
 ## Screenshot Names
 
 The worker converts selected screenshots to WebP and names them `<moduleName>---<maintainer>.webp`. The name is independent of the source image filename. Downstream consumers should use the image path from `modules.json` rather than constructing filenames themselves.

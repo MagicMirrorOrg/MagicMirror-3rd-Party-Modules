@@ -1,6 +1,7 @@
+import { copyFile, mkdir, mkdtemp, readFile } from "node:fs/promises";
 import { deepEqual, equal, ok } from "node:assert/strict";
-import { mkdir, mkdtemp, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { loadPreviousModules } from "../module-list.ts";
 import { test } from "node:test";
 import { tmpdir } from "node:os";
 import { writePublishedCatalogueOutputs } from "../module-catalogue-output.ts";
@@ -65,6 +66,33 @@ test("writePublishedCatalogueOutputs skips writes when modules are unchanged", a
   equal(secondResult.changeSummary.removedCount, 0);
   equal(secondResult.changeSummary.unchangedCount, 1);
   equal(secondStats, firstStats);
+});
+
+test("restored catalogue files preserve previous modules and unchanged outputs in a fresh workspace", async () => {
+  const firstRoot = await createProjectRoot();
+  const secondRoot = await createProjectRoot();
+  const processedModules = [createProcessedModule({ stars: 5 })];
+
+  await writePublishedCatalogueOutputs(processedModules, firstRoot);
+  for (const filename of ["modules.json", "modules.min.json", "issues.json", "stats.json"]) {
+    await copyFile(join(firstRoot, "website", "data", filename), join(secondRoot, "website", "data", filename));
+  }
+
+  const previousModules = loadPreviousModules(join(secondRoot, "website", "data", "modules.json"));
+  equal(previousModules.get(processedModules[0].url).stars, 5);
+  const result = await writePublishedCatalogueOutputs(processedModules, secondRoot);
+  equal(result.wroteOutputs, false);
+  equal(result.changeSummary.addedCount, 0);
+  equal(result.changeSummary.unchangedCount, 1);
+  equal(await readFile(result.statsPath, "utf-8"), await readFile(join(firstRoot, "website", "data", "stats.json"), "utf-8"));
+
+  const changedResult = await writePublishedCatalogueOutputs([
+    ...processedModules,
+    createProcessedModule({ id: "owner/module-b", name: "module-b", url: "https://github.com/owner/module-b" })
+  ], secondRoot);
+  equal(changedResult.wroteOutputs, true);
+  equal(changedResult.changeSummary.addedCount, 1);
+  equal(changedResult.changeSummary.unchangedCount, 1);
 });
 
 test("writePublishedCatalogueOutputs writes issue-only changes", async () => {
