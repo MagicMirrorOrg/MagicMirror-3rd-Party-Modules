@@ -1,6 +1,6 @@
 # Pipeline fixture dataset
 
-This directory contains a curated subset of modules that we will use to exercise the JSON schemas for every pipeline stage. The data is intentionally tiny (seven modules) but chosen to cover a mix of scenarios:
+This directory contains a small, curated dataset of seven modules for validating published catalogue schemas. It covers a mix of scenarios:
 
 - Happy-path module with tags and an image (`MMM-01ZM`).
 - Module missing keywords and screenshots (`MMM-AC-aseag`).
@@ -15,6 +15,7 @@ This directory contains a curated subset of modules that we will use to exercise
 - `modules.seed.json` – snapshot of the wiki-derived module list (stage 1 input).
 - `modules.metadata.json` – supplemental details pulled from later pipeline stages; the fixture generator uses this to emulate enrichment.
 - `data/` - committed fixture outputs for published artifacts (`modules.json`, `modules.min.json`, and `stats.json`).
+- [`modules/`](modules/README.md) - curated module snapshots and synthetic examples, separate from the catalogue fixture generator.
 
 ## Regenerating the fixtures
 
@@ -24,12 +25,12 @@ Run the generator whenever you update the seed list, tweak metadata, or adjust s
 node --run fixtures -- generate
 ```
 
-The command rewrites everything under `fixtures/data/`. Keep these files version-controlled so schema tests stay reproducible.
+The command rewrites `modules.json`, `modules.min.json`, and `stats.json` under `fixtures/data/`. Keep these files version-controlled so schema tests stay reproducible.
 
 The generator performs a few important normalization steps while writing the fixtures:
 
 - Maintainer URLs are backfilled when the wiki snapshot omits them (derived from the repository origin + owner).
-- Every stage array is sorted by module `id` so downstream diffs stay stable.
+- The module list is sorted by `id` so downstream diffs stay stable.
 - The minified catalogue mirrors the production build (`modules.min.json`), while the full catalogue and stats remain pretty-printed for readability.
 
 After regenerating, validate the fixtures:
@@ -38,7 +39,7 @@ After regenerating, validate the fixtures:
 node --run fixtures -- validate
 ```
 
-This command is also part of `node --run lint`, so CI will fail if required fixtures drift from the registered schemas.
+This validation is also part of `npm test`, so CI will fail if the fixture outputs no longer match their schemas.
 
 ## When to refresh
 

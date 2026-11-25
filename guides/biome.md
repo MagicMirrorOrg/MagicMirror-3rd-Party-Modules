@@ -1,6 +1,6 @@
 # How to use Biome for your MagicMirror² module
 
-It's recommend using a linter to help you catch errors and enforce coding standards in your JavaScript code. Biome is a fast all-in-one tool that can handle both linting and formatting.
+A linter helps catch errors and enforce coding standards in JavaScript. Biome handles both linting and formatting.
 
 If you want to better understand how to set up Biome by yourself, check out the [Biome documentation](https://biomejs.dev/guides/getting-started/).
 
@@ -28,7 +28,6 @@ Create a file named `biome.jsonc` in the root directory of your module:
 
 ```json
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
   "linter": {
     "enabled": true
   },
@@ -40,7 +39,7 @@ Create a file named `biome.jsonc` in the root directory of your module:
       "quoteStyle": "double"
     }
   }
-},
+}
 ```
 
 ### 3 - Add scripts to package.json
@@ -55,7 +54,7 @@ Add the following scripts to your `package.json` file:
     "format": "biome format --write .",
     "check": "biome check ."
   }
-},
+}
 ```
 
 ### 4 - Run Biome

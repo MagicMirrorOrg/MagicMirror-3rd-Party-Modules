@@ -43,10 +43,6 @@ The orchestrator is the only pipeline CLI. Use `node --run all` for the full ref
 
 For canonical stage definitions, responsibilities, and data flow, use [docs/architecture.md](architecture.md) as the single source of truth. This avoids drift between contributor instructions and pipeline design docs.
 
-#### `validate_release_artifacts.ts`
-
-Validates the published artifacts (`issues.json`, `modules.json`, `modules.min.json`, `stats.json`) against the JSON Schemas. The command is wired into release packaging and must pass before publishing.
-
 ### Testing specific modules
 
 For focused manual runs, point the pipeline at a small local wiki snapshot instead of the full upstream page:
@@ -67,11 +63,7 @@ node --run release:validate
 
 The command checks the published artifacts (`issues.json`, `modules.json`, `modules.min.json`, `stats.json`).
 
-> ℹ️ **CI gate:** The same validation now runs automatically in GitHub Actions (`release-validation.yml`) on every push and pull request targeting `main`. Keep the command in your local workflow to catch schema regressions before CI fails.
-
-### validate_release_artifacts.ts
-
-This script powers the validation command above and fails when the artifacts do not match their schemas.
+The same validation runs in GitHub Actions (`release-validation.yml`) on pushes and pull requests targeting `main`.
 
 ### When validation fails
 
@@ -147,21 +139,9 @@ The check intentionally compares sanitized, deterministic output only. Volatile 
 
 **Workflow when modifying pipeline code:**
 
-1. **Run tests**: `node --run fixtures -- golden-check`
-   - ✅ **Pass**: Your changes didn't affect outputs
-   - ❌ **Fail**: Outputs changed - review required
-
-2. **Review changes**: `git diff fixtures/golden/`
-   - Are these changes expected and intentional?
-   - Do they match your code changes?
-
-3. **Update golden files** (only if changes are intentional): `node --run fixtures -- golden-update`
-   - Updates reference outputs to match new behavior
-   - Creates new baseline for future tests
-
-4. **Commit**: Include golden files in your commit
-   - Documents expected behavior change
-   - Future tests compare against your new baseline
+1. Run `node --run fixtures -- golden-check`.
+2. If the check fails, determine whether the output changes are intentional.
+3. If they are intentional, run `node --run fixtures -- golden-update`, review `git diff fixtures/golden/`, and include the snapshots in the change.
 
 **When to update golden artifacts:**
 
@@ -198,14 +178,6 @@ The project enforces strict linting rules. If your build fails due to linting:
 
 1.  Run `node --run lint:fix` to automatically fix formatting and simple errors.
 2.  Manually resolve any remaining issues reported by the linter.
-
-**Schema Validation Failures**
-
-If `node --run release:validate` fails:
-
-1.  Check the error message to identify which file violates the schema.
-2.  If you modified the schema, regenerate fixtures: `node --run fixtures -- generate`.
-3.  If you modified code that generates data, ensure the output matches the schemas in `dist/schemas/`.
 
 **Rate Limiting**
 

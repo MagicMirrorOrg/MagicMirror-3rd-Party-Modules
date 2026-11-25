@@ -1,122 +1,61 @@
 # Module Submission System
 
-This directory contains the infrastructure for the new PR-based module submission workflow.
+This directory contains an experimental pull request-based module submission system. Its goal is to replace the wiki-based module list with reviewed submissions.
 
-## 🎯 Goal
+The system is not yet used in production. The catalogue pipeline still reads the wiki, and submissions are not automatically published to the website.
 
-Replace the wiki-based module list with a modern, quality-controlled submission process using GitHub Pull Requests.
+## Structure
 
-> **Status:** This system is under development. The validation infrastructure and GitHub Actions workflows exist, but the submission flow has not yet been used in production. The documentation below describes the intended design.
+- `pending/`: submission files awaiting review.
+- `approved/modules-registry.json`: registry used by the duplicate check.
+- `module-submission.schema.json`: schema for submission files.
 
-## 📁 Directory Structure
+## Submission Workflow
 
-```text
-module-submissions/
-├── pending/              # New submissions awaiting validation
-├── approved/             # Approved modules
-│   └── modules-registry.json
-├── module-submission.schema.json
-└── README.md            # This file
-```
+The intended workflow supports two ways to submit a new or updated module:
 
-## 🚀 How It Works
+1. Use the [GitHub issue form](../../issues/new/choose). The submission bot is intended to create a pull request from the form.
+2. Open a pull request to `develop` containing a JSON file in `module-submissions/pending/`.
 
-### For Module Developers
+Pull requests changing pending submissions trigger the validation workflow. Maintainers review submissions after the checks. The workflow and its integration with the catalogue pipeline are still under development; approval does not currently publish a module.
 
-**Option 1: Web Form (Easiest)**
+## Validation
 
-1. Go to [Issues → New Issue](../../issues/new/choose)
-2. Select "Submit a MagicMirror² Module"
-3. Fill out the form
-4. Submit!
+The validation workflow runs these scripts:
 
-Our bot will automatically:
+| Script                                          | Purpose                                                        |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| `scripts/module-submission/validate.ts`         | Validate submission files against the schema.                  |
+| `scripts/module-submission/check-duplicates.ts` | Compare names and URLs with the approved registry.             |
+| `scripts/module-submission/check-repository.ts` | Check repository access, required files, and license metadata. |
+| `scripts/module-submission/quality-check.ts`    | Check the module name; other quality results are placeholders. |
 
-- Create a Pull Request from your submission
-- Run validation checks
-- Notify you of the status
+The duplicate check does not compare submissions with the wiki. Repository and quality checks process only the first JSON file supplied. Screenshot, keywords, and activity checks are not yet implemented. Repository checks require network access.
 
-**Option 2: Direct Pull Request (Advanced)**
+The validation report is intended to help maintainers review submissions. Passing these checks does not guarantee publication or a particular review time.
 
-1. Fork this repository
-2. Create a JSON file in `module-submissions/pending/`
-3. Follow the schema in `module-submission.schema.json`
-4. Open a Pull Request to `develop` branch
+## Maintainer Review
 
-### For Maintainers
+For submissions under review:
 
-When a submission comes in:
+1. Review the validation report when available, including any errors or warnings.
+2. Check the repository URL, name, description, category, license, and required files. Compare against the wiki as well as the approved registry for duplicates.
+3. Review the repository for spam or malicious content. For updates, verify that the requested change is appropriate and clarify the submitter's relationship to the module when needed.
+4. Request changes or approve the pull request. Approval alone does not publish the module.
 
-1. **Automated checks run automatically:**
-   - JSON schema validation
-   - Duplicate detection
-   - Repository accessibility check
-   - Required files check (package.json, LICENSE, README)
-   - License validation
-   - Quality checks
+If the bot or validation workflow fails, inspect the GitHub Actions run. A submission can also be opened as a pull request directly. Repository checks depend on external APIs, so rate limits and temporary outages can require a retry.
 
-2. **Review the PR:**
-   - Check the automated validation report comment
-   - Review the module manually if needed
-   - Request changes if necessary
+## Submission Format
 
-3. **Approve & Merge:**
-   - Once all checks pass, approve the PR
-   - Merge to `develop`
-   - Module appears on website within 24 hours
+Submission files must follow [module-submission.schema.json](module-submission.schema.json). For example:
 
-## 🤖 Automation Features
-
-### Automatic Validation
-
-All submissions are automatically checked for:
-
-- ✅ Valid JSON schema
-- ✅ No duplicates
-- ✅ Repository exists and is accessible
-- ✅ Contains `package.json` with valid license
-- ✅ Contains LICENSE file
-- ✅ Contains README.md
-- ✅ Uses MMM-\* naming convention (recommended)
-- ✅ Has screenshot (recommended)
-
-### Trusted Contributors
-
-**Simple approach:** Maintainers manually add reliable contributors to a GitHub team.
-
-**How to become trusted:**
-
-- There are no automatic criteria
-- Maintainers grant this status based on contribution quality and reliability
-- Typically after 2-3 successful module submissions
-
-**Benefits:**
-
-- ⚡ Auto-approval after validation passes
-- 🚀 Faster merge times
-- � Recognition as a trusted community member
-
-**For maintainers:**
-
-```bash
-# Add user to trusted team
-gh api orgs/MagicMirrorOrg/teams/trusted-contributors/memberships/USERNAME -X PUT
-
-# Remove user
-gh api orgs/MagicMirrorOrg/teams/trusted-contributors/memberships/USERNAME -X DELETE
-```
-
-## 📊 Validation Schema
-
-All submissions must conform to this schema:
-
-```jsonc
+```json
 {
   "url": "https://github.com/username/MMM-ModuleName",
   "name": "MMM-ModuleName",
   "description": "Brief description of what the module does",
   "category": "Category name",
-  "submissionType": "New Module", // or "Update Existing Module"
+  "submissionType": "New Module",
   "additionalInfo": "Optional additional context",
   "submittedBy": "github-username",
   "submittedAt": "2025-10-19T12:00:00Z",
@@ -124,119 +63,35 @@ All submissions must conform to this schema:
 }
 ```
 
-See `module-submission.schema.json` for the complete schema.
+Use `Update Existing Module` as the submission type for an update. The schema defines required fields and supported values.
 
-## 🧪 Testing the System
+## Local Testing
 
-To test the submission system locally:
+From the repository root, create a submission file in `module-submissions/pending/` using the format above. Then run:
 
-1. **Create a test submission:**
+```bash
+export CHANGED_FILES="module-submissions/pending/MMM-TestModule.json"
+node scripts/module-submission/validate.ts
+node scripts/module-submission/check-duplicates.ts
+node scripts/module-submission/check-repository.ts
+node scripts/module-submission/quality-check.ts
+```
 
-   ```bash
-   echo '{
-     "url": "https://github.com/test/MMM-TestModule",
-     "name": "MMM-TestModule",
-     "description": "Test module for validation",
-     "category": "Testing",
-     "submissionType": "New Module",
-     "submittedBy": "testuser",
-     "submittedAt": "2025-10-19T12:00:00Z",
-     "issueNumber": 1
-   }' > module-submissions/pending/MMM-TestModule.json
-   ```
+The scripts write their results to `validation-results/`. Run schema validation first to create that directory. Use a real, accessible repository URL to test repository checks.
 
-2. **Run validation scripts:**
+## Planned Rollout
 
-   ```bash
-   export CHANGED_FILES="module-submissions/pending/MMM-TestModule.json"
-   node scripts/module-submission/validate.ts
-   node scripts/module-submission/check-duplicates.ts
-   node scripts/module-submission/check-repository.ts
-   node scripts/module-submission/quality-check.ts
-   ```
+The register and its integration are the foundation; the form and bot are optional ways to submit changes. The following work remains before replacing the wiki:
 
-3. **Check results:**
-   ```bash
-   cat validation-results/schema.json
-   cat validation-results/duplicates.json
-   cat validation-results/repository.json
-   cat validation-results/quality.json
-   ```
+1. Define the authoritative registry: its fields and how entries are added, updated, marked outdated, or removed. Connect it to the catalogue pipeline while preserving the published formats used by consumers.
+2. Plan and test migration of existing wiki entries, including duplicates, inaccessible repositories, and outdated modules. Check for data loss and compare the resulting catalogue with the current one.
+3. Make validation reliable. Distinguish invalid submissions from temporary API failures and rate limits; automated checks should support, not replace, maintainer review.
+4. Fix and test the issue form and bot with a small group after the registry and checks are ready. Keep direct pull requests available.
+5. Test the new workflow alongside the wiki, announce the transition, and update the documentation. Keep a rollback path to the wiki until the new workflow is stable.
 
-## 📝 Migration Plan
+## Workflows
 
-### Phase 1: Parallel Testing (Current)
+- `.github/workflows/module-submission-bot.yml`: handles issues labeled `module-submission`.
+- `.github/workflows/validate-module-submission.yml`: validates pull requests changing pending submissions.
 
-- ✅ Submission system infrastructure created
-- ✅ GitHub Issue Form template ready
-- ✅ Automated validation workflows configured
-- ⏳ Testing with selected modules
-- ⏳ Gathering feedback from early adopters
-
-### Phase 2: Soft Launch
-
-- 📢 Announce new submission system
-- 📖 Update documentation
-- 🔗 Add links from wiki to new system
-- ✅ Accept submissions through both methods
-- 📊 Monitor success rate and user feedback
-
-### Phase 3: Migration
-
-- 🔄 Migrate existing modules from wiki
-- 📧 Contact module authors for updates
-- 🎯 Mark wiki as "legacy" with redirect
-
-### Phase 4: Full Deployment
-
-- 🚫 Close wiki for new submissions
-- ✅ All submissions through PR workflow only
-- 🎉 Celebrate modernization!
-
-## 🛠️ Scripts
-
-| Script                | Purpose                                             |
-| --------------------- | --------------------------------------------------- |
-| `validate.js`         | Validates JSON against schema                       |
-| `check-duplicates.js` | Checks for duplicate submissions                    |
-| `check-repository.js` | Validates repository accessibility and contents     |
-| `quality-check.js`    | Performs quality checks (naming, screenshots, etc.) |
-
-## 🔍 Workflow Files
-
-| Workflow                         | Trigger             | Purpose                    |
-| -------------------------------- | ------------------- | -------------------------- |
-| `module-submission-bot.yml`      | Issue opened/edited | Creates PR from issue form |
-| `validate-module-submission.yml` | PR opened/updated   | Runs validation checks     |
-
-## 📚 Resources
-
-- [JSON Schema Documentation](https://json-schema.org/)
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MagicMirror² Documentation](https://docs.magicmirror.builders/)
-
-## ❓ FAQ
-
-**Q: Why replace the wiki?**
-A: The wiki lacks quality control, validation, and review processes. This leads to broken entries and spam.
-
-**Q: Is this harder for module developers?**
-A: No! We provide a simple web form that's actually easier than editing wiki syntax.
-
-**Q: What happens to existing wiki entries?**
-A: They'll be migrated automatically and remain accessible.
-
-**Q: Can I still update my module info?**
-A: Yes! Submit an "Update Existing Module" through the same process.
-
-**Q: How long does approval take?**
-A: Usually 24-48 hours. Trusted contributors get faster approval.
-
-## 🤝 Contributing
-
-Improvements to the submission system are welcome! Please:
-
-1. Test changes locally
-2. Update documentation
-3. Add tests if adding new validation
-4. Open a PR to `develop`
+See the [pipeline architecture](../docs/architecture.md) for the current and planned data flows.

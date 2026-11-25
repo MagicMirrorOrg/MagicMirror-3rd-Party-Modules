@@ -4,16 +4,16 @@ Visibility into the automation that builds and publishes the third-party module 
 
 ## Pipeline
 
-The supported production pipeline is orchestrated via `node scripts/orchestrator/index.ts` (also exposed as `node --run all`). The orchestrator drives one typed linear pipeline with four stages across three operational phases: metadata collection, parallel module processing, and publication.
+The supported production pipeline is orchestrated via `node scripts/orchestrator/index.ts` (also exposed as `node --run all`). The orchestrator drives four stages across three operational phases: metadata collection, parallel module processing, and publication. The publication phase contains stages 3 and 4.
 
 ### Stage Overview
 
-| Order | Stage ID                   | Key Outputs                                                                                        |
-| ----- | -------------------------- | -------------------------------------------------------------------------------------------------- |
-| 1     | `collect-metadata`         | in-memory metadata payload, `website/data/cache/repository-api-cache.json`                         |
-| 2     | `parallel-processing`      | in-memory analysis payload, `modules/`, `modules_temp/`, `website/images/`, `skipped_modules.json` |
-| 3     | `aggregate-catalogue`      | `issues.json`, `modules.json`, `modules.min.json`, `stats.json`                                    |
-| 4     | `generate-result-markdown` | `result.md`                                                                                        |
+| Order | Stage ID                   | Key Outputs                                                                                                                                      |
+| ----- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1     | `collect-metadata`         | in-memory metadata payload, `website/data/cache/repository-api-cache.json`                                                                       |
+| 2     | `parallel-processing`      | in-memory analysis payload, `modules/`, `modules_temp/`, `website/images/`, `website/data/moduleCache.json`, `website/data/skipped_modules.json` |
+| 3     | `aggregate-catalogue`      | `issues.json`, `modules.json`, `modules.min.json`, `stats.json`                                                                                  |
+| 4     | `generate-result-markdown` | `result.md`                                                                                                                                      |
 
 ### Current Workflow Diagram
 
@@ -21,31 +21,40 @@ The supported production pipeline is orchestrated via `node scripts/orchestrator
 flowchart TB
   orchestrator[[Orchestrator<br>4-stage execution]]
 
-  subgraph Phase 1: Metadata Collection
-    seed[("Module seed list")] --> collect{{Collect metadata}}
-    collect --> cache[("repository-api-cache.json")]
+  subgraph metadataPhase["Phase 1: Metadata Collection"]
+    seed[("Wiki module list<br>or WIKI_FILE")] --> collect{{"1. Collect metadata"}}
+    previous[("Previous modules.json")] --> collect
+    hosts["Repository host APIs"] <--> collect
+    apiCache[("repository-api-cache.json")] <--> collect
     collect --> metadata["metadata payload (in-memory)"]
   end
 
-  subgraph Phase 2: Parallel Module Processing
-    metadata --> parallel{{Parallel processing}}
-    parallel --> clones[("modules/<br>modules_temp/")]
-    parallel --> images[("website/images/")]
+  subgraph processingPhase["Phase 2: Parallel Module Processing"]
+    metadata --> parallel{{"2. Parallel processing"}}
+    clones[("modules/")] <--> parallel
+    parallel --> staging[("modules_temp/")]
+    images[("website/images/")] <--> parallel
+    analysisCache[("moduleCache.json")] <--> parallel
+    parallel --> skipped[("skipped_modules.json")]
     parallel --> analysisPayload["analysis payload (in-memory)"]
   end
 
-  subgraph Phase 3: Catalogue Aggregation
-    analysisPayload --> aggregate{{Aggregate catalogue}}
+  subgraph publicationPhase["Phase 3: Catalogue Aggregation and Publication"]
+    analysisPayload --> aggregate{{"3. Aggregate catalogue"}}
     aggregate --> outputs[("modules.json<br>modules.min.json<br>stats.json<br>issues.json")]
-    analysisPayload --> result{{Generate result markdown}}
-    outputs --> result
+    aggregate --> stats["statistics (in-memory)"]
+    analysisPayload --> result{{"4. Generate result markdown"}}
+    stats --> result
     result --> resultMd[("result.md")]
   end
 
   orchestrator -.controls.-> collect
   orchestrator -.controls.-> parallel
   orchestrator -.controls.-> aggregate
+  orchestrator -.controls.-> result
 ```
+
+This shows the normal run; `--local-only` uses the previous catalogue and existing clones without fetching the wiki or repository metadata. Markdown generation normally receives statistics in memory and falls back to `stats.json` if they are unavailable.
 
 ### Key Features
 
@@ -96,15 +105,16 @@ A task timeout (six minutes) or worker crash produces a failed result for the af
 
 ## Distribution Touchpoints
 
-This section is about how module data enters the system and reaches downstream consumers. Unlike the canonical pipeline above, part of this flow is still conceptual.
+This section shows how module data enters the system and reaches the website and known external consumers. Add other relevant consumers as they become known.
 
 ### Current Intake Flow
 
 ```mermaid
 flowchart LR
-  wiki[(module wiki list<br><i>- unreliable -</i>)]
+  wiki[(module wiki list)]
   pipeline{{automation pipeline}}
-  api[(API<br>modules.json)]
+  api[(published<br>modules.json)]
+  websiteData[(modules.min.json<br>stats.json<br>skipped_modules.json)]
   remote[MMM-Remote-Control]
   modinstall[MMM-ModInstall]
   config[MMM-Config]
@@ -112,35 +122,45 @@ flowchart LR
   moduleWebsite[website<br>modules.magicmirror.builders]
 
   wiki --> pipeline --> api
+  pipeline --> websiteData --> moduleWebsite
   api --> mmpm
   api --> remote
   api --> modinstall
   api --> config
-  api --> moduleWebsite
 ```
 
-### Potential Future Intake Flow
+### Planned Submission Flow
+
+An issue form, submission bot, and pull request validation workflows exist, but the submission flow is not yet used in production. The transition from reviewed submissions to the pipeline remains planned. See the [submission system](../module-submissions/README.md) for details.
 
 ```mermaid
 flowchart LR
-  ui[(Form-based front end<br>for adding, editing, and<br>deleting modules<br><i>- not yet conceptualized -</i>)]
+  ui[GitHub issue form<br>new or updated modules]
+  bot{{Submission bot}}
+  pr[Pull request]
+  review[Validation and review]
+  registry[(Approved submissions)]
   pipeline{{automation pipeline}}
-  api[(API<br>modules.json)]
+  api[(published<br>modules.json)]
+  websiteData[(modules.min.json<br>stats.json<br>skipped_modules.json)]
   remote[MMM-Remote-Control]
   modinstall[MMM-ModInstall]
   config[MMM-Config]
   mmpm[mmpm]
   moduleWebsite[website<br>modules.magicmirror.builders]
 
-  ui --> pipeline --> api
+  ui --> bot --> pr --> review
+  review -. planned .-> registry
+  registry -. planned .-> pipeline
+  pipeline --> api
+  pipeline --> websiteData --> moduleWebsite
   api --> remote
   api --> modinstall
   api --> config
   api --> mmpm
-  api --> moduleWebsite
 ```
 
-If this direction is pursued, the wiki would be replaced with a form-based frontend while downstream consumers continue using the unchanged API endpoint.
+The planned submission system would replace the wiki as the source of module entries while preserving the published catalogue files for downstream consumers.
 
 ---
 

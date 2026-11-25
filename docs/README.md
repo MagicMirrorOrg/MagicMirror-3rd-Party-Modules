@@ -16,3 +16,4 @@ Use this index to find the right document quickly.
 
 - [../guides/README.md](../guides/README.md) - guidance aimed at module authors (linting, README quality).
 - [../fixtures/README.md](../fixtures/README.md) - curated fixture dataset and regeneration workflow.
+- [../module-submissions/README.md](../module-submissions/README.md) - experimental submission workflow and its current limitations.

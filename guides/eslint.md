@@ -1,6 +1,6 @@
 # How to use ESLint for your MagicMirror² module
 
-It's recommend using a linter to help you catch errors and enforce coding standards in your JavaScript code. ESLint is a popular linter for JavaScript that can be easily integrated into your project.
+A linter helps catch errors and enforce coding standards in JavaScript. ESLint can be integrated into your module.
 
 If you want to better understand how to setup ESLint all by yourself, check out the [ESLint documentation](https://eslint.org/docs/latest/use/getting-started).
 
@@ -12,14 +12,14 @@ This guide will help you set up ESLint for your MagicMirror² module. It will co
 
 - Make sure you have a `package.json` file in your module's root directory. If you don't have one, you can create it by running `npm init -y` in your terminal.
 - Make sure you have a `.gitignore` file in your module's root directory. If you don't have one, you can create it by running `touch .gitignore` in your terminal.
-- Add `node_modules` to your `.gitignore` file to prevent committing the `node_modules` directory to your repository. You can do this by adding the following line to your `.gitignore` file:
+- Add `node_modules/` to `.gitignore` to avoid committing installed dependencies.
 
 ### 1 - Install necessary packages
 
 You can install ESLint and the necessary plugins using npm. Run the following command in your terminal:
 
 ```bash
-npm install --save-dev eslint @eslint/js @stylistic/eslint-plugin globals
+npm install --save-dev eslint @eslint/js globals
 ```
 
 ### 2 - Create ESLint configuration file
@@ -32,9 +32,9 @@ Add a `eslint.config.mjs` file to the top directory with the following text:
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import js from "@eslint/js";
-import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig([
+  js.configs.recommended,
   {
     files: ["**/*.js"],
     languageOptions: {
@@ -46,8 +46,7 @@ export default defineConfig([
         config: "readonly"
       },
       sourceType: "commonjs"
-    },
-    rules: {}
+    }
   },
   {
     files: ["**/*.mjs"],
@@ -57,8 +56,7 @@ export default defineConfig([
         ...globals.node
       },
       sourceType: "module"
-    },
-    rules: {}
+    }
   }
 ]);
 ```
@@ -148,7 +146,7 @@ Add the following section to your `README.md` file to inform other developers ab
 
 If you want to run ESLint automatically on every push or pull request, you can set up a GitHub Actions workflow. This will help ensure that your code is always linted and follows the defined coding standards.
 
-To do this, create a new directory called `.github/workflows` in the root of your module's directory. Inside that directory, create a file named `automated-tests.yaml` with the following content:
+Commit your `package-lock.json` so the workflow can install dependencies with `npm ci`. Create `.github/workflows/automated-tests.yaml` with the following content:
 
 ```yaml
 name: Automated Tests
@@ -166,13 +164,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
-        uses: actions/checkout@v5
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+        uses: actions/checkout@v7
       - name: Use Node.js
         uses: actions/setup-node@v7
         with:
@@ -182,7 +175,6 @@ jobs:
         run: npm ci
       - name: Check linting
         run: node --run lint
-      - run: echo "🍏 This job's status is ${{ job.status }}."
 ```
 
 ### 6 - Add ESLint to your editor - optional

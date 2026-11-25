@@ -71,6 +71,9 @@ import, and package.json rules. The worker runs this configuration once per
 module using the ESLint API, with the module directory as its working directory.
 It explicitly selects this trusted configuration and disables inline ESLint
 configuration; repository-owned configuration files are never executed.
+If the module root contains `.eslintignore`, the analyzer recommends migrating
+its patterns to an ESLint flat configuration. The worker suppresses ESLint's
+corresponding legacy-file warning without suppressing other warning types.
 
 The pass checks `.js`, `.mjs`, `.cjs`, `.yaml`, `.yml`, and `package.json` files.
 Minified `.min.js` files, `node_modules`, and `.git` are excluded. TypeScript files
@@ -143,7 +146,7 @@ recommendations remain enabled.
 
 ## Fixture coverage
 
-The curated fixture repositories live in `fixtures/modules/`. Keep this table in sync when you add or update fixtures so we maintain coverage for every rule.
+The curated module examples live in `fixtures/modules/`. They document intended rule coverage, but the catalogue fixture generator does not analyze them. Keep this table in sync when adding or updating examples.
 
 ### Fixture catalog
 

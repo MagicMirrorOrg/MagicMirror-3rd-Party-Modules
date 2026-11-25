@@ -1,6 +1,6 @@
 # Check Modules Fixture Repositories
 
-This directory hosts the curated repositories used by the comparison harness. Each fixture is stored as a miniature Git repository (with history squashed into a single commit) so that the harness can clone or copy them without reaching out to GitHub.
+This directory contains curated module snapshots and synthetic examples for module checks. The catalogue fixture generator uses `fixtures/modules.seed.json` and `fixtures/modules.metadata.json`; it does not run analysis on these directories.
 
 ## Layout
 
@@ -12,7 +12,7 @@ fixtures/
     ...
 ```
 
-- `baseline-*` snapshots mirror real third-party modules that we already rely on in other fixtures. They provide parity checks for "no findings" scenarios and guard against regressions when scanning stable repositories.
+- `baseline-*` snapshots contain selected files from real third-party modules.
 - `synthetic-*` repositories are purpose-built to exercise individual rules or heuristics that have no reliable real-world coverage.
 
 Current baselines:
@@ -24,18 +24,16 @@ Current baselines:
 
 Each fixture directory contains:
 
-- A `.git` metadata directory (when the fixture started from an actual clone).
 - The module source code and metadata (`package.json`, Markdown files, workflows, etc.).
 - A `FIXTURE.md` file describing the intent of the repository, the rules it should trigger, and pointers back to the rule registry IDs.
 
 ## Authoring guidelines
 
-1. Keep fixture repositories as small as possible—strip binaries, large screenshots, and unrelated documentation.
+1. Keep fixtures as small as possible by excluding binaries, large screenshots, and unrelated documentation.
 2. Prefer synthetic fixtures when the real module is unstable or likely to change upstream.
-3. When mirroring a real module, record the upstream commit SHA in `FIXTURE.md` and remove unnecessary git history by running `git checkout --orphan fixture && git commit -am "fixture"`.
-4. Ensure every rule listed in the registry has at least one fixture (baseline or synthetic) that will trigger it. Record a short explanation in `FIXTURE.md` so future updates know the expected findings.
-5. When adding a new fixture, update `docs/pipeline/check-modules-reference.md` with the coverage matrix and, if needed, regenerate the curated dataset under `fixtures/data/`.
+3. When mirroring a real module, record the upstream commit SHA in `FIXTURE.md`.
+4. Record the expected findings in `FIXTURE.md` and update `docs/pipeline/check-modules-reference.md` when coverage changes.
 
 ## Maintenance
 
-- Rerun `node scripts/fixtures/updateBaselineShas.ts` whenever you refresh the curated dataset so recorded commits stay accurate.
+- When refreshing a snapshot, record the commit actually used. `node --run fixtures -- update-shas` queries current upstream HEADs but does not refresh the snapshot files.

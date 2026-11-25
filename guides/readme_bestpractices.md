@@ -30,7 +30,7 @@ npm ci --omit=dev
 
 - The code block should not be broken up into multiple separate blocks for each line of code so that users can copy and paste the entire block into their terminal and execute the install with one click.
 - The opening ` ``` ` of your code block should be followed by "`sh`" or "`bash`" so that the code block is styled as shell script.
-- If your module has required dependencies, `npm ci` is preferable to `npm install` in many circumstances because it will repeatably instruct users' machines not to recreate the `package-lock.json` file.
+- If your module has required dependencies and a committed, up-to-date `package-lock.json`, use `npm ci` for a reproducible installation. Otherwise use `npm install`.
 - Adding `--omit=dev` to the `npm ci` or `npm install` command will instruct users' machines not to install developer dependencies that are unneeded by most users, which will save on install time and disk space.
 
 ## Update Instructions
