@@ -3,6 +3,8 @@ import { EventEmitter } from "node:events";
 import { WorkerPool } from "../worker-pool.ts";
 import assert from "node:assert/strict";
 import { join } from "node:path";
+import nodeProcess from "node:process";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
 import { tmpdir } from "node:os";
 
@@ -132,6 +134,25 @@ test("WorkerPool reports unexpected worker exits", { timeout: 5000 }, async (con
 test("WorkerPool defaults to a six-minute task timeout", () => {
   const pool = new WorkerPool({ workerCount: 1 });
   assert.equal(pool.config.taskTimeoutMs, 360_000);
+});
+
+test("workers suppress only the obsolete ESLint ignore warning", async () => {
+  const pool = new WorkerPool({ workerCount: 1 });
+  const worker = await pool.spawnWorker(0);
+  try {
+    assert.ok(worker.process.spawnargs.includes("--disable-warning=ESLintIgnoreWarning"));
+    const result = spawnSync(nodeProcess.execPath, [
+      "--disable-warning=ESLintIgnoreWarning",
+      "-e",
+      "process.emitWarning('old ignore', 'ESLintIgnoreWarning'); process.emitWarning('keep this', 'OtherWarning');"
+    ], { encoding: "utf8" });
+    assert.equal(result.status, 0);
+    assert.doesNotMatch(result.stderr, /ESLintIgnoreWarning/u);
+    assert.match(result.stderr, /OtherWarning: keep this/u);
+  }
+  finally {
+    await pool.shutdown();
+  }
 });
 
 test("WorkerPool shutdown clears task timers", async () => {

@@ -3,6 +3,7 @@ import type { ChildProcess } from "node:child_process";
 import { cpus } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import process from "node:process";
 import { createLogger } from "../shared/logger.ts";
 import type { ModuleInput, ModuleResult } from "./module-types.ts";
 import {
@@ -159,7 +160,10 @@ export class WorkerPool {
 
   private spawnWorker(workerId: number): Promise<WorkerSlot> {
     return new Promise((resolve, reject) => {
-      const child = fork(WORKER_SCRIPT, [], { stdio: ["inherit", "inherit", "inherit", "ipc"] });
+      const child = fork(WORKER_SCRIPT, [], {
+        stdio: ["inherit", "inherit", "inherit", "ipc"],
+        execArgv: [...process.execArgv, "--disable-warning=ESLintIgnoreWarning"]
+      });
       const worker: WorkerSlot = { id: workerId, process: child, task: null, timer: null };
       let ready = false;
       const startupTimer = setTimeout(() => {

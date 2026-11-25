@@ -4,6 +4,7 @@
  */
 
 import { createIssue, type Issue } from "./issue.ts";
+import { join } from "node:path";
 import { readFile, stat } from "node:fs/promises";
 import {
   PACKAGE_DEPENDENCY_RULES,
@@ -279,6 +280,13 @@ export async function analyzeModule(
   const hasNewEslint = filenames.has("ESLINT.CONFIG.JS") || filenames.has("ESLINT.CONFIG.MJS");
   const hasBiome = filenames.has("BIOME.JSON") || filenames.has("BIOME.JSONC");
   const checkEslintSetup = !moduleExceptions.skipEslintChecks && !hasOldEslintrc && hasNewEslint;
+
+  if (relevantFiles.includes(join(modulePath, ".eslintignore"))) {
+    issues.push(createIssue(
+      "Recommendation",
+      "Migrate the `.eslintignore` patterns to the `ignores` property in an ESLint flat configuration."
+    ));
+  }
 
   // Check for each file
   for (const filePath of relevantFiles) {

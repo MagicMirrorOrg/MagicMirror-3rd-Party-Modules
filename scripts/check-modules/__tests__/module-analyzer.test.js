@@ -88,6 +88,29 @@ async function createTempModule() {
   return root;
 }
 
+test("analyzer recommends migrating a root .eslintignore", async (context) => {
+  const moduleRoot = await createTempModule();
+  context.after(() => fsPromises.rm(moduleRoot, { recursive: true, force: true }));
+  const nestedIgnore = join(moduleRoot, "nested", ".eslintignore");
+  const dependencyIgnore = join(moduleRoot, "node_modules", ".eslintignore");
+  const rootIgnore = join(moduleRoot, ".eslintignore");
+  await fsPromises.mkdir(join(moduleRoot, "nested"));
+  await fsPromises.mkdir(join(moduleRoot, "node_modules"));
+  await Promise.all([nestedIgnore, dependencyIgnore, rootIgnore].map(file => fsPromises.writeFile(file, "dist/\n")));
+
+  const files = [join(moduleRoot, "eslint.config.mjs"), nestedIgnore, dependencyIgnore];
+  const withoutRoot = await analyzeModule(moduleRoot, "MMM-Test", "https://github.com/example/MMM-Test", files);
+  assert.equal(withoutRoot.issues.some(issue => issue.message.includes(".eslintignore")), false);
+
+  const withRoot = await analyzeModule(moduleRoot, "MMM-Test", "https://github.com/example/MMM-Test", [...files, rootIgnore]);
+  const recommendations = withRoot.issues.filter(issue => issue.message.includes(".eslintignore"));
+  assert.deepEqual(recommendations, [{
+    category: "Recommendation",
+    message: "Migrate the `.eslintignore` patterns to the `ignores` property in an ESLint flat configuration.",
+    severity: "warning"
+  }]);
+});
+
 test("analyzer keeps .github files and applies only lockfile-specific package-lock rules", async () => {
   const moduleRoot = await createTempModule();
   const files = [
