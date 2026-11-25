@@ -337,15 +337,12 @@ export async function runParallelProcessing({
     pool.onProgress((event) => {
       if (event.type === "module" && event.status !== "started") {
         processedCount += 1;
-        let status = "⊘";
-        if (event.status === "success") {
-          status = "✓";
+        if (event.status !== "success") {
+          runLogger.warn(`[${processedCount}/${modules.length}] ${event.status}: ${event.moduleId}`);
         }
-        else if (event.status === "failed") {
-          status = "✗";
+        if (processedCount % 50 === 0 || processedCount === modules.length) {
+          runLogger.info(`Processed ${processedCount}/${modules.length} modules`);
         }
-        const cacheInfo = event.fromCache ? " (cached)" : "";
-        runLogger.info(`[${processedCount}/${modules.length}] ${status} ${event.moduleId}${cacheInfo}`);
       }
     });
   }
@@ -381,9 +378,11 @@ export async function runParallelProcessing({
     if (cachedResults.length > 0) {
       for (const result of cachedResults) {
         processedCount += 1;
-        runLogger.info(`[${processedCount}/${modules.length}] ⊙ ${result.id} (cached)`);
+        if (result.status === "failed") {
+          runLogger.warn(`[${processedCount}/${modules.length}] failed: ${result.id}: ${result.error}`);
+        }
       }
-      runLogger.info(`Cache: ${cachedResults.length} hit(s), ${uncachedModules.length} to process`);
+      runLogger.info(`Cache: ${cachedResults.filter(result => result.fromCache).length} hit(s), ${uncachedModules.length} to process`);
     }
   }
 

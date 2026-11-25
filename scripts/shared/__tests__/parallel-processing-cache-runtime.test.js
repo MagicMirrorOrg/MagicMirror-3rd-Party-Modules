@@ -256,6 +256,43 @@ test("pipeline reuses persisted results with current metadata and available imag
   equal(processedCount, 2);
 });
 
+test("pipeline reports periodic progress and individual failures", async (context) => {
+  const projectRoot = await mkdtemp(join(tmpdir(), "parallel-progress-test-"));
+  context.after(() => rm(projectRoot, { recursive: true, force: true }));
+  const modules = Array.from({ length: 53 }, (unused, index) => createModule({
+    id: `owner/module-${index}`,
+    url: `https://github.com/owner/module-${index}`,
+    lastCommit: "sha"
+  }));
+  modules[0].notFound = true;
+  const messages = { info: [], warn: [] };
+  let onProgress;
+  const workerPool = {
+    onProgress(handler) { onProgress = handler; },
+    processModules(entries) {
+      return entries.map((module, index) => {
+        const status = { 10: "failed", 20: "skipped" }[index] ?? "success";
+        onProgress({ type: "module", status: "started", moduleId: module.id });
+        onProgress({ type: "module", status, moduleId: module.id });
+        return { ...module, status };
+      });
+    }
+  };
+  await runParallelProcessing({
+    modules,
+    projectRoot,
+    catalogueRevision: "catalogue-revision",
+    workerPool,
+    runLogger: { info: message => messages.info.push(message), warn: message => messages.warn.push(message), error: () => null }
+  });
+
+  deepEqual(messages.info.filter(message => message.startsWith("Processed ")), ["Processed 50/53 modules", "Processed 53/53 modules"]);
+  ok(messages.info.includes("Cache: 0 hit(s), 52 to process"));
+  ok(messages.warn.some(message => message.includes("failed: owner/module-0: Repository not found")));
+  ok(messages.warn.some(message => message.includes("failed: owner/module-11")));
+  ok(messages.warn.some(message => message.includes("skipped: owner/module-21")));
+});
+
 test("runParallelProcessing processes local modules without enabling the analysis cache", async () => {
   const modules = [
     createModule({ id: "owner/module-a", url: "https://github.com/owner/module-a", lastCommit: "sha-a" }),

@@ -31,7 +31,7 @@ export async function processModule(module: ModuleInput, config: ProcessModuleCo
     : null;
   const cacheMetadata = cacheKey ? { cacheKey } : {};
 
-  logger.info(`Processing ${module.name} by ${module.maintainer}`);
+  logger.debug(`Processing ${module.name} by ${module.maintainer}`);
 
   if (config.moduleLogger) {
     await config.moduleLogger.info("start", "Module processing started", {
