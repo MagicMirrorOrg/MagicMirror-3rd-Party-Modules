@@ -155,7 +155,7 @@ export function createHttpClient(config: CreateHttpClientOptions = {}): HttpClie
     }
     catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      const err = new Error(`Failed to parse JSON from ${url}: ${message}`);
+      const err = new Error(`Failed to parse JSON from ${url} (HTTP ${response.status}): ${message}`);
       err.cause = error;
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (err as any).responseText = text;

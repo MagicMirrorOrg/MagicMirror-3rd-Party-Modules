@@ -83,7 +83,75 @@ describe("repository-api/api", () => {
 
     assert.strictEqual(normalized.watchersCount, 4);
   });
+});
 
+describe("repository-api batch retries", () => {
+  for (const scenario of [
+    { name: "empty response", failure: null, sizes: [40, 20, 20], fallbackCount: 0 },
+    { name: "terminated request", failure: new Error("terminated"), sizes: [40, 20, 20], fallbackCount: 0 },
+    { name: "HTML success response", failure: new Error("Failed to parse JSON from https://api.github.com/graphql (HTTP 200): invalid JSON"), sizes: [40, 20, 20], fallbackCount: 0 },
+    { name: "HTML server error", failure: new Error("Failed to parse JSON from https://api.github.com/graphql (HTTP 502): invalid JSON"), sizes: [40, 20, 20], fallbackCount: 0 },
+    { name: "HTML authentication error", failure: new Error("Failed to parse JSON from https://api.github.com/graphql (HTTP 403): invalid JSON"), sizes: [40], fallbackCount: 40 },
+    { name: "HTML rate limit response", failure: new Error("Failed to parse JSON from https://api.github.com/graphql (HTTP 429): invalid JSON"), sizes: [40], fallbackCount: 40 },
+    { name: "persistent empty responses", failure: null, alwaysFail: true, sizes: [40, 20, 20], fallbackCount: 40 }
+  ]) {
+    it(`handles GraphQL ${scenario.name} with bounded retries`, async () => {
+      const previousToken = process.env.GITHUB_TOKEN;
+      process.env.GITHUB_TOKEN = "test-token";
+      try {
+        const modules = Array.from({ length: 40 }, (unused, index) => ({
+          name: `MMM-Test-${index}`,
+          url: `https://github.com/example/MMM-Test-${index}`
+        }));
+        const sizes = [];
+        const logger = { debug: mock.fn(), error: mock.fn(), info: mock.fn(), warn: mock.fn() };
+        let restCalls = 0;
+        const result = await enrichModules(modules, new Map(), {
+          client: {
+            getJson: (url, options) => {
+              if (url.endsWith("/graphql")) {
+                const aliases = [...JSON.parse(options.body).query.matchAll(/(repo\d+): repository\(/gu)];
+                sizes.push(aliases.length);
+                if (scenario.alwaysFail || aliases.length === 40) {
+                  if (scenario.failure) {
+                    throw scenario.failure;
+                  }
+                  return { ok: true, status: 200, data: null };
+                }
+                return { ok: true, status: 200, data: { data: Object.fromEntries(aliases.map(match => [match[1], { stargazerCount: 7 }])) } };
+              }
+              restCalls += 1;
+              return { ok: true, status: 200, data: { default_branch: "main", stargazers_count: 7 } };
+            }
+          },
+          forceRefresh: true,
+          logger,
+          repositoryCache: { get: () => null, set: mock.fn() }
+        });
+
+        assert.deepStrictEqual(sizes, scenario.sizes);
+        assert.strictEqual(result.length, 40);
+        assert.ok(result.every(module => module.stars === 7));
+        assert.strictEqual(restCalls, scenario.fallbackCount * 2);
+        const diagnostics = logger.info.mock.calls.find(call => call.arguments[0] === "GitHub batch diagnostics").arguments[1];
+        assert.strictEqual(diagnostics.individualFallbackAttempts, scenario.fallbackCount);
+        assert.strictEqual(diagnostics.individualFallbackSuccesses, scenario.fallbackCount);
+        assert.strictEqual(diagnostics.splitRetries, (scenario.sizes.length - 1) / 2);
+        assert.strictEqual(logger.info.mock.calls.filter(call => call.arguments[0].startsWith("Recovered ")).length, 0);
+      }
+      finally {
+        if (typeof previousToken === "string") {
+          process.env.GITHUB_TOKEN = previousToken;
+        }
+        else {
+          delete process.env.GITHUB_TOKEN;
+        }
+      }
+    });
+  }
+});
+
+describe("repository-api fallback", () => {
   it("preserves previous metadata after a rate limit and on a partial cache hit", async () => {
     const previousToken = process.env.GITHUB_TOKEN;
     delete process.env.GITHUB_TOKEN;

@@ -245,7 +245,9 @@ async function fetchGitHubArchivedStatus(moduleUrl: string, client: HttpClient):
 function shouldRetryBatchWithSmallerChunks(batchFailed: boolean, batchError: string | null, chunkSize: number): boolean {
   return batchFailed
     && typeof batchError === "string"
-    && batchError.toLowerCase().includes("terminated")
+    && (batchError.toLowerCase().includes("terminated")
+      || batchError === "Invalid GraphQL payload"
+      || /Failed to parse JSON from .* \(HTTP [25]\d\d\)/u.test(batchError))
     && chunkSize > GITHUB_GRAPHQL_MIN_BATCH_SIZE;
 }
 
@@ -287,7 +289,7 @@ async function appendGitHubBatchResult({
   if (recovery.success) {
     if (batchFailed) {
       diagnostics.individualFallbackSuccesses += 1;
-      logger.info(`Recovered ${module.name} via individual GitHub fetch after batch failure`);
+      logger.debug(`Recovered ${module.name} via individual GitHub fetch after batch failure`);
     }
     repositoryCache.set(repoId, recovery.data);
     enrichedModules.push({ ...module, ...recovery.data });
@@ -318,7 +320,7 @@ async function processGitHubChunk(options: {
   if (shouldRetryBatchWithSmallerChunks(failed, error, options.chunk.length)) {
     options.diagnostics.splitRetries += 1;
     const splitPoint = Math.ceil(options.chunk.length / 2);
-    options.logger.warn("GitHub GraphQL chunk terminated, retrying with smaller batches", {
+    options.logger.warn("GitHub GraphQL chunk failed, retrying with smaller batches", {
       chunkStart: options.chunkStart,
       chunkSize: options.chunk.length,
       leftChunkSize: splitPoint,

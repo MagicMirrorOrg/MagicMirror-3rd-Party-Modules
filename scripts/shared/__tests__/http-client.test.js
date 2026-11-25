@@ -125,4 +125,11 @@ describe("HttpClient", () => {
     assert.strictEqual(response.status, 503);
     assert.strictEqual(calls, 3); // Initial + 2 retries
   });
+
+  it("includes the HTTP status when a JSON response is invalid", async () => {
+    globalThis.fetch = mock.fn(() => Promise.resolve(new Response("<html>error</html>", { status: 502 })));
+    const client = createHttpClient({ maxRetries: 0 });
+
+    await assert.rejects(client.getJson("https://example.com"), /Failed to parse JSON from https:\/\/example\.com \(HTTP 502\)/u);
+  });
 });
