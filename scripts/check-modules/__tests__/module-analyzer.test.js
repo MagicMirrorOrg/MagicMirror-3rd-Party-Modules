@@ -257,6 +257,34 @@ test("analyzer accepts biome config as linting setup", async () => {
   assert.equal(issues.some(issue => issue.includes("lint script in package.json does not contain `eslint`")), false);
 });
 
+test("analyzer preserves ESLint setup findings for multiple and unreadable manifests", async (context) => {
+  const moduleRoot = await createTempModule();
+  context.after(() => fsPromises.rm(moduleRoot, { recursive: true, force: true }));
+  const configPath = join(moduleRoot, "eslint.config.mjs");
+  const packagePath = join(moduleRoot, "package.json");
+  const invalidDir = join(moduleRoot, "invalid");
+  const missingDir = join(moduleRoot, "missing");
+  await fsPromises.mkdir(invalidDir);
+  await fsPromises.writeFile(join(invalidDir, "package.json"), "not json");
+  await fsPromises.writeFile(packagePath, JSON.stringify({ scripts: { lint: "node --run test" } }));
+  const files = [configPath, join(invalidDir, "package.json"), packagePath, join(missingDir, "package.json")];
+
+  const result = await analyzeModule(moduleRoot, "MMM-Test", "https://github.com/example/MMM-Test", files);
+  const lintMessages = ["ESLint is not in", "lint script in package.json", "does not contain `defineConfig`"];
+  const lintIssues = formatIssues(result.issues).filter(issue => lintMessages.some(message => issue.includes(message)));
+  assert.equal(lintIssues.length, 4);
+  assert.equal(lintIssues.filter(issue => issue.includes(lintMessages[0])).length, 2);
+  assert.equal(lintIssues.filter(issue => issue.includes(lintMessages[1])).length, 1);
+  assert.equal(lintIssues.filter(issue => issue.includes(lintMessages[2])).length, 1);
+
+  const oldConfig = join(moduleRoot, "eslintrc.json");
+  await fsPromises.writeFile(oldConfig, "{}");
+  const oldResult = await analyzeModule(moduleRoot, "MMM-Test", "https://github.com/example/MMM-Test", [...files, oldConfig]);
+  const oldIssues = formatIssues(oldResult.issues);
+  assert.equal(oldIssues.some(issue => issue.includes("Replace eslintrc")), true);
+  assert.equal(oldIssues.some(issue => issue.includes("ESLint is not in") || issue.includes("does not contain `defineConfig`")), false);
+});
+
 test("analyzer flags likely core-provided moment usage per module", async () => {
   const moduleRoot = await fsPromises.mkdtemp(join(tmpdir(), "module-analyzer-moment-core-test-"));
   const frontendPath = join(moduleRoot, "MMM-Moment.js");

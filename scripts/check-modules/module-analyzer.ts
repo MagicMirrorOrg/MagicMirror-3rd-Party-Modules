@@ -274,6 +274,12 @@ export async function analyzeModule(
     ));
   }
 
+  const filenames = new Set(relevantFiles.map((file) => file.split("/").pop()?.toUpperCase() ?? ""));
+  const hasOldEslintrc = filenames.has("ESLINTRC") || filenames.has("ESLINTRC.JSON") || filenames.has("ESLINTRC.JS") || filenames.has("ESLINTRC.YML") || filenames.has("ESLINTRC.YAML");
+  const hasNewEslint = filenames.has("ESLINT.CONFIG.JS") || filenames.has("ESLINT.CONFIG.MJS");
+  const hasBiome = filenames.has("BIOME.JSON") || filenames.has("BIOME.JSONC");
+  const checkEslintSetup = !moduleExceptions.skipEslintChecks && !hasOldEslintrc && hasNewEslint;
+
   // Check for each file
   for (const filePath of relevantFiles) {
     const filename = filePath.split("/").pop() ?? "";
@@ -282,7 +288,8 @@ export async function analyzeModule(
     if (BINARY_EXTENSIONS.has(extension)) {
       continue;
     }
-    const content = await readFile(filePath, "utf-8").catch(() => "");
+    const fileContent = await readFile(filePath, "utf-8").catch(() => null);
+    const content = fileContent ?? "";
     const isChangelogFile = filenameLower === "changelog" || filenameLower.startsWith("changelog.");
     const isPackageLockFile = filenameLower === "package-lock.json";
     const relativePath = filePath.startsWith(modulePath)
@@ -334,7 +341,7 @@ export async function analyzeModule(
     // Package.json specific rules
     if (filePath.endsWith("package.json")) {
       try {
-        const pkg = JSON.parse(content);
+        const pkg = JSON.parse(fileContent ?? "{}");
         for (const section of PACKAGE_DEPENDENCY_SECTIONS) {
           const dependencies = pkg?.[section];
           if (!dependencies || typeof dependencies !== "object" || Array.isArray(dependencies)) {
@@ -372,11 +379,37 @@ export async function analyzeModule(
           hasOwnMomentDependency = true;
           hasMomentUsage = true;
         }
+
+        if (checkEslintSetup) {
+          if (!pkg.dependencies?.eslint && !pkg.devDependencies?.eslint) {
+            issues.push(createIssue(
+              "Recommendation",
+              "ESLint is not in the dependencies or devDependencies. It is recommended to add it to one of them."
+            ));
+          }
+          if (pkg.scripts) {
+            if (!pkg.scripts.lint) {
+              issues.push(createIssue("Recommendation", "No lint script found in package.json. It is recommended to add one."));
+            } else if (!pkg.scripts.lint.includes("eslint")) {
+              issues.push(createIssue(
+                "Recommendation",
+                "The lint script in package.json does not contain `eslint`. It is recommended to add it."
+              ));
+            }
+          }
+        }
       }
       catch {
         // Silently ignore JSON parse errors
       }
 
+    }
+
+    if (checkEslintSetup && (filePath.endsWith("eslint.config.js") || filePath.endsWith("eslint.config.mjs")) && !content.includes("defineConfig")) {
+      issues.push(createIssue(
+        "Recommendation",
+        `The ESLint configuration file \`${filename}\` does not contain \`defineConfig\`. It is recommended to use it.`
+      ));
     }
 
     // Package-lock.json rules
@@ -455,8 +488,6 @@ export async function analyzeModule(
   }
 
   // File existence checks
-  const filenames = new Set(relevantFiles.map((f) => f.split("/").pop()?.toUpperCase() ?? ""));
-
   if (!filenames.has("LICENSE") && !filenames.has("LICENSE.MD")) {
     issues.push(createIssue(
       "Warning",
@@ -487,10 +518,6 @@ export async function analyzeModule(
 
   // Linting setup checks (ESLint or Biome)
   if (!moduleExceptions.skipEslintChecks) {
-    const hasOldEslintrc = filenames.has("ESLINTRC") || filenames.has("ESLINTRC.JSON") || filenames.has("ESLINTRC.JS") || filenames.has("ESLINTRC.YML") || filenames.has("ESLINTRC.YAML");
-    const hasNewEslint = filenames.has("ESLINT.CONFIG.JS") || filenames.has("ESLINT.CONFIG.MJS");
-    const hasBiome = filenames.has("BIOME.JSON") || filenames.has("BIOME.JSONC");
-
     if (hasOldEslintrc) {
       issues.push(createIssue("Recommendation", "Replace eslintrc by new flat config."));
     } else if (!hasNewEslint && !hasBiome) {
@@ -498,52 +525,6 @@ export async function analyzeModule(
         "Recommendation",
         "No linter configuration was found. A linter is very helpful, it is worth using one even for small projects. You can use ESLint or Biome ([ESLint guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/eslint.md), [Biome guide](https://github.com/MagicMirrorOrg/MagicMirror-3rd-Party-Modules/blob/main/guides/biome.md))."
       ));
-    } else if (hasNewEslint) {
-      // Check if ESLint is in package.json dependencies
-      const packageJsonFiles = relevantFiles.filter((f) => f.endsWith("package.json"));
-      for (const pkgFile of packageJsonFiles) {
-        const pkgContent = await readFile(pkgFile, "utf-8").catch(() => "{}");
-        try {
-          const pkg = JSON.parse(pkgContent);
-          if (
-            !pkg.dependencies?.eslint &&
-            !pkg.devDependencies?.eslint
-          ) {
-            issues.push(createIssue(
-              "Recommendation",
-              "ESLint is not in the dependencies or devDependencies. It is recommended to add it to one of them."
-            ));
-          }
-
-          // Check lint script
-          if (pkg.scripts) {
-            if (!pkg.scripts.lint) {
-              issues.push(createIssue("Recommendation", "No lint script found in package.json. It is recommended to add one."));
-            } else if (!pkg.scripts.lint.includes("eslint")) {
-              issues.push(createIssue(
-                "Recommendation",
-                "The lint script in package.json does not contain `eslint`. It is recommended to add it."
-              ));
-            }
-          }
-        } catch {
-          // Silently ignore JSON parse errors
-        }
-      }
-
-      // Check for defineConfig in eslint.config.js
-      const eslintConfigFiles = relevantFiles.filter(
-        (f) => f.endsWith("eslint.config.js") || f.endsWith("eslint.config.mjs")
-      );
-      for (const configFile of eslintConfigFiles) {
-        const configContent = await readFile(configFile, "utf-8").catch(() => "");
-        if (!configContent.includes("defineConfig")) {
-          issues.push(createIssue(
-            "Recommendation",
-            `The ESLint configuration file \`${configFile.split("/").pop()}\` does not contain \`defineConfig\`. It is recommended to use it.`
-          ));
-        }
-      }
     }
   }
 
